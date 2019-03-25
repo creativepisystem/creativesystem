@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truckleer.Creative", "Truckleer.Creative\Truckleer.Creative.csproj", "{2DC7E726-9FB6-482D-BFE4-1A569C0FAD67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Truckleer.Api", "Truckleer.Api\Truckleer.Api.csproj", "{5C740B37-3DB2-40B9-8EF0-77E6F553746B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2DC7E726-9FB6-482D-BFE4-1A569C0FAD67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DC7E726-9FB6-482D-BFE4-1A569C0FAD67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DC7E726-9FB6-482D-BFE4-1A569C0FAD67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DC7E726-9FB6-482D-BFE4-1A569C0FAD67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C740B37-3DB2-40B9-8EF0-77E6F553746B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C740B37-3DB2-40B9-8EF0-77E6F553746B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C740B37-3DB2-40B9-8EF0-77E6F553746B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C740B37-3DB2-40B9-8EF0-77E6F553746B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9DB98E55-7D5D-48C6-A743-C96D356FFDFA}
+	EndGlobalSection
+EndGlobal
