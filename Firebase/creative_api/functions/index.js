@@ -13,11 +13,12 @@ const express = require('express');
 //Importações dos Módulos
 const UserApp = require('./src/Controller/UserController')
 const VehicleApp = require('./src/Controller/VehicleController')
-
+const DriverApp = require('./src/Controller/DriverController')
 //Criação do server da aplicação
 const app  = express();
 //Injeção modulos no servidor
 app.use("/user",UserApp);
 app.use("/vehicle",VehicleApp);
+app.use("/driver",DriverApp);
 
 exports.api = functions.https.onRequest(app);
