@@ -7,7 +7,7 @@ module.exports = {
             error();
         else if(vehicle.tank_capacity <= 0)
             error();
-        else if( (await vehicleService.findByLincensePlate(vehicle.license_plate)) != null)
+        else if( (await vehicleService.findByLicensePlate(vehicle.license_plate)) == null)
             error();
         else
             success();

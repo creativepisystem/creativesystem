@@ -1,85 +1,101 @@
-const express = require('express');
+const express = require("express");
 const validateUser = require("./../utils/ValidateUser");
-const validateVehicle = require('./../utils/ValidateVehicle');
-const vehicleService = require('./../Service/VehicleService');
-
+const validateVehicle = require("./../utils/ValidateVehicle");
+const Vehicle = require("./../Class/Vehicle");
+// Importação do Service
+const vehicleService = require("./../Service/VehicleService");
 VehicleApp = express();
-
-VehicleApp.get('/', (req, res) => {
-    validateUser.auth({
-        user: req.header('user'),
-        auth: req.header('auth')
+//Criar
+VehicleApp.post("/", (req, res) => {
+  validateUser.auth(
+    {
+      user: req.header("user"),
+      auth: req.header("auth")
     },
-        async function (vehicle) {
-
+    user => {
+      validateVehicle.create(
+        req.body,
+        async () => {
+          let vehicle = await vehicleService.saveVehicle(new Vehicle(req.body));
+          if (vehicle != null) res.status(201).send(vehicle.get());
+          else res.status(400).send("Erro ao criar Veículo");
         },
-
         () => {
-            res.status(401).send("");
+          res.status(400).send("Erro ao criar Veículo,campos invalidos, ");
         }
-    );
+      );
+    },
+    () => {
+      res.status(401).send("não autorizado");
+    }
+  );
+});
+//Listar
+VehicleApp.get("/", (req, res) => {
+  validateUser.auth(
+    {
+      user: req.header("user"),
+      auth: req.header("auth")
+    },
+    async user => {
+      let vehicles = await vehicleService.getAll();
+      if (vehicles != null) {
+        res.status(200).send(vehicles);
+      } else {
+        res.status(400).send("Erro ao listar os Veículos");
+      }
+    },
+    () => {
+      res.status(401).send("não autorizado");
+    }
+  );
+});
+//Detalhar
+VehicleApp.get("/:id", (req, res) => {
+  validateUser.auth(
+    {
+      user: req.header("user"),
+      auth: req.header("auth")
+    },
+    async user => {
+      let vehicle = await vehicleService.getById(req.params.id);
+      if (vehicle != null) {
+        res.status(200).send(vehicle.get());
+      } else {
+        res.status(400).send("Erro ao detalhar o Veículo");
+      }
+    },
+    () => {
+      res.status(401).send("não autorizado");
+    }
+  );
 });
 
-VehicleApp.get('/:id', (req, res) => {
-    validateUser.auth({
-        user: req.header('user'),
-        auth: req.header('auth')
+//Atualizar
+VehicleApp.put("/:id", (req, res) => {
+  validateUser.auth(
+    {
+      user: req.header("user"),
+      auth: req.header("auth")
     },
-        async function (user) {
-
+    async user => {
+      validateVehicle.update(
+        req.body,
+        async () => {
+          let newVehicle = new Vehicle(req.body);
+          newVehicle.setId(req.params.id);
+          let vehicle = await vehicleService.updateVehicle(newVehicle);
+          if (vehicle != null) res.status(201).send(vehicle);
+          else res.status(400).send("Erro ao atualizar Veículo");
         },
-
         () => {
-            res.status(401).send("");
+          res.status(400).send("Erro ao atualizar Veículo,campos invalidos, ");
         }
-    );
-});
-
-VehicleApp.post('/', (req, res) => {
-    validateUser.auth({
-        user: req.header('user'),
-        auth: req.header('auth')
+      );
     },
-        async function (user) {
-            validateVehicle.create(req.body,
-                async () => {
-                    validateVehicle.create(req.body,
-                        async () => {
-                            let vehicle = await vehicleService.saveVehicle(req.body);
-                            if (vehicle == null)
-                                res.status(400).send("Erro ao criar veículo");
-                            else
-                                res.status(201).send(vehicle.get());
-                        },
-                        () => {
-                            res.status(400).send("Dados inválidos");
-                        })
-
-                },
-                () => {
-                    res.status(400).send("Parâmetros Inválidos");
-                })
-        },
-
-        () => {
-            res.status(401).send("");
-        }
-    );
+    () => {
+      res.status(401).send("não autorizado");
+    }
+  );
 });
-
-VehicleApp.put('/:id', (req, res) => {
-    validateUser.auth({
-        user: req.header('user'),
-        auth: req.header('auth')
-    },
-        async function (user) {
-
-        },
-
-        () => {
-            res.status(401).send("");
-        }
-    );
-});
-
-module.exports = VehicleApp
+module.exports = VehicleApp;
