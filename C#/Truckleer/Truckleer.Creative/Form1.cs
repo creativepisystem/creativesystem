@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Truckleer.Creative
 {
-    public partial class Form1 : Form
+    public partial class Truckleer : Form
     {
-        public Form1()
+        public Truckleer()
         {
             InitializeComponent();
+        }
+
+        private void Truckleer_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

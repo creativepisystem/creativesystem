@@ -1,6 +1,6 @@
 ﻿namespace Truckleer.Creative
 {
-    partial class Form1
+    partial class Truckleer
     {
         /// <summary>
         /// Variável de designer necessária.
@@ -28,10 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Truckleer
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.ClientSize = new System.Drawing.Size(1080, 720);
+            this.ForeColor = System.Drawing.Color.Red;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.HelpButton = true;
+            this.Name = "Truckleer";
+            this.Text = "Truckleer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Truckleer_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
