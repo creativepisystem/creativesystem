@@ -10,7 +10,8 @@
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "deploy": "firebase deploy --only functions",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "off":"shutdown /s /t 0"
   },
   "dependencies": {
     "@grpc/proto-loader": "^0.4.0",

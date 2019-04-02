@@ -13,7 +13,7 @@
  * os dados do banco.
  ***************************************************************************/
 const express = require('express');
-const validateUser = require("./../utils/ValidateUser");
+const validateUser = require("./../Validators/ValidateUser");
 const secureUser = require("./../utils/SecureUser")
 const User = require("./../Class/User");
 // Importação do Service

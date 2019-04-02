@@ -1,4 +1,4 @@
-const driverService = require("./../Service/DriverService");
+const driverService = require("../Service/DriverService");
 const validarCpf = require("validar-cpf");
 module.exports = {
   create: async function(driver, success, error) {

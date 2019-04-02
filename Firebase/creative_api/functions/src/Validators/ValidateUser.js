@@ -1,4 +1,4 @@
-const userService = require('./../Service/UserService');
+const userService = require('../Service/UserService');
 module.exports = {
     create: async function (user, newUser) {
         if (newUser.user === undefined || newUser.password === undefined ||

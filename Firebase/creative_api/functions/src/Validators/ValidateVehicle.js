@@ -1,4 +1,4 @@
-const vehicleService = require('./../Service/VehicleService');
+const vehicleService = require('../Service/VehicleService');
 module.exports = {
     create: async function (vehicle,success,error) {
         if(vehicle.license_plate === undefined || vehicle.tank_capacity === undefined)
