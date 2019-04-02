@@ -35,6 +35,7 @@ module.exports = {
         return false;
     },
     auth: async function (user, sucess, error) {
+        
         if (user.user !== undefined && user.auth !== undefined) {
             let validUser = (await userService.isValidPermission(user));
             if (validUser == null)

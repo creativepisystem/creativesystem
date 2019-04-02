@@ -1,6 +1,7 @@
 const express = require("express");
 const validateUser = require("./../Validators/ValidateUser");
 const validateSupply = require("./../Validators/ValidateSupply");
+const validatePermission = require("./../Validators/ValidatePermission");
 const Supply = require("./../Class/Supply");
 // Importação do Service
 const supplyService = require("./../Service/SupplyService");
@@ -16,11 +17,14 @@ SupplyApp.post("/", (req, res) => {
       validateSupply.create(
         req.body,
         async () => {
+          console.log("Aqui");
           let supply = await supplyService.saveSupply(new Supply(req.body));
           if (supply != null) res.status(201).send(supply.get());
           else res.status(400).send("Erro ao criar Abastecimento");
         },
-        () => {
+        (e) => {
+
+          console.log(e);
           res.status(400).send("Erro ao criar Abastecimento,campos invalidos, ");
         }
       );
