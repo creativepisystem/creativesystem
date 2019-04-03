@@ -35,7 +35,7 @@ class VehicleRepository {
             }));
     }
     async findAll() {
-        return (await vehicleRef.get().then((querySnapshot => {
+        return (await vehicleRef.orderBy("license_plate","desc").get().then((querySnapshot => {
                 var vehicles = [];
                 querySnapshot.docs.forEach((doc) => {
                     let vehicleDoc = doc.data();

@@ -72,6 +72,9 @@ class UserService {
         else
             return null;
     }
+    async getBytId(id){
+        return (await userRepository.find(id));
+    }
     async findAll(user){
 
         return await userRepository.findAll(user);

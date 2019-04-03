@@ -11,7 +11,8 @@ class Supply {
         total: object.total,
         current_km: object.current_km,
         station: object.station,
-        price: object.price
+        price: object.price,
+        travel: object.travel
       };
       Object.keys(this.supply).forEach(k => {
         if (this.supply[k] === undefined || this.supply[k] === null)
@@ -36,6 +37,12 @@ class Supply {
   }
   setId(id) {
     this.supply.id = id;
+  }
+  getTravel() {
+    return this.supply.travel;
+  }
+  setTravel(travel) {
+    this.supply.travel = travel;
   }
   getPrice() {
     return this.supply.price;

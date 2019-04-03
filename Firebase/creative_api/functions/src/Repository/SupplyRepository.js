@@ -35,7 +35,7 @@ class SupplyRepository {
             }));
     }
     async findAll() {
-        return (await supplyRef.get().then((querySnapshot => {
+        return (await supplyRef.orderBy("date","desc").get().then((querySnapshot => {
                 var supplys = [];
                 querySnapshot.docs.forEach((doc) => {
                     let supplyDoc = doc.data();

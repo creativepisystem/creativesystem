@@ -12,7 +12,8 @@ class Driver {
         email: object.email,
         cnh_expiration: object.cnh_expiration,
         photo: object.photo,
-        obs: object.obs
+        obs: object.obs,
+        user: object.user
       };
       Object.keys(this.driver).forEach(k => {
         if (this.driver[k] === undefined || this.driver[k] === null)
@@ -43,6 +44,12 @@ class Driver {
   }
   setName(name) {
     this.driver.name = name;
+  }
+  getUser() {
+    return this.driver.user;
+  }
+  setUser(user) {
+    this.driver.user = user;
   }
   getCpf() {
     return this.driver.cpf;

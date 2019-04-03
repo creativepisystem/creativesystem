@@ -18,9 +18,32 @@ const secureUser = require("./../utils/SecureUser")
 const User = require("./../Class/User");
 // Importação do Service
 const userService = require('./../Service/UserService');
+const driverService = require('./../Service/DriverService');
 // Criação do Servidor do Módulo User
 UserApp = express();
 // Serviço de Criação do Usuario
+UserApp.post('/', function (req, res) {
+    validateUser.auth({
+        user: req.header('user'),
+        auth: req.header('auth')
+    },
+        async function (user) {
+            if (await validateUser.create(user, req.body)) {
+                res.status(400).send("Dados Invalidos")
+            } else {
+                user = new User(await userService.saveUser(req.body)).get();
+                if (user == null) {
+                    res.status(400).send("Erro ao criar o Usuario");
+                } else {
+                    delete user.user.password;
+                    res.status(201).send(user.user);
+                }
+            }
+        }, () => {
+            res.status(401).send("não autorizado");
+        });
+});
+
 UserApp.post('/', function (req, res) {
     validateUser.auth({
         user: req.header('user'),

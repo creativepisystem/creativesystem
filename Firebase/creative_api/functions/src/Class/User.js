@@ -6,7 +6,6 @@ class User {
                 user: object.user,
                 password: object.password,
                 type: object.type,
-                driver: object.driver,
                 auth : object.auth,
                 email: object.email
             }
@@ -58,13 +57,6 @@ class User {
     setId(id) {
         this.user.id = id;
     }
-    getDriver() {
-        return this.user.driver;
-    }
-    setDriver(driver) {
-        this.user.driver = driver;
-    }
-
     getEmail() {
         return this.user.email;
     }

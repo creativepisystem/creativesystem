@@ -16,6 +16,7 @@ const VehicleApp = require('./src/Controller/VehicleController')
 const DriverApp = require('./src/Controller/DriverController')
 const RouteApp = require('./src/Controller/RouteController')
 const SupplyApp = require('./src/Controller/SupplyController')
+const TravelApp = require('./src/Controller/TravelController')
 //Criação do server da aplicação
 const app  = express();
 //Injeção modulos no servidor
@@ -24,5 +25,6 @@ app.use("/vehicle",VehicleApp);
 app.use("/driver",DriverApp);
 app.use("/route",RouteApp);
 app.use("/supply",SupplyApp);
+app.use("/travel",TravelApp);
 
 exports.api = functions.https.onRequest(app);

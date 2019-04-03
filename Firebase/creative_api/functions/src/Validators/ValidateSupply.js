@@ -1,6 +1,7 @@
 const driverService = require("./../Service/DriverService");
 const vehicleService = require("./../Service/VehicleService");
 const routeService = require("./../Service/RouteService");
+const travelService = require("./../Service/TravelService");
 module.exports = {
   create: async (supply, succes, error) => {
     if (
@@ -19,7 +20,12 @@ module.exports = {
     else if (supply.liters <= 0) error(3);
     else if (supply.current_km <= 0) error(4);
     else if (supply.total <= 0) error(4);
-    else if ((await driverService.getById(supply.driver)) === null) error(5);
+    else if (
+      supply.station !== undefined &&
+      (supply.station.length < 2 || supply.station.length > 30)
+    ) {
+      error(8);
+    } else if ((await driverService.getById(supply.driver)) === null) error(5);
     else if ((await vehicleService.getById(supply.vehicle)) === null) error(6);
     else if (
       supply.route !== undefined &&
@@ -27,10 +33,10 @@ module.exports = {
     ) {
       error(7);
     } else if (
-      supply.station !== undefined &&
-      (supply.station.length < 2 || supply.station.length > 30)
+      supply.travel !== undefined &&
+      (await travelService.getById(supply.travel)) === null
     ) {
-      error(8);
+      error(7);
     } else succes();
   },
   update: async (supply, succes, error) => {
@@ -41,6 +47,11 @@ module.exports = {
     else if (supply.lites !== undefined && supply.liters <= 0) error();
     else if (supply.current_km !== undefined && supply.current_km <= 0) error();
     else if (supply.total !== undefined && supply.total <= 0) error();
+    else if (
+      supply.station !== undefined &&
+      (supply.station.length < 2 || supply.station.length > 30)
+    )
+      error();
     else if (
       supply.driver !== undefined &&
       (await driverService.getById(supply.driver)) === null
@@ -57,10 +68,10 @@ module.exports = {
     )
       error();
     else if (
-      supply.station !== undefined &&
-      (supply.station.length < 2 || supply.station.length > 30)
-    )
-      error();
-    else succes();
+      supply.travel !== undefined &&
+      (await travelService.getById(supply.travel)) === null
+    ) {
+      error(7);
+    } else succes();
   }
 };

@@ -1,7 +1,6 @@
 const express = require("express");
 const validateUser = require("./../Validators/ValidateUser");
 const validateRoute = require("./../Validators/ValidateRoute");
-const users = require("./../Enum/UserEnum");
 const Route = require("./../Class/Route");
 // Importação do Service
 const routeService = require("./../Service/RouteService");
