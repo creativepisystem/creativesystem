@@ -13,6 +13,9 @@ class TravelSevice {
     }
     async updateTravel(travel){
         return (await travelRepository.update(travel.get()));
+    } 
+    async findByDriver(driver){
+        return (await travelRepository.findByDriver(driver.getId()));
     }
 }
 

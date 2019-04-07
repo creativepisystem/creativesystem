@@ -14,6 +14,9 @@ class DriverSevice {
     async updateDriver(driver){
         return (await driverRepository.update(driver.get()));
     }
+    async findByUser(user) {
+        return (await driverRepository.findByUser(user.getId()));
+    }
 }
 
 module.exports = new DriverSevice();

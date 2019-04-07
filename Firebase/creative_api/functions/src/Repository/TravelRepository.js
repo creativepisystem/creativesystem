@@ -47,6 +47,21 @@ class TravelRepository {
                 return null;
             }));
     }
+    async findByDriver(id) {
+        return (await travelRef.where("driver", "==", id).get()
+            .then((querySnapshot => {
+                var travels = [];
+                querySnapshot.docs.forEach((doc) => {
+                    let travelDoc = doc.data();
+                    travelDoc.id = doc.id;
+                    travels.push(new Travel(travelDoc).get());
+                });
+                return travels;
+            })).catch((e) => {
+                console.log(e);
+                return null;
+            }));
+    }
 }
 
 module.exports = new TravelRepository();

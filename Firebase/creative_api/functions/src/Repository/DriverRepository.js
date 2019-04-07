@@ -47,6 +47,20 @@ class DriverRepository {
                 return null;
             }));
     }
+
+    async findByUser(id) {
+        return (await driverRef.where("user", "==", id).get()
+            .then((querySnapshot => {
+               if(querySnapshot.docs.length > 1)
+                return null;
+                let driver = querySnapshot.docs[0].data();
+                driver.id =querySnapshot.docs[0].id;
+                return new Driver(driver);
+            })).catch((e) => {
+                console.log(e);
+                return null;
+            }));
+    }
 }
 
 module.exports = new DriverRepository();

@@ -9,7 +9,8 @@ const userRepository = require("./../Repository/UserRepository")
 const hash = require("./../utils/AuthGenerator");
 const emailSender = require("./../utils/EmailSender");
 const email = require("./../Enum/EmailEnum");
-const User = require("./../Class/User")
+const User = require("./../Class/User");
+const users = require("./../Enum/UserEnum");
 // Declaração da classe UserService
 class UserService {
     // Método de Criação do Usuario
@@ -44,6 +45,19 @@ class UserService {
     async login(user) {
         let userAuth = await userRepository.findByUserAndPass(user);
         if(userAuth === null){
+            return null;
+        }
+        if(userAuth.getAuth() !== undefined){
+            return userAuth.getAuth();
+        }
+        userAuth.setAuth(hash.generate(20));
+        if(userAuth.getId() === undefined)
+            return null
+        return userRepository.login(userAuth);
+    }
+    async loginDevice(user) {
+        let userAuth = await userRepository.findByUserAndPass(user);
+        if(userAuth === null || userAuth.getType() != users.DRIVER){
             return null;
         }
         if(userAuth.getAuth() !== undefined){
