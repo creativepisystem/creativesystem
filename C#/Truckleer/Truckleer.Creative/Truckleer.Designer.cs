@@ -36,6 +36,7 @@ namespace Truckleer.Creative
             this.nameLogoLayout = new System.Windows.Forms.TableLayoutPanel();
             this.brandLayout = new System.Windows.Forms.TableLayoutPanel();
             this.headerMenu = new System.Windows.Forms.Panel();
+            this.mainContainer = new System.Windows.Forms.TableLayoutPanel();
             this.mainLayout.SuspendLayout();
             this.sideMenuLayout.SuspendLayout();
             this.nameLogoLayout.SuspendLayout();
@@ -50,6 +51,7 @@ namespace Truckleer.Creative
             this.mainLayout.Controls.Add(this.sideMenuLayout, 0, 1);
             this.mainLayout.Controls.Add(this.nameLogoLayout, 0, 0);
             this.mainLayout.Controls.Add(this.headerMenu, 1, 0);
+            this.mainLayout.Controls.Add(this.mainContainer, 1, 1);
             this.mainLayout.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainLayout.Location = new System.Drawing.Point(0, 0);
             this.mainLayout.Margin = new System.Windows.Forms.Padding(0);
@@ -123,6 +125,19 @@ namespace Truckleer.Creative
             this.headerMenu.Size = new System.Drawing.Size(886, 43);
             this.headerMenu.TabIndex = 2;
             // 
+            // mainContainer
+            // 
+            this.mainContainer.ColumnCount = 1;
+            this.mainContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainContainer.Location = new System.Drawing.Point(194, 43);
+            this.mainContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.mainContainer.Name = "mainContainer";
+            this.mainContainer.RowCount = 1;
+            this.mainContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.mainContainer.Size = new System.Drawing.Size(886, 677);
+            this.mainContainer.TabIndex = 3;
+            // 
             // Truckleer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,6 +166,7 @@ namespace Truckleer.Creative
         private System.Windows.Forms.TableLayoutPanel brandLayout;
         private System.Windows.Forms.Panel headerMenu;
         private System.Windows.Forms.Panel backPage;
+        private System.Windows.Forms.TableLayoutPanel mainContainer;
     }
 }
 
