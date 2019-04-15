@@ -16,8 +16,8 @@ namespace Truckleer.Creative
         {
             InitializeComponent();
             Dashboard dash = new Dashboard();
-            mainContainer.Controls.Add(dash);
-            dash.BringToFront();s
+            truckleerContainer.Controls.Add(dash);
+            dash.BringToFront();
         }
     }
 }

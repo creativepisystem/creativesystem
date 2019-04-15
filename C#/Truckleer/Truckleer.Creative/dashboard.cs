@@ -20,8 +20,12 @@ namespace Truckleer.Creative
 
         private void Dashboard_Load(object sender, EventArgs e)
         {
-            this.Width = this.Parent.Width;
-            this.Height = this.Parent.Height;
+            this.Dock= DockStyle.Fill;
+        }
+
+        private void panelGraph_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
