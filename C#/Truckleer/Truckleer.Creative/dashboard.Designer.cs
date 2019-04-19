@@ -30,88 +30,88 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.blockLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.panelTrip = new System.Windows.Forms.Panel();
-            this.yellow = new System.Windows.Forms.Panel();
-            this.tripNumber = new System.Windows.Forms.Label();
-            this.pictureTrip = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.panelCusto = new System.Windows.Forms.Panel();
-            this.purple = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.costValue = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.panelMaintence = new System.Windows.Forms.Panel();
-            this.red = new System.Windows.Forms.Panel();
-            this.pictureMaintence = new System.Windows.Forms.PictureBox();
-            this.maintenceNumber = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.panelAbastecimentos = new System.Windows.Forms.Panel();
-            this.green = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.supplyNumber = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.panelDespesas = new System.Windows.Forms.Panel();
-            this.blue = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.despesasValue = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.despesasValue = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.blue = new System.Windows.Forms.Panel();
+            this.panelAbastecimentos = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.supplyNumber = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.green = new System.Windows.Forms.Panel();
+            this.panelMaintence = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
+            this.maintenceNumber = new System.Windows.Forms.Label();
+            this.pictureMaintence = new System.Windows.Forms.PictureBox();
+            this.red = new System.Windows.Forms.Panel();
+            this.panelCusto = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.costValue = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.purple = new System.Windows.Forms.Panel();
+            this.panelTrip = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.pictureTrip = new System.Windows.Forms.PictureBox();
+            this.tripNumber = new System.Windows.Forms.Label();
+            this.yellow = new System.Windows.Forms.Panel();
             this.line2Layout = new System.Windows.Forms.TableLayoutPanel();
-            this.maintencesLayout = new System.Windows.Forms.TableLayoutPanel();
-            this.miantence2 = new System.Windows.Forms.Panel();
-            this.miantence2Title = new System.Windows.Forms.Panel();
-            this.miantence1 = new System.Windows.Forms.Panel();
-            this.maintence1Title = new System.Windows.Forms.Panel();
             this.panelTripPercent = new System.Windows.Forms.Panel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelTripPercentTitle = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
-            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.maintencesLayout = new System.Windows.Forms.TableLayoutPanel();
+            this.miantence1 = new System.Windows.Forms.Panel();
+            this.maintence1Title = new System.Windows.Forms.Panel();
+            this.miantence2 = new System.Windows.Forms.Panel();
+            this.miantence2Title = new System.Windows.Forms.Panel();
             this.line1Layout = new System.Windows.Forms.TableLayoutPanel();
-            this.panelCustos = new System.Windows.Forms.Panel();
-            this.panelCustosTitle = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelGraph = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panelGraphTitle = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panelCustos = new System.Windows.Forms.Panel();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.panelCustosTitle = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
             this.dashLayout = new System.Windows.Forms.TableLayoutPanel();
             this.panel1.SuspendLayout();
             this.blockLayout.SuspendLayout();
-            this.panelTrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureTrip)).BeginInit();
-            this.panelCusto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panelMaintence.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMaintence)).BeginInit();
-            this.panelAbastecimentos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panelDespesas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.panelAbastecimentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panelMaintence.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMaintence)).BeginInit();
+            this.panelCusto.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panelTrip.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTrip)).BeginInit();
             this.line2Layout.SuspendLayout();
-            this.maintencesLayout.SuspendLayout();
-            this.miantence2.SuspendLayout();
-            this.miantence1.SuspendLayout();
             this.panelTripPercent.SuspendLayout();
-            this.panelTripPercentTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.panelTripPercentTitle.SuspendLayout();
+            this.maintencesLayout.SuspendLayout();
+            this.miantence1.SuspendLayout();
+            this.miantence2.SuspendLayout();
             this.line1Layout.SuspendLayout();
-            this.panelCustos.SuspendLayout();
-            this.panelCustosTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.panelGraph.SuspendLayout();
-            this.panelGraphTitle.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.panelGraphTitle.SuspendLayout();
+            this.panelCustos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.panelCustosTitle.SuspendLayout();
             this.dashLayout.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -147,165 +147,58 @@
             this.blockLayout.Size = new System.Drawing.Size(1096, 113);
             this.blockLayout.TabIndex = 0;
             // 
-            // panelTrip
+            // panelDespesas
             // 
-            this.panelTrip.BackColor = System.Drawing.Color.DarkGray;
-            this.panelTrip.Controls.Add(this.label8);
-            this.panelTrip.Controls.Add(this.pictureTrip);
-            this.panelTrip.Controls.Add(this.tripNumber);
-            this.panelTrip.Controls.Add(this.yellow);
-            this.panelTrip.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTrip.Location = new System.Drawing.Point(10, 5);
-            this.panelTrip.Margin = new System.Windows.Forms.Padding(10, 5, 5, 5);
-            this.panelTrip.Name = "panelTrip";
-            this.panelTrip.Size = new System.Drawing.Size(204, 103);
-            this.panelTrip.TabIndex = 5;
+            this.panelDespesas.BackColor = System.Drawing.Color.DarkGray;
+            this.panelDespesas.Controls.Add(this.label5);
+            this.panelDespesas.Controls.Add(this.despesasValue);
+            this.panelDespesas.Controls.Add(this.pictureBox2);
+            this.panelDespesas.Controls.Add(this.blue);
+            this.panelDespesas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDespesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelDespesas.Location = new System.Drawing.Point(662, 5);
+            this.panelDespesas.Margin = new System.Windows.Forms.Padding(5);
+            this.panelDespesas.Name = "panelDespesas";
+            this.panelDespesas.Size = new System.Drawing.Size(209, 103);
+            this.panelDespesas.TabIndex = 1;
             // 
-            // yellow
+            // label5
             // 
-            this.yellow.BackColor = System.Drawing.Color.Orange;
-            this.yellow.Dock = System.Windows.Forms.DockStyle.Left;
-            this.yellow.Location = new System.Drawing.Point(0, 0);
-            this.yellow.Margin = new System.Windows.Forms.Padding(0);
-            this.yellow.Name = "yellow";
-            this.yellow.Size = new System.Drawing.Size(10, 103);
-            this.yellow.TabIndex = 0;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(93, 15);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(74, 25);
+            this.label5.TabIndex = 3;
+            this.label5.Text = "Custos";
             // 
-            // tripNumber
+            // despesasValue
             // 
-            this.tripNumber.AutoSize = true;
-            this.tripNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tripNumber.Location = new System.Drawing.Point(161, 42);
-            this.tripNumber.Name = "tripNumber";
-            this.tripNumber.Size = new System.Drawing.Size(24, 26);
-            this.tripNumber.TabIndex = 1;
-            this.tripNumber.Text = "5";
+            this.despesasValue.AutoSize = true;
+            this.despesasValue.Location = new System.Drawing.Point(80, 43);
+            this.despesasValue.Name = "despesasValue";
+            this.despesasValue.Size = new System.Drawing.Size(101, 25);
+            this.despesasValue.TabIndex = 2;
+            this.despesasValue.Text = "R$ 900,00";
             // 
-            // pictureTrip
+            // pictureBox2
             // 
-            this.pictureTrip.Image = ((System.Drawing.Image)(resources.GetObject("pictureTrip.Image")));
-            this.pictureTrip.Location = new System.Drawing.Point(27, 15);
-            this.pictureTrip.Name = "pictureTrip";
-            this.pictureTrip.Size = new System.Drawing.Size(66, 67);
-            this.pictureTrip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureTrip.TabIndex = 2;
-            this.pictureTrip.TabStop = false;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(57, 53);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
             // 
-            // label8
+            // blue
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(127, 17);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 25);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Viagens";
-            // 
-            // panelCusto
-            // 
-            this.panelCusto.BackColor = System.Drawing.Color.DarkGray;
-            this.panelCusto.Controls.Add(this.label7);
-            this.panelCusto.Controls.Add(this.costValue);
-            this.panelCusto.Controls.Add(this.pictureBox1);
-            this.panelCusto.Controls.Add(this.purple);
-            this.panelCusto.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCusto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCusto.Location = new System.Drawing.Point(224, 5);
-            this.panelCusto.Margin = new System.Windows.Forms.Padding(5);
-            this.panelCusto.Name = "panelCusto";
-            this.panelCusto.Size = new System.Drawing.Size(209, 103);
-            this.panelCusto.TabIndex = 4;
-            // 
-            // purple
-            // 
-            this.purple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.purple.Dock = System.Windows.Forms.DockStyle.Left;
-            this.purple.Location = new System.Drawing.Point(0, 0);
-            this.purple.Margin = new System.Windows.Forms.Padding(0);
-            this.purple.Name = "purple";
-            this.purple.Size = new System.Drawing.Size(10, 103);
-            this.purple.TabIndex = 0;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(18, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // costValue
-            // 
-            this.costValue.AutoSize = true;
-            this.costValue.Location = new System.Drawing.Point(112, 43);
-            this.costValue.Name = "costValue";
-            this.costValue.Size = new System.Drawing.Size(117, 25);
-            this.costValue.TabIndex = 2;
-            this.costValue.Text = "R$ 1.000,00";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(115, 15);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 25);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Combustível";
-            // 
-            // panelMaintence
-            // 
-            this.panelMaintence.BackColor = System.Drawing.Color.DarkGray;
-            this.panelMaintence.Controls.Add(this.label6);
-            this.panelMaintence.Controls.Add(this.maintenceNumber);
-            this.panelMaintence.Controls.Add(this.pictureMaintence);
-            this.panelMaintence.Controls.Add(this.red);
-            this.panelMaintence.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelMaintence.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelMaintence.Location = new System.Drawing.Point(443, 5);
-            this.panelMaintence.Margin = new System.Windows.Forms.Padding(5);
-            this.panelMaintence.Name = "panelMaintence";
-            this.panelMaintence.Size = new System.Drawing.Size(209, 103);
-            this.panelMaintence.TabIndex = 3;
-            // 
-            // red
-            // 
-            this.red.BackColor = System.Drawing.Color.Firebrick;
-            this.red.Dock = System.Windows.Forms.DockStyle.Left;
-            this.red.Location = new System.Drawing.Point(0, 0);
-            this.red.Margin = new System.Windows.Forms.Padding(0);
-            this.red.Name = "red";
-            this.red.Size = new System.Drawing.Size(10, 103);
-            this.red.TabIndex = 0;
-            // 
-            // pictureMaintence
-            // 
-            this.pictureMaintence.Image = ((System.Drawing.Image)(resources.GetObject("pictureMaintence.Image")));
-            this.pictureMaintence.Location = new System.Drawing.Point(22, 15);
-            this.pictureMaintence.Name = "pictureMaintence";
-            this.pictureMaintence.Size = new System.Drawing.Size(63, 67);
-            this.pictureMaintence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureMaintence.TabIndex = 1;
-            this.pictureMaintence.TabStop = false;
-            // 
-            // maintenceNumber
-            // 
-            this.maintenceNumber.AutoSize = true;
-            this.maintenceNumber.Location = new System.Drawing.Point(166, 43);
-            this.maintenceNumber.Name = "maintenceNumber";
-            this.maintenceNumber.Size = new System.Drawing.Size(23, 25);
-            this.maintenceNumber.TabIndex = 2;
-            this.maintenceNumber.Text = "5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(103, 15);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(131, 25);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Manutenções";
+            this.blue.BackColor = System.Drawing.Color.MidnightBlue;
+            this.blue.Dock = System.Windows.Forms.DockStyle.Left;
+            this.blue.Location = new System.Drawing.Point(0, 0);
+            this.blue.Margin = new System.Windows.Forms.Padding(0);
+            this.blue.Name = "blue";
+            this.blue.Size = new System.Drawing.Size(10, 103);
+            this.blue.TabIndex = 0;
             // 
             // panelAbastecimentos
             // 
@@ -322,6 +215,34 @@
             this.panelAbastecimentos.Size = new System.Drawing.Size(205, 103);
             this.panelAbastecimentos.TabIndex = 2;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(71, 15);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(152, 25);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Abastecimentos";
+            // 
+            // supplyNumber
+            // 
+            this.supplyNumber.AutoSize = true;
+            this.supplyNumber.Location = new System.Drawing.Point(136, 43);
+            this.supplyNumber.Name = "supplyNumber";
+            this.supplyNumber.Size = new System.Drawing.Size(23, 25);
+            this.supplyNumber.TabIndex = 2;
+            this.supplyNumber.Text = "4";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(52, 44);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 1;
+            this.pictureBox3.TabStop = false;
+            // 
             // green
             // 
             this.green.BackColor = System.Drawing.Color.DarkGreen;
@@ -332,86 +253,165 @@
             this.green.Size = new System.Drawing.Size(10, 103);
             this.green.TabIndex = 0;
             // 
-            // pictureBox3
+            // panelMaintence
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(17, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 67);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.panelMaintence.BackColor = System.Drawing.Color.DarkGray;
+            this.panelMaintence.Controls.Add(this.label6);
+            this.panelMaintence.Controls.Add(this.maintenceNumber);
+            this.panelMaintence.Controls.Add(this.pictureMaintence);
+            this.panelMaintence.Controls.Add(this.red);
+            this.panelMaintence.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMaintence.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelMaintence.Location = new System.Drawing.Point(443, 5);
+            this.panelMaintence.Margin = new System.Windows.Forms.Padding(5);
+            this.panelMaintence.Name = "panelMaintence";
+            this.panelMaintence.Size = new System.Drawing.Size(209, 103);
+            this.panelMaintence.TabIndex = 3;
             // 
-            // supplyNumber
+            // label6
             // 
-            this.supplyNumber.AutoSize = true;
-            this.supplyNumber.Location = new System.Drawing.Point(162, 43);
-            this.supplyNumber.Name = "supplyNumber";
-            this.supplyNumber.Size = new System.Drawing.Size(23, 25);
-            this.supplyNumber.TabIndex = 2;
-            this.supplyNumber.Text = "4";
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(73, 15);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(131, 25);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Manutenções";
             // 
-            // label4
+            // maintenceNumber
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(90, 15);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(152, 25);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Abastecimentos";
+            this.maintenceNumber.AutoSize = true;
+            this.maintenceNumber.Location = new System.Drawing.Point(127, 43);
+            this.maintenceNumber.Name = "maintenceNumber";
+            this.maintenceNumber.Size = new System.Drawing.Size(23, 25);
+            this.maintenceNumber.TabIndex = 2;
+            this.maintenceNumber.Text = "5";
             // 
-            // panelDespesas
+            // pictureMaintence
             // 
-            this.panelDespesas.BackColor = System.Drawing.Color.DarkGray;
-            this.panelDespesas.Controls.Add(this.label5);
-            this.panelDespesas.Controls.Add(this.despesasValue);
-            this.panelDespesas.Controls.Add(this.pictureBox2);
-            this.panelDespesas.Controls.Add(this.blue);
-            this.panelDespesas.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDespesas.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelDespesas.Location = new System.Drawing.Point(662, 5);
-            this.panelDespesas.Margin = new System.Windows.Forms.Padding(5);
-            this.panelDespesas.Name = "panelDespesas";
-            this.panelDespesas.Size = new System.Drawing.Size(209, 103);
-            this.panelDespesas.TabIndex = 1;
+            this.pictureMaintence.Image = ((System.Drawing.Image)(resources.GetObject("pictureMaintence.Image")));
+            this.pictureMaintence.Location = new System.Drawing.Point(13, 3);
+            this.pictureMaintence.Name = "pictureMaintence";
+            this.pictureMaintence.Size = new System.Drawing.Size(50, 53);
+            this.pictureMaintence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureMaintence.TabIndex = 1;
+            this.pictureMaintence.TabStop = false;
             // 
-            // blue
+            // red
             // 
-            this.blue.BackColor = System.Drawing.Color.MidnightBlue;
-            this.blue.Dock = System.Windows.Forms.DockStyle.Left;
-            this.blue.Location = new System.Drawing.Point(0, 0);
-            this.blue.Margin = new System.Windows.Forms.Padding(0);
-            this.blue.Name = "blue";
-            this.blue.Size = new System.Drawing.Size(10, 103);
-            this.blue.TabIndex = 0;
+            this.red.BackColor = System.Drawing.Color.Firebrick;
+            this.red.Dock = System.Windows.Forms.DockStyle.Left;
+            this.red.Location = new System.Drawing.Point(0, 0);
+            this.red.Margin = new System.Windows.Forms.Padding(0);
+            this.red.Name = "red";
+            this.red.Size = new System.Drawing.Size(10, 103);
+            this.red.TabIndex = 0;
             // 
-            // pictureBox2
+            // panelCusto
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(21, 15);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(63, 67);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
+            this.panelCusto.BackColor = System.Drawing.Color.DarkGray;
+            this.panelCusto.Controls.Add(this.label7);
+            this.panelCusto.Controls.Add(this.costValue);
+            this.panelCusto.Controls.Add(this.pictureBox1);
+            this.panelCusto.Controls.Add(this.purple);
+            this.panelCusto.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCusto.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelCusto.Location = new System.Drawing.Point(224, 5);
+            this.panelCusto.Margin = new System.Windows.Forms.Padding(5);
+            this.panelCusto.Name = "panelCusto";
+            this.panelCusto.Size = new System.Drawing.Size(209, 103);
+            this.panelCusto.TabIndex = 4;
             // 
-            // despesasValue
+            // label7
             // 
-            this.despesasValue.AutoSize = true;
-            this.despesasValue.Location = new System.Drawing.Point(108, 43);
-            this.despesasValue.Name = "despesasValue";
-            this.despesasValue.Size = new System.Drawing.Size(101, 25);
-            this.despesasValue.TabIndex = 2;
-            this.despesasValue.Text = "R$ 900,00";
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(71, 17);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 25);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Combustível";
             // 
-            // label5
+            // costValue
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(117, 15);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(74, 25);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Custos";
+            this.costValue.AutoSize = true;
+            this.costValue.Location = new System.Drawing.Point(73, 57);
+            this.costValue.Name = "costValue";
+            this.costValue.Size = new System.Drawing.Size(117, 25);
+            this.costValue.TabIndex = 2;
+            this.costValue.Text = "R$ 1.000,00";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(13, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // purple
+            // 
+            this.purple.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.purple.Dock = System.Windows.Forms.DockStyle.Left;
+            this.purple.Location = new System.Drawing.Point(0, 0);
+            this.purple.Margin = new System.Windows.Forms.Padding(0);
+            this.purple.Name = "purple";
+            this.purple.Size = new System.Drawing.Size(10, 103);
+            this.purple.TabIndex = 0;
+            // 
+            // panelTrip
+            // 
+            this.panelTrip.BackColor = System.Drawing.Color.DarkGray;
+            this.panelTrip.Controls.Add(this.label8);
+            this.panelTrip.Controls.Add(this.pictureTrip);
+            this.panelTrip.Controls.Add(this.tripNumber);
+            this.panelTrip.Controls.Add(this.yellow);
+            this.panelTrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelTrip.Location = new System.Drawing.Point(10, 5);
+            this.panelTrip.Margin = new System.Windows.Forms.Padding(10, 5, 5, 5);
+            this.panelTrip.Name = "panelTrip";
+            this.panelTrip.Size = new System.Drawing.Size(204, 103);
+            this.panelTrip.TabIndex = 5;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(81, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(84, 25);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Viagens";
+            // 
+            // pictureTrip
+            // 
+            this.pictureTrip.Image = ((System.Drawing.Image)(resources.GetObject("pictureTrip.Image")));
+            this.pictureTrip.Location = new System.Drawing.Point(15, 8);
+            this.pictureTrip.Name = "pictureTrip";
+            this.pictureTrip.Size = new System.Drawing.Size(50, 48);
+            this.pictureTrip.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureTrip.TabIndex = 2;
+            this.pictureTrip.TabStop = false;
+            // 
+            // tripNumber
+            // 
+            this.tripNumber.AutoSize = true;
+            this.tripNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tripNumber.Location = new System.Drawing.Point(111, 47);
+            this.tripNumber.Name = "tripNumber";
+            this.tripNumber.Size = new System.Drawing.Size(24, 26);
+            this.tripNumber.TabIndex = 1;
+            this.tripNumber.Text = "5";
+            // 
+            // yellow
+            // 
+            this.yellow.BackColor = System.Drawing.Color.Orange;
+            this.yellow.Dock = System.Windows.Forms.DockStyle.Left;
+            this.yellow.Location = new System.Drawing.Point(0, 0);
+            this.yellow.Margin = new System.Windows.Forms.Padding(0);
+            this.yellow.Name = "yellow";
+            this.yellow.Size = new System.Drawing.Size(10, 103);
+            this.yellow.TabIndex = 0;
             // 
             // line2Layout
             // 
@@ -429,63 +429,6 @@
             this.line2Layout.Size = new System.Drawing.Size(1096, 268);
             this.line2Layout.TabIndex = 2;
             // 
-            // maintencesLayout
-            // 
-            this.maintencesLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.maintencesLayout.ColumnCount = 2;
-            this.maintencesLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.maintencesLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.maintencesLayout.Controls.Add(this.miantence1, 0, 0);
-            this.maintencesLayout.Controls.Add(this.miantence2, 1, 0);
-            this.maintencesLayout.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.maintencesLayout.Location = new System.Drawing.Point(448, 10);
-            this.maintencesLayout.Margin = new System.Windows.Forms.Padding(10);
-            this.maintencesLayout.Name = "maintencesLayout";
-            this.maintencesLayout.RowCount = 1;
-            this.maintencesLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.maintencesLayout.Size = new System.Drawing.Size(638, 248);
-            this.maintencesLayout.TabIndex = 1;
-            // 
-            // miantence2
-            // 
-            this.miantence2.BackColor = System.Drawing.Color.Gray;
-            this.miantence2.Controls.Add(this.miantence2Title);
-            this.miantence2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miantence2.Location = new System.Drawing.Point(369, 10);
-            this.miantence2.Margin = new System.Windows.Forms.Padding(50, 10, 50, 10);
-            this.miantence2.Name = "miantence2";
-            this.miantence2.Size = new System.Drawing.Size(219, 228);
-            this.miantence2.TabIndex = 1;
-            // 
-            // miantence2Title
-            // 
-            this.miantence2Title.BackColor = System.Drawing.Color.DarkGray;
-            this.miantence2Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.miantence2Title.Location = new System.Drawing.Point(0, 0);
-            this.miantence2Title.Name = "miantence2Title";
-            this.miantence2Title.Size = new System.Drawing.Size(219, 60);
-            this.miantence2Title.TabIndex = 0;
-            // 
-            // miantence1
-            // 
-            this.miantence1.BackColor = System.Drawing.Color.Gray;
-            this.miantence1.Controls.Add(this.maintence1Title);
-            this.miantence1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.miantence1.Location = new System.Drawing.Point(50, 10);
-            this.miantence1.Margin = new System.Windows.Forms.Padding(50, 10, 50, 10);
-            this.miantence1.Name = "miantence1";
-            this.miantence1.Size = new System.Drawing.Size(219, 228);
-            this.miantence1.TabIndex = 0;
-            // 
-            // maintence1Title
-            // 
-            this.maintence1Title.BackColor = System.Drawing.Color.DarkGray;
-            this.maintence1Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.maintence1Title.Location = new System.Drawing.Point(0, 0);
-            this.maintence1Title.Name = "maintence1Title";
-            this.maintence1Title.Size = new System.Drawing.Size(219, 60);
-            this.maintence1Title.TabIndex = 0;
-            // 
             // panelTripPercent
             // 
             this.panelTripPercent.BackColor = System.Drawing.Color.Silver;
@@ -497,6 +440,24 @@
             this.panelTripPercent.Name = "panelTripPercent";
             this.panelTripPercent.Size = new System.Drawing.Size(418, 248);
             this.panelTripPercent.TabIndex = 0;
+            // 
+            // chart2
+            // 
+            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            chartArea4.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea4);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
+            this.chart2.Location = new System.Drawing.Point(0, 45);
+            this.chart2.Name = "chart2";
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            this.chart2.Series.Add(series4);
+            this.chart2.Size = new System.Drawing.Size(418, 203);
+            this.chart2.TabIndex = 1;
+            this.chart2.Text = "chart2";
             // 
             // panelTripPercentTitle
             // 
@@ -518,23 +479,62 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "Trip Percent";
             // 
-            // chart2
+            // maintencesLayout
             // 
-            this.chart2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            chartArea1.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea1);
-            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            this.chart2.Legends.Add(legend1);
-            this.chart2.Location = new System.Drawing.Point(0, 45);
-            this.chart2.Name = "chart2";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart2.Series.Add(series1);
-            this.chart2.Size = new System.Drawing.Size(418, 203);
-            this.chart2.TabIndex = 1;
-            this.chart2.Text = "chart2";
+            this.maintencesLayout.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.maintencesLayout.ColumnCount = 2;
+            this.maintencesLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.maintencesLayout.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.maintencesLayout.Controls.Add(this.miantence1, 0, 0);
+            this.maintencesLayout.Controls.Add(this.miantence2, 1, 0);
+            this.maintencesLayout.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.maintencesLayout.Location = new System.Drawing.Point(448, 10);
+            this.maintencesLayout.Margin = new System.Windows.Forms.Padding(10);
+            this.maintencesLayout.Name = "maintencesLayout";
+            this.maintencesLayout.RowCount = 1;
+            this.maintencesLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.maintencesLayout.Size = new System.Drawing.Size(638, 248);
+            this.maintencesLayout.TabIndex = 1;
+            // 
+            // miantence1
+            // 
+            this.miantence1.BackColor = System.Drawing.Color.Gray;
+            this.miantence1.Controls.Add(this.maintence1Title);
+            this.miantence1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.miantence1.Location = new System.Drawing.Point(50, 10);
+            this.miantence1.Margin = new System.Windows.Forms.Padding(50, 10, 50, 10);
+            this.miantence1.Name = "miantence1";
+            this.miantence1.Size = new System.Drawing.Size(219, 228);
+            this.miantence1.TabIndex = 0;
+            // 
+            // maintence1Title
+            // 
+            this.maintence1Title.BackColor = System.Drawing.Color.DarkGray;
+            this.maintence1Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.maintence1Title.Location = new System.Drawing.Point(0, 0);
+            this.maintence1Title.Name = "maintence1Title";
+            this.maintence1Title.Size = new System.Drawing.Size(219, 60);
+            this.maintence1Title.TabIndex = 0;
+            // 
+            // miantence2
+            // 
+            this.miantence2.BackColor = System.Drawing.Color.Gray;
+            this.miantence2.Controls.Add(this.miantence2Title);
+            this.miantence2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.miantence2.Location = new System.Drawing.Point(369, 10);
+            this.miantence2.Margin = new System.Windows.Forms.Padding(50, 10, 50, 10);
+            this.miantence2.Name = "miantence2";
+            this.miantence2.Size = new System.Drawing.Size(219, 228);
+            this.miantence2.TabIndex = 1;
+            // 
+            // miantence2Title
+            // 
+            this.miantence2Title.BackColor = System.Drawing.Color.DarkGray;
+            this.miantence2Title.Dock = System.Windows.Forms.DockStyle.Top;
+            this.miantence2Title.Location = new System.Drawing.Point(0, 0);
+            this.miantence2Title.Name = "miantence2Title";
+            this.miantence2Title.Size = new System.Drawing.Size(219, 60);
+            this.miantence2Title.TabIndex = 0;
             // 
             // line1Layout
             // 
@@ -552,57 +552,6 @@
             this.line1Layout.Size = new System.Drawing.Size(1096, 333);
             this.line1Layout.TabIndex = 1;
             // 
-            // panelCustos
-            // 
-            this.panelCustos.BackColor = System.Drawing.Color.Silver;
-            this.panelCustos.Controls.Add(this.chart3);
-            this.panelCustos.Controls.Add(this.panelCustosTitle);
-            this.panelCustos.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCustos.Location = new System.Drawing.Point(667, 10);
-            this.panelCustos.Margin = new System.Windows.Forms.Padding(10, 10, 10, 3);
-            this.panelCustos.Name = "panelCustos";
-            this.panelCustos.Size = new System.Drawing.Size(419, 320);
-            this.panelCustos.TabIndex = 1;
-            // 
-            // panelCustosTitle
-            // 
-            this.panelCustosTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.panelCustosTitle.Controls.Add(this.label3);
-            this.panelCustosTitle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelCustosTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCustosTitle.Location = new System.Drawing.Point(0, 0);
-            this.panelCustosTitle.Name = "panelCustosTitle";
-            this.panelCustosTitle.Size = new System.Drawing.Size(419, 39);
-            this.panelCustosTitle.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(4, 7);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(131, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Manutenções";
-            // 
-            // chart3
-            // 
-            this.chart3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            chartArea3.Name = "ChartArea1";
-            this.chart3.ChartAreas.Add(chartArea3);
-            this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart3.Legends.Add(legend3);
-            this.chart3.Location = new System.Drawing.Point(0, 39);
-            this.chart3.Name = "chart3";
-            series3.ChartArea = "ChartArea1";
-            series3.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            this.chart3.Series.Add(series3);
-            this.chart3.Size = new System.Drawing.Size(419, 281);
-            this.chart3.TabIndex = 1;
-            this.chart3.Text = "chart3";
-            // 
             // panelGraph
             // 
             this.panelGraph.BackColor = System.Drawing.Color.Silver;
@@ -615,6 +564,26 @@
             this.panelGraph.Size = new System.Drawing.Size(637, 320);
             this.panelGraph.TabIndex = 0;
             this.panelGraph.Paint += new System.Windows.Forms.PaintEventHandler(this.panelGraph_Paint);
+            // 
+            // chart1
+            // 
+            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            chartArea5.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea5);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
+            this.chart1.Location = new System.Drawing.Point(0, 39);
+            this.chart1.Name = "chart1";
+            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Legend = "Legend1";
+            series5.Name = "Series1";
+            this.chart1.Series.Add(series5);
+            this.chart1.Size = new System.Drawing.Size(637, 281);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
             // 
             // panelGraphTitle
             // 
@@ -636,25 +605,56 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Earning Overview";
             // 
-            // chart1
+            // panelCustos
             // 
-            this.chart1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
-            this.chart1.Location = new System.Drawing.Point(0, 39);
-            this.chart1.Name = "chart1";
-            this.chart1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Bright;
-            series2.ChartArea = "ChartArea1";
-            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
-            this.chart1.Size = new System.Drawing.Size(637, 281);
-            this.chart1.TabIndex = 1;
-            this.chart1.Text = "chart1";
+            this.panelCustos.BackColor = System.Drawing.Color.Silver;
+            this.panelCustos.Controls.Add(this.chart3);
+            this.panelCustos.Controls.Add(this.panelCustosTitle);
+            this.panelCustos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelCustos.Location = new System.Drawing.Point(667, 10);
+            this.panelCustos.Margin = new System.Windows.Forms.Padding(10, 10, 10, 3);
+            this.panelCustos.Name = "panelCustos";
+            this.panelCustos.Size = new System.Drawing.Size(419, 320);
+            this.panelCustos.TabIndex = 1;
+            // 
+            // chart3
+            // 
+            this.chart3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            chartArea6.Name = "ChartArea1";
+            this.chart3.ChartAreas.Add(chartArea6);
+            this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend6.Name = "Legend1";
+            this.chart3.Legends.Add(legend6);
+            this.chart3.Location = new System.Drawing.Point(0, 39);
+            this.chart3.Name = "chart3";
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart3.Series.Add(series6);
+            this.chart3.Size = new System.Drawing.Size(419, 281);
+            this.chart3.TabIndex = 1;
+            this.chart3.Text = "chart3";
+            // 
+            // panelCustosTitle
+            // 
+            this.panelCustosTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.panelCustosTitle.Controls.Add(this.label3);
+            this.panelCustosTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelCustosTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panelCustosTitle.Location = new System.Drawing.Point(0, 0);
+            this.panelCustosTitle.Name = "panelCustosTitle";
+            this.panelCustosTitle.Size = new System.Drawing.Size(419, 39);
+            this.panelCustosTitle.TabIndex = 0;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(4, 7);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(131, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Manutenções";
             // 
             // dashLayout
             // 
@@ -688,38 +688,38 @@
             this.Load += new System.EventHandler(this.Dashboard_Load);
             this.panel1.ResumeLayout(false);
             this.blockLayout.ResumeLayout(false);
-            this.panelTrip.ResumeLayout(false);
-            this.panelTrip.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureTrip)).EndInit();
-            this.panelCusto.ResumeLayout(false);
-            this.panelCusto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panelMaintence.ResumeLayout(false);
-            this.panelMaintence.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureMaintence)).EndInit();
-            this.panelAbastecimentos.ResumeLayout(false);
-            this.panelAbastecimentos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panelDespesas.ResumeLayout(false);
             this.panelDespesas.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.panelAbastecimentos.ResumeLayout(false);
+            this.panelAbastecimentos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panelMaintence.ResumeLayout(false);
+            this.panelMaintence.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureMaintence)).EndInit();
+            this.panelCusto.ResumeLayout(false);
+            this.panelCusto.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panelTrip.ResumeLayout(false);
+            this.panelTrip.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureTrip)).EndInit();
             this.line2Layout.ResumeLayout(false);
-            this.maintencesLayout.ResumeLayout(false);
-            this.miantence2.ResumeLayout(false);
-            this.miantence1.ResumeLayout(false);
             this.panelTripPercent.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.panelTripPercentTitle.ResumeLayout(false);
             this.panelTripPercentTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.maintencesLayout.ResumeLayout(false);
+            this.miantence1.ResumeLayout(false);
+            this.miantence2.ResumeLayout(false);
             this.line1Layout.ResumeLayout(false);
-            this.panelCustos.ResumeLayout(false);
-            this.panelCustosTitle.ResumeLayout(false);
-            this.panelCustosTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.panelGraph.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.panelGraphTitle.ResumeLayout(false);
             this.panelGraphTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.panelCustos.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.panelCustosTitle.ResumeLayout(false);
+            this.panelCustosTitle.PerformLayout();
             this.dashLayout.ResumeLayout(false);
             this.ResumeLayout(false);
 

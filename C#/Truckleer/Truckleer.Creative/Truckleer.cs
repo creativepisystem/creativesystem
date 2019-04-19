@@ -23,6 +23,8 @@ namespace Truckleer.Creative
         public Truckleer()
         {
             InitializeComponent();
+            truckleerCallcontainer.Controls.Add(dash);
+            dash.BringToFront();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
@@ -35,53 +37,46 @@ namespace Truckleer.Creative
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnDash_Click(object sender, EventArgs e)
+        private bool supplyIsCollapsed;
+        private void supplyTimer_Tick(object sender, EventArgs e)
         {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(dash);
-            dash.BringToFront();
+            if (supplyIsCollapsed)
+            {
+                groupSupply.Height += 10;
+                if(groupSupply.Size.Height == groupSupply.MaximumSize.Height)
+                {
+                    supplyTimer.Stop();
+                    supplyIsCollapsed = false;
+                }
+            }
+            else
+            {
+                groupSupply.Height -= 10;
+                if(groupSupply.Size.Height == groupSupply.MinimumSize.Height)
+                {
+                    supplyTimer.Stop();
+                    supplyIsCollapsed = true;
+                }
+            }
         }
 
-        private void btnSupply_Click(object sender, EventArgs e)
+        private void btnAbastecimento_Click(object sender, EventArgs e)
         {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(supply);
+            supplyTimer.Start();
+        }
+
+        private void btnAbastecer_Click(object sender, EventArgs e)
+        {
+            truckleerCallcontainer.Controls.Clear();
+            truckleerCallcontainer.Controls.Add(supply);
             supply.BringToFront();
         }
 
-        private void btnDriver_Click(object sender, EventArgs e)
+        private void btnDash_Click(object sender, EventArgs e)
         {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(driver);
-            driver.BringToFront();
-        }
-
-        private void btnVehicle_Click(object sender, EventArgs e)
-        {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(vehicle);
-            vehicle.BringToFront();
-        }
-
-        private void btnRoute_Click(object sender, EventArgs e)
-        {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(route);
-            route.BringToFront();
-        }
-
-        private void btnMaintence_Click(object sender, EventArgs e)
-        {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(maintence);
-            maintence.BringToFront();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            truckleerContainer.Controls.Clear();
-            truckleerContainer.Controls.Add(trip);
-            trip.BringToFront();
+            truckleerCallcontainer.Controls.Clear();
+            truckleerCallcontainer.Controls.Add(dash);
+            dash.BringToFront();
         }
     }
 }

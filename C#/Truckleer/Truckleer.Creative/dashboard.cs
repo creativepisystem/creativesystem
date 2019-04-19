@@ -32,7 +32,7 @@ namespace Truckleer.Creative
 
         private async void Dashboard_Load(object sender, EventArgs e)
         {
-            this.Dock= DockStyle.Fill;
+            this.Size = this.Parent.Size;
 
             client = new FireSharp.FirebaseClient(config);
 
