@@ -32,6 +32,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.textBoxDetination = new System.Windows.Forms.TextBox();
             this.labelDestination = new System.Windows.Forms.Label();
             this.textBoxOrigin = new System.Windows.Forms.TextBox();
@@ -39,9 +42,6 @@
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.titleRoute = new System.Windows.Forms.Label();
             this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.tableLayoutRoute.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -76,9 +76,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.68421F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 52.63158F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 23.68421F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
             this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -103,11 +103,35 @@
             this.panel2.Controls.Add(this.panelFooterAbastecimentos);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(259, 50);
+            this.panel2.Location = new System.Drawing.Point(219, 50);
             this.panel2.Margin = new System.Windows.Forms.Padding(0, 50, 0, 200);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(576, 509);
+            this.panel2.Size = new System.Drawing.Size(657, 509);
             this.panel2.TabIndex = 0;
+            // 
+            // listView1
+            // 
+            this.listView1.Location = new System.Drawing.Point(411, 267);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(201, 30);
+            this.listView1.TabIndex = 26;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(66, 267);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(201, 30);
+            this.textBox1.TabIndex = 25;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(61, 239);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(85, 25);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "Paradas";
             // 
             // textBoxDetination
             // 
@@ -150,7 +174,7 @@
             this.panelTitleAbastecimentos.Location = new System.Drawing.Point(0, 0);
             this.panelTitleAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
             this.panelTitleAbastecimentos.Name = "panelTitleAbastecimentos";
-            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(576, 75);
+            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(657, 75);
             this.panelTitleAbastecimentos.TabIndex = 3;
             // 
             // titleRoute
@@ -171,32 +195,8 @@
             this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 482);
             this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
             this.panelFooterAbastecimentos.Name = "panelFooterAbastecimentos";
-            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(576, 27);
+            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(657, 27);
             this.panelFooterAbastecimentos.TabIndex = 2;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(66, 267);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(201, 30);
-            this.textBox1.TabIndex = 25;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(61, 239);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 25);
-            this.label1.TabIndex = 24;
-            this.label1.Text = "Paradas";
-            // 
-            // listView1
-            // 
-            this.listView1.Location = new System.Drawing.Point(411, 267);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(201, 30);
-            this.listView1.TabIndex = 26;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // Rotas
             // 

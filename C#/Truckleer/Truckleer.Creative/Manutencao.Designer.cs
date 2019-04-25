@@ -32,6 +32,7 @@
             this.containerMaintence = new System.Windows.Forms.Panel();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
             this.panelLeftMaintence = new System.Windows.Forms.Panel();
+            this.listBoxPreventiva = new System.Windows.Forms.ListBox();
             this.listBoxMaintenceDriver = new System.Windows.Forms.ListBox();
             this.labelDriverMaintence = new System.Windows.Forms.Label();
             this.radioButtonCorretiva = new System.Windows.Forms.RadioButton();
@@ -41,6 +42,7 @@
             this.labelNameMaintence = new System.Windows.Forms.Label();
             this.labelVeiculoSupply = new System.Windows.Forms.Label();
             this.panelCenter = new System.Windows.Forms.Panel();
+            this.listBoxPiecePrev = new System.Windows.Forms.ListBox();
             this.labelObsMaintence = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,8 +58,6 @@
             this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.titleMaintence = new System.Windows.Forms.Label();
-            this.listBoxPreventiva = new System.Windows.Forms.ListBox();
-            this.listBoxPiecePrev = new System.Windows.Forms.ListBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.containerMaintence.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -70,9 +70,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel1.Controls.Add(this.containerMaintence, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
@@ -90,10 +90,10 @@
             this.containerMaintence.Controls.Add(this.panelFooterAbastecimentos);
             this.containerMaintence.Controls.Add(this.panelTitleAbastecimentos);
             this.containerMaintence.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerMaintence.Location = new System.Drawing.Point(219, 30);
+            this.containerMaintence.Location = new System.Drawing.Point(109, 30);
             this.containerMaintence.Margin = new System.Windows.Forms.Padding(0, 30, 0, 30);
             this.containerMaintence.Name = "containerMaintence";
-            this.containerMaintence.Size = new System.Drawing.Size(657, 699);
+            this.containerMaintence.Size = new System.Drawing.Size(876, 699);
             this.containerMaintence.TabIndex = 0;
             // 
             // tableLayoutPanel2
@@ -109,7 +109,7 @@
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(657, 597);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(876, 597);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // panelLeftMaintence
@@ -128,14 +128,24 @@
             this.panelLeftMaintence.Location = new System.Drawing.Point(0, 0);
             this.panelLeftMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.panelLeftMaintence.Name = "panelLeftMaintence";
-            this.panelLeftMaintence.Size = new System.Drawing.Size(328, 597);
+            this.panelLeftMaintence.Size = new System.Drawing.Size(438, 597);
             this.panelLeftMaintence.TabIndex = 0;
+            // 
+            // listBoxPreventiva
+            // 
+            this.listBoxPreventiva.FormattingEnabled = true;
+            this.listBoxPreventiva.ItemHeight = 25;
+            this.listBoxPreventiva.Location = new System.Drawing.Point(60, 167);
+            this.listBoxPreventiva.Name = "listBoxPreventiva";
+            this.listBoxPreventiva.Size = new System.Drawing.Size(201, 29);
+            this.listBoxPreventiva.TabIndex = 28;
+            this.listBoxPreventiva.Visible = false;
             // 
             // listBoxMaintenceDriver
             // 
             this.listBoxMaintenceDriver.FormattingEnabled = true;
             this.listBoxMaintenceDriver.ItemHeight = 25;
-            this.listBoxMaintenceDriver.Location = new System.Drawing.Point(33, 308);
+            this.listBoxMaintenceDriver.Location = new System.Drawing.Point(60, 308);
             this.listBoxMaintenceDriver.Name = "listBoxMaintenceDriver";
             this.listBoxMaintenceDriver.Size = new System.Drawing.Size(195, 29);
             this.listBoxMaintenceDriver.TabIndex = 10;
@@ -143,7 +153,7 @@
             // labelDriverMaintence
             // 
             this.labelDriverMaintence.AutoSize = true;
-            this.labelDriverMaintence.Location = new System.Drawing.Point(28, 280);
+            this.labelDriverMaintence.Location = new System.Drawing.Point(55, 280);
             this.labelDriverMaintence.Name = "labelDriverMaintence";
             this.labelDriverMaintence.Size = new System.Drawing.Size(92, 25);
             this.labelDriverMaintence.TabIndex = 9;
@@ -152,7 +162,7 @@
             // radioButtonCorretiva
             // 
             this.radioButtonCorretiva.AutoSize = true;
-            this.radioButtonCorretiva.Location = new System.Drawing.Point(173, 39);
+            this.radioButtonCorretiva.Location = new System.Drawing.Point(200, 39);
             this.radioButtonCorretiva.Name = "radioButtonCorretiva";
             this.radioButtonCorretiva.Size = new System.Drawing.Size(109, 29);
             this.radioButtonCorretiva.TabIndex = 8;
@@ -163,7 +173,7 @@
             // radioButtonPreventiva
             // 
             this.radioButtonPreventiva.AutoSize = true;
-            this.radioButtonPreventiva.Location = new System.Drawing.Point(39, 39);
+            this.radioButtonPreventiva.Location = new System.Drawing.Point(66, 39);
             this.radioButtonPreventiva.Name = "radioButtonPreventiva";
             this.radioButtonPreventiva.Size = new System.Drawing.Size(122, 29);
             this.radioButtonPreventiva.TabIndex = 7;
@@ -173,7 +183,7 @@
             // 
             // textBoxKMSupply
             // 
-            this.textBoxKMSupply.Location = new System.Drawing.Point(33, 131);
+            this.textBoxKMSupply.Location = new System.Drawing.Point(60, 131);
             this.textBoxKMSupply.Name = "textBoxKMSupply";
             this.textBoxKMSupply.Size = new System.Drawing.Size(201, 30);
             this.textBoxKMSupply.TabIndex = 27;
@@ -182,7 +192,7 @@
             // 
             this.listBoxVehicle.FormattingEnabled = true;
             this.listBoxVehicle.ItemHeight = 25;
-            this.listBoxVehicle.Location = new System.Drawing.Point(33, 230);
+            this.listBoxVehicle.Location = new System.Drawing.Point(60, 230);
             this.listBoxVehicle.Name = "listBoxVehicle";
             this.listBoxVehicle.Size = new System.Drawing.Size(195, 29);
             this.listBoxVehicle.TabIndex = 6;
@@ -190,7 +200,7 @@
             // labelNameMaintence
             // 
             this.labelNameMaintence.AutoSize = true;
-            this.labelNameMaintence.Location = new System.Drawing.Point(28, 103);
+            this.labelNameMaintence.Location = new System.Drawing.Point(55, 103);
             this.labelNameMaintence.Name = "labelNameMaintence";
             this.labelNameMaintence.Size = new System.Drawing.Size(178, 25);
             this.labelNameMaintence.TabIndex = 26;
@@ -199,7 +209,7 @@
             // labelVeiculoSupply
             // 
             this.labelVeiculoSupply.AutoSize = true;
-            this.labelVeiculoSupply.Location = new System.Drawing.Point(28, 202);
+            this.labelVeiculoSupply.Location = new System.Drawing.Point(55, 202);
             this.labelVeiculoSupply.Name = "labelVeiculoSupply";
             this.labelVeiculoSupply.Size = new System.Drawing.Size(77, 25);
             this.labelVeiculoSupply.TabIndex = 5;
@@ -222,11 +232,21 @@
             this.panelCenter.Controls.Add(this.labelDataMaintence);
             this.panelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCenter.Location = new System.Drawing.Point(328, 0);
+            this.panelCenter.Location = new System.Drawing.Point(438, 0);
             this.panelCenter.Margin = new System.Windows.Forms.Padding(0);
             this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(329, 597);
+            this.panelCenter.Size = new System.Drawing.Size(438, 597);
             this.panelCenter.TabIndex = 1;
+            // 
+            // listBoxPiecePrev
+            // 
+            this.listBoxPiecePrev.FormattingEnabled = true;
+            this.listBoxPiecePrev.ItemHeight = 25;
+            this.listBoxPiecePrev.Location = new System.Drawing.Point(81, 103);
+            this.listBoxPiecePrev.Name = "listBoxPiecePrev";
+            this.listBoxPiecePrev.Size = new System.Drawing.Size(249, 29);
+            this.listBoxPiecePrev.TabIndex = 37;
+            this.listBoxPiecePrev.Visible = false;
             // 
             // labelObsMaintence
             // 
@@ -300,7 +320,7 @@
             // 
             this.textBox1.Location = new System.Drawing.Point(81, 88);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 30);
+            this.textBox1.Size = new System.Drawing.Size(249, 30);
             this.textBox1.TabIndex = 29;
             // 
             // label1
@@ -338,7 +358,7 @@
             this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 672);
             this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
             this.panelFooterAbastecimentos.Name = "panelFooterAbastecimentos";
-            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(657, 27);
+            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(876, 27);
             this.panelFooterAbastecimentos.TabIndex = 2;
             // 
             // panelTitleAbastecimentos
@@ -350,7 +370,7 @@
             this.panelTitleAbastecimentos.Location = new System.Drawing.Point(0, 0);
             this.panelTitleAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
             this.panelTitleAbastecimentos.Name = "panelTitleAbastecimentos";
-            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(657, 75);
+            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(876, 75);
             this.panelTitleAbastecimentos.TabIndex = 1;
             // 
             // titleMaintence
@@ -363,26 +383,6 @@
             this.titleMaintence.Size = new System.Drawing.Size(204, 39);
             this.titleMaintence.TabIndex = 0;
             this.titleMaintence.Text = "Manutenção";
-            // 
-            // listBoxPreventiva
-            // 
-            this.listBoxPreventiva.FormattingEnabled = true;
-            this.listBoxPreventiva.ItemHeight = 25;
-            this.listBoxPreventiva.Location = new System.Drawing.Point(33, 167);
-            this.listBoxPreventiva.Name = "listBoxPreventiva";
-            this.listBoxPreventiva.Size = new System.Drawing.Size(201, 29);
-            this.listBoxPreventiva.TabIndex = 28;
-            this.listBoxPreventiva.Visible = false;
-            // 
-            // listBoxPiecePrev
-            // 
-            this.listBoxPiecePrev.FormattingEnabled = true;
-            this.listBoxPiecePrev.ItemHeight = 25;
-            this.listBoxPiecePrev.Location = new System.Drawing.Point(81, 103);
-            this.listBoxPiecePrev.Name = "listBoxPiecePrev";
-            this.listBoxPiecePrev.Size = new System.Drawing.Size(233, 29);
-            this.listBoxPiecePrev.TabIndex = 37;
-            this.listBoxPiecePrev.Visible = false;
             // 
             // Manutencao
             // 

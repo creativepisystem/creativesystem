@@ -19,10 +19,15 @@ namespace Truckleer.Creative
 
         private void Abastecimento_Load(object sender, EventArgs e)
         {
-            this.Dock = DockStyle.Fill;
+            this.Size = this.Parent.Size;
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
