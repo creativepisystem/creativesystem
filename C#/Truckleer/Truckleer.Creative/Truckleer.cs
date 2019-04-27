@@ -38,10 +38,10 @@ namespace Truckleer.Creative
             this.WindowState = FormWindowState.Minimized;
         }
 
-    
+        bool supplyIsCollapsed = true;
         private void supplyTimer_Tick(object sender, EventArgs e)
         {
-            bool supplyIsCollapsed = true;
+            
 
             if (supplyIsCollapsed)
             {
@@ -63,10 +63,9 @@ namespace Truckleer.Creative
             }
         }
 
+        bool vehicleIsCollapsed = true;
         private void vehicleTimer_Tick(object sender, EventArgs e)
         {
-            bool vehicleIsCollapsed = true;
-
             if (vehicleIsCollapsed)
             {
                 groupVehicle.Height += 10;
@@ -87,10 +86,9 @@ namespace Truckleer.Creative
             }
         }
 
+        bool driverIsCollapsed = true;
         private void driverTimer_Tick(object sender, EventArgs e)
         {
-            bool driverIsCollapsed = true;
-
             if (driverIsCollapsed)
             {
                 groupDriver.Height += 10;
@@ -111,10 +109,9 @@ namespace Truckleer.Creative
             }
         }
 
+        bool routeIsCollapsed = true;
         private void routeTimer_Tick(object sender, EventArgs e)
         {
-            bool routeIsCollapsed = true;
-
             if (routeIsCollapsed)
             {
                 groupRoute.Height += 10;
@@ -135,10 +132,9 @@ namespace Truckleer.Creative
             }
         }
 
+        bool maintenceIsCollapsed = true;
         private void maintenceTimer_Tick(object sender, EventArgs e)
         {
-            bool maintenceIsCollapsed = true;
-
             if (maintenceIsCollapsed)
             {
                 groupMaintence.Height += 10;
@@ -159,10 +155,9 @@ namespace Truckleer.Creative
             }
         }
 
+        bool tripIsCollapsed = true;
         private void tripTimer_Tick(object sender, EventArgs e)
         {
-            bool tripIsCollapsed = true;
-
             if (tripIsCollapsed)
             {
                 groupTrip.Height += 10;

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veiculos));
             this.containerVehicle = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -56,6 +57,8 @@
             this.labelFabVehicle = new System.Windows.Forms.Label();
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.titleVehicles = new System.Windows.Forms.Label();
+            this.btnCancelVehicle = new System.Windows.Forms.Button();
+            this.btnSaveVehicle = new System.Windows.Forms.Button();
             this.containerVehicle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -140,7 +143,7 @@
             // 
             // panelFooterAbastecimentos
             // 
-            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.Indigo;
             this.panelFooterAbastecimentos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 788);
             this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
@@ -150,14 +153,16 @@
             // 
             // textBoxTankVehicle
             // 
+            this.textBoxTankVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxTankVehicle.Location = new System.Drawing.Point(52, 332);
             this.textBoxTankVehicle.Name = "textBoxTankVehicle";
-            this.textBoxTankVehicle.Size = new System.Drawing.Size(168, 30);
+            this.textBoxTankVehicle.Size = new System.Drawing.Size(168, 23);
             this.textBoxTankVehicle.TabIndex = 27;
             // 
             // labelTankVehicle
             // 
             this.labelTankVehicle.AutoSize = true;
+            this.labelTankVehicle.ForeColor = System.Drawing.Color.Azure;
             this.labelTankVehicle.Location = new System.Drawing.Point(47, 304);
             this.labelTankVehicle.Name = "labelTankVehicle";
             this.labelTankVehicle.Size = new System.Drawing.Size(191, 25);
@@ -166,14 +171,16 @@
             // 
             // textBoxModelVehicle
             // 
+            this.textBoxModelVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxModelVehicle.Location = new System.Drawing.Point(52, 242);
             this.textBoxModelVehicle.Name = "textBoxModelVehicle";
-            this.textBoxModelVehicle.Size = new System.Drawing.Size(168, 30);
+            this.textBoxModelVehicle.Size = new System.Drawing.Size(168, 23);
             this.textBoxModelVehicle.TabIndex = 25;
             // 
             // labelModelVehicle
             // 
             this.labelModelVehicle.AutoSize = true;
+            this.labelModelVehicle.ForeColor = System.Drawing.Color.Azure;
             this.labelModelVehicle.Location = new System.Drawing.Point(47, 214);
             this.labelModelVehicle.Name = "labelModelVehicle";
             this.labelModelVehicle.Size = new System.Drawing.Size(77, 25);
@@ -182,14 +189,16 @@
             // 
             // textBoxBrandVehicle
             // 
+            this.textBoxBrandVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxBrandVehicle.Location = new System.Drawing.Point(52, 154);
             this.textBoxBrandVehicle.Name = "textBoxBrandVehicle";
-            this.textBoxBrandVehicle.Size = new System.Drawing.Size(168, 30);
+            this.textBoxBrandVehicle.Size = new System.Drawing.Size(168, 23);
             this.textBoxBrandVehicle.TabIndex = 23;
             // 
             // labelBrandVehicle
             // 
             this.labelBrandVehicle.AutoSize = true;
+            this.labelBrandVehicle.ForeColor = System.Drawing.Color.Azure;
             this.labelBrandVehicle.Location = new System.Drawing.Point(47, 126);
             this.labelBrandVehicle.Name = "labelBrandVehicle";
             this.labelBrandVehicle.Size = new System.Drawing.Size(67, 25);
@@ -198,14 +207,16 @@
             // 
             // textBoxPlateVehicle
             // 
+            this.textBoxPlateVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxPlateVehicle.Location = new System.Drawing.Point(52, 70);
             this.textBoxPlateVehicle.Name = "textBoxPlateVehicle";
-            this.textBoxPlateVehicle.Size = new System.Drawing.Size(168, 30);
+            this.textBoxPlateVehicle.Size = new System.Drawing.Size(168, 23);
             this.textBoxPlateVehicle.TabIndex = 21;
             // 
             // labelPlateVehicle
             // 
             this.labelPlateVehicle.AutoSize = true;
+            this.labelPlateVehicle.ForeColor = System.Drawing.Color.Azure;
             this.labelPlateVehicle.Location = new System.Drawing.Point(47, 43);
             this.labelPlateVehicle.Name = "labelPlateVehicle";
             this.labelPlateVehicle.Size = new System.Drawing.Size(61, 25);
@@ -214,6 +225,8 @@
             // 
             // panelRightVehicle
             // 
+            this.panelRightVehicle.Controls.Add(this.btnCancelVehicle);
+            this.panelRightVehicle.Controls.Add(this.btnSaveVehicle);
             this.panelRightVehicle.Controls.Add(this.panel2);
             this.panelRightVehicle.Controls.Add(this.textBox2);
             this.panelRightVehicle.Controls.Add(this.label1);
@@ -235,7 +248,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel2.BackColor = System.Drawing.Color.Indigo;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel2.Location = new System.Drawing.Point(0, 788);
             this.panel2.Margin = new System.Windows.Forms.Padding(0);
@@ -245,14 +258,16 @@
             // 
             // textBox2
             // 
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Location = new System.Drawing.Point(6, 242);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(348, 30);
+            this.textBox2.Size = new System.Drawing.Size(348, 23);
             this.textBox2.TabIndex = 33;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.ForeColor = System.Drawing.Color.Azure;
             this.label1.Location = new System.Drawing.Point(1, 214);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(73, 25);
@@ -261,14 +276,16 @@
             // 
             // textBoxRenavam
             // 
+            this.textBoxRenavam.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRenavam.Location = new System.Drawing.Point(201, 154);
             this.textBoxRenavam.Name = "textBoxRenavam";
-            this.textBoxRenavam.Size = new System.Drawing.Size(153, 30);
+            this.textBoxRenavam.Size = new System.Drawing.Size(153, 23);
             this.textBoxRenavam.TabIndex = 31;
             // 
             // labelRenavam
             // 
             this.labelRenavam.AutoSize = true;
+            this.labelRenavam.ForeColor = System.Drawing.Color.Azure;
             this.labelRenavam.Location = new System.Drawing.Point(196, 126);
             this.labelRenavam.Name = "labelRenavam";
             this.labelRenavam.Size = new System.Drawing.Size(95, 25);
@@ -277,14 +294,16 @@
             // 
             // textBox1
             // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Location = new System.Drawing.Point(4, 154);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 30);
+            this.textBox1.Size = new System.Drawing.Size(125, 23);
             this.textBox1.TabIndex = 29;
             // 
             // labelColorVehicle
             // 
             this.labelColorVehicle.AutoSize = true;
+            this.labelColorVehicle.ForeColor = System.Drawing.Color.Azure;
             this.labelColorVehicle.Location = new System.Drawing.Point(-1, 126);
             this.labelColorVehicle.Name = "labelColorVehicle";
             this.labelColorVehicle.Size = new System.Drawing.Size(44, 25);
@@ -293,15 +312,17 @@
             // 
             // textBoxModVehicle
             // 
+            this.textBoxModVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxModVehicle.Location = new System.Drawing.Point(201, 71);
             this.textBoxModVehicle.Name = "textBoxModVehicle";
-            this.textBoxModVehicle.Size = new System.Drawing.Size(92, 30);
+            this.textBoxModVehicle.Size = new System.Drawing.Size(92, 23);
             this.textBoxModVehicle.TabIndex = 27;
             // 
             // labelModVehicle
             // 
             this.labelModVehicle.AutoSize = true;
-            this.labelModVehicle.Location = new System.Drawing.Point(201, 43);
+            this.labelModVehicle.ForeColor = System.Drawing.Color.Azure;
+            this.labelModVehicle.Location = new System.Drawing.Point(196, 43);
             this.labelModVehicle.Name = "labelModVehicle";
             this.labelModVehicle.Size = new System.Drawing.Size(118, 25);
             this.labelModVehicle.TabIndex = 26;
@@ -309,14 +330,16 @@
             // 
             // textBoxFabVehicle
             // 
+            this.textBoxFabVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxFabVehicle.Location = new System.Drawing.Point(4, 70);
             this.textBoxFabVehicle.Name = "textBoxFabVehicle";
-            this.textBoxFabVehicle.Size = new System.Drawing.Size(92, 30);
+            this.textBoxFabVehicle.Size = new System.Drawing.Size(92, 23);
             this.textBoxFabVehicle.TabIndex = 25;
             // 
             // labelFabVehicle
             // 
             this.labelFabVehicle.AutoSize = true;
+            this.labelFabVehicle.ForeColor = System.Drawing.Color.Azure;
             this.labelFabVehicle.Location = new System.Drawing.Point(-1, 43);
             this.labelFabVehicle.Name = "labelFabVehicle";
             this.labelFabVehicle.Size = new System.Drawing.Size(150, 25);
@@ -325,7 +348,9 @@
             // 
             // panelTitleAbastecimentos
             // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Transparent;
+            this.panelTitleAbastecimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTitleAbastecimentos.BackgroundImage")));
+            this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelTitleAbastecimentos.Controls.Add(this.titleVehicles);
             this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -338,13 +363,43 @@
             // titleVehicles
             // 
             this.titleVehicles.AutoSize = true;
-            this.titleVehicles.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleVehicles.ForeColor = System.Drawing.Color.Brown;
-            this.titleVehicles.Location = new System.Drawing.Point(214, 17);
+            this.titleVehicles.Font = new System.Drawing.Font("Arial Narrow", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleVehicles.ForeColor = System.Drawing.Color.Orange;
+            this.titleVehicles.Location = new System.Drawing.Point(169, 0);
             this.titleVehicles.Name = "titleVehicles";
-            this.titleVehicles.Size = new System.Drawing.Size(294, 39);
+            this.titleVehicles.Size = new System.Drawing.Size(392, 64);
             this.titleVehicles.TabIndex = 0;
             this.titleVehicles.Text = "Cadastro Veículos";
+            // 
+            // btnCancelVehicle
+            // 
+            this.btnCancelVehicle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancelVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancelVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelVehicle.FlatAppearance.BorderSize = 0;
+            this.btnCancelVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelVehicle.Location = new System.Drawing.Point(267, 385);
+            this.btnCancelVehicle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelVehicle.Name = "btnCancelVehicle";
+            this.btnCancelVehicle.Size = new System.Drawing.Size(89, 35);
+            this.btnCancelVehicle.TabIndex = 36;
+            this.btnCancelVehicle.Text = "Cancelar";
+            this.btnCancelVehicle.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveVehicle
+            // 
+            this.btnSaveVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnSaveVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSaveVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveVehicle.FlatAppearance.BorderSize = 0;
+            this.btnSaveVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveVehicle.Location = new System.Drawing.Point(165, 385);
+            this.btnSaveVehicle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSaveVehicle.Name = "btnSaveVehicle";
+            this.btnSaveVehicle.Size = new System.Drawing.Size(79, 35);
+            this.btnSaveVehicle.TabIndex = 35;
+            this.btnSaveVehicle.Text = "Salvar";
+            this.btnSaveVehicle.UseVisualStyleBackColor = false;
             // 
             // Veiculos
             // 
@@ -400,5 +455,7 @@
         private System.Windows.Forms.Label labelFabVehicle;
         private System.Windows.Forms.Panel panelTitleAbastecimentos;
         private System.Windows.Forms.Label titleVehicles;
+        private System.Windows.Forms.Button btnCancelVehicle;
+        private System.Windows.Forms.Button btnSaveVehicle;
     }
 }

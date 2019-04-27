@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Motorista));
             this.panelDriverContainer = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panelContainerDriver = new System.Windows.Forms.Panel();
@@ -54,6 +55,8 @@
             this.textBoxCnhDriver = new System.Windows.Forms.TextBox();
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.titleDriver = new System.Windows.Forms.Label();
+            this.btnCancelVehicle = new System.Windows.Forms.Button();
+            this.btnSaveVehicle = new System.Windows.Forms.Button();
             this.panelDriverContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelContainerDriver.SuspendLayout();
@@ -124,8 +127,10 @@
             this.panelLeftDriver.Controls.Add(this.panel1);
             this.panelLeftDriver.Controls.Add(this.textBoxPhoneDriver);
             this.panelLeftDriver.Controls.Add(this.labelPhoneDriver);
+            this.panelLeftDriver.Controls.Add(this.textBoxMailDriver);
             this.panelLeftDriver.Controls.Add(this.textBoxCpfDriver);
             this.panelLeftDriver.Controls.Add(this.labelCpfDriver);
+            this.panelLeftDriver.Controls.Add(this.labelMailDriver);
             this.panelLeftDriver.Controls.Add(this.textBoxNameDriver);
             this.panelLeftDriver.Controls.Add(this.labelNameDriver);
             this.panelLeftDriver.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -149,6 +154,7 @@
             // labelBirthDriver
             // 
             this.labelBirthDriver.AutoSize = true;
+            this.labelBirthDriver.ForeColor = System.Drawing.Color.Azure;
             this.labelBirthDriver.Location = new System.Drawing.Point(23, 66);
             this.labelBirthDriver.Name = "labelBirthDriver";
             this.labelBirthDriver.Size = new System.Drawing.Size(161, 25);
@@ -157,7 +163,7 @@
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel1.BackColor = System.Drawing.Color.Indigo;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel1.Location = new System.Drawing.Point(0, 577);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
@@ -175,6 +181,7 @@
             // labelPhoneDriver
             // 
             this.labelPhoneDriver.AutoSize = true;
+            this.labelPhoneDriver.ForeColor = System.Drawing.Color.Azure;
             this.labelPhoneDriver.Location = new System.Drawing.Point(21, 261);
             this.labelPhoneDriver.Margin = new System.Windows.Forms.Padding(0);
             this.labelPhoneDriver.Name = "labelPhoneDriver";
@@ -192,6 +199,7 @@
             // labelCpfDriver
             // 
             this.labelCpfDriver.AutoSize = true;
+            this.labelCpfDriver.ForeColor = System.Drawing.Color.Azure;
             this.labelCpfDriver.Location = new System.Drawing.Point(21, 195);
             this.labelCpfDriver.Margin = new System.Windows.Forms.Padding(0);
             this.labelCpfDriver.Name = "labelCpfDriver";
@@ -209,6 +217,7 @@
             // labelNameDriver
             // 
             this.labelNameDriver.AutoSize = true;
+            this.labelNameDriver.ForeColor = System.Drawing.Color.Azure;
             this.labelNameDriver.Location = new System.Drawing.Point(21, 130);
             this.labelNameDriver.Name = "labelNameDriver";
             this.labelNameDriver.Size = new System.Drawing.Size(64, 25);
@@ -217,14 +226,14 @@
             // 
             // panelRightDriver
             // 
+            this.panelRightDriver.Controls.Add(this.btnCancelVehicle);
+            this.panelRightDriver.Controls.Add(this.btnSaveVehicle);
             this.panelRightDriver.Controls.Add(this.textBox1);
             this.panelRightDriver.Controls.Add(this.dateTimeOverDue);
             this.panelRightDriver.Controls.Add(this.labelObs);
             this.panelRightDriver.Controls.Add(this.labelOverDue);
             this.panelRightDriver.Controls.Add(this.panelFooterAbastecimentos);
-            this.panelRightDriver.Controls.Add(this.textBoxMailDriver);
             this.panelRightDriver.Controls.Add(this.labelCnhDriver);
-            this.panelRightDriver.Controls.Add(this.labelMailDriver);
             this.panelRightDriver.Controls.Add(this.textBoxCnhDriver);
             this.panelRightDriver.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelRightDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -236,7 +245,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(33, 289);
+            this.textBox1.Location = new System.Drawing.Point(29, 224);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -256,7 +265,8 @@
             // labelObs
             // 
             this.labelObs.AutoSize = true;
-            this.labelObs.Location = new System.Drawing.Point(28, 261);
+            this.labelObs.ForeColor = System.Drawing.Color.Azure;
+            this.labelObs.Location = new System.Drawing.Point(24, 196);
             this.labelObs.Name = "labelObs";
             this.labelObs.Size = new System.Drawing.Size(119, 25);
             this.labelObs.TabIndex = 33;
@@ -265,6 +275,7 @@
             // labelOverDue
             // 
             this.labelOverDue.AutoSize = true;
+            this.labelOverDue.ForeColor = System.Drawing.Color.Azure;
             this.labelOverDue.Location = new System.Drawing.Point(24, 66);
             this.labelOverDue.Name = "labelOverDue";
             this.labelOverDue.Size = new System.Drawing.Size(164, 25);
@@ -273,7 +284,7 @@
             // 
             // panelFooterAbastecimentos
             // 
-            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.Indigo;
             this.panelFooterAbastecimentos.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 577);
             this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
@@ -283,7 +294,7 @@
             // 
             // textBoxMailDriver
             // 
-            this.textBoxMailDriver.Location = new System.Drawing.Point(128, 192);
+            this.textBoxMailDriver.Location = new System.Drawing.Point(123, 333);
             this.textBoxMailDriver.Name = "textBoxMailDriver";
             this.textBoxMailDriver.Size = new System.Drawing.Size(201, 30);
             this.textBoxMailDriver.TabIndex = 29;
@@ -291,6 +302,7 @@
             // labelCnhDriver
             // 
             this.labelCnhDriver.AutoSize = true;
+            this.labelCnhDriver.ForeColor = System.Drawing.Color.Azure;
             this.labelCnhDriver.Location = new System.Drawing.Point(28, 130);
             this.labelCnhDriver.Margin = new System.Windows.Forms.Padding(0);
             this.labelCnhDriver.Name = "labelCnhDriver";
@@ -301,7 +313,8 @@
             // labelMailDriver
             // 
             this.labelMailDriver.AutoSize = true;
-            this.labelMailDriver.Location = new System.Drawing.Point(28, 197);
+            this.labelMailDriver.ForeColor = System.Drawing.Color.Azure;
+            this.labelMailDriver.Location = new System.Drawing.Point(23, 338);
             this.labelMailDriver.Margin = new System.Windows.Forms.Padding(0);
             this.labelMailDriver.Name = "labelMailDriver";
             this.labelMailDriver.Size = new System.Drawing.Size(68, 25);
@@ -317,7 +330,9 @@
             // 
             // panelTitleAbastecimentos
             // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Transparent;
+            this.panelTitleAbastecimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTitleAbastecimentos.BackgroundImage")));
+            this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelTitleAbastecimentos.Controls.Add(this.titleDriver);
             this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -330,13 +345,43 @@
             // titleDriver
             // 
             this.titleDriver.AutoSize = true;
-            this.titleDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleDriver.ForeColor = System.Drawing.Color.Brown;
-            this.titleDriver.Location = new System.Drawing.Point(263, 16);
+            this.titleDriver.Font = new System.Drawing.Font("Arial Narrow", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.titleDriver.ForeColor = System.Drawing.Color.Orange;
+            this.titleDriver.Location = new System.Drawing.Point(235, 5);
             this.titleDriver.Name = "titleDriver";
-            this.titleDriver.Size = new System.Drawing.Size(312, 39);
+            this.titleDriver.Size = new System.Drawing.Size(404, 63);
             this.titleDriver.TabIndex = 0;
             this.titleDriver.Text = " Cadastro Motorista";
+            // 
+            // btnCancelVehicle
+            // 
+            this.btnCancelVehicle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancelVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancelVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelVehicle.FlatAppearance.BorderSize = 0;
+            this.btnCancelVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelVehicle.Location = new System.Drawing.Point(293, 411);
+            this.btnCancelVehicle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelVehicle.Name = "btnCancelVehicle";
+            this.btnCancelVehicle.Size = new System.Drawing.Size(89, 35);
+            this.btnCancelVehicle.TabIndex = 38;
+            this.btnCancelVehicle.Text = "Cancelar";
+            this.btnCancelVehicle.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveVehicle
+            // 
+            this.btnSaveVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnSaveVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSaveVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveVehicle.FlatAppearance.BorderSize = 0;
+            this.btnSaveVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveVehicle.Location = new System.Drawing.Point(191, 411);
+            this.btnSaveVehicle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSaveVehicle.Name = "btnSaveVehicle";
+            this.btnSaveVehicle.Size = new System.Drawing.Size(79, 35);
+            this.btnSaveVehicle.TabIndex = 37;
+            this.btnSaveVehicle.Text = "Salvar";
+            this.btnSaveVehicle.UseVisualStyleBackColor = false;
             // 
             // Motorista
             // 
@@ -390,5 +435,7 @@
         private System.Windows.Forms.Label labelObs;
         private System.Windows.Forms.DateTimePicker dateTimeOverDue;
         private System.Windows.Forms.Label labelOverDue;
+        private System.Windows.Forms.Button btnCancelVehicle;
+        private System.Windows.Forms.Button btnSaveVehicle;
     }
 }
