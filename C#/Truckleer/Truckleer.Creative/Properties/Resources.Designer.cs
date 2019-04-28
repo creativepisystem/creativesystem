@@ -63,6 +63,26 @@ namespace Truckleer.Creative.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap iconArrowDown {
+            get {
+                object obj = ResourceManager.GetObject("iconArrowDown", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap iconArrowUp {
+            get {
+                object obj = ResourceManager.GetObject("iconArrowUp", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap imgCost {
             get {
                 object obj = ResourceManager.GetObject("imgCost", resourceCulture);

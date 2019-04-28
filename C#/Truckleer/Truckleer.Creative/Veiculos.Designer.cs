@@ -44,6 +44,8 @@
             this.textBoxPlateVehicle = new System.Windows.Forms.TextBox();
             this.labelPlateVehicle = new System.Windows.Forms.Label();
             this.panelRightVehicle = new System.Windows.Forms.Panel();
+            this.btnCancelVehicle = new System.Windows.Forms.Button();
+            this.btnSaveVehicle = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,8 +59,7 @@
             this.labelFabVehicle = new System.Windows.Forms.Label();
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.titleVehicles = new System.Windows.Forms.Label();
-            this.btnCancelVehicle = new System.Windows.Forms.Button();
-            this.btnSaveVehicle = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.containerVehicle.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -66,6 +67,7 @@
             this.panelLeftVehicle.SuspendLayout();
             this.panelRightVehicle.SuspendLayout();
             this.panelTitleAbastecimentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // containerVehicle
@@ -246,6 +248,36 @@
             this.panelRightVehicle.Size = new System.Drawing.Size(440, 815);
             this.panelRightVehicle.TabIndex = 1;
             // 
+            // btnCancelVehicle
+            // 
+            this.btnCancelVehicle.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancelVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancelVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelVehicle.FlatAppearance.BorderSize = 0;
+            this.btnCancelVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelVehicle.Location = new System.Drawing.Point(267, 385);
+            this.btnCancelVehicle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelVehicle.Name = "btnCancelVehicle";
+            this.btnCancelVehicle.Size = new System.Drawing.Size(89, 35);
+            this.btnCancelVehicle.TabIndex = 36;
+            this.btnCancelVehicle.Text = "Cancelar";
+            this.btnCancelVehicle.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveVehicle
+            // 
+            this.btnSaveVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnSaveVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSaveVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveVehicle.FlatAppearance.BorderSize = 0;
+            this.btnSaveVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveVehicle.Location = new System.Drawing.Point(165, 385);
+            this.btnSaveVehicle.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSaveVehicle.Name = "btnSaveVehicle";
+            this.btnSaveVehicle.Size = new System.Drawing.Size(79, 35);
+            this.btnSaveVehicle.TabIndex = 35;
+            this.btnSaveVehicle.Text = "Salvar";
+            this.btnSaveVehicle.UseVisualStyleBackColor = false;
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Indigo;
@@ -351,6 +383,7 @@
             this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Transparent;
             this.panelTitleAbastecimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTitleAbastecimentos.BackgroundImage")));
             this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
             this.panelTitleAbastecimentos.Controls.Add(this.titleVehicles);
             this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -371,35 +404,15 @@
             this.titleVehicles.TabIndex = 0;
             this.titleVehicles.Text = "Cadastro Veículos";
             // 
-            // btnCancelVehicle
+            // pictureBox1
             // 
-            this.btnCancelVehicle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancelVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelVehicle.FlatAppearance.BorderSize = 0;
-            this.btnCancelVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelVehicle.Location = new System.Drawing.Point(267, 385);
-            this.btnCancelVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelVehicle.Name = "btnCancelVehicle";
-            this.btnCancelVehicle.Size = new System.Drawing.Size(89, 35);
-            this.btnCancelVehicle.TabIndex = 36;
-            this.btnCancelVehicle.Text = "Cancelar";
-            this.btnCancelVehicle.UseVisualStyleBackColor = false;
-            // 
-            // btnSaveVehicle
-            // 
-            this.btnSaveVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSaveVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSaveVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveVehicle.FlatAppearance.BorderSize = 0;
-            this.btnSaveVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveVehicle.Location = new System.Drawing.Point(165, 385);
-            this.btnSaveVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaveVehicle.Name = "btnSaveVehicle";
-            this.btnSaveVehicle.Size = new System.Drawing.Size(79, 35);
-            this.btnSaveVehicle.TabIndex = 35;
-            this.btnSaveVehicle.Text = "Salvar";
-            this.btnSaveVehicle.UseVisualStyleBackColor = false;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(53, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 61);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
             // 
             // Veiculos
             // 
@@ -421,6 +434,7 @@
             this.panelRightVehicle.PerformLayout();
             this.panelTitleAbastecimentos.ResumeLayout(false);
             this.panelTitleAbastecimentos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -457,5 +471,6 @@
         private System.Windows.Forms.Label titleVehicles;
         private System.Windows.Forms.Button btnCancelVehicle;
         private System.Windows.Forms.Button btnSaveVehicle;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

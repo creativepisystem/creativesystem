@@ -33,6 +33,8 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnCancelRoute = new System.Windows.Forms.Button();
+            this.btnSaveRoute = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.textBoxDetination = new System.Windows.Forms.TextBox();
@@ -42,11 +44,13 @@
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.titleRoute = new System.Windows.Forms.Label();
             this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutRoute.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelTitleAbastecimentos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // tableLayoutRoute
@@ -92,6 +96,8 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Controls.Add(this.btnCancelRoute);
+            this.panel2.Controls.Add(this.btnSaveRoute);
             this.panel2.Controls.Add(this.textBox1);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.textBoxDetination);
@@ -107,6 +113,36 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(657, 509);
             this.panel2.TabIndex = 0;
+            // 
+            // btnCancelRoute
+            // 
+            this.btnCancelRoute.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancelRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnCancelRoute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancelRoute.FlatAppearance.BorderSize = 0;
+            this.btnCancelRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelRoute.Location = new System.Drawing.Point(523, 304);
+            this.btnCancelRoute.Margin = new System.Windows.Forms.Padding(0);
+            this.btnCancelRoute.Name = "btnCancelRoute";
+            this.btnCancelRoute.Size = new System.Drawing.Size(89, 35);
+            this.btnCancelRoute.TabIndex = 40;
+            this.btnCancelRoute.Text = "Cancelar";
+            this.btnCancelRoute.UseVisualStyleBackColor = false;
+            // 
+            // btnSaveRoute
+            // 
+            this.btnSaveRoute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
+            this.btnSaveRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnSaveRoute.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSaveRoute.FlatAppearance.BorderSize = 0;
+            this.btnSaveRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveRoute.Location = new System.Drawing.Point(421, 304);
+            this.btnSaveRoute.Margin = new System.Windows.Forms.Padding(0);
+            this.btnSaveRoute.Name = "btnSaveRoute";
+            this.btnSaveRoute.Size = new System.Drawing.Size(79, 35);
+            this.btnSaveRoute.TabIndex = 39;
+            this.btnSaveRoute.Text = "Salvar";
+            this.btnSaveRoute.UseVisualStyleBackColor = false;
             // 
             // textBox1
             // 
@@ -164,6 +200,7 @@
             this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Transparent;
             this.panelTitleAbastecimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTitleAbastecimentos.BackgroundImage")));
             this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
             this.panelTitleAbastecimentos.Controls.Add(this.titleRoute);
             this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -194,6 +231,16 @@
             this.panelFooterAbastecimentos.Size = new System.Drawing.Size(657, 27);
             this.panelFooterAbastecimentos.TabIndex = 2;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(80, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // Rotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,6 +258,7 @@
             this.panel2.PerformLayout();
             this.panelTitleAbastecimentos.ResumeLayout(false);
             this.panelTitleAbastecimentos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -230,5 +278,8 @@
         private System.Windows.Forms.Label labelOrigin;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnCancelRoute;
+        private System.Windows.Forms.Button btnSaveRoute;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

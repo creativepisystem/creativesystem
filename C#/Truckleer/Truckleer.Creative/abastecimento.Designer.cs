@@ -36,6 +36,8 @@ namespace Truckleer.Creative
             this.panelContainerAbastecimentos = new System.Windows.Forms.Panel();
             this.tableLayoutItems = new System.Windows.Forms.TableLayoutPanel();
             this.panelLeftAbastecimentos = new System.Windows.Forms.Panel();
+            this.boxVehicle = new System.Windows.Forms.ComboBox();
+            this.boxRoute = new System.Windows.Forms.ComboBox();
             this.textBoxLitersSupply = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelRouteSupplpy = new System.Windows.Forms.Label();
@@ -45,6 +47,9 @@ namespace Truckleer.Creative
             this.labelDataSupply = new System.Windows.Forms.Label();
             this.labelMotoristaSupply = new System.Windows.Forms.Label();
             this.panelRightAbastecimentos = new System.Windows.Forms.Panel();
+            this.boxStation = new System.Windows.Forms.ComboBox();
+            this.boxTrip = new System.Windows.Forms.ComboBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.btnSaveSupply = new System.Windows.Forms.Button();
             this.textBoxPriceSupply = new System.Windows.Forms.TextBox();
             this.textBoxKMSupply = new System.Windows.Forms.TextBox();
@@ -58,11 +63,6 @@ namespace Truckleer.Creative
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titleSupply = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.boxTrip = new System.Windows.Forms.ComboBox();
-            this.boxRoute = new System.Windows.Forms.ComboBox();
-            this.boxVehicle = new System.Windows.Forms.ComboBox();
-            this.boxStation = new System.Windows.Forms.ComboBox();
             this.panelAbastecimentos.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelContainerAbastecimentos.SuspendLayout();
@@ -148,6 +148,28 @@ namespace Truckleer.Creative
             this.panelLeftAbastecimentos.Name = "panelLeftAbastecimentos";
             this.panelLeftAbastecimentos.Size = new System.Drawing.Size(366, 828);
             this.panelLeftAbastecimentos.TabIndex = 0;
+            // 
+            // boxVehicle
+            // 
+            this.boxVehicle.AllowDrop = true;
+            this.boxVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.boxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxVehicle.FormattingEnabled = true;
+            this.boxVehicle.Location = new System.Drawing.Point(130, 121);
+            this.boxVehicle.Name = "boxVehicle";
+            this.boxVehicle.Size = new System.Drawing.Size(195, 33);
+            this.boxVehicle.TabIndex = 23;
+            // 
+            // boxRoute
+            // 
+            this.boxRoute.AllowDrop = true;
+            this.boxRoute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.boxRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxRoute.FormattingEnabled = true;
+            this.boxRoute.Location = new System.Drawing.Point(130, 271);
+            this.boxRoute.Name = "boxRoute";
+            this.boxRoute.Size = new System.Drawing.Size(195, 33);
+            this.boxRoute.TabIndex = 22;
             // 
             // textBoxLitersSupply
             // 
@@ -250,6 +272,44 @@ namespace Truckleer.Creative
             this.panelRightAbastecimentos.Name = "panelRightAbastecimentos";
             this.panelRightAbastecimentos.Size = new System.Drawing.Size(366, 828);
             this.panelRightAbastecimentos.TabIndex = 1;
+            // 
+            // boxStation
+            // 
+            this.boxStation.AllowDrop = true;
+            this.boxStation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.boxStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxStation.FormattingEnabled = true;
+            this.boxStation.Location = new System.Drawing.Point(120, 274);
+            this.boxStation.Name = "boxStation";
+            this.boxStation.Size = new System.Drawing.Size(201, 33);
+            this.boxStation.TabIndex = 24;
+            // 
+            // boxTrip
+            // 
+            this.boxTrip.AllowDrop = true;
+            this.boxTrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.boxTrip.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.boxTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxTrip.FormattingEnabled = true;
+            this.boxTrip.Location = new System.Drawing.Point(120, 47);
+            this.boxTrip.Name = "boxTrip";
+            this.boxTrip.Size = new System.Drawing.Size(201, 33);
+            this.boxTrip.TabIndex = 23;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(247, 445);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(89, 35);
+            this.button1.TabIndex = 22;
+            this.button1.Text = "Cancelar";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // btnSaveSupply
             // 
@@ -375,7 +435,7 @@ namespace Truckleer.Creative
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(65, 8);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(72, 64);
+            this.pictureBox1.Size = new System.Drawing.Size(91, 64);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
@@ -392,66 +452,6 @@ namespace Truckleer.Creative
             this.titleSupply.TabIndex = 0;
             this.titleSupply.Text = "Abastecer";
             this.titleSupply.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(247, 445);
-            this.button1.Margin = new System.Windows.Forms.Padding(0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(89, 35);
-            this.button1.TabIndex = 22;
-            this.button1.Text = "Cancelar";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // boxTrip
-            // 
-            this.boxTrip.AllowDrop = true;
-            this.boxTrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.boxTrip.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.boxTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxTrip.FormattingEnabled = true;
-            this.boxTrip.Location = new System.Drawing.Point(120, 47);
-            this.boxTrip.Name = "boxTrip";
-            this.boxTrip.Size = new System.Drawing.Size(201, 33);
-            this.boxTrip.TabIndex = 23;
-            // 
-            // boxRoute
-            // 
-            this.boxRoute.AllowDrop = true;
-            this.boxRoute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.boxRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxRoute.FormattingEnabled = true;
-            this.boxRoute.Location = new System.Drawing.Point(130, 271);
-            this.boxRoute.Name = "boxRoute";
-            this.boxRoute.Size = new System.Drawing.Size(195, 33);
-            this.boxRoute.TabIndex = 22;
-            // 
-            // boxVehicle
-            // 
-            this.boxVehicle.AllowDrop = true;
-            this.boxVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.boxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxVehicle.FormattingEnabled = true;
-            this.boxVehicle.Location = new System.Drawing.Point(130, 121);
-            this.boxVehicle.Name = "boxVehicle";
-            this.boxVehicle.Size = new System.Drawing.Size(195, 33);
-            this.boxVehicle.TabIndex = 23;
-            // 
-            // boxStation
-            // 
-            this.boxStation.AllowDrop = true;
-            this.boxStation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.boxStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxStation.FormattingEnabled = true;
-            this.boxStation.Location = new System.Drawing.Point(120, 274);
-            this.boxStation.Name = "boxStation";
-            this.boxStation.Size = new System.Drawing.Size(201, 33);
-            this.boxStation.TabIndex = 24;
             // 
             // Abastecimento
             // 

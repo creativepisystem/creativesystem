@@ -38,11 +38,10 @@ namespace Truckleer.Creative
             this.WindowState = FormWindowState.Minimized;
         }
 
+        // Animation Supply Menu 
         bool supplyIsCollapsed = true;
         private void supplyTimer_Tick(object sender, EventArgs e)
         {
-            
-
             if (supplyIsCollapsed)
             {
                 groupSupply.Height += 10;
@@ -63,6 +62,7 @@ namespace Truckleer.Creative
             }
         }
 
+        // Animation Vehicle Menu
         bool vehicleIsCollapsed = true;
         private void vehicleTimer_Tick(object sender, EventArgs e)
         {
@@ -86,6 +86,7 @@ namespace Truckleer.Creative
             }
         }
 
+        // Animation Driver Menu
         bool driverIsCollapsed = true;
         private void driverTimer_Tick(object sender, EventArgs e)
         {
@@ -109,6 +110,7 @@ namespace Truckleer.Creative
             }
         }
 
+        // Animation Route Menu
         bool routeIsCollapsed = true;
         private void routeTimer_Tick(object sender, EventArgs e)
         {
@@ -132,6 +134,7 @@ namespace Truckleer.Creative
             }
         }
 
+        // Animation Maintence Menu
         bool maintenceIsCollapsed = true;
         private void maintenceTimer_Tick(object sender, EventArgs e)
         {
@@ -154,7 +157,8 @@ namespace Truckleer.Creative
                 }
             }
         }
-
+        
+        // Animation Trip Menu
         bool tripIsCollapsed = true;
         private void tripTimer_Tick(object sender, EventArgs e)
         {
@@ -178,28 +182,20 @@ namespace Truckleer.Creative
             }
         }
 
-        private void btnAbastecimento_Click(object sender, EventArgs e)
+        // Method Remove Buttons Color
+        public void uncolor()
         {
-            supplyTimer.Start();
+            // Main Menus
+            btnDash.BackColor = Color.FromArgb(64, 64, 64);
+            btnAbastecimento.BackColor = Color.FromArgb(64, 64, 64);
+            btnDriver.BackColor = Color.FromArgb(64, 64, 64);
+            btnRoutes.BackColor = Color.FromArgb(64, 64, 64);
+            btnMaintence.BackColor = Color.FromArgb(64, 64, 64);
+            btnTrip.BackColor = Color.FromArgb(64, 64, 64);
+            btnVeiculo.BackColor = Color.FromArgb(64, 64, 64);
 
-            //Close others panels
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
-        }
-
-        private void btnAbastecer_Click(object sender, EventArgs e)
-        {
-            //Call the supply Panel
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(supply);
-            supply.BringToFront();
-
-            //Set - Unset Color
-            btnAbastecer.BackColor = Color.FromArgb(25, 137, 186);
-            btnDash.BackColor = Color.FromArgb(65,65,65);
+            // Submenus
+            btnAbastecer.BackColor = Color.Gray;
             btnListAbastecimentos.BackColor = Color.FromArgb(90, 90, 90);
             btnMakeVehicle.BackColor = Color.FromArgb(90, 90, 90);
             btnListVehicle.BackColor = Color.FromArgb(90, 90, 90);
@@ -210,8 +206,40 @@ namespace Truckleer.Creative
             btnMakeMaintence.BackColor = Color.FromArgb(90, 90, 90);
             btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
             btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
+        }
 
+        // Method Close Menus
+        public void closeMenu()
+        {
+            supplyIsCollapsed = true;
+            vehicleIsCollapsed = true;
+            driverIsCollapsed = true;
+            routeIsCollapsed = true;
+            maintenceIsCollapsed = true;
+            tripIsCollapsed = true;
+            groupSupply.Size = groupSupply.MinimumSize;
+            groupVehicle.Size = groupVehicle.MinimumSize;
+            groupDriver.Size = groupDriver.MinimumSize;
+            groupRoute.Size = groupRoute.MinimumSize;
+            groupMaintence.Size = groupMaintence.MinimumSize;
+            groupTrip.Size = groupTrip.MinimumSize;
+        }
 
+        public void backImageUp(Button botao)
+        {
+            Image up = Properties.Resources.iconArrowUp;
+            botao.BackgroundImage = up;
+        }
+
+        public void BackImageDown()
+        {
+            Image down = Properties.Resources.iconArrowDown;
+            btnAbastecimento.BackgroundImage = down;
+            btnVeiculo.BackgroundImage = down;
+            btnDriver.BackgroundImage = down;
+            btnRoutes.BackgroundImage = down;
+            btnMaintence.BackgroundImage = down;
+            btnTrip.BackgroundImage = down;
         }
 
         private void btnDash_Click(object sender, EventArgs e)
@@ -221,28 +249,35 @@ namespace Truckleer.Creative
             dash.BringToFront();
 
             //Close Other Panels
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
+            closeMenu();
 
-            //Set - Unset Color
+            // Unset Colors
+            uncolor();
             btnDash.BackColor = Color.FromArgb(25, 137, 186);
-            btnAbastecer.BackColor = Color.FromArgb(90,90,90);
-            btnListAbastecimentos.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnListVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeDriver.BackColor = Color.FromArgb(90, 90, 90);
-            btnListDrivers.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeRoute.BackColor = Color.FromArgb(90, 90, 90);
-            btnListRoutes.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
+        }
 
+        private void btnAbastecimento_Click(object sender, EventArgs e)
+        {
+            supplyTimer.Start();
 
+            //Close others panels
+            closeMenu();
+            BackImageDown();
+            backImageUp(btnAbastecimento);
+        }
+
+        private void btnAbastecer_Click(object sender, EventArgs e)
+        {
+            //Call the supply Panel
+            truckleerCallcontainer.Controls.Clear();
+            truckleerCallcontainer.Controls.Add(supply);
+            supply.BringToFront();
+
+            
+            // Unset Colors
+            uncolor();
+            btnAbastecimento.BackColor = Color.FromArgb(25, 137, 186);
+            btnAbastecer.BackColor = Color.Gray;
         }
 
         private void btnVeiculo_Click(object sender, EventArgs e)
@@ -250,11 +285,9 @@ namespace Truckleer.Creative
             vehicleTimer.Start();
 
             //Close others panels
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
+            closeMenu();
+            BackImageDown();
+            backImageUp(btnVeiculo);
         }
 
         private void btnMakeVehicle_Click(object sender, EventArgs e)
@@ -263,19 +296,10 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Add(vehicle);
             vehicle.BringToFront();
 
-            //Set - Unset Color
-            btnMakeVehicle.BackColor = Color.FromArgb(25, 137, 186);
-            btnAbastecer.BackColor = Color.FromArgb(90,90,90);
-            btnListAbastecimentos.BackColor = Color.FromArgb(90, 90, 90);
-            btnDash.BackColor = Color.FromArgb(65,65,65);
-            btnListVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeDriver.BackColor = Color.FromArgb(90, 90, 90);
-            btnListDrivers.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeRoute.BackColor = Color.FromArgb(90, 90, 90);
-            btnListRoutes.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
+            // Unset Colors
+            uncolor();
+            btnVeiculo.BackColor = Color.FromArgb(25, 137, 186);
+            btnMakeVehicle.BackColor = Color.Gray;
         }
 
         private void btnDriver_Click(object sender, EventArgs e)
@@ -283,11 +307,9 @@ namespace Truckleer.Creative
             driverTimer.Start();
 
             //Close Others Panels
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
+            closeMenu();
+            BackImageDown();
+            backImageUp(btnDriver);
         }
 
         private void btnMakeDriver_Click(object sender, EventArgs e)
@@ -296,19 +318,10 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Add(driver);
             driver.BringToFront();
 
-            //Set - Unset Color
-            btnMakeVehicle.BackColor = Color.FromArgb(90,90,90);
-            btnAbastecer.BackColor = Color.FromArgb(90, 90, 90);
-            btnListAbastecimentos.BackColor = Color.FromArgb(90, 90, 90);
-            btnDash.BackColor = Color.FromArgb(65, 65, 65);
-            btnListVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeDriver.BackColor = Color.FromArgb(25, 137, 186);
-            btnListDrivers.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeRoute.BackColor = Color.FromArgb(90, 90, 90);
-            btnListRoutes.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
+            // Unset Colors
+            uncolor();
+            btnDriver.BackColor = Color.FromArgb(25, 137, 186);
+            btnMakeDriver.BackColor = Color.Gray;
         }
 
         private void btnRoutes_Click(object sender, EventArgs e)
@@ -316,11 +329,9 @@ namespace Truckleer.Creative
             routeTimer.Start();
 
             //Close Others Panels
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
+            closeMenu();
+            BackImageDown();
+            backImageUp(btnRoutes);
         }
 
         private void btnMakeRoute_Click(object sender, EventArgs e)
@@ -329,19 +340,10 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Add(route);
             route.BringToFront();
 
-            //Set - Unset Color
-            btnMakeVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnAbastecer.BackColor = Color.FromArgb(90, 90, 90);
-            btnListAbastecimentos.BackColor = Color.FromArgb(90, 90, 90);
-            btnDash.BackColor = Color.FromArgb(65, 65, 65);
-            btnListVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeDriver.BackColor = Color.FromArgb(90,90,90);
-            btnListDrivers.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeRoute.BackColor = Color.FromArgb(25, 137, 186);
-            btnListRoutes.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
+            // Unset Colors
+            uncolor();
+            btnRoutes.BackColor = Color.FromArgb(25, 137, 186);
+            btnMakeRoute.BackColor = Color.Gray;
         }
 
         private void btnMaintence_Click(object sender, EventArgs e)
@@ -349,11 +351,9 @@ namespace Truckleer.Creative
             maintenceTimer.Start();
 
             //Close Others Panels
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
+            closeMenu();
+            BackImageDown();
+            backImageUp(btnMaintence);
         }
 
         private void btnMakeMaintence_Click(object sender, EventArgs e)
@@ -362,19 +362,10 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Add(maintence);
             maintence.BringToFront();
 
-            //Set - Unset Color
-            btnMakeVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnAbastecer.BackColor = Color.FromArgb(90, 90, 90);
-            btnListAbastecimentos.BackColor = Color.FromArgb(90, 90, 90);
-            btnDash.BackColor = Color.FromArgb(65, 65, 65);
-            btnListVehicle.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeDriver.BackColor = Color.FromArgb(90, 90, 90);
-            btnListDrivers.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeRoute.BackColor = Color.FromArgb(90,90,90);
-            btnListRoutes.BackColor = Color.FromArgb(90, 90, 90);
-            btnMakeMaintence.BackColor = Color.FromArgb(25,137,186);
-            btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
-            btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
+            // Unset Colors
+            uncolor();
+            btnMaintence.BackColor = Color.FromArgb(25, 137, 186);
+            btnMakeMaintence.BackColor = Color.Gray;
         }
 
         private void btnTrip_Click(object sender, EventArgs e)
@@ -382,11 +373,9 @@ namespace Truckleer.Creative
             tripTimer.Start();
 
             //Close Others Panels
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
+            closeMenu();
+            BackImageDown();
+            backImageUp(btnTrip);
         }
 
         private void btnMakeTrip_Click(object sender, EventArgs e)
@@ -394,14 +383,11 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Clear();
             truckleerCallcontainer.Controls.Add(trip);
             trip.BringToFront();
-        }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-            if (truckleerCallcontainer.Controls.Contains(supply))
-            {
-                
-            }
+            //Unset Colors
+            uncolor();
+            btnTrip.BackColor = Color.FromArgb(25, 137, 186);
+            btnMakeTrip.BackColor = Color.Gray;
         }
     }
 }
