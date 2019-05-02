@@ -7,24 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using FireSharp.Config;
-using FireSharp.Interfaces;
-using FireSharp.Response;
 
 namespace Truckleer.Creative
 {
-    public partial class Dashboard : UserControl
+    public partial class AlertaManutencao : UserControl
     {
-
-        public Dashboard()
+        public AlertaManutencao()
         {
             InitializeComponent();
-            
-        }
-
-        private void Dashboard_Load(object sender, EventArgs e)
-        {
-            this.Dock = DockStyle.Fill;               
         }
     }
 }

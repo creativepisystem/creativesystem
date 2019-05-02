@@ -56,8 +56,8 @@
             this.labelCnhDriver = new System.Windows.Forms.Label();
             this.textBoxCnhDriver = new System.Windows.Forms.TextBox();
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
-            this.titleDriver = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.titleDriver = new System.Windows.Forms.Label();
             this.panelDriverContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panelContainerDriver.SuspendLayout();
@@ -376,6 +376,16 @@
             this.panelTitleAbastecimentos.Size = new System.Drawing.Size(876, 75);
             this.panelTitleAbastecimentos.TabIndex = 1;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(77, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(73, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // titleDriver
             // 
             this.titleDriver.AutoSize = true;
@@ -386,16 +396,6 @@
             this.titleDriver.Size = new System.Drawing.Size(404, 63);
             this.titleDriver.TabIndex = 0;
             this.titleDriver.Text = " Cadastro Motorista";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // Motorista
             // 
@@ -427,31 +427,31 @@
         private System.Windows.Forms.Panel panelDriverContainer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelContainerDriver;
-        private System.Windows.Forms.Panel panelTitleAbastecimentos;
-        private System.Windows.Forms.Label titleDriver;
         private System.Windows.Forms.TableLayoutPanel layoutDriver;
         private System.Windows.Forms.Panel panelLeftDriver;
-        private System.Windows.Forms.Panel panelRightDriver;
-        private System.Windows.Forms.Label labelCnhDriver;
-        private System.Windows.Forms.TextBox textBoxCpfDriver;
-        private System.Windows.Forms.Label labelCpfDriver;
-        private System.Windows.Forms.TextBox textBoxNameDriver;
-        private System.Windows.Forms.Label labelNameDriver;
-        private System.Windows.Forms.TextBox textBoxMailDriver;
-        private System.Windows.Forms.Label labelMailDriver;
-        private System.Windows.Forms.TextBox textBoxPhoneDriver;
-        private System.Windows.Forms.Label labelPhoneDriver;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panelFooterAbastecimentos;
-        private System.Windows.Forms.TextBox textBoxCnhDriver;
         private System.Windows.Forms.DateTimePicker dateTimeBirthDriver;
         private System.Windows.Forms.Label labelBirthDriver;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label labelObs;
-        private System.Windows.Forms.DateTimePicker dateTimeOverDue;
-        private System.Windows.Forms.Label labelOverDue;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxPhoneDriver;
+        private System.Windows.Forms.Label labelPhoneDriver;
+        private System.Windows.Forms.TextBox textBoxMailDriver;
+        private System.Windows.Forms.TextBox textBoxCpfDriver;
+        private System.Windows.Forms.Label labelCpfDriver;
+        private System.Windows.Forms.Label labelMailDriver;
+        private System.Windows.Forms.TextBox textBoxNameDriver;
+        private System.Windows.Forms.Label labelNameDriver;
+        private System.Windows.Forms.Panel panelRightDriver;
         private System.Windows.Forms.Button btnCancelDriver;
         private System.Windows.Forms.Button btnSaveDriver;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DateTimePicker dateTimeOverDue;
+        private System.Windows.Forms.Label labelObs;
+        private System.Windows.Forms.Label labelOverDue;
+        private System.Windows.Forms.Panel panelFooterAbastecimentos;
+        private System.Windows.Forms.Label labelCnhDriver;
+        private System.Windows.Forms.TextBox textBoxCnhDriver;
+        private System.Windows.Forms.Panel panelTitleAbastecimentos;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label titleDriver;
     }
 }

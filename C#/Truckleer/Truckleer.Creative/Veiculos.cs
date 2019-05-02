@@ -21,5 +21,10 @@ namespace Truckleer.Creative
         {
             this.Dock = DockStyle.Fill;
         }
+
+        private void containerVehicle_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

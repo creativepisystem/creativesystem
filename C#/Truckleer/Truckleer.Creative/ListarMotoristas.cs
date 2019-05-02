@@ -10,26 +10,16 @@ using System.Windows.Forms;
 
 namespace Truckleer.Creative
 {
-    public partial class Abastecimento : UserControl
+    public partial class ListarMotoristas : UserControl
     {
-        public Abastecimento()
+        public ListarMotoristas()
         {
             InitializeComponent();
         }
 
-        private void Abastecimento_Load(object sender, EventArgs e)
+        private void ListarMotoristas_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-        }
-
-        private void Label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
         }
     }
 }

@@ -82,11 +82,47 @@
     <Compile Include="Abastecimento.Designer.cs">
       <DependentUpon>Abastecimento.cs</DependentUpon>
     </Compile>
+    <Compile Include="AlertaManutencao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AlertaManutencao.Designer.cs">
+      <DependentUpon>AlertaManutencao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarAbastecimentos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListarAbastecimentos.Designer.cs">
+      <DependentUpon>ListarAbastecimentos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarManutencao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListarManutencao.Designer.cs">
+      <DependentUpon>ListarManutencao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarMotoristas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListarMotoristas.Designer.cs">
+      <DependentUpon>ListarMotoristas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarRotas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListarRotas.Designer.cs">
+      <DependentUpon>ListarRotas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ListarVeiculos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ListarVeiculos.Designer.cs">
+      <DependentUpon>ListarVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="Manutencao.cs">
       <SubType>UserControl</SubType>
@@ -129,8 +165,26 @@
     <EmbeddedResource Include="Abastecimento.resx">
       <DependentUpon>Abastecimento.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AlertaManutencao.resx">
+      <DependentUpon>AlertaManutencao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarAbastecimentos.resx">
+      <DependentUpon>ListarAbastecimentos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarManutencao.resx">
+      <DependentUpon>ListarManutencao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarMotoristas.resx">
+      <DependentUpon>ListarMotoristas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarRotas.resx">
+      <DependentUpon>ListarRotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListarVeiculos.resx">
+      <DependentUpon>ListarVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Manutencao.resx">
       <DependentUpon>Manutencao.cs</DependentUpon>

@@ -33,61 +33,65 @@ namespace Truckleer.Creative
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Truckleer));
             this.supplyTimer = new System.Windows.Forms.Timer(this.components);
+            this.truckleerContainer1 = new System.Windows.Forms.TableLayoutPanel();
             this.mainContainer = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panelNavbar = new System.Windows.Forms.Panel();
-            this.truckleerContainer1 = new System.Windows.Forms.TableLayoutPanel();
+            this.hamburguerMenu = new System.Windows.Forms.Button();
             this.truckleerContainer = new System.Windows.Forms.TableLayoutPanel();
-            this.panelSideBar = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.truckleerMainContainer = new System.Windows.Forms.Panel();
+            this.truckleerCallcontainer = new System.Windows.Forms.TableLayoutPanel();
+            this.sideBarMenu = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
+            this.panelMenu = new System.Windows.Forms.Panel();
+            this.smallMenuPanel = new System.Windows.Forms.Panel();
+            this.menuPanel = new System.Windows.Forms.Panel();
             this.groupTrip = new System.Windows.Forms.Panel();
             this.btnListTrip = new System.Windows.Forms.Button();
             this.btnMakeTrip = new System.Windows.Forms.Button();
+            this.btnTrip = new System.Windows.Forms.Button();
             this.groupMaintence = new System.Windows.Forms.Panel();
             this.btnAlertMaintence = new System.Windows.Forms.Button();
             this.btnListMaintence = new System.Windows.Forms.Button();
             this.btnMakeMaintence = new System.Windows.Forms.Button();
+            this.btnMaintence = new System.Windows.Forms.Button();
             this.groupRoute = new System.Windows.Forms.Panel();
             this.btnListRoutes = new System.Windows.Forms.Button();
             this.btnMakeRoute = new System.Windows.Forms.Button();
+            this.btnRoutes = new System.Windows.Forms.Button();
             this.groupDriver = new System.Windows.Forms.Panel();
             this.btnListDrivers = new System.Windows.Forms.Button();
             this.btnMakeDriver = new System.Windows.Forms.Button();
+            this.btnDriver = new System.Windows.Forms.Button();
             this.groupVehicle = new System.Windows.Forms.Panel();
             this.btnListVehicle = new System.Windows.Forms.Button();
             this.btnMakeVehicle = new System.Windows.Forms.Button();
+            this.btnVeiculo = new System.Windows.Forms.Button();
             this.groupSupply = new System.Windows.Forms.Panel();
             this.btnListAbastecimentos = new System.Windows.Forms.Button();
             this.btnAbastecer = new System.Windows.Forms.Button();
-            this.sideBarTop = new System.Windows.Forms.Panel();
+            this.btnAbastecimento = new System.Windows.Forms.Button();
             this.btnDash = new System.Windows.Forms.Button();
-            this.truckleerCallcontainer = new System.Windows.Forms.TableLayoutPanel();
+            this.sideBarTop = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.vehicleTimer = new System.Windows.Forms.Timer(this.components);
             this.driverTimer = new System.Windows.Forms.Timer(this.components);
             this.routeTimer = new System.Windows.Forms.Timer(this.components);
             this.maintenceTimer = new System.Windows.Forms.Timer(this.components);
             this.tripTimer = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.btnTrip = new System.Windows.Forms.Button();
-            this.btnMaintence = new System.Windows.Forms.Button();
-            this.btnRoutes = new System.Windows.Forms.Button();
-            this.btnDriver = new System.Windows.Forms.Button();
-            this.btnVeiculo = new System.Windows.Forms.Button();
-            this.btnAbastecimento = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.timerMenu = new System.Windows.Forms.Timer(this.components);
+            this.button1 = new System.Windows.Forms.Button();
+            this.truckleerContainer1.SuspendLayout();
             this.mainContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            this.truckleerContainer1.SuspendLayout();
+            this.panelNavbar.SuspendLayout();
             this.truckleerContainer.SuspendLayout();
-            this.panelSideBar.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.truckleerMainContainer.SuspendLayout();
+            this.sideBarMenu.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
+            this.panelMenu.SuspendLayout();
+            this.smallMenuPanel.SuspendLayout();
+            this.menuPanel.SuspendLayout();
             this.groupTrip.SuspendLayout();
             this.groupMaintence.SuspendLayout();
             this.groupRoute.SuspendLayout();
@@ -95,15 +99,30 @@ namespace Truckleer.Creative
             this.groupVehicle.SuspendLayout();
             this.groupSupply.SuspendLayout();
             this.sideBarTop.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // supplyTimer
             // 
             this.supplyTimer.Interval = 15;
-            this.supplyTimer.Tick += new System.EventHandler(this.supplyTimer_Tick);
+            this.supplyTimer.Tick += new System.EventHandler(this.SupplyTimer_Tick);
+            // 
+            // truckleerContainer1
+            // 
+            this.truckleerContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.truckleerContainer1.ColumnCount = 1;
+            this.truckleerContainer1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.truckleerContainer1.Controls.Add(this.mainContainer, 0, 0);
+            this.truckleerContainer1.Controls.Add(this.truckleerContainer, 1, 1);
+            this.truckleerContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truckleerContainer1.Location = new System.Drawing.Point(0, 0);
+            this.truckleerContainer1.Margin = new System.Windows.Forms.Padding(0);
+            this.truckleerContainer1.Name = "truckleerContainer1";
+            this.truckleerContainer1.RowCount = 2;
+            this.truckleerContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 6F));
+            this.truckleerContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 94F));
+            this.truckleerContainer1.Size = new System.Drawing.Size(1080, 720);
+            this.truckleerContainer1.TabIndex = 0;
             // 
             // mainContainer
             // 
@@ -116,7 +135,7 @@ namespace Truckleer.Creative
             this.mainContainer.Name = "mainContainer";
             this.mainContainer.RowCount = 1;
             this.mainContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.mainContainer.Size = new System.Drawing.Size(1080, 102);
+            this.mainContainer.Size = new System.Drawing.Size(1080, 43);
             this.mainContainer.TabIndex = 0;
             // 
             // tableLayoutPanel1
@@ -126,139 +145,141 @@ namespace Truckleer.Creative
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.tableLayoutPanel1.Controls.Add(this.panel4, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel3, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panel2, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.panelNavbar, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panelNavbar, 0, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 27.27273F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45.45454F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1080, 102);
+            this.tableLayoutPanel1.RowCount = 1;
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1080, 43);
             this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.MintCream;
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(918, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(162, 38);
-            this.panel4.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.MintCream;
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(756, 0);
-            this.panel3.Margin = new System.Windows.Forms.Padding(0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(162, 38);
-            this.panel3.TabIndex = 2;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.MintCream;
-            this.panel2.Controls.Add(this.pictureBox1);
-            this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(756, 38);
-            this.panel2.TabIndex = 1;
             // 
             // panelNavbar
             // 
+            this.panelNavbar.Controls.Add(this.hamburguerMenu);
             this.panelNavbar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelNavbar.Location = new System.Drawing.Point(0, 38);
+            this.panelNavbar.Location = new System.Drawing.Point(0, 0);
             this.panelNavbar.Margin = new System.Windows.Forms.Padding(0);
             this.panelNavbar.Name = "panelNavbar";
-            this.panelNavbar.Size = new System.Drawing.Size(756, 64);
-            this.panelNavbar.TabIndex = 4;
+            this.panelNavbar.Size = new System.Drawing.Size(756, 43);
+            this.panelNavbar.TabIndex = 5;
             // 
-            // truckleerContainer1
+            // hamburguerMenu
             // 
-            this.truckleerContainer1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.truckleerContainer1.ColumnCount = 1;
-            this.truckleerContainer1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.truckleerContainer1.Controls.Add(this.mainContainer, 0, 0);
-            this.truckleerContainer1.Controls.Add(this.truckleerContainer, 0, 1);
-            this.truckleerContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truckleerContainer1.Location = new System.Drawing.Point(0, 0);
-            this.truckleerContainer1.Margin = new System.Windows.Forms.Padding(0);
-            this.truckleerContainer1.Name = "truckleerContainer1";
-            this.truckleerContainer1.RowCount = 2;
-            this.truckleerContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.truckleerContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85.71429F));
-            this.truckleerContainer1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.truckleerContainer1.Size = new System.Drawing.Size(1080, 720);
-            this.truckleerContainer1.TabIndex = 0;
+            this.hamburguerMenu.Location = new System.Drawing.Point(59, 12);
+            this.hamburguerMenu.Name = "hamburguerMenu";
+            this.hamburguerMenu.Size = new System.Drawing.Size(75, 23);
+            this.hamburguerMenu.TabIndex = 0;
+            this.hamburguerMenu.Text = "button1";
+            this.hamburguerMenu.UseVisualStyleBackColor = true;
+            this.hamburguerMenu.Click += new System.EventHandler(this.HamburguerMenu_Click);
             // 
             // truckleerContainer
             // 
-            this.truckleerContainer.ColumnCount = 2;
-            this.truckleerContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15F));
-            this.truckleerContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 85F));
-            this.truckleerContainer.Controls.Add(this.panelSideBar, 0, 0);
-            this.truckleerContainer.Controls.Add(this.truckleerCallcontainer, 1, 0);
+            this.truckleerContainer.ColumnCount = 1;
+            this.truckleerContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.truckleerContainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.truckleerContainer.Controls.Add(this.truckleerMainContainer, 0, 0);
             this.truckleerContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truckleerContainer.Location = new System.Drawing.Point(0, 102);
+            this.truckleerContainer.Location = new System.Drawing.Point(0, 43);
             this.truckleerContainer.Margin = new System.Windows.Forms.Padding(0);
             this.truckleerContainer.Name = "truckleerContainer";
             this.truckleerContainer.RowCount = 1;
             this.truckleerContainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.truckleerContainer.Size = new System.Drawing.Size(1080, 618);
+            this.truckleerContainer.Size = new System.Drawing.Size(1080, 677);
             this.truckleerContainer.TabIndex = 1;
             // 
-            // panelSideBar
+            // truckleerMainContainer
             // 
-            this.panelSideBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(60)))));
-            this.panelSideBar.Controls.Add(this.tableLayoutPanel2);
-            this.panelSideBar.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelSideBar.Location = new System.Drawing.Point(0, 0);
-            this.panelSideBar.Margin = new System.Windows.Forms.Padding(0);
-            this.panelSideBar.Name = "panelSideBar";
-            this.panelSideBar.Size = new System.Drawing.Size(162, 618);
-            this.panelSideBar.TabIndex = 0;
+            this.truckleerMainContainer.Controls.Add(this.truckleerCallcontainer);
+            this.truckleerMainContainer.Controls.Add(this.sideBarMenu);
+            this.truckleerMainContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truckleerMainContainer.Location = new System.Drawing.Point(0, 0);
+            this.truckleerMainContainer.Margin = new System.Windows.Forms.Padding(0);
+            this.truckleerMainContainer.Name = "truckleerMainContainer";
+            this.truckleerMainContainer.Size = new System.Drawing.Size(1080, 677);
+            this.truckleerMainContainer.TabIndex = 1;
             // 
-            // tableLayoutPanel2
+            // truckleerCallcontainer
             // 
-            this.tableLayoutPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(65)))), ((int)(((byte)(65)))));
-            this.tableLayoutPanel2.ColumnCount = 1;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Controls.Add(this.panel1, 0, 1);
-            this.tableLayoutPanel2.Controls.Add(this.sideBarTop, 0, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 2;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 75F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(162, 618);
-            this.tableLayoutPanel2.TabIndex = 2;
+            this.truckleerCallcontainer.ColumnCount = 1;
+            this.truckleerCallcontainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.truckleerCallcontainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.truckleerCallcontainer.Location = new System.Drawing.Point(178, 0);
+            this.truckleerCallcontainer.Name = "truckleerCallcontainer";
+            this.truckleerCallcontainer.RowCount = 1;
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.Size = new System.Drawing.Size(902, 677);
+            this.truckleerCallcontainer.TabIndex = 1;
             // 
-            // panel1
+            // sideBarMenu
             // 
-            this.panel1.AutoScroll = true;
-            this.panel1.BackColor = System.Drawing.Color.Transparent;
-            this.panel1.Controls.Add(this.groupTrip);
-            this.panel1.Controls.Add(this.groupMaintence);
-            this.panel1.Controls.Add(this.groupRoute);
-            this.panel1.Controls.Add(this.groupDriver);
-            this.panel1.Controls.Add(this.groupVehicle);
-            this.panel1.Controls.Add(this.groupSupply);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(5, 154);
-            this.panel1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(152, 459);
-            this.panel1.TabIndex = 0;
+            this.sideBarMenu.Controls.Add(this.tableLayoutPanel3);
+            this.sideBarMenu.Dock = System.Windows.Forms.DockStyle.Left;
+            this.sideBarMenu.Location = new System.Drawing.Point(0, 0);
+            this.sideBarMenu.MaximumSize = new System.Drawing.Size(200, 677);
+            this.sideBarMenu.MinimumSize = new System.Drawing.Size(60, 677);
+            this.sideBarMenu.Name = "sideBarMenu";
+            this.sideBarMenu.Size = new System.Drawing.Size(178, 677);
+            this.sideBarMenu.TabIndex = 0;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.panelMenu, 0, 1);
+            this.tableLayoutPanel3.Controls.Add(this.sideBarTop, 0, 0);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 15F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 85F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(178, 677);
+            this.tableLayoutPanel3.TabIndex = 0;
+            // 
+            // panelMenu
+            // 
+            this.panelMenu.AutoScroll = true;
+            this.panelMenu.BackColor = System.Drawing.Color.Transparent;
+            this.panelMenu.Controls.Add(this.smallMenuPanel);
+            this.panelMenu.Controls.Add(this.menuPanel);
+            this.panelMenu.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelMenu.Location = new System.Drawing.Point(5, 101);
+            this.panelMenu.Margin = new System.Windows.Forms.Padding(5, 0, 5, 5);
+            this.panelMenu.Name = "panelMenu";
+            this.panelMenu.Size = new System.Drawing.Size(168, 571);
+            this.panelMenu.TabIndex = 3;
+            // 
+            // smallMenuPanel
+            // 
+            this.smallMenuPanel.Controls.Add(this.button1);
+            this.smallMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
+            this.smallMenuPanel.Location = new System.Drawing.Point(0, 398);
+            this.smallMenuPanel.Name = "smallMenuPanel";
+            this.smallMenuPanel.Size = new System.Drawing.Size(50, 173);
+            this.smallMenuPanel.TabIndex = 14;
+            // 
+            // menuPanel
+            // 
+            this.menuPanel.Controls.Add(this.groupTrip);
+            this.menuPanel.Controls.Add(this.groupMaintence);
+            this.menuPanel.Controls.Add(this.groupRoute);
+            this.menuPanel.Controls.Add(this.groupDriver);
+            this.menuPanel.Controls.Add(this.groupVehicle);
+            this.menuPanel.Controls.Add(this.groupSupply);
+            this.menuPanel.Controls.Add(this.btnDash);
+            this.menuPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.menuPanel.Location = new System.Drawing.Point(0, 0);
+            this.menuPanel.Name = "menuPanel";
+            this.menuPanel.Size = new System.Drawing.Size(168, 398);
+            this.menuPanel.TabIndex = 13;
             // 
             // groupTrip
             // 
@@ -266,13 +287,13 @@ namespace Truckleer.Creative
             this.groupTrip.Controls.Add(this.btnMakeTrip);
             this.groupTrip.Controls.Add(this.btnTrip);
             this.groupTrip.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupTrip.Location = new System.Drawing.Point(0, 204);
+            this.groupTrip.Location = new System.Drawing.Point(0, 244);
             this.groupTrip.Margin = new System.Windows.Forms.Padding(0);
             this.groupTrip.MaximumSize = new System.Drawing.Size(0, 120);
             this.groupTrip.MinimumSize = new System.Drawing.Size(0, 40);
             this.groupTrip.Name = "groupTrip";
-            this.groupTrip.Size = new System.Drawing.Size(152, 40);
-            this.groupTrip.TabIndex = 5;
+            this.groupTrip.Size = new System.Drawing.Size(168, 40);
+            this.groupTrip.TabIndex = 19;
             // 
             // btnListTrip
             // 
@@ -285,7 +306,7 @@ namespace Truckleer.Creative
             this.btnListTrip.Location = new System.Drawing.Point(0, 81);
             this.btnListTrip.Margin = new System.Windows.Forms.Padding(0);
             this.btnListTrip.Name = "btnListTrip";
-            this.btnListTrip.Size = new System.Drawing.Size(152, 40);
+            this.btnListTrip.Size = new System.Drawing.Size(168, 40);
             this.btnListTrip.TabIndex = 2;
             this.btnListTrip.Text = "Listar Viagens";
             this.btnListTrip.UseVisualStyleBackColor = false;
@@ -302,11 +323,30 @@ namespace Truckleer.Creative
             this.btnMakeTrip.Location = new System.Drawing.Point(0, 41);
             this.btnMakeTrip.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeTrip.Name = "btnMakeTrip";
-            this.btnMakeTrip.Size = new System.Drawing.Size(152, 40);
+            this.btnMakeTrip.Size = new System.Drawing.Size(168, 40);
             this.btnMakeTrip.TabIndex = 1;
             this.btnMakeTrip.Text = "Abrir Viagem";
             this.btnMakeTrip.UseVisualStyleBackColor = false;
-            this.btnMakeTrip.Click += new System.EventHandler(this.btnMakeTrip_Click);
+            // 
+            // btnTrip
+            // 
+            this.btnTrip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrip.BackgroundImage")));
+            this.btnTrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTrip.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnTrip.FlatAppearance.BorderSize = 0;
+            this.btnTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.btnTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnTrip.ForeColor = System.Drawing.Color.Silver;
+            this.btnTrip.Image = ((System.Drawing.Image)(resources.GetObject("btnTrip.Image")));
+            this.btnTrip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnTrip.Location = new System.Drawing.Point(0, 0);
+            this.btnTrip.Margin = new System.Windows.Forms.Padding(0);
+            this.btnTrip.Name = "btnTrip";
+            this.btnTrip.Size = new System.Drawing.Size(168, 41);
+            this.btnTrip.TabIndex = 0;
+            this.btnTrip.Text = "Viagens";
+            this.btnTrip.UseVisualStyleBackColor = true;
             // 
             // groupMaintence
             // 
@@ -315,13 +355,13 @@ namespace Truckleer.Creative
             this.groupMaintence.Controls.Add(this.btnMakeMaintence);
             this.groupMaintence.Controls.Add(this.btnMaintence);
             this.groupMaintence.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupMaintence.Location = new System.Drawing.Point(0, 164);
+            this.groupMaintence.Location = new System.Drawing.Point(0, 204);
             this.groupMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.groupMaintence.MaximumSize = new System.Drawing.Size(0, 161);
             this.groupMaintence.MinimumSize = new System.Drawing.Size(0, 40);
             this.groupMaintence.Name = "groupMaintence";
-            this.groupMaintence.Size = new System.Drawing.Size(152, 40);
-            this.groupMaintence.TabIndex = 4;
+            this.groupMaintence.Size = new System.Drawing.Size(168, 40);
+            this.groupMaintence.TabIndex = 18;
             // 
             // btnAlertMaintence
             // 
@@ -334,7 +374,7 @@ namespace Truckleer.Creative
             this.btnAlertMaintence.Location = new System.Drawing.Point(0, 121);
             this.btnAlertMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnAlertMaintence.Name = "btnAlertMaintence";
-            this.btnAlertMaintence.Size = new System.Drawing.Size(152, 40);
+            this.btnAlertMaintence.Size = new System.Drawing.Size(168, 40);
             this.btnAlertMaintence.TabIndex = 3;
             this.btnAlertMaintence.Text = "Alertas Manutenções";
             this.btnAlertMaintence.UseVisualStyleBackColor = false;
@@ -351,7 +391,7 @@ namespace Truckleer.Creative
             this.btnListMaintence.Location = new System.Drawing.Point(0, 81);
             this.btnListMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnListMaintence.Name = "btnListMaintence";
-            this.btnListMaintence.Size = new System.Drawing.Size(152, 40);
+            this.btnListMaintence.Size = new System.Drawing.Size(168, 40);
             this.btnListMaintence.TabIndex = 2;
             this.btnListMaintence.Text = "Listar Manutenções";
             this.btnListMaintence.UseVisualStyleBackColor = false;
@@ -368,11 +408,30 @@ namespace Truckleer.Creative
             this.btnMakeMaintence.Location = new System.Drawing.Point(0, 41);
             this.btnMakeMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeMaintence.Name = "btnMakeMaintence";
-            this.btnMakeMaintence.Size = new System.Drawing.Size(152, 40);
+            this.btnMakeMaintence.Size = new System.Drawing.Size(168, 40);
             this.btnMakeMaintence.TabIndex = 1;
             this.btnMakeMaintence.Text = "Realizar Manutenção";
             this.btnMakeMaintence.UseVisualStyleBackColor = false;
-            this.btnMakeMaintence.Click += new System.EventHandler(this.btnMakeMaintence_Click);
+            // 
+            // btnMaintence
+            // 
+            this.btnMaintence.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaintence.BackgroundImage")));
+            this.btnMaintence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMaintence.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMaintence.FlatAppearance.BorderSize = 0;
+            this.btnMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.btnMaintence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMaintence.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMaintence.ForeColor = System.Drawing.Color.Silver;
+            this.btnMaintence.Image = ((System.Drawing.Image)(resources.GetObject("btnMaintence.Image")));
+            this.btnMaintence.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnMaintence.Location = new System.Drawing.Point(0, 0);
+            this.btnMaintence.Margin = new System.Windows.Forms.Padding(0);
+            this.btnMaintence.Name = "btnMaintence";
+            this.btnMaintence.Size = new System.Drawing.Size(168, 41);
+            this.btnMaintence.TabIndex = 0;
+            this.btnMaintence.Text = "Manutenção";
+            this.btnMaintence.UseVisualStyleBackColor = true;
             // 
             // groupRoute
             // 
@@ -380,13 +439,13 @@ namespace Truckleer.Creative
             this.groupRoute.Controls.Add(this.btnMakeRoute);
             this.groupRoute.Controls.Add(this.btnRoutes);
             this.groupRoute.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupRoute.Location = new System.Drawing.Point(0, 123);
+            this.groupRoute.Location = new System.Drawing.Point(0, 163);
             this.groupRoute.Margin = new System.Windows.Forms.Padding(0);
             this.groupRoute.MaximumSize = new System.Drawing.Size(0, 123);
             this.groupRoute.MinimumSize = new System.Drawing.Size(0, 41);
             this.groupRoute.Name = "groupRoute";
-            this.groupRoute.Size = new System.Drawing.Size(152, 41);
-            this.groupRoute.TabIndex = 3;
+            this.groupRoute.Size = new System.Drawing.Size(168, 41);
+            this.groupRoute.TabIndex = 17;
             // 
             // btnListRoutes
             // 
@@ -400,7 +459,7 @@ namespace Truckleer.Creative
             this.btnListRoutes.Location = new System.Drawing.Point(0, 81);
             this.btnListRoutes.Margin = new System.Windows.Forms.Padding(0);
             this.btnListRoutes.Name = "btnListRoutes";
-            this.btnListRoutes.Size = new System.Drawing.Size(152, 40);
+            this.btnListRoutes.Size = new System.Drawing.Size(168, 40);
             this.btnListRoutes.TabIndex = 2;
             this.btnListRoutes.Text = "Listar Rotas";
             this.btnListRoutes.UseVisualStyleBackColor = false;
@@ -416,11 +475,30 @@ namespace Truckleer.Creative
             this.btnMakeRoute.Location = new System.Drawing.Point(0, 41);
             this.btnMakeRoute.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeRoute.Name = "btnMakeRoute";
-            this.btnMakeRoute.Size = new System.Drawing.Size(152, 40);
+            this.btnMakeRoute.Size = new System.Drawing.Size(168, 40);
             this.btnMakeRoute.TabIndex = 1;
             this.btnMakeRoute.Text = "Cadastrar Rota";
             this.btnMakeRoute.UseVisualStyleBackColor = false;
-            this.btnMakeRoute.Click += new System.EventHandler(this.btnMakeRoute_Click);
+            // 
+            // btnRoutes
+            // 
+            this.btnRoutes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRoutes.BackgroundImage")));
+            this.btnRoutes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRoutes.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnRoutes.FlatAppearance.BorderSize = 0;
+            this.btnRoutes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRoutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRoutes.ForeColor = System.Drawing.Color.Silver;
+            this.btnRoutes.Image = ((System.Drawing.Image)(resources.GetObject("btnRoutes.Image")));
+            this.btnRoutes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnRoutes.Location = new System.Drawing.Point(0, 0);
+            this.btnRoutes.Margin = new System.Windows.Forms.Padding(0);
+            this.btnRoutes.Name = "btnRoutes";
+            this.btnRoutes.Size = new System.Drawing.Size(168, 41);
+            this.btnRoutes.TabIndex = 0;
+            this.btnRoutes.Text = "Rotas";
+            this.btnRoutes.UseVisualStyleBackColor = true;
             // 
             // groupDriver
             // 
@@ -428,13 +506,13 @@ namespace Truckleer.Creative
             this.groupDriver.Controls.Add(this.btnMakeDriver);
             this.groupDriver.Controls.Add(this.btnDriver);
             this.groupDriver.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupDriver.Location = new System.Drawing.Point(0, 82);
+            this.groupDriver.Location = new System.Drawing.Point(0, 122);
             this.groupDriver.Margin = new System.Windows.Forms.Padding(0);
             this.groupDriver.MaximumSize = new System.Drawing.Size(0, 123);
             this.groupDriver.MinimumSize = new System.Drawing.Size(0, 41);
             this.groupDriver.Name = "groupDriver";
-            this.groupDriver.Size = new System.Drawing.Size(152, 41);
-            this.groupDriver.TabIndex = 2;
+            this.groupDriver.Size = new System.Drawing.Size(168, 41);
+            this.groupDriver.TabIndex = 16;
             // 
             // btnListDrivers
             // 
@@ -448,7 +526,7 @@ namespace Truckleer.Creative
             this.btnListDrivers.Location = new System.Drawing.Point(0, 81);
             this.btnListDrivers.Margin = new System.Windows.Forms.Padding(0);
             this.btnListDrivers.Name = "btnListDrivers";
-            this.btnListDrivers.Size = new System.Drawing.Size(152, 40);
+            this.btnListDrivers.Size = new System.Drawing.Size(168, 40);
             this.btnListDrivers.TabIndex = 2;
             this.btnListDrivers.Text = "Listar Motoristas";
             this.btnListDrivers.UseVisualStyleBackColor = false;
@@ -465,11 +543,30 @@ namespace Truckleer.Creative
             this.btnMakeDriver.Location = new System.Drawing.Point(0, 41);
             this.btnMakeDriver.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeDriver.Name = "btnMakeDriver";
-            this.btnMakeDriver.Size = new System.Drawing.Size(152, 40);
+            this.btnMakeDriver.Size = new System.Drawing.Size(168, 40);
             this.btnMakeDriver.TabIndex = 1;
             this.btnMakeDriver.Text = "Cadastrar Motorista";
             this.btnMakeDriver.UseVisualStyleBackColor = false;
-            this.btnMakeDriver.Click += new System.EventHandler(this.btnMakeDriver_Click);
+            // 
+            // btnDriver
+            // 
+            this.btnDriver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDriver.BackgroundImage")));
+            this.btnDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDriver.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDriver.FlatAppearance.BorderSize = 0;
+            this.btnDriver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.btnDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDriver.ForeColor = System.Drawing.Color.Silver;
+            this.btnDriver.Image = ((System.Drawing.Image)(resources.GetObject("btnDriver.Image")));
+            this.btnDriver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnDriver.Location = new System.Drawing.Point(0, 0);
+            this.btnDriver.Margin = new System.Windows.Forms.Padding(0);
+            this.btnDriver.Name = "btnDriver";
+            this.btnDriver.Size = new System.Drawing.Size(168, 41);
+            this.btnDriver.TabIndex = 0;
+            this.btnDriver.Text = "Motorista";
+            this.btnDriver.UseVisualStyleBackColor = true;
             // 
             // groupVehicle
             // 
@@ -477,13 +574,13 @@ namespace Truckleer.Creative
             this.groupVehicle.Controls.Add(this.btnMakeVehicle);
             this.groupVehicle.Controls.Add(this.btnVeiculo);
             this.groupVehicle.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupVehicle.Location = new System.Drawing.Point(0, 41);
+            this.groupVehicle.Location = new System.Drawing.Point(0, 81);
             this.groupVehicle.Margin = new System.Windows.Forms.Padding(0);
             this.groupVehicle.MaximumSize = new System.Drawing.Size(0, 123);
             this.groupVehicle.MinimumSize = new System.Drawing.Size(0, 41);
             this.groupVehicle.Name = "groupVehicle";
-            this.groupVehicle.Size = new System.Drawing.Size(152, 41);
-            this.groupVehicle.TabIndex = 1;
+            this.groupVehicle.Size = new System.Drawing.Size(168, 41);
+            this.groupVehicle.TabIndex = 15;
             // 
             // btnListVehicle
             // 
@@ -498,7 +595,7 @@ namespace Truckleer.Creative
             this.btnListVehicle.Location = new System.Drawing.Point(0, 81);
             this.btnListVehicle.Margin = new System.Windows.Forms.Padding(0);
             this.btnListVehicle.Name = "btnListVehicle";
-            this.btnListVehicle.Size = new System.Drawing.Size(152, 40);
+            this.btnListVehicle.Size = new System.Drawing.Size(168, 40);
             this.btnListVehicle.TabIndex = 2;
             this.btnListVehicle.Text = "Listar Veículos";
             this.btnListVehicle.UseVisualStyleBackColor = false;
@@ -516,236 +613,10 @@ namespace Truckleer.Creative
             this.btnMakeVehicle.Location = new System.Drawing.Point(0, 41);
             this.btnMakeVehicle.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeVehicle.Name = "btnMakeVehicle";
-            this.btnMakeVehicle.Size = new System.Drawing.Size(152, 40);
+            this.btnMakeVehicle.Size = new System.Drawing.Size(168, 40);
             this.btnMakeVehicle.TabIndex = 1;
             this.btnMakeVehicle.Text = "Cadastrar Veículo";
             this.btnMakeVehicle.UseVisualStyleBackColor = false;
-            this.btnMakeVehicle.Click += new System.EventHandler(this.btnMakeVehicle_Click);
-            // 
-            // groupSupply
-            // 
-            this.groupSupply.BackColor = System.Drawing.Color.Transparent;
-            this.groupSupply.Controls.Add(this.btnListAbastecimentos);
-            this.groupSupply.Controls.Add(this.btnAbastecer);
-            this.groupSupply.Controls.Add(this.btnAbastecimento);
-            this.groupSupply.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupSupply.Location = new System.Drawing.Point(0, 0);
-            this.groupSupply.Margin = new System.Windows.Forms.Padding(0);
-            this.groupSupply.MaximumSize = new System.Drawing.Size(0, 123);
-            this.groupSupply.MinimumSize = new System.Drawing.Size(0, 41);
-            this.groupSupply.Name = "groupSupply";
-            this.groupSupply.Size = new System.Drawing.Size(152, 41);
-            this.groupSupply.TabIndex = 0;
-            // 
-            // btnListAbastecimentos
-            // 
-            this.btnListAbastecimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnListAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnListAbastecimentos.FlatAppearance.BorderSize = 0;
-            this.btnListAbastecimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
-            this.btnListAbastecimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnListAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnListAbastecimentos.ForeColor = System.Drawing.Color.Silver;
-            this.btnListAbastecimentos.Location = new System.Drawing.Point(0, 81);
-            this.btnListAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.btnListAbastecimentos.Name = "btnListAbastecimentos";
-            this.btnListAbastecimentos.Size = new System.Drawing.Size(152, 40);
-            this.btnListAbastecimentos.TabIndex = 2;
-            this.btnListAbastecimentos.Text = "Listar Abastecimentos";
-            this.btnListAbastecimentos.UseVisualStyleBackColor = false;
-            // 
-            // btnAbastecer
-            // 
-            this.btnAbastecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.btnAbastecer.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnAbastecer.FlatAppearance.BorderSize = 0;
-            this.btnAbastecer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
-            this.btnAbastecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAbastecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbastecer.ForeColor = System.Drawing.Color.Silver;
-            this.btnAbastecer.Location = new System.Drawing.Point(0, 41);
-            this.btnAbastecer.Margin = new System.Windows.Forms.Padding(0);
-            this.btnAbastecer.Name = "btnAbastecer";
-            this.btnAbastecer.Size = new System.Drawing.Size(152, 40);
-            this.btnAbastecer.TabIndex = 1;
-            this.btnAbastecer.Text = "Abastecer";
-            this.btnAbastecer.UseVisualStyleBackColor = false;
-            this.btnAbastecer.Click += new System.EventHandler(this.btnAbastecer_Click);
-            // 
-            // sideBarTop
-            // 
-            this.sideBarTop.BackColor = System.Drawing.Color.Transparent;
-            this.sideBarTop.Controls.Add(this.pictureBox3);
-            this.sideBarTop.Controls.Add(this.btnDash);
-            this.sideBarTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.sideBarTop.Location = new System.Drawing.Point(5, 5);
-            this.sideBarTop.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
-            this.sideBarTop.Name = "sideBarTop";
-            this.sideBarTop.Size = new System.Drawing.Size(152, 149);
-            this.sideBarTop.TabIndex = 1;
-            // 
-            // btnDash
-            // 
-            this.btnDash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(137)))), ((int)(((byte)(186)))));
-            this.btnDash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDash.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.btnDash.FlatAppearance.BorderSize = 0;
-            this.btnDash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.btnDash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDash.ForeColor = System.Drawing.Color.Silver;
-            this.btnDash.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnDash.Location = new System.Drawing.Point(0, 109);
-            this.btnDash.Name = "btnDash";
-            this.btnDash.Size = new System.Drawing.Size(152, 40);
-            this.btnDash.TabIndex = 0;
-            this.btnDash.Text = "DashBoard";
-            this.btnDash.UseVisualStyleBackColor = false;
-            this.btnDash.Click += new System.EventHandler(this.btnDash_Click);
-            // 
-            // truckleerCallcontainer
-            // 
-            this.truckleerCallcontainer.ColumnCount = 1;
-            this.truckleerCallcontainer.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.truckleerCallcontainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.truckleerCallcontainer.Location = new System.Drawing.Point(162, 0);
-            this.truckleerCallcontainer.Margin = new System.Windows.Forms.Padding(0);
-            this.truckleerCallcontainer.Name = "truckleerCallcontainer";
-            this.truckleerCallcontainer.RowCount = 1;
-            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.truckleerCallcontainer.Size = new System.Drawing.Size(918, 618);
-            this.truckleerCallcontainer.TabIndex = 0;
-            // 
-            // vehicleTimer
-            // 
-            this.vehicleTimer.Interval = 15;
-            this.vehicleTimer.Tick += new System.EventHandler(this.vehicleTimer_Tick);
-            // 
-            // driverTimer
-            // 
-            this.driverTimer.Interval = 15;
-            this.driverTimer.Tick += new System.EventHandler(this.driverTimer_Tick);
-            // 
-            // routeTimer
-            // 
-            this.routeTimer.Interval = 15;
-            this.routeTimer.Tick += new System.EventHandler(this.routeTimer_Tick);
-            // 
-            // maintenceTimer
-            // 
-            this.maintenceTimer.Interval = 15;
-            this.maintenceTimer.Tick += new System.EventHandler(this.maintenceTimer_Tick);
-            // 
-            // tripTimer
-            // 
-            this.tripTimer.Interval = 15;
-            this.tripTimer.Tick += new System.EventHandler(this.tripTimer_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(45, 2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(23, 25);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(12, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 25);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 1;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            // 
-            // btnTrip
-            // 
-            this.btnTrip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrip.BackgroundImage")));
-            this.btnTrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnTrip.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnTrip.FlatAppearance.BorderSize = 0;
-            this.btnTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.btnTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnTrip.ForeColor = System.Drawing.Color.Silver;
-            this.btnTrip.Image = ((System.Drawing.Image)(resources.GetObject("btnTrip.Image")));
-            this.btnTrip.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnTrip.Location = new System.Drawing.Point(0, 0);
-            this.btnTrip.Margin = new System.Windows.Forms.Padding(0);
-            this.btnTrip.Name = "btnTrip";
-            this.btnTrip.Size = new System.Drawing.Size(152, 41);
-            this.btnTrip.TabIndex = 0;
-            this.btnTrip.Text = "Viagens";
-            this.btnTrip.UseVisualStyleBackColor = true;
-            this.btnTrip.Click += new System.EventHandler(this.btnTrip_Click);
-            // 
-            // btnMaintence
-            // 
-            this.btnMaintence.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaintence.BackgroundImage")));
-            this.btnMaintence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMaintence.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnMaintence.FlatAppearance.BorderSize = 0;
-            this.btnMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.btnMaintence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMaintence.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMaintence.ForeColor = System.Drawing.Color.Silver;
-            this.btnMaintence.Image = ((System.Drawing.Image)(resources.GetObject("btnMaintence.Image")));
-            this.btnMaintence.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnMaintence.Location = new System.Drawing.Point(0, 0);
-            this.btnMaintence.Margin = new System.Windows.Forms.Padding(0);
-            this.btnMaintence.Name = "btnMaintence";
-            this.btnMaintence.Size = new System.Drawing.Size(152, 41);
-            this.btnMaintence.TabIndex = 0;
-            this.btnMaintence.Text = "Manutenção";
-            this.btnMaintence.UseVisualStyleBackColor = true;
-            this.btnMaintence.Click += new System.EventHandler(this.btnMaintence_Click);
-            // 
-            // btnRoutes
-            // 
-            this.btnRoutes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRoutes.BackgroundImage")));
-            this.btnRoutes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRoutes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRoutes.FlatAppearance.BorderSize = 0;
-            this.btnRoutes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.btnRoutes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRoutes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRoutes.ForeColor = System.Drawing.Color.Silver;
-            this.btnRoutes.Image = ((System.Drawing.Image)(resources.GetObject("btnRoutes.Image")));
-            this.btnRoutes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRoutes.Location = new System.Drawing.Point(0, 0);
-            this.btnRoutes.Margin = new System.Windows.Forms.Padding(0);
-            this.btnRoutes.Name = "btnRoutes";
-            this.btnRoutes.Size = new System.Drawing.Size(152, 41);
-            this.btnRoutes.TabIndex = 0;
-            this.btnRoutes.Text = "Rotas";
-            this.btnRoutes.UseVisualStyleBackColor = true;
-            this.btnRoutes.Click += new System.EventHandler(this.btnRoutes_Click);
-            // 
-            // btnDriver
-            // 
-            this.btnDriver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDriver.BackgroundImage")));
-            this.btnDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDriver.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnDriver.FlatAppearance.BorderSize = 0;
-            this.btnDriver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.btnDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDriver.ForeColor = System.Drawing.Color.Silver;
-            this.btnDriver.Image = ((System.Drawing.Image)(resources.GetObject("btnDriver.Image")));
-            this.btnDriver.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnDriver.Location = new System.Drawing.Point(0, 0);
-            this.btnDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.btnDriver.Name = "btnDriver";
-            this.btnDriver.Size = new System.Drawing.Size(152, 41);
-            this.btnDriver.TabIndex = 0;
-            this.btnDriver.Text = "Motorista";
-            this.btnDriver.UseVisualStyleBackColor = true;
-            this.btnDriver.Click += new System.EventHandler(this.btnDriver_Click);
             // 
             // btnVeiculo
             // 
@@ -762,11 +633,59 @@ namespace Truckleer.Creative
             this.btnVeiculo.Location = new System.Drawing.Point(0, 0);
             this.btnVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.btnVeiculo.Name = "btnVeiculo";
-            this.btnVeiculo.Size = new System.Drawing.Size(152, 41);
+            this.btnVeiculo.Size = new System.Drawing.Size(168, 41);
             this.btnVeiculo.TabIndex = 0;
             this.btnVeiculo.Text = "Veículo";
             this.btnVeiculo.UseVisualStyleBackColor = true;
-            this.btnVeiculo.Click += new System.EventHandler(this.btnVeiculo_Click);
+            // 
+            // groupSupply
+            // 
+            this.groupSupply.BackColor = System.Drawing.Color.Transparent;
+            this.groupSupply.Controls.Add(this.btnListAbastecimentos);
+            this.groupSupply.Controls.Add(this.btnAbastecer);
+            this.groupSupply.Controls.Add(this.btnAbastecimento);
+            this.groupSupply.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupSupply.Location = new System.Drawing.Point(0, 40);
+            this.groupSupply.Margin = new System.Windows.Forms.Padding(0);
+            this.groupSupply.MaximumSize = new System.Drawing.Size(0, 123);
+            this.groupSupply.MinimumSize = new System.Drawing.Size(0, 41);
+            this.groupSupply.Name = "groupSupply";
+            this.groupSupply.Size = new System.Drawing.Size(168, 41);
+            this.groupSupply.TabIndex = 14;
+            // 
+            // btnListAbastecimentos
+            // 
+            this.btnListAbastecimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListAbastecimentos.FlatAppearance.BorderSize = 0;
+            this.btnListAbastecimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.btnListAbastecimentos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListAbastecimentos.ForeColor = System.Drawing.Color.Silver;
+            this.btnListAbastecimentos.Location = new System.Drawing.Point(0, 81);
+            this.btnListAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
+            this.btnListAbastecimentos.Name = "btnListAbastecimentos";
+            this.btnListAbastecimentos.Size = new System.Drawing.Size(168, 40);
+            this.btnListAbastecimentos.TabIndex = 2;
+            this.btnListAbastecimentos.Text = "Listar Abastecimentos";
+            this.btnListAbastecimentos.UseVisualStyleBackColor = false;
+            // 
+            // btnAbastecer
+            // 
+            this.btnAbastecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnAbastecer.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnAbastecer.FlatAppearance.BorderSize = 0;
+            this.btnAbastecer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.btnAbastecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAbastecer.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAbastecer.ForeColor = System.Drawing.Color.Silver;
+            this.btnAbastecer.Location = new System.Drawing.Point(0, 41);
+            this.btnAbastecer.Margin = new System.Windows.Forms.Padding(0);
+            this.btnAbastecer.Name = "btnAbastecer";
+            this.btnAbastecer.Size = new System.Drawing.Size(168, 40);
+            this.btnAbastecer.TabIndex = 1;
+            this.btnAbastecer.Text = "Abastecer";
+            this.btnAbastecer.UseVisualStyleBackColor = false;
             // 
             // btnAbastecimento
             // 
@@ -782,21 +701,89 @@ namespace Truckleer.Creative
             this.btnAbastecimento.Location = new System.Drawing.Point(0, 0);
             this.btnAbastecimento.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbastecimento.Name = "btnAbastecimento";
-            this.btnAbastecimento.Size = new System.Drawing.Size(152, 41);
+            this.btnAbastecimento.Size = new System.Drawing.Size(168, 41);
             this.btnAbastecimento.TabIndex = 0;
             this.btnAbastecimento.Text = "Abastecimento";
             this.btnAbastecimento.UseVisualStyleBackColor = true;
-            this.btnAbastecimento.Click += new System.EventHandler(this.btnAbastecimento_Click);
+            // 
+            // btnDash
+            // 
+            this.btnDash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(137)))), ((int)(((byte)(186)))));
+            this.btnDash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDash.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnDash.FlatAppearance.BorderSize = 0;
+            this.btnDash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.btnDash.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDash.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDash.ForeColor = System.Drawing.Color.Silver;
+            this.btnDash.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDash.Location = new System.Drawing.Point(0, 0);
+            this.btnDash.Name = "btnDash";
+            this.btnDash.Size = new System.Drawing.Size(168, 40);
+            this.btnDash.TabIndex = 13;
+            this.btnDash.Text = "DashBoard";
+            this.btnDash.UseVisualStyleBackColor = false;
+            // 
+            // sideBarTop
+            // 
+            this.sideBarTop.BackColor = System.Drawing.Color.Transparent;
+            this.sideBarTop.Controls.Add(this.pictureBox3);
+            this.sideBarTop.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.sideBarTop.Location = new System.Drawing.Point(5, 5);
+            this.sideBarTop.Margin = new System.Windows.Forms.Padding(5, 5, 5, 0);
+            this.sideBarTop.Name = "sideBarTop";
+            this.sideBarTop.Size = new System.Drawing.Size(168, 96);
+            this.sideBarTop.TabIndex = 2;
             // 
             // pictureBox3
             // 
+            this.pictureBox3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(29, 11);
+            this.pictureBox3.Location = new System.Drawing.Point(0, 0);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(116, 89);
+            this.pictureBox3.Size = new System.Drawing.Size(168, 96);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
+            // 
+            // vehicleTimer
+            // 
+            this.vehicleTimer.Interval = 15;
+            this.vehicleTimer.Tick += new System.EventHandler(this.VehicleTimer_Tick);
+            // 
+            // driverTimer
+            // 
+            this.driverTimer.Interval = 15;
+            this.driverTimer.Tick += new System.EventHandler(this.DriverTimer_Tick);
+            // 
+            // routeTimer
+            // 
+            this.routeTimer.Interval = 15;
+            this.routeTimer.Tick += new System.EventHandler(this.RouteTimer_Tick);
+            // 
+            // maintenceTimer
+            // 
+            this.maintenceTimer.Interval = 15;
+            this.maintenceTimer.Tick += new System.EventHandler(this.MaintenceTimer_Tick);
+            // 
+            // tripTimer
+            // 
+            this.tripTimer.Interval = 15;
+            this.tripTimer.Tick += new System.EventHandler(this.TripTimer_Tick);
+            // 
+            // timerMenu
+            // 
+            this.timerMenu.Interval = 2;
+            this.timerMenu.Tick += new System.EventHandler(this.TimerMenu_Tick);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(8, 7);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Truckleer
             // 
@@ -812,14 +799,17 @@ namespace Truckleer.Creative
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Truckleer";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.truckleerContainer1.ResumeLayout(false);
             this.mainContainer.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
-            this.truckleerContainer1.ResumeLayout(false);
+            this.panelNavbar.ResumeLayout(false);
             this.truckleerContainer.ResumeLayout(false);
-            this.panelSideBar.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.truckleerMainContainer.ResumeLayout(false);
+            this.sideBarMenu.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
+            this.panelMenu.ResumeLayout(false);
+            this.smallMenuPanel.ResumeLayout(false);
+            this.menuPanel.ResumeLayout(false);
             this.groupTrip.ResumeLayout(false);
             this.groupMaintence.ResumeLayout(false);
             this.groupRoute.ResumeLayout(false);
@@ -827,8 +817,6 @@ namespace Truckleer.Creative
             this.groupVehicle.ResumeLayout(false);
             this.groupSupply.ResumeLayout(false);
             this.sideBarTop.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
@@ -836,31 +824,26 @@ namespace Truckleer.Creative
 
         #endregion
         private System.Windows.Forms.Timer supplyTimer;
-        private System.Windows.Forms.TableLayoutPanel mainContainer;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Panel panelNavbar;
         private System.Windows.Forms.TableLayoutPanel truckleerContainer1;
-        private System.Windows.Forms.TableLayoutPanel truckleerContainer;
-        private System.Windows.Forms.Panel panelSideBar;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel groupSupply;
-        private System.Windows.Forms.Button btnListAbastecimentos;
-        private System.Windows.Forms.Button btnAbastecer;
-        private System.Windows.Forms.Button btnAbastecimento;
-        private System.Windows.Forms.TableLayoutPanel truckleerCallcontainer;
-        private System.Windows.Forms.Panel sideBarTop;
         private System.Windows.Forms.Timer vehicleTimer;
         private System.Windows.Forms.Timer driverTimer;
         private System.Windows.Forms.Timer routeTimer;
         private System.Windows.Forms.Timer maintenceTimer;
         private System.Windows.Forms.Timer tripTimer;
-        public System.Windows.Forms.Button btnDash;
+        private System.Windows.Forms.TableLayoutPanel mainContainer;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Panel panelNavbar;
+        private System.Windows.Forms.TableLayoutPanel truckleerContainer;
+        private System.Windows.Forms.Panel truckleerMainContainer;
+        private System.Windows.Forms.Panel sideBarMenu;
+        private System.Windows.Forms.TableLayoutPanel truckleerCallcontainer;
+        private System.Windows.Forms.Button hamburguerMenu;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
+        private System.Windows.Forms.Panel sideBarTop;
+        private System.Windows.Forms.Timer timerMenu;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel panelMenu;
+        private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Panel groupTrip;
         private System.Windows.Forms.Button btnListTrip;
         private System.Windows.Forms.Button btnMakeTrip;
@@ -882,7 +865,13 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Button btnListVehicle;
         private System.Windows.Forms.Button btnMakeVehicle;
         private System.Windows.Forms.Button btnVeiculo;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Panel groupSupply;
+        private System.Windows.Forms.Button btnListAbastecimentos;
+        private System.Windows.Forms.Button btnAbastecer;
+        private System.Windows.Forms.Button btnAbastecimento;
+        public System.Windows.Forms.Button btnDash;
+        private System.Windows.Forms.Panel smallMenuPanel;
+        private System.Windows.Forms.Button button1;
     }
 }
 
