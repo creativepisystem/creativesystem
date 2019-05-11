@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Api.Classes
 {
-    class Driver
+    enum UserType
     {
+        ADMIN = 1,
+        CLIENT = 2,
+        DRIVER = 3
     }
 }

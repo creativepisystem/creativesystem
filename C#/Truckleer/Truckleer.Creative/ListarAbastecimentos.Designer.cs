@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             this.timerFilter = new System.Windows.Forms.Timer(this.components);
             this.listSupply = new System.Windows.Forms.Panel();
+            this.container = new System.Windows.Forms.Panel();
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.filter = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.container = new System.Windows.Forms.Panel();
+            this.filter = new System.Windows.Forms.Panel();
             this.listSupply.SuspendLayout();
+            this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            this.container.SuspendLayout();
             this.SuspendLayout();
             // 
             // listSupply
@@ -51,6 +51,16 @@
             this.listSupply.Name = "listSupply";
             this.listSupply.Size = new System.Drawing.Size(900, 500);
             this.listSupply.TabIndex = 0;
+            // 
+            // container
+            // 
+            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.container.Controls.Add(this.layoutFlex);
+            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.Location = new System.Drawing.Point(0, 0);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(900, 500);
+            this.container.TabIndex = 0;
             // 
             // layoutFlex
             // 
@@ -81,16 +91,6 @@
             this.MainPanel.Size = new System.Drawing.Size(871, 434);
             this.MainPanel.TabIndex = 0;
             // 
-            // filter
-            // 
-            this.filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.filter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filter.Location = new System.Drawing.Point(0, 0);
-            this.filter.Margin = new System.Windows.Forms.Padding(0);
-            this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(871, 100);
-            this.filter.TabIndex = 0;
-            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
@@ -100,15 +100,15 @@
             this.panel4.Size = new System.Drawing.Size(871, 334);
             this.panel4.TabIndex = 1;
             // 
-            // container
+            // filter
             // 
-            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.container.Controls.Add(this.layoutFlex);
-            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.container.Location = new System.Drawing.Point(0, 0);
-            this.container.Name = "container";
-            this.container.Size = new System.Drawing.Size(900, 500);
-            this.container.TabIndex = 0;
+            this.filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.filter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filter.Location = new System.Drawing.Point(0, 0);
+            this.filter.Margin = new System.Windows.Forms.Padding(0);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(871, 100);
+            this.filter.TabIndex = 0;
             // 
             // ListarAbastecimentos
             // 
@@ -121,9 +121,9 @@
             this.Size = new System.Drawing.Size(900, 500);
             this.Load += new System.EventHandler(this.ListarAbastecimentos_Load);
             this.listSupply.ResumeLayout(false);
+            this.container.ResumeLayout(false);
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
-            this.container.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

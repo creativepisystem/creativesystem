@@ -39,6 +39,24 @@
     <Reference Include="FireSharp.Serialization.JsonNet, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\FireSharp.Serialization.JsonNet.1.1.0\lib\net45\FireSharp.Serialization.JsonNet.dll</HintPath>
     </Reference>
+    <Reference Include="Google.Apis, Version=1.39.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.39.0\lib\net45\Google.Apis.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth, Version=1.39.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.39.0\lib\net45\Google.Apis.Auth.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Auth.PlatformServices, Version=1.39.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Auth.1.39.0\lib\net45\Google.Apis.Auth.PlatformServices.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Core, Version=1.39.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Core.1.39.0\lib\net45\Google.Apis.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.Firestore.v1beta2, Version=1.39.0.1542, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.Firestore.v1beta2.1.39.0.1542\lib\net45\Google.Apis.Firestore.v1beta2.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Apis.PlatformServices, Version=1.39.0.0, Culture=neutral, PublicKeyToken=4b01fa6e34db77ab, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Apis.1.39.0\lib\net45\Google.Apis.PlatformServices.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.dll</HintPath>
     </Reference>
@@ -48,8 +66,8 @@
     <Reference Include="Microsoft.Threading.Tasks.Extensions.Desktop, Version=1.0.168.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\net40\Microsoft.Threading.Tasks.Extensions.Desktop.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp, Version=104.4.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.104.4.0\lib\net4\RestSharp.dll</HintPath>
@@ -88,6 +106,15 @@
     <Compile Include="AlertaManutencao.Designer.cs">
       <DependentUpon>AlertaManutencao.cs</DependentUpon>
     </Compile>
+    <Compile Include="Api\Classes\Driver\Driver.cs" />
+    <Compile Include="Api\Classes\Route\Route.cs" />
+    <Compile Include="Api\Classes\Supply\Supply.cs" />
+    <Compile Include="Api\Classes\Trip\Trip.cs" />
+    <Compile Include="Api\Classes\User\User.cs" />
+    <Compile Include="Api\Classes\User\UserType.cs" />
+    <Compile Include="Api\Classes\Vehicle\Vehicle.cs" />
+    <Compile Include="Api\FireConnection\FireConnection.cs" />
+    <Compile Include="Api\FireConnection\Serializer.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -123,6 +150,12 @@
     </Compile>
     <Compile Include="ListarVeiculos.Designer.cs">
       <DependentUpon>ListarVeiculos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoadingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoadingForm.Designer.cs">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Manutencao.cs">
       <SubType>UserControl</SubType>
@@ -186,6 +219,9 @@
     <EmbeddedResource Include="ListarVeiculos.resx">
       <DependentUpon>ListarVeiculos.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoadingForm.resx">
+      <DependentUpon>LoadingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Manutencao.resx">
       <DependentUpon>Manutencao.cs</DependentUpon>
     </EmbeddedResource>
@@ -243,6 +279,93 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\iconArrowUp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driverMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driverSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\driverSelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\homeSelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintence.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenceMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenceSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maintenceSelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\route.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\routeSelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplyMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplySelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\supplySelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tripMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tripSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tripSelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truckMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truckSelected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truckSelectedMin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.14\tools\Microsoft.Bcl.Build.targets')" />

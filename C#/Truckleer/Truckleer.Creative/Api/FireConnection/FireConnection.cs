@@ -1,6 +1,8 @@
 ﻿using FireSharp.Config;
 using FireSharp.Interfaces;
 using FireSharp.Response;
+using Truckleer.Api.Classes;
+using System.Windows.Forms;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,16 +19,11 @@ namespace Truckleer.Api.FireConnection
             BasePath = "https://creative-external-supply.firebaseio.com"
         };
 
-        IFirebaseClient client;
+        public IFirebaseClient Client;
 
-        private void FirebaseClient()
+        public FireConnection()
         {
-            client = new FireSharp.FirebaseClient(config);
-
-            if (client != null)
-            {
-
-            }
+            Client = new FireSharp.FirebaseClient(config);
         }
         
     }

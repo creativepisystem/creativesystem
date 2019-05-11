@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Truckleer.Api.Classes;
 
 namespace Truckleer.Creative
 {
@@ -32,22 +33,21 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Clear();
             truckleerCallcontainer.Controls.Add(dash);
             dash.BringToFront();
+
+            /*Serializer<Driver> driving = new Serializer<Driver>("Zyh5fy3SMfu7mDrkpNWr");
+            MessageBox.Show(driving.ToString());*/
         }
 
-        private void PictureBox2_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
+
+        public void SplashStart() { }
         
-        private void PictureBox1_Click(object sender, EventArgs e)
-        {
-            this.WindowState = FormWindowState.Minimized;
-        }
+
         bool menuIsCollapsed = false;
         private void TimerMenu_Tick(object sender, EventArgs e)
         {
             if (menuIsCollapsed)
             {
+                OpenSideMenu();
                 sideBarMenu.Width += 10;
                 if (sideBarMenu.Size.Width == sideBarMenu.MaximumSize.Width)
                 {
@@ -56,11 +56,12 @@ namespace Truckleer.Creative
                 }
             }
             else
-            {
+            {                
                 sideBarMenu.Width -= 10;
                 if (sideBarMenu.Size.Width == sideBarMenu.MinimumSize.Width)
                 {
                     timerMenu.Stop();
+                    CloseSideMenu();
                     menuIsCollapsed = true;
                 }
                 
@@ -255,6 +256,43 @@ namespace Truckleer.Creative
             groupTrip.Size = groupTrip.MinimumSize;
         }
 
+        private void CloseSideMenu()
+        {
+            btnDash.Text = "";
+            btnAbastecimento.Text = "";
+            btnAbastecimento.BackgroundImage = null;
+            btnVeiculo.Text = "";
+            btnVeiculo.BackgroundImage = null;
+            btnDriver.Text = "";
+            btnDriver.BackgroundImage = null;
+            btnRoutes.Text = "";
+            btnRoutes.BackgroundImage = null;
+            btnMaintence.Text = "";
+            btnMaintence.BackgroundImage = null;
+            btnTrip.Text = "";
+            btnTrip.BackgroundImage = null;
+            CloseMenu();
+        }
+
+        private void OpenSideMenu()
+        {
+            timerSideMenu.Start();
+            btnDash.Text = "Dashboard";
+            btnAbastecimento.Text = "Abastecimento";
+            btnAbastecimento.BackgroundImage = Properties.Resources.iconArrowUp;
+            btnVeiculo.Text = "Veículo";
+            btnVeiculo.BackgroundImage = Properties.Resources.iconArrowUp;
+            btnDriver.Text = "Motorista";
+            btnDriver.BackgroundImage = Properties.Resources.iconArrowUp;
+            btnRoutes.Text = "Rotas";
+            btnRoutes.BackgroundImage = Properties.Resources.iconArrowUp;
+            btnMaintence.Text = "Manutenção";
+            btnMaintence.BackgroundImage = Properties.Resources.iconArrowUp;
+            btnTrip.Text = "Viagem";
+            btnTrip.BackgroundImage = Properties.Resources.iconArrowUp;
+
+        }
+
         public void BackImageUp(Button botao)
         {
             Image up = Properties.Resources.iconArrowUp;
@@ -291,6 +329,7 @@ namespace Truckleer.Creative
         private void BtnAbastecimento_Click(object sender, EventArgs e)
         {
             supplyTimer.Start();
+            OpenSideMenu();
 
             //Close others panels
             CloseMenu();
@@ -330,6 +369,7 @@ namespace Truckleer.Creative
         private void BtnVeiculo_Click(object sender, EventArgs e)
         {
             vehicleTimer.Start();
+            OpenSideMenu();
 
             //Close others panels
             CloseMenu();
@@ -361,14 +401,16 @@ namespace Truckleer.Creative
             btnListVehicle.BackColor = Color.Gray;
         }
 
-        private void BtnDriver_Click(object sender, EventArgs e)
+        private void BtnDriver_Click_1(object sender, EventArgs e)
         {
             driverTimer.Start();
+            OpenSideMenu();
 
             //Close Others Panels
             CloseMenu();
             BackImageDown();
             BackImageUp(btnDriver);
+
         }
 
         private void BtnMakeDriver_Click(object sender, EventArgs e)
@@ -400,6 +442,7 @@ namespace Truckleer.Creative
         private void BtnRoutes_Click(object sender, EventArgs e)
         {
             routeTimer.Start();
+            OpenSideMenu();
 
             //Close Others Panels
             CloseMenu();
@@ -434,6 +477,7 @@ namespace Truckleer.Creative
         private void BtnMaintence_Click(object sender, EventArgs e)
         {
             maintenceTimer.Start();
+            OpenSideMenu();
 
             //Close Others Panels
             CloseMenu();
@@ -473,6 +517,7 @@ namespace Truckleer.Creative
         private void BtnTrip_Click(object sender, EventArgs e)
         {
             tripTimer.Start();
+            OpenSideMenu();
 
             //Close Others Panels
             CloseMenu();
@@ -498,9 +543,24 @@ namespace Truckleer.Creative
 
         }
 
+        private void TimerSideMenu_Tick(object sender, EventArgs e)
+        {
+            sideBarMenu.Width += 10;
+            if (sideBarMenu.Size.Width == sideBarMenu.MaximumSize.Width)
+            {
+                timerSideMenu.Stop();
+                menuIsCollapsed = false;
+            }
+        }
+
         private void HamburguerMenu_Click(object sender, EventArgs e)
         {
-            timerMenu.Start();        
+            timerMenu.Start();            
+        }
+
+        private void LoadScreen_Tick(object sender, EventArgs e)
+        {
+
         }
     }
 }

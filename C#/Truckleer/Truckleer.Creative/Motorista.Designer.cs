@@ -293,6 +293,7 @@
             this.btnSaveDriver.TabIndex = 37;
             this.btnSaveDriver.Text = "Salvar";
             this.btnSaveDriver.UseVisualStyleBackColor = false;
+            this.btnSaveDriver.Click += new System.EventHandler(this.btnSaveDriver_Click);
             // 
             // textBox1
             // 
@@ -363,8 +364,7 @@
             // 
             // panelTitleAbastecimentos
             // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Transparent;
-            this.panelTitleAbastecimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTitleAbastecimentos.BackgroundImage")));
+            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Indigo;
             this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
             this.panelTitleAbastecimentos.Controls.Add(this.titleDriver);
@@ -388,6 +388,8 @@
             // 
             // titleDriver
             // 
+            this.titleDriver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.titleDriver.AutoSize = true;
             this.titleDriver.Font = new System.Drawing.Font("Arial Narrow", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleDriver.ForeColor = System.Drawing.Color.Orange;

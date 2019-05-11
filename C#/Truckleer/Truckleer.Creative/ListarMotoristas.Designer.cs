@@ -28,138 +28,96 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.panelTop = new System.Windows.Forms.Panel();
-            this.filterPanel = new System.Windows.Forms.Panel();
-            this.comboVehicle = new System.Windows.Forms.ComboBox();
-            this.filterVehicle = new System.Windows.Forms.Label();
-            this.labelFilter = new System.Windows.Forms.Label();
-            this.listDriver = new System.Windows.Forms.TableLayoutPanel();
-            this.containerLista = new System.Windows.Forms.Panel();
-            this.bodyPanel = new System.Windows.Forms.Panel();
-            this.panelTop.SuspendLayout();
-            this.filterPanel.SuspendLayout();
-            this.listDriver.SuspendLayout();
-            this.bodyPanel.SuspendLayout();
+            this.container = new System.Windows.Forms.Panel();
+            this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.filter = new System.Windows.Forms.Panel();
+            this.container.SuspendLayout();
+            this.layoutFlex.SuspendLayout();
+            this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelTop
+            // container
             // 
-            this.panelTop.Controls.Add(this.labelFilter);
-            this.panelTop.Controls.Add(this.filterPanel);
-            this.panelTop.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelTop.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTop.ForeColor = System.Drawing.Color.Azure;
-            this.panelTop.Location = new System.Drawing.Point(0, 0);
-            this.panelTop.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTop.Name = "panelTop";
-            this.panelTop.Size = new System.Drawing.Size(1170, 151);
-            this.panelTop.TabIndex = 1;
+            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.container.Controls.Add(this.layoutFlex);
+            this.container.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.container.Location = new System.Drawing.Point(0, 0);
+            this.container.Name = "container";
+            this.container.Size = new System.Drawing.Size(1170, 759);
+            this.container.TabIndex = 1;
             // 
-            // filterPanel
+            // layoutFlex
             // 
-            this.filterPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.filterPanel.Controls.Add(this.filterVehicle);
-            this.filterPanel.Controls.Add(this.comboVehicle);
-            this.filterPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filterPanel.Location = new System.Drawing.Point(35, 43);
-            this.filterPanel.Name = "filterPanel";
-            this.filterPanel.Size = new System.Drawing.Size(1101, 89);
-            this.filterPanel.TabIndex = 2;
+            this.layoutFlex.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.layoutFlex.ColumnCount = 1;
+            this.layoutFlex.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Controls.Add(this.MainPanel, 0, 0);
+            this.layoutFlex.Location = new System.Drawing.Point(15, 36);
+            this.layoutFlex.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutFlex.Name = "layoutFlex";
+            this.layoutFlex.RowCount = 1;
+            this.layoutFlex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Size = new System.Drawing.Size(1141, 693);
+            this.layoutFlex.TabIndex = 0;
             // 
-            // comboVehicle
+            // MainPanel
             // 
-            this.comboVehicle.AllowDrop = true;
-            this.comboVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboVehicle.FormattingEnabled = true;
-            this.comboVehicle.Location = new System.Drawing.Point(31, 44);
-            this.comboVehicle.Name = "comboVehicle";
-            this.comboVehicle.Size = new System.Drawing.Size(191, 24);
-            this.comboVehicle.TabIndex = 4;
+            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel.Controls.Add(this.panel4);
+            this.MainPanel.Controls.Add(this.filter);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1141, 693);
+            this.MainPanel.TabIndex = 0;
             // 
-            // filterVehicle
+            // panel4
             // 
-            this.filterVehicle.AutoSize = true;
-            this.filterVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.filterVehicle.Location = new System.Drawing.Point(28, 15);
-            this.filterVehicle.Name = "filterVehicle";
-            this.filterVehicle.Size = new System.Drawing.Size(66, 17);
-            this.filterVehicle.TabIndex = 7;
-            this.filterVehicle.Text = "Motorista";
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 100);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1141, 593);
+            this.panel4.TabIndex = 1;
             // 
-            // labelFilter
+            // filter
             // 
-            this.labelFilter.AutoSize = true;
-            this.labelFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelFilter.Location = new System.Drawing.Point(47, 17);
-            this.labelFilter.Name = "labelFilter";
-            this.labelFilter.Size = new System.Drawing.Size(89, 31);
-            this.labelFilter.TabIndex = 3;
-            this.labelFilter.Text = "Filtros";
-            // 
-            // listDriver
-            // 
-            this.listDriver.ColumnCount = 1;
-            this.listDriver.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.listDriver.Controls.Add(this.bodyPanel, 0, 1);
-            this.listDriver.Controls.Add(this.panelTop, 0, 0);
-            this.listDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listDriver.Location = new System.Drawing.Point(0, 0);
-            this.listDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.listDriver.Name = "listDriver";
-            this.listDriver.RowCount = 2;
-            this.listDriver.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.listDriver.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.listDriver.Size = new System.Drawing.Size(1170, 759);
-            this.listDriver.TabIndex = 0;
-            // 
-            // containerLista
-            // 
-            this.containerLista.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.containerLista.Location = new System.Drawing.Point(35, 21);
-            this.containerLista.Name = "containerLista";
-            this.containerLista.Size = new System.Drawing.Size(1101, 479);
-            this.containerLista.TabIndex = 0;
-            // 
-            // bodyPanel
-            // 
-            this.bodyPanel.Controls.Add(this.containerLista);
-            this.bodyPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.bodyPanel.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bodyPanel.ForeColor = System.Drawing.Color.Azure;
-            this.bodyPanel.Location = new System.Drawing.Point(0, 151);
-            this.bodyPanel.Margin = new System.Windows.Forms.Padding(0);
-            this.bodyPanel.Name = "bodyPanel";
-            this.bodyPanel.Size = new System.Drawing.Size(1170, 608);
-            this.bodyPanel.TabIndex = 3;
+            this.filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
+            this.filter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.filter.Location = new System.Drawing.Point(0, 0);
+            this.filter.Margin = new System.Windows.Forms.Padding(0);
+            this.filter.Name = "filter";
+            this.filter.Size = new System.Drawing.Size(1141, 100);
+            this.filter.TabIndex = 0;
             // 
             // ListarMotoristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Controls.Add(this.listDriver);
+            this.Controls.Add(this.container);
             this.Name = "ListarMotoristas";
             this.Size = new System.Drawing.Size(1170, 759);
             this.Load += new System.EventHandler(this.ListarMotoristas_Load);
-            this.panelTop.ResumeLayout(false);
-            this.panelTop.PerformLayout();
-            this.filterPanel.ResumeLayout(false);
-            this.filterPanel.PerformLayout();
-            this.listDriver.ResumeLayout(false);
-            this.bodyPanel.ResumeLayout(false);
+            this.container.ResumeLayout(false);
+            this.layoutFlex.ResumeLayout(false);
+            this.MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelTop;
-        private System.Windows.Forms.Label labelFilter;
-        private System.Windows.Forms.Panel filterPanel;
-        private System.Windows.Forms.Label filterVehicle;
-        private System.Windows.Forms.ComboBox comboVehicle;
-        private System.Windows.Forms.TableLayoutPanel listDriver;
-        private System.Windows.Forms.Panel bodyPanel;
-        private System.Windows.Forms.Panel containerLista;
+        private System.Windows.Forms.Panel container;
+        private System.Windows.Forms.TableLayoutPanel layoutFlex;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel filter;
     }
 }

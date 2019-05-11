@@ -42,9 +42,9 @@
             this.textBoxOrigin = new System.Windows.Forms.TextBox();
             this.labelOrigin = new System.Windows.Forms.Label();
             this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.titleRoute = new System.Windows.Forms.Label();
             this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutRoute.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -116,6 +116,7 @@
             // 
             // btnCancelRoute
             // 
+            this.btnCancelRoute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancelRoute.BackColor = System.Drawing.Color.WhiteSmoke;
             this.btnCancelRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnCancelRoute.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -131,6 +132,7 @@
             // 
             // btnSaveRoute
             // 
+            this.btnSaveRoute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveRoute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
             this.btnSaveRoute.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.btnSaveRoute.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -163,6 +165,7 @@
             // 
             // textBoxDetination
             // 
+            this.textBoxDetination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBoxDetination.Location = new System.Drawing.Point(411, 168);
             this.textBoxDetination.Name = "textBoxDetination";
             this.textBoxDetination.Size = new System.Drawing.Size(201, 30);
@@ -170,6 +173,7 @@
             // 
             // labelDestination
             // 
+            this.labelDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.labelDestination.AutoSize = true;
             this.labelDestination.ForeColor = System.Drawing.Color.Azure;
             this.labelDestination.Location = new System.Drawing.Point(406, 129);
@@ -197,8 +201,7 @@
             // 
             // panelTitleAbastecimentos
             // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Transparent;
-            this.panelTitleAbastecimentos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panelTitleAbastecimentos.BackgroundImage")));
+            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Indigo;
             this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
             this.panelTitleAbastecimentos.Controls.Add(this.titleRoute);
@@ -210,12 +213,24 @@
             this.panelTitleAbastecimentos.Size = new System.Drawing.Size(657, 75);
             this.panelTitleAbastecimentos.TabIndex = 3;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(80, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(81, 67);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
             // titleRoute
             // 
+            this.titleRoute.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.titleRoute.AutoSize = true;
             this.titleRoute.Font = new System.Drawing.Font("Arial Narrow", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleRoute.ForeColor = System.Drawing.Color.Orange;
-            this.titleRoute.Location = new System.Drawing.Point(292, 5);
+            this.titleRoute.Location = new System.Drawing.Point(266, 5);
             this.titleRoute.Name = "titleRoute";
             this.titleRoute.Size = new System.Drawing.Size(140, 63);
             this.titleRoute.TabIndex = 0;
@@ -230,16 +245,6 @@
             this.panelFooterAbastecimentos.Name = "panelFooterAbastecimentos";
             this.panelFooterAbastecimentos.Size = new System.Drawing.Size(657, 27);
             this.panelFooterAbastecimentos.TabIndex = 2;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(81, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
             // 
             // Rotas
             // 

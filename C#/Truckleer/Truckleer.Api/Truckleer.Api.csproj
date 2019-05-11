@@ -70,11 +70,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Classes\Driver.cs" />
-    <Compile Include="FireConnection\FireConnection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\Truckleer.Creative\Truckleer.Creative.csproj">
+      <Project>{2dc7e726-9fb6-482d-bfe4-1a569c0fad67}</Project>
+      <Name>Truckleer.Creative</Name>
+    </ProjectReference>
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>

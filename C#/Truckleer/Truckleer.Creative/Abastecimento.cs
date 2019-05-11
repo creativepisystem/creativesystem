@@ -31,5 +31,15 @@ namespace Truckleer.Creative
         {
 
         }
+
+        private void TextBoxLitersSupply_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+       
+        private void btnSaveSupply_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
