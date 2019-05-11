@@ -262,7 +262,7 @@
             this.panelRightDriver.Name = "panelRightDriver";
             this.panelRightDriver.Size = new System.Drawing.Size(438, 604);
             this.panelRightDriver.TabIndex = 1;
-            this.panelRightDriver.Paint += new System.Windows.Forms.PaintEventHandler(this.panelRightDriver_Paint);
+            this.panelRightDriver.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelRightDriver_Paint);
             // 
             // btnCancelDriver
             // 
@@ -293,7 +293,7 @@
             this.btnSaveDriver.TabIndex = 37;
             this.btnSaveDriver.Text = "Salvar";
             this.btnSaveDriver.UseVisualStyleBackColor = false;
-            this.btnSaveDriver.Click += new System.EventHandler(this.btnSaveDriver_Click);
+            this.btnSaveDriver.Click += new System.EventHandler(this.BtnSaveDriver_Click);
             // 
             // textBox1
             // 
