@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Truckleer.Api.Classes
+namespace Truckleer.Modules
 {
     [FirestoreData]
-    class Trip
+    class Trip : IModule
     {
         public Trip()
         {
@@ -20,11 +20,20 @@ namespace Truckleer.Api.Classes
         private DateTime date { get; set; }
         [FirestoreProperty]
         private string name { get; set; }
-        [FirestoreProperty]
         private Route route { get; set; }
         private Driver driver { get; set; }
         [FirestoreProperty]
         private bool status { get; set; }
         private Vehicle vehicle { get; set; }
+
+        public Message IsValid()
+        {
+            throw new NotImplementedException();
+        }
+
+        public dynamic ToObject()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

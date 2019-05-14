@@ -6,10 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace Truckleer.Api.Classes
+namespace Truckleer.Modules
 {
     [FirestoreData]
-    class Supply
+    class Supply : IModule
     {
         public Supply()
         {
@@ -32,5 +32,15 @@ namespace Truckleer.Api.Classes
         [FirestoreProperty]
         public decimal price { get; set; }
         public Trip trip { get; set; }
+
+        public Message IsValid()
+        {
+            throw new NotImplementedException();
+        }
+
+        public dynamic ToObject()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

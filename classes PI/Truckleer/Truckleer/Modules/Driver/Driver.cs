@@ -1,14 +1,10 @@
 ﻿using Google.Cloud.Firestore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Truckleer.Api.Classes
+namespace Truckleer.Modules
 {
     [FirestoreData]
-    class Driver
+    class Driver : IModule
     {
         //Constructor
         public Driver()
@@ -23,11 +19,11 @@ namespace Truckleer.Api.Classes
         [FirestoreProperty]
         public string cnh { get; set; }
         [FirestoreProperty]
-        public int cnh_number { get; set; }
+        public string cnh_number { get; set; }
         [FirestoreProperty]
         public DateTime birth_date { get; set; }
         [FirestoreProperty]
-        public int phone { get; set; }
+        public string phone { get; set; }
         [FirestoreProperty]
         public string email { get; set; }
         [FirestoreProperty]
@@ -36,7 +32,16 @@ namespace Truckleer.Api.Classes
         public string photo { get; set; }
         [FirestoreProperty]
         public string obs { get; set; }
-        public User User { get; set; }
-    }
+        public User user { get; set; }
 
+        public Message IsValid()
+        {
+            throw new NotImplementedException();
+        }
+
+        public dynamic ToObject()
+        {
+            throw new NotImplementedException();
+        }
+    }
 }
