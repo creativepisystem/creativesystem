@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace Truckleer.Modules
 {
     [FirestoreData]
-    class Route:IModule
+    public class Route:IModule
     {
         //Constructor
         public Route()

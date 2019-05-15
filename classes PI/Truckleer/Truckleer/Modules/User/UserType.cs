@@ -1,7 +1,7 @@
 ﻿namespace Truckleer.Modules
 {
     //Enum of type users of system
-    enum UserType
+    public enum UserType
     {
         ADMIN = 1,
         CLIENT = 2,

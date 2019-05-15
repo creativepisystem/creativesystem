@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Modules
 {
-    public enum CnhType
+    public enum TripStatus
     {
-        A,B,C,D,E
+        ABERTA,FECHADA
     }
 }

@@ -1,11 +1,10 @@
 ﻿using Google.Cloud.Firestore;
 using System;
 using System.Dynamic;
-using BrTypes;
 namespace Truckleer.Modules
 {
     [FirestoreData]
-    class Driver : IModule
+    public class Driver : IModule
     {
         UserService userService;
         //Constructor
