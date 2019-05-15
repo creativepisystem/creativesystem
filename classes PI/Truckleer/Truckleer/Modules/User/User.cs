@@ -74,7 +74,7 @@ namespace Truckleer.Modules
                     MessageText = "O tipo do usário é inválido!"
                 };
             //check if email is valid
-            if (email == null || !(new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").IsMatch(email)))
+            if (email == null || !Validator.IsValidEmail(email))
                 return new Message()
                 {
                     Type = MessageType.ERROR,

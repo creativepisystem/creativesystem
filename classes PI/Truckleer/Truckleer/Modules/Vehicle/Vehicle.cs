@@ -108,7 +108,7 @@ namespace Truckleer.Modules
                 us.fab_Year = fab_Year;
             if (mod_Year > 0)
                 us.mod_Year = mod_Year;
-            if (color != null)
+            if (color >0)
                 us.color = color;
             if (renavam != null)
                 us.renavam = renavam;
