@@ -20,24 +20,25 @@ namespace Truckleer.Modules
         {
             DriverService = new DriverService();
             VehicleService = new VehicleService();
+            RouteService = new RouteService();
             TripService = new TripService();
         }
 
         public string id { get; set; }
-        [FirestoreProperty]
+        
         public DateTime date { get; set; }
         public Driver driver { get; set; }
         public Vehicle vehicle { get; set; }
         public Route route { get; set; }
-        [FirestoreProperty]
+        
         public float liters { get; set; }
-        [FirestoreProperty]
+        
         public float total { get; set; }
-        [FirestoreProperty]
+        
         public float current_Km { get; set; }
         [FirestoreProperty]
         public string station { get; set; }
-        [FirestoreProperty]
+       
         public float price { get; set; }
         public Trip trip { get; set; }
 

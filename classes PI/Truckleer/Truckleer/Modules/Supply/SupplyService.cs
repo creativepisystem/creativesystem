@@ -1,4 +1,5 @@
 ﻿
+using Google.Cloud.Firestore;
 using System.Collections.Generic;
 
 namespace Truckleer.Modules
@@ -27,6 +28,11 @@ namespace Truckleer.Modules
         public bool Save(Supply supply)
         {
             return repository.Save(supply).Result;
+        }
+
+        public List<Supply> Filter(SupplyFilter supplyFilter)
+        {
+            return repository.Filter(supplyFilter).Result;
         }
     }
 }

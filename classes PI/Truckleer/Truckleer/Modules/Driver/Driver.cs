@@ -18,7 +18,7 @@ namespace Truckleer.Modules
         public string name { get; set; }
         [FirestoreProperty]
         public string cpf { get; set; }
-        [FirestoreProperty]
+        //[FirestoreProperty]
         public CnhType cnh { get; set; }
         [FirestoreProperty]
         public string cnh_number { get; set; }
@@ -28,7 +28,7 @@ namespace Truckleer.Modules
         public string phone { get; set; }
         [FirestoreProperty]
         public string email { get; set; }
-        [FirestoreProperty]
+        //[FirestoreProperty]
         public DateTime cnh_expiration { get; set; }
         [FirestoreProperty]
         public string photo { get; set; }

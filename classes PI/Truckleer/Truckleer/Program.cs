@@ -10,10 +10,19 @@ namespace Truckleer
     {
         static void Main(string[] args)
         {
-            DriverService service = new DriverService();
 
-            Driver d = service.FindOne("Zyh5fy3SMfu7mDrkpNWr");
-            Console.WriteLine(d.user.user);
+            SupplyFilter supplyFilter = new SupplyFilter()
+            {
+                driver = new Driver()
+                {
+                    id = "eySPZJGHlI2d4EHaPaA4"
+                }
+
+            };
+
+            List<Supply> result = supplyFilter.Filter();
+
+            Console.WriteLine(result.Count);
 
             Console.ReadKey();
         }

@@ -54,6 +54,7 @@
     <Compile Include="Modules\Driver\Driver.cs" />
     <Compile Include="Modules\Driver\DriverRepository.cs" />
     <Compile Include="Modules\Driver\DriverService.cs" />
+    <Compile Include="Modules\Interface\IFilter.cs" />
     <Compile Include="Modules\Interface\IModule.cs" />
     <Compile Include="Modules\Message\Message.cs" />
     <Compile Include="Modules\Message\MessageType.cs" />
@@ -61,6 +62,7 @@
     <Compile Include="Modules\Route\RouteRepository.cs" />
     <Compile Include="Modules\Route\RouteService.cs" />
     <Compile Include="Modules\Supply\Supply.cs" />
+    <Compile Include="Modules\Supply\SupplyFilter.cs" />
     <Compile Include="Modules\Supply\SupplyRepository.cs" />
     <Compile Include="Modules\Supply\SupplyService.cs" />
     <Compile Include="Modules\Trip\Trip.cs" />
@@ -71,6 +73,7 @@
     <Compile Include="Modules\User\UserRepository.cs" />
     <Compile Include="Modules\User\UserService.cs" />
     <Compile Include="Modules\User\UserType.cs" />
+    <Compile Include="Modules\Util\DateUtil.cs" />
     <Compile Include="Modules\Util\Validator.cs" />
     <Compile Include="Modules\Vehicle\Vehicle.cs" />
     <Compile Include="Modules\Vehicle\VehicleColor.cs" />

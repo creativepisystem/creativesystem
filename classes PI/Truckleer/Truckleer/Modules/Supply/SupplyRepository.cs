@@ -99,5 +99,52 @@ namespace Truckleer.Modules
                 return snapshot.UpdateTime != null;
             }
         }
+        async public Task<List<Supply>> Filter(SupplyFilter supplyFilter)
+        {
+            //Create a list of supplys
+            List<Supply> supplys = new List<Supply>();
+
+            Console.WriteLine(supplyFilter.driver != null);
+            Query query = Reference.OrderByDescending("date");
+            
+            query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(supplyFilter.startAt));
+            //query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(supplyFilter.endAt));
+            if (supplyFilter.driver != null)
+                query = query.WhereEqualTo("driver", supplyFilter.driver.id);
+            if (supplyFilter.route != null)
+                query = query.WhereEqualTo("route", supplyFilter.route.id);
+            if (supplyFilter.trip != null)
+                query = query.WhereEqualTo("travel", supplyFilter.trip.id);
+            if (supplyFilter.vehicle != null)
+                query = query.WhereEqualTo("vehicle", supplyFilter.vehicle.id);
+
+            QuerySnapshot snapshot = await query
+                .GetSnapshotAsync();
+
+            //Pass all Documents
+            foreach (DocumentSnapshot queryResult in snapshot.Documents)
+            {
+                //Convert Document in a Supply class
+                Supply us = queryResult.ConvertTo<Supply>();
+                //Set id of supply
+                us.id = queryResult.Id;
+                string Route = null;
+                try
+                {
+                    Route = queryResult.GetValue<string>("route");
+               
+                
+                if (Route != null)
+                    us.route = RouteService.FindOne(Route);
+                us.vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
+                us.driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
+                us.trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
+                }
+                catch { }
+                //Add supply to list
+                supplys.Add(us);
+            }
+            return supplys;
+        }
     }
 }

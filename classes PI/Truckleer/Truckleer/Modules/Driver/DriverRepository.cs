@@ -38,8 +38,11 @@ namespace Truckleer.Modules
                 Driver us = queryResult.ConvertTo<Driver>();
                 //Set id of driver
                 us.id = queryResult.Id;
-                us.user = userService.FindOne(queryResult.GetValue<string>("user"));
-                
+                try
+                {
+                    us.user = userService.FindOne(queryResult.GetValue<string>("user"));
+                }
+                catch { }
                 //Add driver to list
                 drivers.Add(us);
             }
@@ -58,7 +61,11 @@ namespace Truckleer.Modules
             {
                 //Convert document to a Driver class
                 us = DocRef.ConvertTo<Driver>();
-                us.user = userService.FindOne(DocRef.GetValue<string>("user"));
+                try
+                {
+                    us.user = userService.FindOne(DocRef.GetValue<string>("user"));
+                }
+                catch { }
                 //Set id of driver
                 us.id = DocRef.Id;
             }
