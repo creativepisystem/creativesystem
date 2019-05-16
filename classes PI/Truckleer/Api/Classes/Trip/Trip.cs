@@ -8,12 +8,8 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Api.Classes
 {
-<<<<<<< HEAD
-    public class Trip
-=======
     [FirestoreData]
     class Trip
->>>>>>> f58830a559ae3e4f27f47af6f936eb3a068d0a9b
     {
         public Trip()
         {

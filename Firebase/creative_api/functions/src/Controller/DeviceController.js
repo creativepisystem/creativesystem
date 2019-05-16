@@ -15,7 +15,7 @@ DeviceApp.post("/login", async (req, res) => {
   }
 });
 
-DeviceApp.post("/config", (req, res) => {
+DeviceApp.get("/config", (req, res) => {
   validateUser.auth(
     {
       user: req.header("user"),
