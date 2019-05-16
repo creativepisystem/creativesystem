@@ -28,450 +28,586 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Veiculos));
-            this.containerVehicle = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.tableLayoutVehicles = new System.Windows.Forms.TableLayoutPanel();
-            this.panelLeftVehicle = new System.Windows.Forms.Panel();
-            this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
-            this.textBoxTankVehicle = new System.Windows.Forms.TextBox();
-            this.labelTankVehicle = new System.Windows.Forms.Label();
-            this.textBoxModelVehicle = new System.Windows.Forms.TextBox();
-            this.labelModelVehicle = new System.Windows.Forms.Label();
-            this.textBoxBrandVehicle = new System.Windows.Forms.TextBox();
-            this.labelBrandVehicle = new System.Windows.Forms.Label();
-            this.textBoxPlateVehicle = new System.Windows.Forms.TextBox();
-            this.labelPlateVehicle = new System.Windows.Forms.Label();
-            this.panelRightVehicle = new System.Windows.Forms.Panel();
-            this.btnCancelVehicle = new System.Windows.Forms.Button();
-            this.btnSaveVehicle = new System.Windows.Forms.Button();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBoxRenavam = new System.Windows.Forms.TextBox();
-            this.labelRenavam = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.labelColorVehicle = new System.Windows.Forms.Label();
-            this.textBoxModVehicle = new System.Windows.Forms.TextBox();
-            this.labelModVehicle = new System.Windows.Forms.Label();
-            this.textBoxFabVehicle = new System.Windows.Forms.TextBox();
-            this.labelFabVehicle = new System.Windows.Forms.Label();
-            this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.titleVehicles = new System.Windows.Forms.Label();
-            this.containerVehicle.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.tableLayoutVehicles.SuspendLayout();
-            this.panelLeftVehicle.SuspendLayout();
-            this.panelRightVehicle.SuspendLayout();
-            this.panelTitleAbastecimentos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelMain = new System.Windows.Forms.Panel();
+            this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
+            this.PanelVehicle = new System.Windows.Forms.Panel();
+            this.ButtonCancel = new System.Windows.Forms.Button();
+            this.ButtonSave = new System.Windows.Forms.Button();
+            this.PanelTitle = new System.Windows.Forms.Panel();
+            this.title = new System.Windows.Forms.Label();
+            this.TextTank = new System.Windows.Forms.TextBox();
+            this.LabelPlate = new System.Windows.Forms.Label();
+            this.LabelTank = new System.Windows.Forms.Label();
+            this.TextBrand = new System.Windows.Forms.TextBox();
+            this.LabelBrand = new System.Windows.Forms.Label();
+            this.TextModel = new System.Windows.Forms.TextBox();
+            this.LabelModel = new System.Windows.Forms.Label();
+            this.TextPlate = new System.Windows.Forms.TextBox();
+            this.TextChassi = new System.Windows.Forms.TextBox();
+            this.LabelChassi = new System.Windows.Forms.Label();
+            this.TextRenavam = new System.Windows.Forms.TextBox();
+            this.LabelRenavam = new System.Windows.Forms.Label();
+            this.TextColor = new System.Windows.Forms.TextBox();
+            this.LabelColor = new System.Windows.Forms.Label();
+            this.TextYearFab = new System.Windows.Forms.TextBox();
+            this.LabelYearFab = new System.Windows.Forms.Label();
+            this.TextType = new System.Windows.Forms.TextBox();
+            this.LabelType = new System.Windows.Forms.Label();
+            this.TextYearMod = new System.Windows.Forms.TextBox();
+            this.LabelYearMod = new System.Windows.Forms.Label();
+            this.DivPanel = new System.Windows.Forms.Panel();
+            this.BorderPanel1 = new System.Windows.Forms.Panel();
+            this.BorderPanel2 = new System.Windows.Forms.Panel();
+            this.BorderPanel3 = new System.Windows.Forms.Panel();
+            this.BorderPanel4 = new System.Windows.Forms.Panel();
+            this.BorderPanel5 = new System.Windows.Forms.Panel();
+            this.BorderPanel6 = new System.Windows.Forms.Panel();
+            this.BorderPanel7 = new System.Windows.Forms.Panel();
+            this.BorderPanel8 = new System.Windows.Forms.Panel();
+            this.BorderPanel9 = new System.Windows.Forms.Panel();
+            this.BorderPanel10 = new System.Windows.Forms.Panel();
+            this.ButtonHome = new System.Windows.Forms.Button();
+            this.PageDescription = new System.Windows.Forms.Label();
+            this.PanelMain.SuspendLayout();
+            this.layoutFlex.SuspendLayout();
+            this.MainPanel.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
+            this.PanelVehicle.SuspendLayout();
+            this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
-            // containerVehicle
+            // PanelMain
             // 
-            this.containerVehicle.Controls.Add(this.tableLayoutPanel1);
-            this.containerVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerVehicle.Location = new System.Drawing.Point(0, 0);
-            this.containerVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.containerVehicle.Name = "containerVehicle";
-            this.containerVehicle.Size = new System.Drawing.Size(1220, 990);
-            this.containerVehicle.TabIndex = 1;
+            this.PanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
+            this.PanelMain.Controls.Add(this.ButtonHome);
+            this.PanelMain.Controls.Add(this.layoutFlex);
+            this.PanelMain.Controls.Add(this.PageDescription);
+            this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelMain.Location = new System.Drawing.Point(0, 0);
+            this.PanelMain.Name = "PanelMain";
+            this.PanelMain.Size = new System.Drawing.Size(1220, 990);
+            this.PanelMain.TabIndex = 5;
             // 
-            // tableLayoutPanel1
+            // layoutFlex
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1220, 990);
-            this.tableLayoutPanel1.TabIndex = 0;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Controls.Add(this.tableLayoutVehicles);
-            this.panel1.Controls.Add(this.panelTitleAbastecimentos);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(244, 50);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0, 50, 0, 50);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(732, 890);
-            this.panel1.TabIndex = 0;
-            // 
-            // tableLayoutVehicles
-            // 
-            this.tableLayoutVehicles.ColumnCount = 2;
-            this.tableLayoutVehicles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutVehicles.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutVehicles.Controls.Add(this.panelLeftVehicle, 0, 0);
-            this.tableLayoutVehicles.Controls.Add(this.panelRightVehicle, 1, 0);
-            this.tableLayoutVehicles.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutVehicles.Location = new System.Drawing.Point(0, 75);
-            this.tableLayoutVehicles.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutVehicles.Name = "tableLayoutVehicles";
-            this.tableLayoutVehicles.RowCount = 1;
-            this.tableLayoutVehicles.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutVehicles.Size = new System.Drawing.Size(732, 815);
-            this.tableLayoutVehicles.TabIndex = 2;
-            // 
-            // panelLeftVehicle
-            // 
-            this.panelLeftVehicle.Controls.Add(this.panelFooterAbastecimentos);
-            this.panelLeftVehicle.Controls.Add(this.textBoxTankVehicle);
-            this.panelLeftVehicle.Controls.Add(this.labelTankVehicle);
-            this.panelLeftVehicle.Controls.Add(this.textBoxModelVehicle);
-            this.panelLeftVehicle.Controls.Add(this.labelModelVehicle);
-            this.panelLeftVehicle.Controls.Add(this.textBoxBrandVehicle);
-            this.panelLeftVehicle.Controls.Add(this.labelBrandVehicle);
-            this.panelLeftVehicle.Controls.Add(this.textBoxPlateVehicle);
-            this.panelLeftVehicle.Controls.Add(this.labelPlateVehicle);
-            this.panelLeftVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLeftVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelLeftVehicle.Location = new System.Drawing.Point(0, 0);
-            this.panelLeftVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLeftVehicle.Name = "panelLeftVehicle";
-            this.panelLeftVehicle.Size = new System.Drawing.Size(292, 815);
-            this.panelLeftVehicle.TabIndex = 0;
-            // 
-            // panelFooterAbastecimentos
-            // 
-            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.Indigo;
-            this.panelFooterAbastecimentos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 788);
-            this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelFooterAbastecimentos.Name = "panelFooterAbastecimentos";
-            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(292, 27);
-            this.panelFooterAbastecimentos.TabIndex = 28;
-            // 
-            // textBoxTankVehicle
-            // 
-            this.textBoxTankVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxTankVehicle.Location = new System.Drawing.Point(52, 332);
-            this.textBoxTankVehicle.Name = "textBoxTankVehicle";
-            this.textBoxTankVehicle.Size = new System.Drawing.Size(168, 23);
-            this.textBoxTankVehicle.TabIndex = 27;
-            // 
-            // labelTankVehicle
-            // 
-            this.labelTankVehicle.AutoSize = true;
-            this.labelTankVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelTankVehicle.Location = new System.Drawing.Point(47, 304);
-            this.labelTankVehicle.Name = "labelTankVehicle";
-            this.labelTankVehicle.Size = new System.Drawing.Size(191, 25);
-            this.labelTankVehicle.TabIndex = 26;
-            this.labelTankVehicle.Text = "Capacidade Tanque";
-            // 
-            // textBoxModelVehicle
-            // 
-            this.textBoxModelVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxModelVehicle.Location = new System.Drawing.Point(52, 242);
-            this.textBoxModelVehicle.Name = "textBoxModelVehicle";
-            this.textBoxModelVehicle.Size = new System.Drawing.Size(168, 23);
-            this.textBoxModelVehicle.TabIndex = 25;
-            // 
-            // labelModelVehicle
-            // 
-            this.labelModelVehicle.AutoSize = true;
-            this.labelModelVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelModelVehicle.Location = new System.Drawing.Point(47, 214);
-            this.labelModelVehicle.Name = "labelModelVehicle";
-            this.labelModelVehicle.Size = new System.Drawing.Size(77, 25);
-            this.labelModelVehicle.TabIndex = 24;
-            this.labelModelVehicle.Text = "Modelo";
-            // 
-            // textBoxBrandVehicle
-            // 
-            this.textBoxBrandVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxBrandVehicle.Location = new System.Drawing.Point(52, 154);
-            this.textBoxBrandVehicle.Name = "textBoxBrandVehicle";
-            this.textBoxBrandVehicle.Size = new System.Drawing.Size(168, 23);
-            this.textBoxBrandVehicle.TabIndex = 23;
-            // 
-            // labelBrandVehicle
-            // 
-            this.labelBrandVehicle.AutoSize = true;
-            this.labelBrandVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelBrandVehicle.Location = new System.Drawing.Point(47, 126);
-            this.labelBrandVehicle.Name = "labelBrandVehicle";
-            this.labelBrandVehicle.Size = new System.Drawing.Size(67, 25);
-            this.labelBrandVehicle.TabIndex = 22;
-            this.labelBrandVehicle.Text = "Marca";
-            // 
-            // textBoxPlateVehicle
-            // 
-            this.textBoxPlateVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPlateVehicle.Location = new System.Drawing.Point(52, 70);
-            this.textBoxPlateVehicle.Name = "textBoxPlateVehicle";
-            this.textBoxPlateVehicle.Size = new System.Drawing.Size(168, 23);
-            this.textBoxPlateVehicle.TabIndex = 21;
-            // 
-            // labelPlateVehicle
-            // 
-            this.labelPlateVehicle.AutoSize = true;
-            this.labelPlateVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelPlateVehicle.Location = new System.Drawing.Point(47, 43);
-            this.labelPlateVehicle.Name = "labelPlateVehicle";
-            this.labelPlateVehicle.Size = new System.Drawing.Size(61, 25);
-            this.labelPlateVehicle.TabIndex = 20;
-            this.labelPlateVehicle.Text = "Placa";
-            // 
-            // panelRightVehicle
-            // 
-            this.panelRightVehicle.Controls.Add(this.btnCancelVehicle);
-            this.panelRightVehicle.Controls.Add(this.btnSaveVehicle);
-            this.panelRightVehicle.Controls.Add(this.panel2);
-            this.panelRightVehicle.Controls.Add(this.textBox2);
-            this.panelRightVehicle.Controls.Add(this.label1);
-            this.panelRightVehicle.Controls.Add(this.textBoxRenavam);
-            this.panelRightVehicle.Controls.Add(this.labelRenavam);
-            this.panelRightVehicle.Controls.Add(this.textBox1);
-            this.panelRightVehicle.Controls.Add(this.labelColorVehicle);
-            this.panelRightVehicle.Controls.Add(this.textBoxModVehicle);
-            this.panelRightVehicle.Controls.Add(this.labelModVehicle);
-            this.panelRightVehicle.Controls.Add(this.textBoxFabVehicle);
-            this.panelRightVehicle.Controls.Add(this.labelFabVehicle);
-            this.panelRightVehicle.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRightVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelRightVehicle.Location = new System.Drawing.Point(292, 0);
-            this.panelRightVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.panelRightVehicle.Name = "panelRightVehicle";
-            this.panelRightVehicle.Size = new System.Drawing.Size(440, 815);
-            this.panelRightVehicle.TabIndex = 1;
-            // 
-            // btnCancelVehicle
-            // 
-            this.btnCancelVehicle.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancelVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelVehicle.FlatAppearance.BorderSize = 0;
-            this.btnCancelVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelVehicle.Location = new System.Drawing.Point(267, 385);
-            this.btnCancelVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelVehicle.Name = "btnCancelVehicle";
-            this.btnCancelVehicle.Size = new System.Drawing.Size(89, 35);
-            this.btnCancelVehicle.TabIndex = 36;
-            this.btnCancelVehicle.Text = "Cancelar";
-            this.btnCancelVehicle.UseVisualStyleBackColor = false;
-            // 
-            // btnSaveVehicle
-            // 
-            this.btnSaveVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSaveVehicle.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSaveVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveVehicle.FlatAppearance.BorderSize = 0;
-            this.btnSaveVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveVehicle.Location = new System.Drawing.Point(165, 385);
-            this.btnSaveVehicle.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaveVehicle.Name = "btnSaveVehicle";
-            this.btnSaveVehicle.Size = new System.Drawing.Size(79, 35);
-            this.btnSaveVehicle.TabIndex = 35;
-            this.btnSaveVehicle.Text = "Salvar";
-            this.btnSaveVehicle.UseVisualStyleBackColor = false;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.Indigo;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 788);
-            this.panel2.Margin = new System.Windows.Forms.Padding(0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(440, 27);
-            this.panel2.TabIndex = 34;
-            // 
-            // textBox2
-            // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox2.Location = new System.Drawing.Point(6, 242);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(348, 23);
-            this.textBox2.TabIndex = 33;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Azure;
-            this.label1.Location = new System.Drawing.Point(1, 214);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 25);
-            this.label1.TabIndex = 32;
-            this.label1.Text = "Chassi";
-            // 
-            // textBoxRenavam
-            // 
-            this.textBoxRenavam.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxRenavam.Location = new System.Drawing.Point(201, 154);
-            this.textBoxRenavam.Name = "textBoxRenavam";
-            this.textBoxRenavam.Size = new System.Drawing.Size(153, 23);
-            this.textBoxRenavam.TabIndex = 31;
-            // 
-            // labelRenavam
-            // 
-            this.labelRenavam.AutoSize = true;
-            this.labelRenavam.ForeColor = System.Drawing.Color.Azure;
-            this.labelRenavam.Location = new System.Drawing.Point(196, 126);
-            this.labelRenavam.Name = "labelRenavam";
-            this.labelRenavam.Size = new System.Drawing.Size(95, 25);
-            this.labelRenavam.TabIndex = 30;
-            this.labelRenavam.Text = "Renavam";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(4, 154);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 23);
-            this.textBox1.TabIndex = 29;
-            // 
-            // labelColorVehicle
-            // 
-            this.labelColorVehicle.AutoSize = true;
-            this.labelColorVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelColorVehicle.Location = new System.Drawing.Point(-1, 126);
-            this.labelColorVehicle.Name = "labelColorVehicle";
-            this.labelColorVehicle.Size = new System.Drawing.Size(44, 25);
-            this.labelColorVehicle.TabIndex = 28;
-            this.labelColorVehicle.Text = "Cor";
-            // 
-            // textBoxModVehicle
-            // 
-            this.textBoxModVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxModVehicle.Location = new System.Drawing.Point(201, 71);
-            this.textBoxModVehicle.Name = "textBoxModVehicle";
-            this.textBoxModVehicle.Size = new System.Drawing.Size(92, 23);
-            this.textBoxModVehicle.TabIndex = 27;
-            // 
-            // labelModVehicle
-            // 
-            this.labelModVehicle.AutoSize = true;
-            this.labelModVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelModVehicle.Location = new System.Drawing.Point(196, 43);
-            this.labelModVehicle.Name = "labelModVehicle";
-            this.labelModVehicle.Size = new System.Drawing.Size(118, 25);
-            this.labelModVehicle.TabIndex = 26;
-            this.labelModVehicle.Text = "Ano Modelo";
-            // 
-            // textBoxFabVehicle
-            // 
-            this.textBoxFabVehicle.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxFabVehicle.Location = new System.Drawing.Point(4, 70);
-            this.textBoxFabVehicle.Name = "textBoxFabVehicle";
-            this.textBoxFabVehicle.Size = new System.Drawing.Size(92, 23);
-            this.textBoxFabVehicle.TabIndex = 25;
-            // 
-            // labelFabVehicle
-            // 
-            this.labelFabVehicle.AutoSize = true;
-            this.labelFabVehicle.ForeColor = System.Drawing.Color.Azure;
-            this.labelFabVehicle.Location = new System.Drawing.Point(-1, 43);
-            this.labelFabVehicle.Name = "labelFabVehicle";
-            this.labelFabVehicle.Size = new System.Drawing.Size(150, 25);
-            this.labelFabVehicle.TabIndex = 24;
-            this.labelFabVehicle.Text = "Ano Fabricação";
-            // 
-            // panelTitleAbastecimentos
-            // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Indigo;
-            this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
-            this.panelTitleAbastecimentos.Controls.Add(this.titleVehicles);
-            this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTitleAbastecimentos.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTitleAbastecimentos.Name = "panelTitleAbastecimentos";
-            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(732, 75);
-            this.panelTitleAbastecimentos.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(53, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(78, 61);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // titleVehicles
-            // 
-            this.titleVehicles.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.layoutFlex.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.titleVehicles.AutoSize = true;
-            this.titleVehicles.Font = new System.Drawing.Font("Arial Narrow", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleVehicles.ForeColor = System.Drawing.Color.Orange;
-            this.titleVehicles.Location = new System.Drawing.Point(197, 5);
-            this.titleVehicles.Name = "titleVehicles";
-            this.titleVehicles.Size = new System.Drawing.Size(392, 64);
-            this.titleVehicles.TabIndex = 0;
-            this.titleVehicles.Text = "Cadastro Veículos";
+            this.layoutFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.layoutFlex.ColumnCount = 1;
+            this.layoutFlex.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Controls.Add(this.MainPanel, 0, 0);
+            this.layoutFlex.Location = new System.Drawing.Point(15, 36);
+            this.layoutFlex.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutFlex.Name = "layoutFlex";
+            this.layoutFlex.RowCount = 1;
+            this.layoutFlex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Size = new System.Drawing.Size(1191, 924);
+            this.layoutFlex.TabIndex = 0;
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel.Controls.Add(this.PanelContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1191, 924);
+            this.MainPanel.TabIndex = 0;
+            // 
+            // PanelContainer
+            // 
+            this.PanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelContainer.Controls.Add(this.PanelVehicle);
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(0, 0);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1191, 924);
+            this.PanelContainer.TabIndex = 1;
+            // 
+            // PanelVehicle
+            // 
+            this.PanelVehicle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelVehicle.BackColor = System.Drawing.Color.LightGray;
+            this.PanelVehicle.Controls.Add(this.BorderPanel10);
+            this.PanelVehicle.Controls.Add(this.BorderPanel9);
+            this.PanelVehicle.Controls.Add(this.BorderPanel8);
+            this.PanelVehicle.Controls.Add(this.BorderPanel7);
+            this.PanelVehicle.Controls.Add(this.BorderPanel6);
+            this.PanelVehicle.Controls.Add(this.BorderPanel5);
+            this.PanelVehicle.Controls.Add(this.BorderPanel4);
+            this.PanelVehicle.Controls.Add(this.BorderPanel3);
+            this.PanelVehicle.Controls.Add(this.BorderPanel2);
+            this.PanelVehicle.Controls.Add(this.BorderPanel1);
+            this.PanelVehicle.Controls.Add(this.DivPanel);
+            this.PanelVehicle.Controls.Add(this.TextType);
+            this.PanelVehicle.Controls.Add(this.LabelType);
+            this.PanelVehicle.Controls.Add(this.TextYearMod);
+            this.PanelVehicle.Controls.Add(this.LabelYearMod);
+            this.PanelVehicle.Controls.Add(this.TextChassi);
+            this.PanelVehicle.Controls.Add(this.LabelChassi);
+            this.PanelVehicle.Controls.Add(this.TextRenavam);
+            this.PanelVehicle.Controls.Add(this.LabelRenavam);
+            this.PanelVehicle.Controls.Add(this.TextColor);
+            this.PanelVehicle.Controls.Add(this.LabelColor);
+            this.PanelVehicle.Controls.Add(this.TextYearFab);
+            this.PanelVehicle.Controls.Add(this.LabelYearFab);
+            this.PanelVehicle.Controls.Add(this.TextTank);
+            this.PanelVehicle.Controls.Add(this.LabelPlate);
+            this.PanelVehicle.Controls.Add(this.LabelTank);
+            this.PanelVehicle.Controls.Add(this.TextBrand);
+            this.PanelVehicle.Controls.Add(this.LabelBrand);
+            this.PanelVehicle.Controls.Add(this.TextModel);
+            this.PanelVehicle.Controls.Add(this.LabelModel);
+            this.PanelVehicle.Controls.Add(this.TextPlate);
+            this.PanelVehicle.Controls.Add(this.ButtonCancel);
+            this.PanelVehicle.Controls.Add(this.ButtonSave);
+            this.PanelVehicle.Controls.Add(this.PanelTitle);
+            this.PanelVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelVehicle.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PanelVehicle.Location = new System.Drawing.Point(107, 40);
+            this.PanelVehicle.Name = "PanelVehicle";
+            this.PanelVehicle.Size = new System.Drawing.Size(970, 589);
+            this.PanelVehicle.TabIndex = 0;
+            // 
+            // ButtonCancel
+            // 
+            this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCancel.BackColor = System.Drawing.Color.Crimson;
+            this.ButtonCancel.FlatAppearance.BorderSize = 0;
+            this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonCancel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancel.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonCancel.Location = new System.Drawing.Point(818, 524);
+            this.ButtonCancel.Name = "ButtonCancel";
+            this.ButtonCancel.Size = new System.Drawing.Size(97, 32);
+            this.ButtonCancel.TabIndex = 70;
+            this.ButtonCancel.Text = "Cancelar";
+            this.ButtonCancel.UseVisualStyleBackColor = false;
+            // 
+            // ButtonSave
+            // 
+            this.ButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonSave.BackColor = System.Drawing.Color.Teal;
+            this.ButtonSave.FlatAppearance.BorderSize = 0;
+            this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSave.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSave.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonSave.Location = new System.Drawing.Point(707, 524);
+            this.ButtonSave.Name = "ButtonSave";
+            this.ButtonSave.Size = new System.Drawing.Size(97, 32);
+            this.ButtonSave.TabIndex = 69;
+            this.ButtonSave.Text = "Salvar";
+            this.ButtonSave.UseVisualStyleBackColor = false;
+            // 
+            // PanelTitle
+            // 
+            this.PanelTitle.BackColor = System.Drawing.Color.Firebrick;
+            this.PanelTitle.Controls.Add(this.title);
+            this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitle.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitle.Name = "PanelTitle";
+            this.PanelTitle.Size = new System.Drawing.Size(970, 87);
+            this.PanelTitle.TabIndex = 0;
+            // 
+            // title
+            // 
+            this.title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Impact", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.Azure;
+            this.title.Location = new System.Drawing.Point(35, 20);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(365, 48);
+            this.title.TabIndex = 41;
+            this.title.Text = "Cadastro de Veículos";
+            // 
+            // TextTank
+            // 
+            this.TextTank.BackColor = System.Drawing.Color.LightGray;
+            this.TextTank.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextTank.Location = new System.Drawing.Point(617, 358);
+            this.TextTank.Name = "TextTank";
+            this.TextTank.Size = new System.Drawing.Size(168, 19);
+            this.TextTank.TabIndex = 78;
+            // 
+            // LabelPlate
+            // 
+            this.LabelPlate.AutoSize = true;
+            this.LabelPlate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPlate.ForeColor = System.Drawing.Color.Gray;
+            this.LabelPlate.Location = new System.Drawing.Point(80, 152);
+            this.LabelPlate.Name = "LabelPlate";
+            this.LabelPlate.Size = new System.Drawing.Size(53, 20);
+            this.LabelPlate.TabIndex = 71;
+            this.LabelPlate.Text = "Placa";
+            // 
+            // LabelTank
+            // 
+            this.LabelTank.AutoSize = true;
+            this.LabelTank.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTank.ForeColor = System.Drawing.Color.Gray;
+            this.LabelTank.Location = new System.Drawing.Point(442, 358);
+            this.LabelTank.Name = "LabelTank";
+            this.LabelTank.Size = new System.Drawing.Size(169, 20);
+            this.LabelTank.TabIndex = 77;
+            this.LabelTank.Text = "Capacidade Tanque";
+            this.LabelTank.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelTank.Click += new System.EventHandler(this.labelTankVehicle_Click);
+            // 
+            // TextBrand
+            // 
+            this.TextBrand.BackColor = System.Drawing.Color.LightGray;
+            this.TextBrand.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextBrand.Location = new System.Drawing.Point(162, 223);
+            this.TextBrand.Name = "TextBrand";
+            this.TextBrand.Size = new System.Drawing.Size(168, 19);
+            this.TextBrand.TabIndex = 74;
+            // 
+            // LabelBrand
+            // 
+            this.LabelBrand.AutoSize = true;
+            this.LabelBrand.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBrand.ForeColor = System.Drawing.Color.Gray;
+            this.LabelBrand.Location = new System.Drawing.Point(80, 222);
+            this.LabelBrand.Name = "LabelBrand";
+            this.LabelBrand.Size = new System.Drawing.Size(58, 20);
+            this.LabelBrand.TabIndex = 73;
+            this.LabelBrand.Text = "Marca";
+            // 
+            // TextModel
+            // 
+            this.TextModel.BackColor = System.Drawing.Color.LightGray;
+            this.TextModel.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextModel.Location = new System.Drawing.Point(162, 288);
+            this.TextModel.Name = "TextModel";
+            this.TextModel.Size = new System.Drawing.Size(168, 19);
+            this.TextModel.TabIndex = 76;
+            // 
+            // LabelModel
+            // 
+            this.LabelModel.AutoSize = true;
+            this.LabelModel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelModel.ForeColor = System.Drawing.Color.Gray;
+            this.LabelModel.Location = new System.Drawing.Point(80, 287);
+            this.LabelModel.Name = "LabelModel";
+            this.LabelModel.Size = new System.Drawing.Size(67, 20);
+            this.LabelModel.TabIndex = 75;
+            this.LabelModel.Text = "Modelo";
+            // 
+            // TextPlate
+            // 
+            this.TextPlate.BackColor = System.Drawing.Color.LightGray;
+            this.TextPlate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextPlate.Location = new System.Drawing.Point(162, 153);
+            this.TextPlate.Name = "TextPlate";
+            this.TextPlate.Size = new System.Drawing.Size(168, 19);
+            this.TextPlate.TabIndex = 72;
+            // 
+            // TextChassi
+            // 
+            this.TextChassi.BackColor = System.Drawing.Color.LightGray;
+            this.TextChassi.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextChassi.Location = new System.Drawing.Point(532, 153);
+            this.TextChassi.Name = "TextChassi";
+            this.TextChassi.Size = new System.Drawing.Size(367, 19);
+            this.TextChassi.TabIndex = 86;
+            // 
+            // LabelChassi
+            // 
+            this.LabelChassi.AutoSize = true;
+            this.LabelChassi.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelChassi.ForeColor = System.Drawing.Color.Gray;
+            this.LabelChassi.Location = new System.Drawing.Point(443, 152);
+            this.LabelChassi.Name = "LabelChassi";
+            this.LabelChassi.Size = new System.Drawing.Size(63, 20);
+            this.LabelChassi.TabIndex = 85;
+            this.LabelChassi.Text = "Chassi";
+            // 
+            // TextRenavam
+            // 
+            this.TextRenavam.BackColor = System.Drawing.Color.LightGray;
+            this.TextRenavam.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextRenavam.Location = new System.Drawing.Point(532, 289);
+            this.TextRenavam.Name = "TextRenavam";
+            this.TextRenavam.Size = new System.Drawing.Size(153, 19);
+            this.TextRenavam.TabIndex = 84;
+            // 
+            // LabelRenavam
+            // 
+            this.LabelRenavam.AutoSize = true;
+            this.LabelRenavam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelRenavam.ForeColor = System.Drawing.Color.Gray;
+            this.LabelRenavam.Location = new System.Drawing.Point(442, 288);
+            this.LabelRenavam.Name = "LabelRenavam";
+            this.LabelRenavam.Size = new System.Drawing.Size(84, 20);
+            this.LabelRenavam.TabIndex = 83;
+            this.LabelRenavam.Text = "Renavam";
+            // 
+            // TextColor
+            // 
+            this.TextColor.BackColor = System.Drawing.Color.LightGray;
+            this.TextColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextColor.Location = new System.Drawing.Point(162, 359);
+            this.TextColor.Name = "TextColor";
+            this.TextColor.Size = new System.Drawing.Size(168, 19);
+            this.TextColor.TabIndex = 82;
+            // 
+            // LabelColor
+            // 
+            this.LabelColor.AutoSize = true;
+            this.LabelColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelColor.ForeColor = System.Drawing.Color.Gray;
+            this.LabelColor.Location = new System.Drawing.Point(80, 358);
+            this.LabelColor.Name = "LabelColor";
+            this.LabelColor.Size = new System.Drawing.Size(37, 20);
+            this.LabelColor.TabIndex = 81;
+            this.LabelColor.Text = "Cor";
+            // 
+            // TextYearFab
+            // 
+            this.TextYearFab.BackColor = System.Drawing.Color.LightGray;
+            this.TextYearFab.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextYearFab.Location = new System.Drawing.Point(593, 223);
+            this.TextYearFab.Name = "TextYearFab";
+            this.TextYearFab.Size = new System.Drawing.Size(92, 19);
+            this.TextYearFab.TabIndex = 80;
+            // 
+            // LabelYearFab
+            // 
+            this.LabelYearFab.AutoSize = true;
+            this.LabelYearFab.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelYearFab.ForeColor = System.Drawing.Color.Gray;
+            this.LabelYearFab.Location = new System.Drawing.Point(442, 221);
+            this.LabelYearFab.Name = "LabelYearFab";
+            this.LabelYearFab.Size = new System.Drawing.Size(135, 20);
+            this.LabelYearFab.TabIndex = 79;
+            this.LabelYearFab.Text = "Ano Fabricação";
+            // 
+            // TextType
+            // 
+            this.TextType.BackColor = System.Drawing.Color.LightGray;
+            this.TextType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextType.Location = new System.Drawing.Point(619, 420);
+            this.TextType.Name = "TextType";
+            this.TextType.Size = new System.Drawing.Size(153, 19);
+            this.TextType.TabIndex = 90;
+            // 
+            // LabelType
+            // 
+            this.LabelType.AutoSize = true;
+            this.LabelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelType.ForeColor = System.Drawing.Color.Gray;
+            this.LabelType.Location = new System.Drawing.Point(443, 420);
+            this.LabelType.Name = "LabelType";
+            this.LabelType.Size = new System.Drawing.Size(170, 20);
+            this.LabelType.TabIndex = 89;
+            this.LabelType.Text = "Tipo de Combustível";
+            // 
+            // TextYearMod
+            // 
+            this.TextYearMod.BackColor = System.Drawing.Color.LightGray;
+            this.TextYearMod.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextYearMod.Location = new System.Drawing.Point(807, 221);
+            this.TextYearMod.Name = "TextYearMod";
+            this.TextYearMod.Size = new System.Drawing.Size(92, 19);
+            this.TextYearMod.TabIndex = 88;
+            // 
+            // LabelYearMod
+            // 
+            this.LabelYearMod.AutoSize = true;
+            this.LabelYearMod.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelYearMod.ForeColor = System.Drawing.Color.Gray;
+            this.LabelYearMod.Location = new System.Drawing.Point(700, 221);
+            this.LabelYearMod.Name = "LabelYearMod";
+            this.LabelYearMod.Size = new System.Drawing.Size(104, 20);
+            this.LabelYearMod.TabIndex = 87;
+            this.LabelYearMod.Text = "Ano Modelo";
+            // 
+            // DivPanel
+            // 
+            this.DivPanel.BackColor = System.Drawing.Color.Firebrick;
+            this.DivPanel.Location = new System.Drawing.Point(390, 124);
+            this.DivPanel.Name = "DivPanel";
+            this.DivPanel.Size = new System.Drawing.Size(2, 366);
+            this.DivPanel.TabIndex = 91;
+            // 
+            // BorderPanel1
+            // 
+            this.BorderPanel1.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel1.Location = new System.Drawing.Point(161, 173);
+            this.BorderPanel1.Name = "BorderPanel1";
+            this.BorderPanel1.Size = new System.Drawing.Size(169, 2);
+            this.BorderPanel1.TabIndex = 92;
+            // 
+            // BorderPanel2
+            // 
+            this.BorderPanel2.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel2.Location = new System.Drawing.Point(162, 241);
+            this.BorderPanel2.Name = "BorderPanel2";
+            this.BorderPanel2.Size = new System.Drawing.Size(169, 2);
+            this.BorderPanel2.TabIndex = 93;
+            // 
+            // BorderPanel3
+            // 
+            this.BorderPanel3.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel3.Location = new System.Drawing.Point(162, 307);
+            this.BorderPanel3.Name = "BorderPanel3";
+            this.BorderPanel3.Size = new System.Drawing.Size(169, 2);
+            this.BorderPanel3.TabIndex = 94;
+            // 
+            // BorderPanel4
+            // 
+            this.BorderPanel4.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel4.Location = new System.Drawing.Point(162, 378);
+            this.BorderPanel4.Name = "BorderPanel4";
+            this.BorderPanel4.Size = new System.Drawing.Size(169, 2);
+            this.BorderPanel4.TabIndex = 95;
+            // 
+            // BorderPanel5
+            // 
+            this.BorderPanel5.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel5.Location = new System.Drawing.Point(532, 172);
+            this.BorderPanel5.Name = "BorderPanel5";
+            this.BorderPanel5.Size = new System.Drawing.Size(367, 2);
+            this.BorderPanel5.TabIndex = 96;
+            // 
+            // BorderPanel6
+            // 
+            this.BorderPanel6.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel6.Location = new System.Drawing.Point(593, 242);
+            this.BorderPanel6.Name = "BorderPanel6";
+            this.BorderPanel6.Size = new System.Drawing.Size(92, 2);
+            this.BorderPanel6.TabIndex = 97;
+            // 
+            // BorderPanel7
+            // 
+            this.BorderPanel7.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel7.Location = new System.Drawing.Point(807, 241);
+            this.BorderPanel7.Name = "BorderPanel7";
+            this.BorderPanel7.Size = new System.Drawing.Size(92, 2);
+            this.BorderPanel7.TabIndex = 98;
+            // 
+            // BorderPanel8
+            // 
+            this.BorderPanel8.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel8.Location = new System.Drawing.Point(532, 308);
+            this.BorderPanel8.Name = "BorderPanel8";
+            this.BorderPanel8.Size = new System.Drawing.Size(153, 2);
+            this.BorderPanel8.TabIndex = 99;
+            // 
+            // BorderPanel9
+            // 
+            this.BorderPanel9.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel9.Location = new System.Drawing.Point(617, 377);
+            this.BorderPanel9.Name = "BorderPanel9";
+            this.BorderPanel9.Size = new System.Drawing.Size(168, 2);
+            this.BorderPanel9.TabIndex = 100;
+            // 
+            // BorderPanel10
+            // 
+            this.BorderPanel10.BackColor = System.Drawing.Color.Firebrick;
+            this.BorderPanel10.Location = new System.Drawing.Point(619, 439);
+            this.BorderPanel10.Name = "BorderPanel10";
+            this.BorderPanel10.Size = new System.Drawing.Size(153, 2);
+            this.BorderPanel10.TabIndex = 101;
+            // 
+            // ButtonHome
+            // 
+            this.ButtonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonHome.FlatAppearance.BorderSize = 0;
+            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHome.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonHome.Location = new System.Drawing.Point(1116, 5);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Size = new System.Drawing.Size(76, 31);
+            this.ButtonHome.TabIndex = 43;
+            this.ButtonHome.Text = "Home";
+            this.ButtonHome.UseVisualStyleBackColor = true;
+            // 
+            // PageDescription
+            // 
+            this.PageDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PageDescription.AutoSize = true;
+            this.PageDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageDescription.ForeColor = System.Drawing.Color.Azure;
+            this.PageDescription.Location = new System.Drawing.Point(864, 5);
+            this.PageDescription.Name = "PageDescription";
+            this.PageDescription.Size = new System.Drawing.Size(259, 31);
+            this.PageDescription.TabIndex = 42;
+            this.PageDescription.Text = "Cadastrar Veículos /";
             // 
             // Veiculos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.Controls.Add(this.containerVehicle);
+            this.Controls.Add(this.PanelMain);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Veiculos";
             this.Size = new System.Drawing.Size(1220, 990);
             this.Load += new System.EventHandler(this.Veiculos_Load);
-            this.containerVehicle.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.tableLayoutVehicles.ResumeLayout(false);
-            this.panelLeftVehicle.ResumeLayout(false);
-            this.panelLeftVehicle.PerformLayout();
-            this.panelRightVehicle.ResumeLayout(false);
-            this.panelRightVehicle.PerformLayout();
-            this.panelTitleAbastecimentos.ResumeLayout(false);
-            this.panelTitleAbastecimentos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelMain.ResumeLayout(false);
+            this.PanelMain.PerformLayout();
+            this.layoutFlex.ResumeLayout(false);
+            this.MainPanel.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
+            this.PanelVehicle.ResumeLayout(false);
+            this.PanelVehicle.PerformLayout();
+            this.PanelTitle.ResumeLayout(false);
+            this.PanelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel containerVehicle;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutVehicles;
-        private System.Windows.Forms.Panel panelLeftVehicle;
-        private System.Windows.Forms.Panel panelFooterAbastecimentos;
-        private System.Windows.Forms.TextBox textBoxTankVehicle;
-        private System.Windows.Forms.Label labelTankVehicle;
-        private System.Windows.Forms.TextBox textBoxModelVehicle;
-        private System.Windows.Forms.Label labelModelVehicle;
-        private System.Windows.Forms.TextBox textBoxBrandVehicle;
-        private System.Windows.Forms.Label labelBrandVehicle;
-        private System.Windows.Forms.TextBox textBoxPlateVehicle;
-        private System.Windows.Forms.Label labelPlateVehicle;
-        private System.Windows.Forms.Panel panelRightVehicle;
-        private System.Windows.Forms.Button btnCancelVehicle;
-        private System.Windows.Forms.Button btnSaveVehicle;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxRenavam;
-        private System.Windows.Forms.Label labelRenavam;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label labelColorVehicle;
-        private System.Windows.Forms.TextBox textBoxModVehicle;
-        private System.Windows.Forms.Label labelModVehicle;
-        private System.Windows.Forms.TextBox textBoxFabVehicle;
-        private System.Windows.Forms.Label labelFabVehicle;
-        private System.Windows.Forms.Panel panelTitleAbastecimentos;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label titleVehicles;
+        private System.Windows.Forms.Panel PanelMain;
+        private System.Windows.Forms.TableLayoutPanel layoutFlex;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel PanelContainer;
+        private System.Windows.Forms.Panel PanelVehicle;
+        private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.Button ButtonSave;
+        private System.Windows.Forms.Panel PanelTitle;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.TextBox TextTank;
+        private System.Windows.Forms.Label LabelPlate;
+        private System.Windows.Forms.Label LabelTank;
+        private System.Windows.Forms.TextBox TextBrand;
+        private System.Windows.Forms.Label LabelBrand;
+        private System.Windows.Forms.TextBox TextModel;
+        private System.Windows.Forms.Label LabelModel;
+        private System.Windows.Forms.TextBox TextPlate;
+        private System.Windows.Forms.TextBox TextChassi;
+        private System.Windows.Forms.Label LabelChassi;
+        private System.Windows.Forms.TextBox TextRenavam;
+        private System.Windows.Forms.Label LabelRenavam;
+        private System.Windows.Forms.TextBox TextColor;
+        private System.Windows.Forms.Label LabelColor;
+        private System.Windows.Forms.TextBox TextYearFab;
+        private System.Windows.Forms.Label LabelYearFab;
+        private System.Windows.Forms.TextBox TextType;
+        private System.Windows.Forms.Label LabelType;
+        private System.Windows.Forms.TextBox TextYearMod;
+        private System.Windows.Forms.Label LabelYearMod;
+        private System.Windows.Forms.Panel DivPanel;
+        private System.Windows.Forms.Panel BorderPanel10;
+        private System.Windows.Forms.Panel BorderPanel9;
+        private System.Windows.Forms.Panel BorderPanel8;
+        private System.Windows.Forms.Panel BorderPanel7;
+        private System.Windows.Forms.Panel BorderPanel6;
+        private System.Windows.Forms.Panel BorderPanel5;
+        private System.Windows.Forms.Panel BorderPanel4;
+        private System.Windows.Forms.Panel BorderPanel3;
+        private System.Windows.Forms.Panel BorderPanel2;
+        private System.Windows.Forms.Panel BorderPanel1;
+        private System.Windows.Forms.Button ButtonHome;
+        private System.Windows.Forms.Label PageDescription;
     }
 }

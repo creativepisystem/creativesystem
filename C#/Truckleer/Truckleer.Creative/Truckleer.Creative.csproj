@@ -72,7 +72,7 @@
     <Compile Include="Api\Classes\User\User.cs" />
     <Compile Include="Api\Classes\User\UserType.cs" />
     <Compile Include="Api\Classes\Vehicle\Vehicle.cs" />
-    <Compile Include="Api\FireConnection\FireConnection.cs" />
+    <Compile Include="Api\FireConnection\FirestoreDb.cs" />
     <Compile Include="Api\FireConnection\Serializer.cs" />
     <Compile Include="Dashboard.cs">
       <SubType>UserControl</SubType>
@@ -142,6 +142,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Usuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Veiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -203,6 +209,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Veiculos.resx">
       <DependentUpon>Veiculos.cs</DependentUpon>
     </EmbeddedResource>

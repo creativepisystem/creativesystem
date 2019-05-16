@@ -21,5 +21,20 @@ namespace Truckleer.Creative
         {
             this.Dock = DockStyle.Fill;
         }
+
+        private void RadioButtonPreventiva_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void RadioButtonCorretiva_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PanelMaintence_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

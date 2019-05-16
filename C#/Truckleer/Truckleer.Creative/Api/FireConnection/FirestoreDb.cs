@@ -5,8 +5,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Google.Cloud.Firestore;
 
-namespace Truckleer.Api.FireConnection
+namespace Truckleer.Api.FirestoreDb
 {
-   
+    public class FirestoreDb
+    {
+
+    }
 }

@@ -28,153 +28,293 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Manutencao));
-            this.containerMaintence = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelLeftMaintence = new System.Windows.Forms.Panel();
-            this.listBoxPreventiva = new System.Windows.Forms.ListBox();
-            this.labelObsMaintence = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.listBoxMaintenceDriver = new System.Windows.Forms.ListBox();
-            this.labelDriverMaintence = new System.Windows.Forms.Label();
+            this.PanelMain = new System.Windows.Forms.Panel();
+            this.ButtonHome = new System.Windows.Forms.Button();
+            this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
+            this.PanelMaintence = new System.Windows.Forms.Panel();
+            this.DivPanel = new System.Windows.Forms.Panel();
+            this.ButtonCancel = new System.Windows.Forms.Button();
+            this.ButtonSave = new System.Windows.Forms.Button();
+            this.PanelTitle = new System.Windows.Forms.Panel();
+            this.Title = new System.Windows.Forms.Label();
+            this.PageDescription = new System.Windows.Forms.Label();
+            this.BoxDriver = new System.Windows.Forms.ComboBox();
+            this.BoxPreventiva = new System.Windows.Forms.ComboBox();
+            this.LabelObservation = new System.Windows.Forms.Label();
+            this.TextObservation = new System.Windows.Forms.RichTextBox();
+            this.LabelDriver = new System.Windows.Forms.Label();
             this.radioButtonCorretiva = new System.Windows.Forms.RadioButton();
             this.radioButtonPreventiva = new System.Windows.Forms.RadioButton();
-            this.textBoxKMSupply = new System.Windows.Forms.TextBox();
-            this.labelNameMaintence = new System.Windows.Forms.Label();
-            this.panelCenter = new System.Windows.Forms.Panel();
-            this.btnCancelMaintence = new System.Windows.Forms.Button();
-            this.btnSaveMaintence = new System.Windows.Forms.Button();
-            this.listBoxPiecePrev = new System.Windows.Forms.ListBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.labelTotal = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.labelQtd = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.listBoxVehicle = new System.Windows.Forms.ListBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.labelVeiculoSupply = new System.Windows.Forms.Label();
+            this.TextCorretiva = new System.Windows.Forms.TextBox();
+            this.LabelName = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.BoxVehicle = new System.Windows.Forms.ComboBox();
+            this.LabelResult = new System.Windows.Forms.Label();
+            this.LabelTotal = new System.Windows.Forms.Label();
+            this.NumberQtd = new System.Windows.Forms.NumericUpDown();
+            this.LabelQtd = new System.Windows.Forms.Label();
+            this.TextPrice = new System.Windows.Forms.TextBox();
+            this.LabelPrice = new System.Windows.Forms.Label();
+            this.PeçaCorretiva = new System.Windows.Forms.TextBox();
+            this.PecaLabel = new System.Windows.Forms.Label();
+            this.LabelVehicle = new System.Windows.Forms.Label();
             this.dateTimeMaintence = new System.Windows.Forms.DateTimePicker();
-            this.labelDataMaintence = new System.Windows.Forms.Label();
-            this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
-            this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.titleMaintence = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.containerMaintence.SuspendLayout();
-            this.tableLayoutPanel2.SuspendLayout();
-            this.panelLeftMaintence.SuspendLayout();
-            this.panelCenter.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            this.panelTitleAbastecimentos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.LabelData = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.PanelMain.SuspendLayout();
+            this.layoutFlex.SuspendLayout();
+            this.MainPanel.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
+            this.PanelMaintence.SuspendLayout();
+            this.PanelTitle.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberQtd)).BeginInit();
             this.SuspendLayout();
             // 
-            // containerMaintence
+            // PanelMain
             // 
-            this.containerMaintence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.containerMaintence.Controls.Add(this.tableLayoutPanel2);
-            this.containerMaintence.Controls.Add(this.panelFooterAbastecimentos);
-            this.containerMaintence.Controls.Add(this.panelTitleAbastecimentos);
-            this.containerMaintence.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.containerMaintence.Location = new System.Drawing.Point(109, 15);
-            this.containerMaintence.Margin = new System.Windows.Forms.Padding(0, 15, 0, 60);
-            this.containerMaintence.Name = "containerMaintence";
-            this.containerMaintence.Size = new System.Drawing.Size(876, 684);
-            this.containerMaintence.TabIndex = 0;
+            this.PanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
+            this.PanelMain.Controls.Add(this.ButtonHome);
+            this.PanelMain.Controls.Add(this.layoutFlex);
+            this.PanelMain.Controls.Add(this.PageDescription);
+            this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelMain.Location = new System.Drawing.Point(0, 0);
+            this.PanelMain.Name = "PanelMain";
+            this.PanelMain.Size = new System.Drawing.Size(1220, 990);
+            this.PanelMain.TabIndex = 7;
             // 
-            // tableLayoutPanel2
+            // ButtonHome
             // 
-            this.tableLayoutPanel2.ColumnCount = 2;
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel2.Controls.Add(this.panelLeftMaintence, 0, 0);
-            this.tableLayoutPanel2.Controls.Add(this.panelCenter, 1, 0);
-            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 75);
-            this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel2.Name = "tableLayoutPanel2";
-            this.tableLayoutPanel2.RowCount = 1;
-            this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(876, 582);
-            this.tableLayoutPanel2.TabIndex = 3;
+            this.ButtonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonHome.FlatAppearance.BorderSize = 0;
+            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHome.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonHome.Location = new System.Drawing.Point(1074, 5);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Size = new System.Drawing.Size(76, 31);
+            this.ButtonHome.TabIndex = 43;
+            this.ButtonHome.Text = "Home";
+            this.ButtonHome.UseVisualStyleBackColor = true;
             // 
-            // panelLeftMaintence
+            // layoutFlex
             // 
-            this.panelLeftMaintence.Controls.Add(this.listBoxPreventiva);
-            this.panelLeftMaintence.Controls.Add(this.labelObsMaintence);
-            this.panelLeftMaintence.Controls.Add(this.richTextBox1);
-            this.panelLeftMaintence.Controls.Add(this.listBoxMaintenceDriver);
-            this.panelLeftMaintence.Controls.Add(this.labelDriverMaintence);
-            this.panelLeftMaintence.Controls.Add(this.radioButtonCorretiva);
-            this.panelLeftMaintence.Controls.Add(this.radioButtonPreventiva);
-            this.panelLeftMaintence.Controls.Add(this.textBoxKMSupply);
-            this.panelLeftMaintence.Controls.Add(this.labelNameMaintence);
-            this.panelLeftMaintence.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLeftMaintence.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelLeftMaintence.Location = new System.Drawing.Point(0, 0);
-            this.panelLeftMaintence.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLeftMaintence.Name = "panelLeftMaintence";
-            this.panelLeftMaintence.Size = new System.Drawing.Size(438, 582);
-            this.panelLeftMaintence.TabIndex = 0;
+            this.layoutFlex.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.layoutFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.layoutFlex.ColumnCount = 1;
+            this.layoutFlex.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Controls.Add(this.MainPanel, 0, 0);
+            this.layoutFlex.Location = new System.Drawing.Point(15, 36);
+            this.layoutFlex.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutFlex.Name = "layoutFlex";
+            this.layoutFlex.RowCount = 1;
+            this.layoutFlex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Size = new System.Drawing.Size(1191, 924);
+            this.layoutFlex.TabIndex = 0;
             // 
-            // listBoxPreventiva
+            // MainPanel
             // 
-            this.listBoxPreventiva.FormattingEnabled = true;
-            this.listBoxPreventiva.ItemHeight = 25;
-            this.listBoxPreventiva.Location = new System.Drawing.Point(53, 135);
-            this.listBoxPreventiva.Name = "listBoxPreventiva";
-            this.listBoxPreventiva.Size = new System.Drawing.Size(201, 29);
-            this.listBoxPreventiva.TabIndex = 28;
-            this.listBoxPreventiva.Visible = false;
+            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel.Controls.Add(this.PanelContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1191, 924);
+            this.MainPanel.TabIndex = 0;
             // 
-            // labelObsMaintence
+            // PanelContainer
             // 
-            this.labelObsMaintence.AutoSize = true;
-            this.labelObsMaintence.ForeColor = System.Drawing.Color.Azure;
-            this.labelObsMaintence.Location = new System.Drawing.Point(48, 263);
-            this.labelObsMaintence.Name = "labelObsMaintence";
-            this.labelObsMaintence.Size = new System.Drawing.Size(119, 25);
-            this.labelObsMaintence.TabIndex = 36;
-            this.labelObsMaintence.Text = "Observação";
+            this.PanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelContainer.Controls.Add(this.PanelMaintence);
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(0, 0);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1191, 924);
+            this.PanelContainer.TabIndex = 1;
             // 
-            // richTextBox1
+            // PanelMaintence
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(53, 291);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(329, 133);
-            this.richTextBox1.TabIndex = 35;
-            this.richTextBox1.Text = "";
+            this.PanelMaintence.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelMaintence.BackColor = System.Drawing.Color.LightGray;
+            this.PanelMaintence.Controls.Add(this.panel5);
+            this.PanelMaintence.Controls.Add(this.panel4);
+            this.PanelMaintence.Controls.Add(this.panel3);
+            this.PanelMaintence.Controls.Add(this.BoxVehicle);
+            this.PanelMaintence.Controls.Add(this.LabelResult);
+            this.PanelMaintence.Controls.Add(this.LabelTotal);
+            this.PanelMaintence.Controls.Add(this.NumberQtd);
+            this.PanelMaintence.Controls.Add(this.LabelQtd);
+            this.PanelMaintence.Controls.Add(this.TextPrice);
+            this.PanelMaintence.Controls.Add(this.LabelPrice);
+            this.PanelMaintence.Controls.Add(this.PeçaCorretiva);
+            this.PanelMaintence.Controls.Add(this.PecaLabel);
+            this.PanelMaintence.Controls.Add(this.LabelVehicle);
+            this.PanelMaintence.Controls.Add(this.dateTimeMaintence);
+            this.PanelMaintence.Controls.Add(this.LabelData);
+            this.PanelMaintence.Controls.Add(this.panel2);
+            this.PanelMaintence.Controls.Add(this.panel1);
+            this.PanelMaintence.Controls.Add(this.BoxDriver);
+            this.PanelMaintence.Controls.Add(this.BoxPreventiva);
+            this.PanelMaintence.Controls.Add(this.LabelObservation);
+            this.PanelMaintence.Controls.Add(this.TextObservation);
+            this.PanelMaintence.Controls.Add(this.LabelDriver);
+            this.PanelMaintence.Controls.Add(this.radioButtonCorretiva);
+            this.PanelMaintence.Controls.Add(this.radioButtonPreventiva);
+            this.PanelMaintence.Controls.Add(this.TextCorretiva);
+            this.PanelMaintence.Controls.Add(this.LabelName);
+            this.PanelMaintence.Controls.Add(this.DivPanel);
+            this.PanelMaintence.Controls.Add(this.ButtonCancel);
+            this.PanelMaintence.Controls.Add(this.ButtonSave);
+            this.PanelMaintence.Controls.Add(this.PanelTitle);
+            this.PanelMaintence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelMaintence.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PanelMaintence.Location = new System.Drawing.Point(107, 40);
+            this.PanelMaintence.Name = "PanelMaintence";
+            this.PanelMaintence.Size = new System.Drawing.Size(970, 589);
+            this.PanelMaintence.TabIndex = 0;
+            this.PanelMaintence.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelMaintence_Paint);
             // 
-            // listBoxMaintenceDriver
+            // DivPanel
             // 
-            this.listBoxMaintenceDriver.FormattingEnabled = true;
-            this.listBoxMaintenceDriver.ItemHeight = 25;
-            this.listBoxMaintenceDriver.Location = new System.Drawing.Point(53, 216);
-            this.listBoxMaintenceDriver.Name = "listBoxMaintenceDriver";
-            this.listBoxMaintenceDriver.Size = new System.Drawing.Size(195, 29);
-            this.listBoxMaintenceDriver.TabIndex = 10;
+            this.DivPanel.BackColor = System.Drawing.Color.DarkGreen;
+            this.DivPanel.Location = new System.Drawing.Point(466, 126);
+            this.DivPanel.Name = "DivPanel";
+            this.DivPanel.Size = new System.Drawing.Size(2, 343);
+            this.DivPanel.TabIndex = 88;
             // 
-            // labelDriverMaintence
+            // ButtonCancel
             // 
-            this.labelDriverMaintence.AutoSize = true;
-            this.labelDriverMaintence.ForeColor = System.Drawing.Color.Azure;
-            this.labelDriverMaintence.Location = new System.Drawing.Point(48, 188);
-            this.labelDriverMaintence.Name = "labelDriverMaintence";
-            this.labelDriverMaintence.Size = new System.Drawing.Size(92, 25);
-            this.labelDriverMaintence.TabIndex = 9;
-            this.labelDriverMaintence.Text = "Motorista";
+            this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCancel.BackColor = System.Drawing.Color.Crimson;
+            this.ButtonCancel.FlatAppearance.BorderSize = 0;
+            this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonCancel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancel.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonCancel.Location = new System.Drawing.Point(818, 524);
+            this.ButtonCancel.Name = "ButtonCancel";
+            this.ButtonCancel.Size = new System.Drawing.Size(97, 32);
+            this.ButtonCancel.TabIndex = 70;
+            this.ButtonCancel.Text = "Cancelar";
+            this.ButtonCancel.UseVisualStyleBackColor = false;
+            // 
+            // ButtonSave
+            // 
+            this.ButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonSave.BackColor = System.Drawing.Color.Teal;
+            this.ButtonSave.FlatAppearance.BorderSize = 0;
+            this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSave.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSave.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonSave.Location = new System.Drawing.Point(707, 524);
+            this.ButtonSave.Name = "ButtonSave";
+            this.ButtonSave.Size = new System.Drawing.Size(97, 32);
+            this.ButtonSave.TabIndex = 69;
+            this.ButtonSave.Text = "Salvar";
+            this.ButtonSave.UseVisualStyleBackColor = false;
+            // 
+            // PanelTitle
+            // 
+            this.PanelTitle.BackColor = System.Drawing.Color.DarkGreen;
+            this.PanelTitle.Controls.Add(this.Title);
+            this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitle.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitle.Name = "PanelTitle";
+            this.PanelTitle.Size = new System.Drawing.Size(970, 87);
+            this.PanelTitle.TabIndex = 0;
+            // 
+            // Title
+            // 
+            this.Title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.Title.AutoSize = true;
+            this.Title.Font = new System.Drawing.Font("Impact", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Title.ForeColor = System.Drawing.Color.Azure;
+            this.Title.Location = new System.Drawing.Point(35, 20);
+            this.Title.Name = "Title";
+            this.Title.Size = new System.Drawing.Size(427, 48);
+            this.Title.TabIndex = 41;
+            this.Title.Text = "Cadastro de Manutenção";
+            // 
+            // PageDescription
+            // 
+            this.PageDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PageDescription.AutoSize = true;
+            this.PageDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageDescription.ForeColor = System.Drawing.Color.Azure;
+            this.PageDescription.Location = new System.Drawing.Point(776, 2);
+            this.PageDescription.Name = "PageDescription";
+            this.PageDescription.Size = new System.Drawing.Size(305, 31);
+            this.PageDescription.TabIndex = 42;
+            this.PageDescription.Text = "Cadastrar Manutenção /";
+            // 
+            // BoxDriver
+            // 
+            this.BoxDriver.AllowDrop = true;
+            this.BoxDriver.BackColor = System.Drawing.Color.LightGray;
+            this.BoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxDriver.FormattingEnabled = true;
+            this.BoxDriver.Location = new System.Drawing.Point(76, 307);
+            this.BoxDriver.Name = "BoxDriver";
+            this.BoxDriver.Size = new System.Drawing.Size(201, 28);
+            this.BoxDriver.TabIndex = 97;
+            // 
+            // BoxPreventiva
+            // 
+            this.BoxPreventiva.AllowDrop = true;
+            this.BoxPreventiva.BackColor = System.Drawing.Color.LightGray;
+            this.BoxPreventiva.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxPreventiva.FormattingEnabled = true;
+            this.BoxPreventiva.Location = new System.Drawing.Point(76, 204);
+            this.BoxPreventiva.Name = "BoxPreventiva";
+            this.BoxPreventiva.Size = new System.Drawing.Size(201, 28);
+            this.BoxPreventiva.TabIndex = 96;
+            // 
+            // LabelObservation
+            // 
+            this.LabelObservation.AutoSize = true;
+            this.LabelObservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelObservation.ForeColor = System.Drawing.Color.Gray;
+            this.LabelObservation.Location = new System.Drawing.Point(71, 357);
+            this.LabelObservation.Name = "LabelObservation";
+            this.LabelObservation.Size = new System.Drawing.Size(104, 20);
+            this.LabelObservation.TabIndex = 95;
+            this.LabelObservation.Text = "Observação";
+            // 
+            // TextObservation
+            // 
+            this.TextObservation.Location = new System.Drawing.Point(76, 385);
+            this.TextObservation.Name = "TextObservation";
+            this.TextObservation.Size = new System.Drawing.Size(329, 133);
+            this.TextObservation.TabIndex = 94;
+            this.TextObservation.Text = "";
+            // 
+            // LabelDriver
+            // 
+            this.LabelDriver.AutoSize = true;
+            this.LabelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDriver.ForeColor = System.Drawing.Color.Gray;
+            this.LabelDriver.Location = new System.Drawing.Point(71, 275);
+            this.LabelDriver.Name = "LabelDriver";
+            this.LabelDriver.Size = new System.Drawing.Size(84, 20);
+            this.LabelDriver.TabIndex = 91;
+            this.LabelDriver.Text = "Motorista";
             // 
             // radioButtonCorretiva
             // 
             this.radioButtonCorretiva.AutoSize = true;
-            this.radioButtonCorretiva.ForeColor = System.Drawing.Color.Azure;
-            this.radioButtonCorretiva.Location = new System.Drawing.Point(193, 32);
+            this.radioButtonCorretiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonCorretiva.ForeColor = System.Drawing.Color.Gray;
+            this.radioButtonCorretiva.Location = new System.Drawing.Point(216, 126);
             this.radioButtonCorretiva.Name = "radioButtonCorretiva";
-            this.radioButtonCorretiva.Size = new System.Drawing.Size(109, 29);
-            this.radioButtonCorretiva.TabIndex = 8;
+            this.radioButtonCorretiva.Size = new System.Drawing.Size(99, 24);
+            this.radioButtonCorretiva.TabIndex = 90;
             this.radioButtonCorretiva.TabStop = true;
             this.radioButtonCorretiva.Text = "Corretiva";
             this.radioButtonCorretiva.UseVisualStyleBackColor = true;
@@ -182,329 +322,264 @@
             // radioButtonPreventiva
             // 
             this.radioButtonPreventiva.AutoSize = true;
-            this.radioButtonPreventiva.ForeColor = System.Drawing.Color.Azure;
-            this.radioButtonPreventiva.Location = new System.Drawing.Point(59, 32);
+            this.radioButtonPreventiva.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButtonPreventiva.ForeColor = System.Drawing.Color.Gray;
+            this.radioButtonPreventiva.Location = new System.Drawing.Point(82, 126);
             this.radioButtonPreventiva.Name = "radioButtonPreventiva";
-            this.radioButtonPreventiva.Size = new System.Drawing.Size(122, 29);
-            this.radioButtonPreventiva.TabIndex = 7;
+            this.radioButtonPreventiva.Size = new System.Drawing.Size(110, 24);
+            this.radioButtonPreventiva.TabIndex = 89;
             this.radioButtonPreventiva.TabStop = true;
             this.radioButtonPreventiva.Text = "Preventiva";
             this.radioButtonPreventiva.UseVisualStyleBackColor = true;
             // 
-            // textBoxKMSupply
+            // TextCorretiva
             // 
-            this.textBoxKMSupply.Location = new System.Drawing.Point(53, 124);
-            this.textBoxKMSupply.Name = "textBoxKMSupply";
-            this.textBoxKMSupply.Size = new System.Drawing.Size(201, 30);
-            this.textBoxKMSupply.TabIndex = 27;
+            this.TextCorretiva.BackColor = System.Drawing.Color.Black;
+            this.TextCorretiva.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextCorretiva.Location = new System.Drawing.Point(76, 220);
+            this.TextCorretiva.Name = "TextCorretiva";
+            this.TextCorretiva.Size = new System.Drawing.Size(201, 19);
+            this.TextCorretiva.TabIndex = 93;
             // 
-            // labelNameMaintence
+            // LabelName
             // 
-            this.labelNameMaintence.AutoSize = true;
-            this.labelNameMaintence.ForeColor = System.Drawing.Color.Azure;
-            this.labelNameMaintence.Location = new System.Drawing.Point(48, 96);
-            this.labelNameMaintence.Name = "labelNameMaintence";
-            this.labelNameMaintence.Size = new System.Drawing.Size(178, 25);
-            this.labelNameMaintence.TabIndex = 26;
-            this.labelNameMaintence.Text = "Nome Manutenção";
+            this.LabelName.AutoSize = true;
+            this.LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelName.ForeColor = System.Drawing.Color.Gray;
+            this.LabelName.Location = new System.Drawing.Point(71, 189);
+            this.LabelName.Name = "LabelName";
+            this.LabelName.Size = new System.Drawing.Size(159, 20);
+            this.LabelName.TabIndex = 92;
+            this.LabelName.Text = "Nome Manutenção";
             // 
-            // panelCenter
+            // panel1
             // 
-            this.panelCenter.Controls.Add(this.btnCancelMaintence);
-            this.panelCenter.Controls.Add(this.btnSaveMaintence);
-            this.panelCenter.Controls.Add(this.listBoxPiecePrev);
-            this.panelCenter.Controls.Add(this.label3);
-            this.panelCenter.Controls.Add(this.labelTotal);
-            this.panelCenter.Controls.Add(this.numericUpDown1);
-            this.panelCenter.Controls.Add(this.labelQtd);
-            this.panelCenter.Controls.Add(this.textBox2);
-            this.panelCenter.Controls.Add(this.label2);
-            this.panelCenter.Controls.Add(this.textBox1);
-            this.panelCenter.Controls.Add(this.listBoxVehicle);
-            this.panelCenter.Controls.Add(this.label1);
-            this.panelCenter.Controls.Add(this.labelVeiculoSupply);
-            this.panelCenter.Controls.Add(this.dateTimeMaintence);
-            this.panelCenter.Controls.Add(this.labelDataMaintence);
-            this.panelCenter.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelCenter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelCenter.Location = new System.Drawing.Point(438, 0);
-            this.panelCenter.Margin = new System.Windows.Forms.Padding(0);
-            this.panelCenter.Name = "panelCenter";
-            this.panelCenter.Size = new System.Drawing.Size(438, 582);
-            this.panelCenter.TabIndex = 1;
+            this.panel1.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel1.Location = new System.Drawing.Point(76, 240);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(201, 2);
+            this.panel1.TabIndex = 89;
             // 
-            // btnCancelMaintence
+            // panel2
             // 
-            this.btnCancelMaintence.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelMaintence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancelMaintence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelMaintence.FlatAppearance.BorderSize = 0;
-            this.btnCancelMaintence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelMaintence.Location = new System.Drawing.Point(300, 408);
-            this.btnCancelMaintence.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelMaintence.Name = "btnCancelMaintence";
-            this.btnCancelMaintence.Size = new System.Drawing.Size(89, 35);
-            this.btnCancelMaintence.TabIndex = 40;
-            this.btnCancelMaintence.Text = "Cancelar";
-            this.btnCancelMaintence.UseVisualStyleBackColor = false;
+            this.panel2.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel2.Location = new System.Drawing.Point(76, 336);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(201, 2);
+            this.panel2.TabIndex = 90;
             // 
-            // btnSaveMaintence
+            // BoxVehicle
             // 
-            this.btnSaveMaintence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSaveMaintence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSaveMaintence.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveMaintence.FlatAppearance.BorderSize = 0;
-            this.btnSaveMaintence.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveMaintence.Location = new System.Drawing.Point(198, 408);
-            this.btnSaveMaintence.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaveMaintence.Name = "btnSaveMaintence";
-            this.btnSaveMaintence.Size = new System.Drawing.Size(79, 35);
-            this.btnSaveMaintence.TabIndex = 39;
-            this.btnSaveMaintence.Text = "Salvar";
-            this.btnSaveMaintence.UseVisualStyleBackColor = false;
+            this.BoxVehicle.AllowDrop = true;
+            this.BoxVehicle.BackColor = System.Drawing.Color.LightGray;
+            this.BoxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxVehicle.FormattingEnabled = true;
+            this.BoxVehicle.Location = new System.Drawing.Point(608, 209);
+            this.BoxVehicle.Name = "BoxVehicle";
+            this.BoxVehicle.Size = new System.Drawing.Size(233, 28);
+            this.BoxVehicle.TabIndex = 109;
             // 
-            // listBoxPiecePrev
+            // LabelResult
             // 
-            this.listBoxPiecePrev.FormattingEnabled = true;
-            this.listBoxPiecePrev.ItemHeight = 25;
-            this.listBoxPiecePrev.Location = new System.Drawing.Point(100, 184);
-            this.listBoxPiecePrev.Name = "listBoxPiecePrev";
-            this.listBoxPiecePrev.Size = new System.Drawing.Size(233, 29);
-            this.listBoxPiecePrev.TabIndex = 37;
-            this.listBoxPiecePrev.Visible = false;
+            this.LabelResult.AutoSize = true;
+            this.LabelResult.BackColor = System.Drawing.Color.LightGray;
+            this.LabelResult.ForeColor = System.Drawing.Color.Black;
+            this.LabelResult.Location = new System.Drawing.Point(736, 396);
+            this.LabelResult.Name = "LabelResult";
+            this.LabelResult.Size = new System.Drawing.Size(83, 20);
+            this.LabelResult.TabIndex = 108;
+            this.LabelResult.Text = "Total Price";
             // 
-            // label3
+            // LabelTotal
             // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.SteelBlue;
-            this.label3.Location = new System.Drawing.Point(228, 290);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(105, 25);
-            this.label3.TabIndex = 34;
-            this.label3.Text = "Total Price";
+            this.LabelTotal.AutoSize = true;
+            this.LabelTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelTotal.ForeColor = System.Drawing.Color.Gray;
+            this.LabelTotal.Location = new System.Drawing.Point(530, 396);
+            this.LabelTotal.Name = "LabelTotal";
+            this.LabelTotal.Size = new System.Drawing.Size(49, 20);
+            this.LabelTotal.TabIndex = 101;
+            this.LabelTotal.Text = "Total";
             // 
-            // labelTotal
+            // NumberQtd
             // 
-            this.labelTotal.AutoSize = true;
-            this.labelTotal.ForeColor = System.Drawing.Color.Azure;
-            this.labelTotal.Location = new System.Drawing.Point(22, 290);
-            this.labelTotal.Name = "labelTotal";
-            this.labelTotal.Size = new System.Drawing.Size(56, 25);
-            this.labelTotal.TabIndex = 28;
-            this.labelTotal.Text = "Total";
+            this.NumberQtd.BackColor = System.Drawing.Color.LightGray;
+            this.NumberQtd.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.NumberQtd.Location = new System.Drawing.Point(833, 274);
+            this.NumberQtd.Name = "NumberQtd";
+            this.NumberQtd.Size = new System.Drawing.Size(40, 22);
+            this.NumberQtd.TabIndex = 107;
             // 
-            // numericUpDown1
+            // LabelQtd
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(325, 233);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(40, 30);
-            this.numericUpDown1.TabIndex = 33;
+            this.LabelQtd.AutoSize = true;
+            this.LabelQtd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelQtd.ForeColor = System.Drawing.Color.Gray;
+            this.LabelQtd.Location = new System.Drawing.Point(713, 276);
+            this.LabelQtd.Name = "LabelQtd";
+            this.LabelQtd.Size = new System.Drawing.Size(102, 20);
+            this.LabelQtd.TabIndex = 106;
+            this.LabelQtd.Text = "Quantidade";
             // 
-            // labelQtd
+            // TextPrice
             // 
-            this.labelQtd.AutoSize = true;
-            this.labelQtd.ForeColor = System.Drawing.Color.Azure;
-            this.labelQtd.Location = new System.Drawing.Point(205, 235);
-            this.labelQtd.Name = "labelQtd";
-            this.labelQtd.Size = new System.Drawing.Size(114, 25);
-            this.labelQtd.TabIndex = 32;
-            this.labelQtd.Text = "Quantidade";
+            this.TextPrice.BackColor = System.Drawing.Color.LightGray;
+            this.TextPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextPrice.Location = new System.Drawing.Point(608, 273);
+            this.TextPrice.Name = "TextPrice";
+            this.TextPrice.Size = new System.Drawing.Size(80, 19);
+            this.TextPrice.TabIndex = 105;
             // 
-            // textBox2
+            // LabelPrice
             // 
-            this.textBox2.Location = new System.Drawing.Point(100, 232);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(80, 30);
-            this.textBox2.TabIndex = 31;
+            this.LabelPrice.AutoSize = true;
+            this.LabelPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPrice.ForeColor = System.Drawing.Color.Gray;
+            this.LabelPrice.Location = new System.Drawing.Point(525, 271);
+            this.LabelPrice.Name = "LabelPrice";
+            this.LabelPrice.Size = new System.Drawing.Size(55, 20);
+            this.LabelPrice.TabIndex = 104;
+            this.LabelPrice.Text = "Preço";
             // 
-            // label2
+            // PeçaCorretiva
             // 
-            this.label2.AutoSize = true;
-            this.label2.ForeColor = System.Drawing.Color.Azure;
-            this.label2.Location = new System.Drawing.Point(17, 230);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 25);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "Preço";
+            this.PeçaCorretiva.BackColor = System.Drawing.Color.LightGray;
+            this.PeçaCorretiva.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.PeçaCorretiva.Location = new System.Drawing.Point(608, 336);
+            this.PeçaCorretiva.Name = "PeçaCorretiva";
+            this.PeçaCorretiva.Size = new System.Drawing.Size(233, 19);
+            this.PeçaCorretiva.TabIndex = 103;
             // 
-            // textBox1
+            // PecaLabel
             // 
-            this.textBox1.Location = new System.Drawing.Point(100, 169);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 30);
-            this.textBox1.TabIndex = 29;
+            this.PecaLabel.AutoSize = true;
+            this.PecaLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PecaLabel.ForeColor = System.Drawing.Color.Gray;
+            this.PecaLabel.Location = new System.Drawing.Point(525, 336);
+            this.PecaLabel.Name = "PecaLabel";
+            this.PecaLabel.Size = new System.Drawing.Size(49, 20);
+            this.PecaLabel.TabIndex = 102;
+            this.PecaLabel.Text = "Peça";
             // 
-            // listBoxVehicle
+            // LabelVehicle
             // 
-            this.listBoxVehicle.FormattingEnabled = true;
-            this.listBoxVehicle.ItemHeight = 25;
-            this.listBoxVehicle.Location = new System.Drawing.Point(100, 106);
-            this.listBoxVehicle.Name = "listBoxVehicle";
-            this.listBoxVehicle.Size = new System.Drawing.Size(233, 29);
-            this.listBoxVehicle.TabIndex = 6;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.ForeColor = System.Drawing.Color.Azure;
-            this.label1.Location = new System.Drawing.Point(17, 169);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 25);
-            this.label1.TabIndex = 28;
-            this.label1.Text = "Peça";
-            // 
-            // labelVeiculoSupply
-            // 
-            this.labelVeiculoSupply.AutoSize = true;
-            this.labelVeiculoSupply.ForeColor = System.Drawing.Color.Azure;
-            this.labelVeiculoSupply.Location = new System.Drawing.Point(17, 106);
-            this.labelVeiculoSupply.Name = "labelVeiculoSupply";
-            this.labelVeiculoSupply.Size = new System.Drawing.Size(77, 25);
-            this.labelVeiculoSupply.TabIndex = 5;
-            this.labelVeiculoSupply.Text = "Veículo";
+            this.LabelVehicle.AutoSize = true;
+            this.LabelVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelVehicle.ForeColor = System.Drawing.Color.Gray;
+            this.LabelVehicle.Location = new System.Drawing.Point(525, 212);
+            this.LabelVehicle.Name = "LabelVehicle";
+            this.LabelVehicle.Size = new System.Drawing.Size(68, 20);
+            this.LabelVehicle.TabIndex = 98;
+            this.LabelVehicle.Text = "Veículo";
             // 
             // dateTimeMaintence
             // 
             this.dateTimeMaintence.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeMaintence.Location = new System.Drawing.Point(84, 36);
+            this.dateTimeMaintence.Location = new System.Drawing.Point(619, 125);
             this.dateTimeMaintence.Name = "dateTimeMaintence";
             this.dateTimeMaintence.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.dateTimeMaintence.RightToLeftLayout = true;
-            this.dateTimeMaintence.Size = new System.Drawing.Size(133, 30);
-            this.dateTimeMaintence.TabIndex = 25;
+            this.dateTimeMaintence.Size = new System.Drawing.Size(133, 26);
+            this.dateTimeMaintence.TabIndex = 100;
             // 
-            // labelDataMaintence
+            // LabelData
             // 
-            this.labelDataMaintence.AutoSize = true;
-            this.labelDataMaintence.ForeColor = System.Drawing.Color.Azure;
-            this.labelDataMaintence.Location = new System.Drawing.Point(19, 36);
-            this.labelDataMaintence.Name = "labelDataMaintence";
-            this.labelDataMaintence.Size = new System.Drawing.Size(53, 25);
-            this.labelDataMaintence.TabIndex = 24;
-            this.labelDataMaintence.Text = "Data";
+            this.LabelData.AutoSize = true;
+            this.LabelData.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelData.ForeColor = System.Drawing.Color.Gray;
+            this.LabelData.Location = new System.Drawing.Point(530, 130);
+            this.LabelData.Name = "LabelData";
+            this.LabelData.Size = new System.Drawing.Size(48, 20);
+            this.LabelData.TabIndex = 99;
+            this.LabelData.Text = "Data";
             // 
-            // panelFooterAbastecimentos
+            // panel3
             // 
-            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.SteelBlue;
-            this.panelFooterAbastecimentos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 657);
-            this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelFooterAbastecimentos.Name = "panelFooterAbastecimentos";
-            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(876, 27);
-            this.panelFooterAbastecimentos.TabIndex = 2;
+            this.panel3.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel3.Location = new System.Drawing.Point(608, 237);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(234, 2);
+            this.panel3.TabIndex = 90;
             // 
-            // panelTitleAbastecimentos
+            // panel4
             // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Indigo;
-            this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
-            this.panelTitleAbastecimentos.Controls.Add(this.titleMaintence);
-            this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTitleAbastecimentos.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTitleAbastecimentos.Name = "panelTitleAbastecimentos";
-            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(876, 75);
-            this.panelTitleAbastecimentos.TabIndex = 1;
+            this.panel4.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel4.Location = new System.Drawing.Point(608, 357);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(233, 2);
+            this.panel4.TabIndex = 110;
             // 
-            // pictureBox1
+            // panel5
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(80, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(87, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // titleMaintence
-            // 
-            this.titleMaintence.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.titleMaintence.AutoSize = true;
-            this.titleMaintence.Font = new System.Drawing.Font("Arial Narrow", 40F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleMaintence.ForeColor = System.Drawing.Color.Orange;
-            this.titleMaintence.Location = new System.Drawing.Point(333, 5);
-            this.titleMaintence.Name = "titleMaintence";
-            this.titleMaintence.Size = new System.Drawing.Size(274, 64);
-            this.titleMaintence.TabIndex = 0;
-            this.titleMaintence.Text = "Manutenção";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.containerMaintence, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1096, 759);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.panel5.BackColor = System.Drawing.Color.DarkGreen;
+            this.panel5.Location = new System.Drawing.Point(608, 294);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(80, 2);
+            this.panel5.TabIndex = 111;
             // 
             // Manutencao
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.Controls.Add(this.tableLayoutPanel1);
+            this.Controls.Add(this.PanelMain);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Manutencao";
-            this.Size = new System.Drawing.Size(1096, 759);
+            this.Size = new System.Drawing.Size(1220, 990);
             this.Load += new System.EventHandler(this.Manutencao_Load);
-            this.containerMaintence.ResumeLayout(false);
-            this.tableLayoutPanel2.ResumeLayout(false);
-            this.panelLeftMaintence.ResumeLayout(false);
-            this.panelLeftMaintence.PerformLayout();
-            this.panelCenter.ResumeLayout(false);
-            this.panelCenter.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            this.panelTitleAbastecimentos.ResumeLayout(false);
-            this.panelTitleAbastecimentos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.PanelMain.ResumeLayout(false);
+            this.PanelMain.PerformLayout();
+            this.layoutFlex.ResumeLayout(false);
+            this.MainPanel.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
+            this.PanelMaintence.ResumeLayout(false);
+            this.PanelMaintence.PerformLayout();
+            this.PanelTitle.ResumeLayout(false);
+            this.PanelTitle.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumberQtd)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel containerMaintence;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Panel panelLeftMaintence;
-        private System.Windows.Forms.ListBox listBoxPreventiva;
-        private System.Windows.Forms.Label labelObsMaintence;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ListBox listBoxMaintenceDriver;
-        private System.Windows.Forms.Label labelDriverMaintence;
+        private System.Windows.Forms.Panel PanelMain;
+        private System.Windows.Forms.Button ButtonHome;
+        private System.Windows.Forms.TableLayoutPanel layoutFlex;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel PanelContainer;
+        private System.Windows.Forms.Panel PanelMaintence;
+        private System.Windows.Forms.Panel DivPanel;
+        private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.Button ButtonSave;
+        private System.Windows.Forms.Panel PanelTitle;
+        private System.Windows.Forms.Label Title;
+        private System.Windows.Forms.Label PageDescription;
+        private System.Windows.Forms.ComboBox BoxDriver;
+        private System.Windows.Forms.ComboBox BoxPreventiva;
+        private System.Windows.Forms.Label LabelObservation;
+        private System.Windows.Forms.RichTextBox TextObservation;
+        private System.Windows.Forms.Label LabelDriver;
         private System.Windows.Forms.RadioButton radioButtonCorretiva;
         private System.Windows.Forms.RadioButton radioButtonPreventiva;
-        private System.Windows.Forms.TextBox textBoxKMSupply;
-        private System.Windows.Forms.Label labelNameMaintence;
-        private System.Windows.Forms.Panel panelCenter;
-        private System.Windows.Forms.Button btnCancelMaintence;
-        private System.Windows.Forms.Button btnSaveMaintence;
-        private System.Windows.Forms.ListBox listBoxPiecePrev;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label labelTotal;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Label labelQtd;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ListBox listBoxVehicle;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label labelVeiculoSupply;
+        private System.Windows.Forms.TextBox TextCorretiva;
+        private System.Windows.Forms.Label LabelName;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox BoxVehicle;
+        private System.Windows.Forms.Label LabelResult;
+        private System.Windows.Forms.Label LabelTotal;
+        private System.Windows.Forms.NumericUpDown NumberQtd;
+        private System.Windows.Forms.Label LabelQtd;
+        private System.Windows.Forms.TextBox TextPrice;
+        private System.Windows.Forms.Label LabelPrice;
+        private System.Windows.Forms.TextBox PeçaCorretiva;
+        private System.Windows.Forms.Label PecaLabel;
+        private System.Windows.Forms.Label LabelVehicle;
         private System.Windows.Forms.DateTimePicker dateTimeMaintence;
-        private System.Windows.Forms.Label labelDataMaintence;
-        private System.Windows.Forms.Panel panelFooterAbastecimentos;
-        private System.Windows.Forms.Panel panelTitleAbastecimentos;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label titleMaintence;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.Label LabelData;
     }
 }

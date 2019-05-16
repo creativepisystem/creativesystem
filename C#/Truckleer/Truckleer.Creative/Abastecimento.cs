@@ -7,13 +7,25 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Truckleer.Api.Classes;
 
 namespace Truckleer.Creative
 {
     public partial class Abastecimento : UserControl
     {
-        public Abastecimento()
+        public Supply Supply;
+
+        public Abastecimento(Supply supply)
         {
+            if(supply != null)
+            {
+                this.Supply = supply;
+            }
+            else
+            {
+                this.Supply = new Supply();
+            }
+
             InitializeComponent();
         }
 
@@ -37,7 +49,12 @@ namespace Truckleer.Creative
 
         }
        
-        private void btnSaveSupply_Click(object sender, EventArgs e)
+        private void BtnSaveSupply_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
         {
 
         }

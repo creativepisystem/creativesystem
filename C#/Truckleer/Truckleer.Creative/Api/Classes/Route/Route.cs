@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Api.Classes
 {
-    class Route
+    public class Route
     {
         //Constructor
         public Route()

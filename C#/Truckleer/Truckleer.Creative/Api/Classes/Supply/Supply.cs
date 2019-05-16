@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Api.Classes
 {
-    class Supply
+    public class Supply
     {
         public Supply()
         {

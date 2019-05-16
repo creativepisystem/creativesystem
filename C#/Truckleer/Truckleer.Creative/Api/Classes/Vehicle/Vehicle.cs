@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Api.Classes
 {
-    class Vehicle
+    public class Vehicle
     {
         public Vehicle()
         {

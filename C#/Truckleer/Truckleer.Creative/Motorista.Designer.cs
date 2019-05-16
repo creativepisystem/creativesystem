@@ -28,432 +28,483 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Motorista));
-            this.panelDriverContainer = new System.Windows.Forms.Panel();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.panelContainerDriver = new System.Windows.Forms.Panel();
-            this.layoutDriver = new System.Windows.Forms.TableLayoutPanel();
-            this.panelLeftDriver = new System.Windows.Forms.Panel();
-            this.dateTimeBirthDriver = new System.Windows.Forms.DateTimePicker();
-            this.labelBirthDriver = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.textBoxPhoneDriver = new System.Windows.Forms.TextBox();
-            this.labelPhoneDriver = new System.Windows.Forms.Label();
-            this.textBoxMailDriver = new System.Windows.Forms.TextBox();
-            this.textBoxCpfDriver = new System.Windows.Forms.TextBox();
-            this.labelCpfDriver = new System.Windows.Forms.Label();
-            this.labelMailDriver = new System.Windows.Forms.Label();
-            this.textBoxNameDriver = new System.Windows.Forms.TextBox();
-            this.labelNameDriver = new System.Windows.Forms.Label();
-            this.panelRightDriver = new System.Windows.Forms.Panel();
-            this.btnCancelDriver = new System.Windows.Forms.Button();
-            this.btnSaveDriver = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dateTimeOverDue = new System.Windows.Forms.DateTimePicker();
-            this.labelObs = new System.Windows.Forms.Label();
-            this.labelOverDue = new System.Windows.Forms.Label();
-            this.panelFooterAbastecimentos = new System.Windows.Forms.Panel();
-            this.labelCnhDriver = new System.Windows.Forms.Label();
-            this.textBoxCnhDriver = new System.Windows.Forms.TextBox();
-            this.panelTitleAbastecimentos = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.titleDriver = new System.Windows.Forms.Label();
-            this.panelDriverContainer.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
-            this.panelContainerDriver.SuspendLayout();
-            this.layoutDriver.SuspendLayout();
-            this.panelLeftDriver.SuspendLayout();
-            this.panelRightDriver.SuspendLayout();
-            this.panelTitleAbastecimentos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.PanelMain = new System.Windows.Forms.Panel();
+            this.ButtonHome = new System.Windows.Forms.Button();
+            this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
+            this.MainPanel = new System.Windows.Forms.Panel();
+            this.PanelContainer = new System.Windows.Forms.Panel();
+            this.PanelDriver = new System.Windows.Forms.Panel();
+            this.ButtonCancel = new System.Windows.Forms.Button();
+            this.ButtonSave = new System.Windows.Forms.Button();
+            this.PanelTitle = new System.Windows.Forms.Panel();
+            this.title = new System.Windows.Forms.Label();
+            this.PageDescription = new System.Windows.Forms.Label();
+            this.TextObservation = new System.Windows.Forms.TextBox();
+            this.DateCnhDue = new System.Windows.Forms.DateTimePicker();
+            this.LabelObservation = new System.Windows.Forms.Label();
+            this.LabelCnhDue = new System.Windows.Forms.Label();
+            this.LabelCnh = new System.Windows.Forms.Label();
+            this.TextCnh = new System.Windows.Forms.TextBox();
+            this.DatePicker = new System.Windows.Forms.DateTimePicker();
+            this.LabelBirth = new System.Windows.Forms.Label();
+            this.TextPhone = new System.Windows.Forms.TextBox();
+            this.LabelPhone = new System.Windows.Forms.Label();
+            this.TextMail = new System.Windows.Forms.TextBox();
+            this.TextCpf = new System.Windows.Forms.TextBox();
+            this.LabelCpf = new System.Windows.Forms.Label();
+            this.LabelMail = new System.Windows.Forms.Label();
+            this.TextName = new System.Windows.Forms.TextBox();
+            this.LabelName = new System.Windows.Forms.Label();
+            this.BorderPanel1 = new System.Windows.Forms.Panel();
+            this.BorderPanel2 = new System.Windows.Forms.Panel();
+            this.BorderPanel3 = new System.Windows.Forms.Panel();
+            this.BorderPanel4 = new System.Windows.Forms.Panel();
+            this.BorderPanel5 = new System.Windows.Forms.Panel();
+            this.DivPanel = new System.Windows.Forms.Panel();
+            this.PanelMain.SuspendLayout();
+            this.layoutFlex.SuspendLayout();
+            this.MainPanel.SuspendLayout();
+            this.PanelContainer.SuspendLayout();
+            this.PanelDriver.SuspendLayout();
+            this.PanelTitle.SuspendLayout();
             this.SuspendLayout();
             // 
-            // panelDriverContainer
+            // PanelMain
             // 
-            this.panelDriverContainer.Controls.Add(this.tableLayoutPanel1);
-            this.panelDriverContainer.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDriverContainer.Location = new System.Drawing.Point(0, 0);
-            this.panelDriverContainer.Margin = new System.Windows.Forms.Padding(0);
-            this.panelDriverContainer.Name = "panelDriverContainer";
-            this.panelDriverContainer.Size = new System.Drawing.Size(1096, 759);
-            this.panelDriverContainer.TabIndex = 0;
+            this.PanelMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
+            this.PanelMain.Controls.Add(this.ButtonHome);
+            this.PanelMain.Controls.Add(this.layoutFlex);
+            this.PanelMain.Controls.Add(this.PageDescription);
+            this.PanelMain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelMain.Location = new System.Drawing.Point(0, 0);
+            this.PanelMain.Name = "PanelMain";
+            this.PanelMain.Size = new System.Drawing.Size(1220, 990);
+            this.PanelMain.TabIndex = 6;
             // 
-            // tableLayoutPanel1
+            // ButtonHome
             // 
-            this.tableLayoutPanel1.ColumnCount = 3;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel1.Controls.Add(this.panelContainerDriver, 1, 0);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1096, 759);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.ButtonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonHome.FlatAppearance.BorderSize = 0;
+            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHome.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonHome.Location = new System.Drawing.Point(1116, 5);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Size = new System.Drawing.Size(76, 31);
+            this.ButtonHome.TabIndex = 43;
+            this.ButtonHome.Text = "Home";
+            this.ButtonHome.UseVisualStyleBackColor = true;
             // 
-            // panelContainerDriver
+            // layoutFlex
             // 
-            this.panelContainerDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panelContainerDriver.Controls.Add(this.layoutDriver);
-            this.panelContainerDriver.Controls.Add(this.panelTitleAbastecimentos);
-            this.panelContainerDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContainerDriver.Location = new System.Drawing.Point(109, 30);
-            this.panelContainerDriver.Margin = new System.Windows.Forms.Padding(0, 30, 0, 50);
-            this.panelContainerDriver.Name = "panelContainerDriver";
-            this.panelContainerDriver.Size = new System.Drawing.Size(876, 679);
-            this.panelContainerDriver.TabIndex = 0;
-            // 
-            // layoutDriver
-            // 
-            this.layoutDriver.ColumnCount = 2;
-            this.layoutDriver.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutDriver.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.layoutDriver.Controls.Add(this.panelLeftDriver, 0, 0);
-            this.layoutDriver.Controls.Add(this.panelRightDriver, 1, 0);
-            this.layoutDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutDriver.Location = new System.Drawing.Point(0, 75);
-            this.layoutDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.layoutDriver.Name = "layoutDriver";
-            this.layoutDriver.RowCount = 1;
-            this.layoutDriver.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.layoutDriver.Size = new System.Drawing.Size(876, 604);
-            this.layoutDriver.TabIndex = 2;
-            // 
-            // panelLeftDriver
-            // 
-            this.panelLeftDriver.Controls.Add(this.dateTimeBirthDriver);
-            this.panelLeftDriver.Controls.Add(this.labelBirthDriver);
-            this.panelLeftDriver.Controls.Add(this.panel1);
-            this.panelLeftDriver.Controls.Add(this.textBoxPhoneDriver);
-            this.panelLeftDriver.Controls.Add(this.labelPhoneDriver);
-            this.panelLeftDriver.Controls.Add(this.textBoxMailDriver);
-            this.panelLeftDriver.Controls.Add(this.textBoxCpfDriver);
-            this.panelLeftDriver.Controls.Add(this.labelCpfDriver);
-            this.panelLeftDriver.Controls.Add(this.labelMailDriver);
-            this.panelLeftDriver.Controls.Add(this.textBoxNameDriver);
-            this.panelLeftDriver.Controls.Add(this.labelNameDriver);
-            this.panelLeftDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelLeftDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelLeftDriver.Location = new System.Drawing.Point(0, 0);
-            this.panelLeftDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.panelLeftDriver.Name = "panelLeftDriver";
-            this.panelLeftDriver.Size = new System.Drawing.Size(438, 604);
-            this.panelLeftDriver.TabIndex = 0;
-            // 
-            // dateTimeBirthDriver
-            // 
-            this.dateTimeBirthDriver.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeBirthDriver.Location = new System.Drawing.Point(190, 66);
-            this.dateTimeBirthDriver.Name = "dateTimeBirthDriver";
-            this.dateTimeBirthDriver.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimeBirthDriver.RightToLeftLayout = true;
-            this.dateTimeBirthDriver.Size = new System.Drawing.Size(135, 30);
-            this.dateTimeBirthDriver.TabIndex = 32;
-            // 
-            // labelBirthDriver
-            // 
-            this.labelBirthDriver.AutoSize = true;
-            this.labelBirthDriver.ForeColor = System.Drawing.Color.Azure;
-            this.labelBirthDriver.Location = new System.Drawing.Point(23, 66);
-            this.labelBirthDriver.Name = "labelBirthDriver";
-            this.labelBirthDriver.Size = new System.Drawing.Size(161, 25);
-            this.labelBirthDriver.TabIndex = 31;
-            this.labelBirthDriver.Text = "Data Nascimento";
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Indigo;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 577);
-            this.panel1.Margin = new System.Windows.Forms.Padding(0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(438, 27);
-            this.panel1.TabIndex = 30;
-            // 
-            // textBoxPhoneDriver
-            // 
-            this.textBoxPhoneDriver.Location = new System.Drawing.Point(121, 256);
-            this.textBoxPhoneDriver.Name = "textBoxPhoneDriver";
-            this.textBoxPhoneDriver.Size = new System.Drawing.Size(204, 30);
-            this.textBoxPhoneDriver.TabIndex = 27;
-            // 
-            // labelPhoneDriver
-            // 
-            this.labelPhoneDriver.AutoSize = true;
-            this.labelPhoneDriver.ForeColor = System.Drawing.Color.Azure;
-            this.labelPhoneDriver.Location = new System.Drawing.Point(21, 261);
-            this.labelPhoneDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.labelPhoneDriver.Name = "labelPhoneDriver";
-            this.labelPhoneDriver.Size = new System.Drawing.Size(89, 25);
-            this.labelPhoneDriver.TabIndex = 26;
-            this.labelPhoneDriver.Text = "Telefone";
-            // 
-            // textBoxMailDriver
-            // 
-            this.textBoxMailDriver.Location = new System.Drawing.Point(123, 333);
-            this.textBoxMailDriver.Name = "textBoxMailDriver";
-            this.textBoxMailDriver.Size = new System.Drawing.Size(201, 30);
-            this.textBoxMailDriver.TabIndex = 29;
-            // 
-            // textBoxCpfDriver
-            // 
-            this.textBoxCpfDriver.Location = new System.Drawing.Point(121, 190);
-            this.textBoxCpfDriver.Name = "textBoxCpfDriver";
-            this.textBoxCpfDriver.Size = new System.Drawing.Size(204, 30);
-            this.textBoxCpfDriver.TabIndex = 23;
-            // 
-            // labelCpfDriver
-            // 
-            this.labelCpfDriver.AutoSize = true;
-            this.labelCpfDriver.ForeColor = System.Drawing.Color.Azure;
-            this.labelCpfDriver.Location = new System.Drawing.Point(21, 195);
-            this.labelCpfDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.labelCpfDriver.Name = "labelCpfDriver";
-            this.labelCpfDriver.Size = new System.Drawing.Size(52, 25);
-            this.labelCpfDriver.TabIndex = 22;
-            this.labelCpfDriver.Text = "CPF";
-            // 
-            // labelMailDriver
-            // 
-            this.labelMailDriver.AutoSize = true;
-            this.labelMailDriver.ForeColor = System.Drawing.Color.Azure;
-            this.labelMailDriver.Location = new System.Drawing.Point(23, 338);
-            this.labelMailDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.labelMailDriver.Name = "labelMailDriver";
-            this.labelMailDriver.Size = new System.Drawing.Size(68, 25);
-            this.labelMailDriver.TabIndex = 28;
-            this.labelMailDriver.Text = "E-Mail";
-            // 
-            // textBoxNameDriver
-            // 
-            this.textBoxNameDriver.Location = new System.Drawing.Point(121, 125);
-            this.textBoxNameDriver.Name = "textBoxNameDriver";
-            this.textBoxNameDriver.Size = new System.Drawing.Size(204, 30);
-            this.textBoxNameDriver.TabIndex = 21;
-            // 
-            // labelNameDriver
-            // 
-            this.labelNameDriver.AutoSize = true;
-            this.labelNameDriver.ForeColor = System.Drawing.Color.Azure;
-            this.labelNameDriver.Location = new System.Drawing.Point(21, 130);
-            this.labelNameDriver.Name = "labelNameDriver";
-            this.labelNameDriver.Size = new System.Drawing.Size(64, 25);
-            this.labelNameDriver.TabIndex = 20;
-            this.labelNameDriver.Text = "Nome";
-            // 
-            // panelRightDriver
-            // 
-            this.panelRightDriver.Controls.Add(this.btnCancelDriver);
-            this.panelRightDriver.Controls.Add(this.btnSaveDriver);
-            this.panelRightDriver.Controls.Add(this.textBox1);
-            this.panelRightDriver.Controls.Add(this.dateTimeOverDue);
-            this.panelRightDriver.Controls.Add(this.labelObs);
-            this.panelRightDriver.Controls.Add(this.labelOverDue);
-            this.panelRightDriver.Controls.Add(this.panelFooterAbastecimentos);
-            this.panelRightDriver.Controls.Add(this.labelCnhDriver);
-            this.panelRightDriver.Controls.Add(this.textBoxCnhDriver);
-            this.panelRightDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelRightDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelRightDriver.Location = new System.Drawing.Point(438, 0);
-            this.panelRightDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.panelRightDriver.Name = "panelRightDriver";
-            this.panelRightDriver.Size = new System.Drawing.Size(438, 604);
-            this.panelRightDriver.TabIndex = 1;
-            this.panelRightDriver.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelRightDriver_Paint);
-            // 
-            // btnCancelDriver
-            // 
-            this.btnCancelDriver.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCancelDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnCancelDriver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnCancelDriver.FlatAppearance.BorderSize = 0;
-            this.btnCancelDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCancelDriver.Location = new System.Drawing.Point(293, 411);
-            this.btnCancelDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.btnCancelDriver.Name = "btnCancelDriver";
-            this.btnCancelDriver.Size = new System.Drawing.Size(89, 35);
-            this.btnCancelDriver.TabIndex = 38;
-            this.btnCancelDriver.Text = "Cancelar";
-            this.btnCancelDriver.UseVisualStyleBackColor = false;
-            // 
-            // btnSaveDriver
-            // 
-            this.btnSaveDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(123)))), ((int)(((byte)(255)))));
-            this.btnSaveDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.btnSaveDriver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSaveDriver.FlatAppearance.BorderSize = 0;
-            this.btnSaveDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSaveDriver.Location = new System.Drawing.Point(191, 411);
-            this.btnSaveDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.btnSaveDriver.Name = "btnSaveDriver";
-            this.btnSaveDriver.Size = new System.Drawing.Size(79, 35);
-            this.btnSaveDriver.TabIndex = 37;
-            this.btnSaveDriver.Text = "Salvar";
-            this.btnSaveDriver.UseVisualStyleBackColor = false;
-            this.btnSaveDriver.Click += new System.EventHandler(this.BtnSaveDriver_Click);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(29, 224);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(296, 139);
-            this.textBox1.TabIndex = 34;
-            // 
-            // dateTimeOverDue
-            // 
-            this.dateTimeOverDue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimeOverDue.Location = new System.Drawing.Point(191, 66);
-            this.dateTimeOverDue.Name = "dateTimeOverDue";
-            this.dateTimeOverDue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimeOverDue.RightToLeftLayout = true;
-            this.dateTimeOverDue.Size = new System.Drawing.Size(138, 30);
-            this.dateTimeOverDue.TabIndex = 34;
-            // 
-            // labelObs
-            // 
-            this.labelObs.AutoSize = true;
-            this.labelObs.ForeColor = System.Drawing.Color.Azure;
-            this.labelObs.Location = new System.Drawing.Point(24, 196);
-            this.labelObs.Name = "labelObs";
-            this.labelObs.Size = new System.Drawing.Size(119, 25);
-            this.labelObs.TabIndex = 33;
-            this.labelObs.Text = "Observação";
-            // 
-            // labelOverDue
-            // 
-            this.labelOverDue.AutoSize = true;
-            this.labelOverDue.ForeColor = System.Drawing.Color.Azure;
-            this.labelOverDue.Location = new System.Drawing.Point(24, 66);
-            this.labelOverDue.Name = "labelOverDue";
-            this.labelOverDue.Size = new System.Drawing.Size(164, 25);
-            this.labelOverDue.TabIndex = 33;
-            this.labelOverDue.Text = "Vencimento CNH";
-            // 
-            // panelFooterAbastecimentos
-            // 
-            this.panelFooterAbastecimentos.BackColor = System.Drawing.Color.Indigo;
-            this.panelFooterAbastecimentos.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panelFooterAbastecimentos.Location = new System.Drawing.Point(0, 577);
-            this.panelFooterAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelFooterAbastecimentos.Name = "panelFooterAbastecimentos";
-            this.panelFooterAbastecimentos.Size = new System.Drawing.Size(438, 27);
-            this.panelFooterAbastecimentos.TabIndex = 2;
-            // 
-            // labelCnhDriver
-            // 
-            this.labelCnhDriver.AutoSize = true;
-            this.labelCnhDriver.ForeColor = System.Drawing.Color.Azure;
-            this.labelCnhDriver.Location = new System.Drawing.Point(28, 130);
-            this.labelCnhDriver.Margin = new System.Windows.Forms.Padding(0);
-            this.labelCnhDriver.Name = "labelCnhDriver";
-            this.labelCnhDriver.Size = new System.Drawing.Size(55, 25);
-            this.labelCnhDriver.TabIndex = 24;
-            this.labelCnhDriver.Text = "CNH";
-            // 
-            // textBoxCnhDriver
-            // 
-            this.textBoxCnhDriver.Location = new System.Drawing.Point(128, 125);
-            this.textBoxCnhDriver.Name = "textBoxCnhDriver";
-            this.textBoxCnhDriver.Size = new System.Drawing.Size(201, 30);
-            this.textBoxCnhDriver.TabIndex = 25;
-            // 
-            // panelTitleAbastecimentos
-            // 
-            this.panelTitleAbastecimentos.BackColor = System.Drawing.Color.Indigo;
-            this.panelTitleAbastecimentos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelTitleAbastecimentos.Controls.Add(this.pictureBox1);
-            this.panelTitleAbastecimentos.Controls.Add(this.titleDriver);
-            this.panelTitleAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelTitleAbastecimentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panelTitleAbastecimentos.Location = new System.Drawing.Point(0, 0);
-            this.panelTitleAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
-            this.panelTitleAbastecimentos.Name = "panelTitleAbastecimentos";
-            this.panelTitleAbastecimentos.Size = new System.Drawing.Size(876, 75);
-            this.panelTitleAbastecimentos.TabIndex = 1;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(77, 5);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(73, 67);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            // 
-            // titleDriver
-            // 
-            this.titleDriver.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.layoutFlex.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.titleDriver.AutoSize = true;
-            this.titleDriver.Font = new System.Drawing.Font("Arial Narrow", 39.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.titleDriver.ForeColor = System.Drawing.Color.Orange;
-            this.titleDriver.Location = new System.Drawing.Point(235, 5);
-            this.titleDriver.Name = "titleDriver";
-            this.titleDriver.Size = new System.Drawing.Size(404, 63);
-            this.titleDriver.TabIndex = 0;
-            this.titleDriver.Text = " Cadastro Motorista";
+            this.layoutFlex.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.layoutFlex.ColumnCount = 1;
+            this.layoutFlex.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Controls.Add(this.MainPanel, 0, 0);
+            this.layoutFlex.Location = new System.Drawing.Point(15, 36);
+            this.layoutFlex.Margin = new System.Windows.Forms.Padding(0);
+            this.layoutFlex.Name = "layoutFlex";
+            this.layoutFlex.RowCount = 1;
+            this.layoutFlex.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.layoutFlex.Size = new System.Drawing.Size(1191, 924);
+            this.layoutFlex.TabIndex = 0;
+            // 
+            // MainPanel
+            // 
+            this.MainPanel.BackColor = System.Drawing.Color.Transparent;
+            this.MainPanel.Controls.Add(this.PanelContainer);
+            this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MainPanel.Location = new System.Drawing.Point(0, 0);
+            this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
+            this.MainPanel.Name = "MainPanel";
+            this.MainPanel.Size = new System.Drawing.Size(1191, 924);
+            this.MainPanel.TabIndex = 0;
+            // 
+            // PanelContainer
+            // 
+            this.PanelContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.PanelContainer.Controls.Add(this.PanelDriver);
+            this.PanelContainer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelContainer.Location = new System.Drawing.Point(0, 0);
+            this.PanelContainer.Name = "PanelContainer";
+            this.PanelContainer.Size = new System.Drawing.Size(1191, 924);
+            this.PanelContainer.TabIndex = 1;
+            // 
+            // PanelDriver
+            // 
+            this.PanelDriver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PanelDriver.BackColor = System.Drawing.Color.LightGray;
+            this.PanelDriver.Controls.Add(this.DivPanel);
+            this.PanelDriver.Controls.Add(this.BorderPanel5);
+            this.PanelDriver.Controls.Add(this.BorderPanel4);
+            this.PanelDriver.Controls.Add(this.BorderPanel3);
+            this.PanelDriver.Controls.Add(this.BorderPanel2);
+            this.PanelDriver.Controls.Add(this.BorderPanel1);
+            this.PanelDriver.Controls.Add(this.TextObservation);
+            this.PanelDriver.Controls.Add(this.DateCnhDue);
+            this.PanelDriver.Controls.Add(this.LabelObservation);
+            this.PanelDriver.Controls.Add(this.LabelCnhDue);
+            this.PanelDriver.Controls.Add(this.LabelCnh);
+            this.PanelDriver.Controls.Add(this.TextCnh);
+            this.PanelDriver.Controls.Add(this.DatePicker);
+            this.PanelDriver.Controls.Add(this.LabelBirth);
+            this.PanelDriver.Controls.Add(this.TextPhone);
+            this.PanelDriver.Controls.Add(this.LabelPhone);
+            this.PanelDriver.Controls.Add(this.TextMail);
+            this.PanelDriver.Controls.Add(this.TextCpf);
+            this.PanelDriver.Controls.Add(this.LabelCpf);
+            this.PanelDriver.Controls.Add(this.LabelMail);
+            this.PanelDriver.Controls.Add(this.TextName);
+            this.PanelDriver.Controls.Add(this.LabelName);
+            this.PanelDriver.Controls.Add(this.ButtonCancel);
+            this.PanelDriver.Controls.Add(this.ButtonSave);
+            this.PanelDriver.Controls.Add(this.PanelTitle);
+            this.PanelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PanelDriver.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.PanelDriver.Location = new System.Drawing.Point(107, 40);
+            this.PanelDriver.Name = "PanelDriver";
+            this.PanelDriver.Size = new System.Drawing.Size(970, 589);
+            this.PanelDriver.TabIndex = 0;
+            // 
+            // ButtonCancel
+            // 
+            this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonCancel.BackColor = System.Drawing.Color.Crimson;
+            this.ButtonCancel.FlatAppearance.BorderSize = 0;
+            this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonCancel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonCancel.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonCancel.Location = new System.Drawing.Point(818, 524);
+            this.ButtonCancel.Name = "ButtonCancel";
+            this.ButtonCancel.Size = new System.Drawing.Size(97, 32);
+            this.ButtonCancel.TabIndex = 70;
+            this.ButtonCancel.Text = "Cancelar";
+            this.ButtonCancel.UseVisualStyleBackColor = false;
+            // 
+            // ButtonSave
+            // 
+            this.ButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonSave.BackColor = System.Drawing.Color.Teal;
+            this.ButtonSave.FlatAppearance.BorderSize = 0;
+            this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonSave.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonSave.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonSave.Location = new System.Drawing.Point(707, 524);
+            this.ButtonSave.Name = "ButtonSave";
+            this.ButtonSave.Size = new System.Drawing.Size(97, 32);
+            this.ButtonSave.TabIndex = 69;
+            this.ButtonSave.Text = "Salvar";
+            this.ButtonSave.UseVisualStyleBackColor = false;
+            // 
+            // PanelTitle
+            // 
+            this.PanelTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.PanelTitle.Controls.Add(this.title);
+            this.PanelTitle.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelTitle.Location = new System.Drawing.Point(0, 0);
+            this.PanelTitle.Name = "PanelTitle";
+            this.PanelTitle.Size = new System.Drawing.Size(970, 87);
+            this.PanelTitle.TabIndex = 0;
+            // 
+            // title
+            // 
+            this.title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.title.AutoSize = true;
+            this.title.Font = new System.Drawing.Font("Impact", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.title.ForeColor = System.Drawing.Color.Azure;
+            this.title.Location = new System.Drawing.Point(35, 20);
+            this.title.Name = "title";
+            this.title.Size = new System.Drawing.Size(380, 48);
+            this.title.TabIndex = 41;
+            this.title.Text = "Cadastro de Motorista";
+            // 
+            // PageDescription
+            // 
+            this.PageDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PageDescription.AutoSize = true;
+            this.PageDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageDescription.ForeColor = System.Drawing.Color.Azure;
+            this.PageDescription.Location = new System.Drawing.Point(854, 5);
+            this.PageDescription.Name = "PageDescription";
+            this.PageDescription.Size = new System.Drawing.Size(268, 31);
+            this.PageDescription.TabIndex = 42;
+            this.PageDescription.Text = "Cadastrar Motorista /";
+            // 
+            // TextObservation
+            // 
+            this.TextObservation.Location = new System.Drawing.Point(110, 420);
+            this.TextObservation.Multiline = true;
+            this.TextObservation.Name = "TextObservation";
+            this.TextObservation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TextObservation.Size = new System.Drawing.Size(296, 139);
+            this.TextObservation.TabIndex = 85;
+            // 
+            // DateCnhDue
+            // 
+            this.DateCnhDue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateCnhDue.Location = new System.Drawing.Point(707, 144);
+            this.DateCnhDue.Name = "DateCnhDue";
+            this.DateCnhDue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateCnhDue.RightToLeftLayout = true;
+            this.DateCnhDue.Size = new System.Drawing.Size(138, 26);
+            this.DateCnhDue.TabIndex = 86;
+            // 
+            // LabelObservation
+            // 
+            this.LabelObservation.AutoSize = true;
+            this.LabelObservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelObservation.ForeColor = System.Drawing.Color.Gray;
+            this.LabelObservation.Location = new System.Drawing.Point(106, 397);
+            this.LabelObservation.Name = "LabelObservation";
+            this.LabelObservation.Size = new System.Drawing.Size(104, 20);
+            this.LabelObservation.TabIndex = 83;
+            this.LabelObservation.Text = "Observação";
+            // 
+            // LabelCnhDue
+            // 
+            this.LabelCnhDue.AutoSize = true;
+            this.LabelCnhDue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCnhDue.ForeColor = System.Drawing.Color.Gray;
+            this.LabelCnhDue.Location = new System.Drawing.Point(530, 144);
+            this.LabelCnhDue.Name = "LabelCnhDue";
+            this.LabelCnhDue.Size = new System.Drawing.Size(146, 20);
+            this.LabelCnhDue.TabIndex = 84;
+            this.LabelCnhDue.Text = "Vencimento CNH";
+            // 
+            // LabelCnh
+            // 
+            this.LabelCnh.AutoSize = true;
+            this.LabelCnh.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCnh.ForeColor = System.Drawing.Color.Gray;
+            this.LabelCnh.Location = new System.Drawing.Point(530, 213);
+            this.LabelCnh.Margin = new System.Windows.Forms.Padding(0);
+            this.LabelCnh.Name = "LabelCnh";
+            this.LabelCnh.Size = new System.Drawing.Size(46, 20);
+            this.LabelCnh.TabIndex = 81;
+            this.LabelCnh.Text = "CNH";
+            // 
+            // TextCnh
+            // 
+            this.TextCnh.BackColor = System.Drawing.Color.LightGray;
+            this.TextCnh.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextCnh.Location = new System.Drawing.Point(603, 215);
+            this.TextCnh.Name = "TextCnh";
+            this.TextCnh.Size = new System.Drawing.Size(242, 19);
+            this.TextCnh.TabIndex = 82;
+            // 
+            // DatePicker
+            // 
+            this.DatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DatePicker.Location = new System.Drawing.Point(271, 144);
+            this.DatePicker.Name = "DatePicker";
+            this.DatePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DatePicker.RightToLeftLayout = true;
+            this.DatePicker.Size = new System.Drawing.Size(135, 26);
+            this.DatePicker.TabIndex = 80;
+            // 
+            // LabelBirth
+            // 
+            this.LabelBirth.AutoSize = true;
+            this.LabelBirth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelBirth.ForeColor = System.Drawing.Color.Gray;
+            this.LabelBirth.Location = new System.Drawing.Point(106, 144);
+            this.LabelBirth.Name = "LabelBirth";
+            this.LabelBirth.Size = new System.Drawing.Size(147, 20);
+            this.LabelBirth.TabIndex = 79;
+            this.LabelBirth.Text = "Data Nascimento";
+            // 
+            // TextPhone
+            // 
+            this.TextPhone.BackColor = System.Drawing.Color.LightGray;
+            this.TextPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextPhone.Location = new System.Drawing.Point(202, 335);
+            this.TextPhone.Name = "TextPhone";
+            this.TextPhone.Size = new System.Drawing.Size(204, 19);
+            this.TextPhone.TabIndex = 76;
+            // 
+            // LabelPhone
+            // 
+            this.LabelPhone.AutoSize = true;
+            this.LabelPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelPhone.ForeColor = System.Drawing.Color.Gray;
+            this.LabelPhone.Location = new System.Drawing.Point(106, 338);
+            this.LabelPhone.Margin = new System.Windows.Forms.Padding(0);
+            this.LabelPhone.Name = "LabelPhone";
+            this.LabelPhone.Size = new System.Drawing.Size(79, 20);
+            this.LabelPhone.TabIndex = 75;
+            this.LabelPhone.Text = "Telefone";
+            // 
+            // TextMail
+            // 
+            this.TextMail.BackColor = System.Drawing.Color.LightGray;
+            this.TextMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextMail.Location = new System.Drawing.Point(603, 275);
+            this.TextMail.Name = "TextMail";
+            this.TextMail.Size = new System.Drawing.Size(242, 19);
+            this.TextMail.TabIndex = 78;
+            // 
+            // TextCpf
+            // 
+            this.TextCpf.BackColor = System.Drawing.Color.LightGray;
+            this.TextCpf.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextCpf.Location = new System.Drawing.Point(202, 271);
+            this.TextCpf.Name = "TextCpf";
+            this.TextCpf.Size = new System.Drawing.Size(204, 19);
+            this.TextCpf.TabIndex = 74;
+            // 
+            // LabelCpf
+            // 
+            this.LabelCpf.AutoSize = true;
+            this.LabelCpf.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCpf.ForeColor = System.Drawing.Color.Gray;
+            this.LabelCpf.Location = new System.Drawing.Point(106, 272);
+            this.LabelCpf.Margin = new System.Windows.Forms.Padding(0);
+            this.LabelCpf.Name = "LabelCpf";
+            this.LabelCpf.Size = new System.Drawing.Size(43, 20);
+            this.LabelCpf.TabIndex = 73;
+            this.LabelCpf.Text = "CPF";
+            // 
+            // LabelMail
+            // 
+            this.LabelMail.AutoSize = true;
+            this.LabelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelMail.ForeColor = System.Drawing.Color.Gray;
+            this.LabelMail.Location = new System.Drawing.Point(530, 278);
+            this.LabelMail.Margin = new System.Windows.Forms.Padding(0);
+            this.LabelMail.Name = "LabelMail";
+            this.LabelMail.Size = new System.Drawing.Size(59, 20);
+            this.LabelMail.TabIndex = 77;
+            this.LabelMail.Text = "E-Mail";
+            // 
+            // TextName
+            // 
+            this.TextName.BackColor = System.Drawing.Color.LightGray;
+            this.TextName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextName.Location = new System.Drawing.Point(202, 210);
+            this.TextName.Name = "TextName";
+            this.TextName.Size = new System.Drawing.Size(204, 19);
+            this.TextName.TabIndex = 72;
+            // 
+            // LabelName
+            // 
+            this.LabelName.AutoSize = true;
+            this.LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelName.ForeColor = System.Drawing.Color.Gray;
+            this.LabelName.Location = new System.Drawing.Point(106, 209);
+            this.LabelName.Name = "LabelName";
+            this.LabelName.Size = new System.Drawing.Size(55, 20);
+            this.LabelName.TabIndex = 71;
+            this.LabelName.Text = "Nome";
+            // 
+            // BorderPanel1
+            // 
+            this.BorderPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BorderPanel1.Location = new System.Drawing.Point(202, 231);
+            this.BorderPanel1.Name = "BorderPanel1";
+            this.BorderPanel1.Size = new System.Drawing.Size(204, 2);
+            this.BorderPanel1.TabIndex = 87;
+            // 
+            // BorderPanel2
+            // 
+            this.BorderPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BorderPanel2.Location = new System.Drawing.Point(202, 292);
+            this.BorderPanel2.Name = "BorderPanel2";
+            this.BorderPanel2.Size = new System.Drawing.Size(204, 2);
+            this.BorderPanel2.TabIndex = 88;
+            // 
+            // BorderPanel3
+            // 
+            this.BorderPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BorderPanel3.Location = new System.Drawing.Point(202, 356);
+            this.BorderPanel3.Name = "BorderPanel3";
+            this.BorderPanel3.Size = new System.Drawing.Size(204, 2);
+            this.BorderPanel3.TabIndex = 89;
+            // 
+            // BorderPanel4
+            // 
+            this.BorderPanel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BorderPanel4.Location = new System.Drawing.Point(603, 236);
+            this.BorderPanel4.Name = "BorderPanel4";
+            this.BorderPanel4.Size = new System.Drawing.Size(241, 2);
+            this.BorderPanel4.TabIndex = 88;
+            // 
+            // BorderPanel5
+            // 
+            this.BorderPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.BorderPanel5.Location = new System.Drawing.Point(603, 296);
+            this.BorderPanel5.Name = "BorderPanel5";
+            this.BorderPanel5.Size = new System.Drawing.Size(242, 2);
+            this.BorderPanel5.TabIndex = 90;
+            // 
+            // DivPanel
+            // 
+            this.DivPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.DivPanel.Location = new System.Drawing.Point(466, 126);
+            this.DivPanel.Name = "DivPanel";
+            this.DivPanel.Size = new System.Drawing.Size(2, 343);
+            this.DivPanel.TabIndex = 88;
             // 
             // Motorista
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(34)))), ((int)(((byte)(35)))));
-            this.Controls.Add(this.panelDriverContainer);
+            this.Controls.Add(this.PanelMain);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "Motorista";
-            this.Size = new System.Drawing.Size(1096, 759);
+            this.Size = new System.Drawing.Size(1220, 990);
             this.Load += new System.EventHandler(this.Motorista_Load);
-            this.panelDriverContainer.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.panelContainerDriver.ResumeLayout(false);
-            this.layoutDriver.ResumeLayout(false);
-            this.panelLeftDriver.ResumeLayout(false);
-            this.panelLeftDriver.PerformLayout();
-            this.panelRightDriver.ResumeLayout(false);
-            this.panelRightDriver.PerformLayout();
-            this.panelTitleAbastecimentos.ResumeLayout(false);
-            this.panelTitleAbastecimentos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.PanelMain.ResumeLayout(false);
+            this.PanelMain.PerformLayout();
+            this.layoutFlex.ResumeLayout(false);
+            this.MainPanel.ResumeLayout(false);
+            this.PanelContainer.ResumeLayout(false);
+            this.PanelDriver.ResumeLayout(false);
+            this.PanelDriver.PerformLayout();
+            this.PanelTitle.ResumeLayout(false);
+            this.PanelTitle.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panelDriverContainer;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Panel panelContainerDriver;
-        private System.Windows.Forms.TableLayoutPanel layoutDriver;
-        private System.Windows.Forms.Panel panelLeftDriver;
-        private System.Windows.Forms.DateTimePicker dateTimeBirthDriver;
-        private System.Windows.Forms.Label labelBirthDriver;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.TextBox textBoxPhoneDriver;
-        private System.Windows.Forms.Label labelPhoneDriver;
-        private System.Windows.Forms.TextBox textBoxMailDriver;
-        private System.Windows.Forms.TextBox textBoxCpfDriver;
-        private System.Windows.Forms.Label labelCpfDriver;
-        private System.Windows.Forms.Label labelMailDriver;
-        private System.Windows.Forms.TextBox textBoxNameDriver;
-        private System.Windows.Forms.Label labelNameDriver;
-        private System.Windows.Forms.Panel panelRightDriver;
-        private System.Windows.Forms.Button btnCancelDriver;
-        private System.Windows.Forms.Button btnSaveDriver;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DateTimePicker dateTimeOverDue;
-        private System.Windows.Forms.Label labelObs;
-        private System.Windows.Forms.Label labelOverDue;
-        private System.Windows.Forms.Panel panelFooterAbastecimentos;
-        private System.Windows.Forms.Label labelCnhDriver;
-        private System.Windows.Forms.TextBox textBoxCnhDriver;
-        private System.Windows.Forms.Panel panelTitleAbastecimentos;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label titleDriver;
+        private System.Windows.Forms.Panel PanelMain;
+        private System.Windows.Forms.Button ButtonHome;
+        private System.Windows.Forms.TableLayoutPanel layoutFlex;
+        private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel PanelContainer;
+        private System.Windows.Forms.Panel PanelDriver;
+        private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.Button ButtonSave;
+        private System.Windows.Forms.Panel PanelTitle;
+        private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Label PageDescription;
+        private System.Windows.Forms.TextBox TextObservation;
+        private System.Windows.Forms.DateTimePicker DateCnhDue;
+        private System.Windows.Forms.Label LabelObservation;
+        private System.Windows.Forms.Label LabelCnhDue;
+        private System.Windows.Forms.Label LabelCnh;
+        private System.Windows.Forms.TextBox TextCnh;
+        private System.Windows.Forms.DateTimePicker DatePicker;
+        private System.Windows.Forms.Label LabelBirth;
+        private System.Windows.Forms.TextBox TextPhone;
+        private System.Windows.Forms.Label LabelPhone;
+        private System.Windows.Forms.TextBox TextMail;
+        private System.Windows.Forms.TextBox TextCpf;
+        private System.Windows.Forms.Label LabelCpf;
+        private System.Windows.Forms.Label LabelMail;
+        private System.Windows.Forms.TextBox TextName;
+        private System.Windows.Forms.Label LabelName;
+        private System.Windows.Forms.Panel BorderPanel3;
+        private System.Windows.Forms.Panel BorderPanel2;
+        private System.Windows.Forms.Panel BorderPanel1;
+        private System.Windows.Forms.Panel BorderPanel5;
+        private System.Windows.Forms.Panel BorderPanel4;
+        private System.Windows.Forms.Panel DivPanel;
     }
 }

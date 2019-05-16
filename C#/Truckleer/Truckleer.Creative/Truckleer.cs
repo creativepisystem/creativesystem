@@ -14,7 +14,7 @@ namespace Truckleer.Creative
     public partial class Truckleer : Form
     {
         Dashboard dash = new Dashboard();
-        Abastecimento supply = new Abastecimento();
+        Abastecimento supply = new Abastecimento(null);
         ListarAbastecimentos listSupply = new ListarAbastecimentos();
         Veiculos vehicle = new Veiculos();
         ListarVeiculos listVehicle = new ListarVeiculos();
@@ -24,31 +24,32 @@ namespace Truckleer.Creative
         ListarRotas listRoute = new ListarRotas();
         Manutencao maintence = new Manutencao();
         ListarManutencao listMaintece = new ListarManutencao();
+        AlertaManutencao aleratManutencao = new AlertaManutencao();
         Viagens trip = new Viagens();
+        Usuarios user = new Usuarios();
 
+        Panel currentPanel;
         public Truckleer()
         {
             InitializeComponent();
-
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(dash);
-            dash.BringToFront();
-
-            /*Serializer<Driver> driving = new Serializer<Driver>("Zyh5fy3SMfu7mDrkpNWr");
-            MessageBox.Show(driving.ToString());*/
+            Call(dash);           
         }
 
+        /*
+         * if(!currentPanel.Equals(panel)
+         *  close();
+         * 
+            currentPanel = panel;
 
-        public void SplashStart() { }
-        
+            if colapsed
+        */
 
         bool menuIsCollapsed = false;
-        private void TimerMenu_Tick(object sender, EventArgs e)
+        public void TimerMenu_Tick(object sender, EventArgs e)
         {
             if (menuIsCollapsed)
             {
-                OpenSideMenu();
-                sideBarMenu.Width += 10;
+                sideBarMenu.Width += 200;
                 if (sideBarMenu.Size.Width == sideBarMenu.MaximumSize.Width)
                 {
                     timerMenu.Stop();
@@ -56,19 +57,42 @@ namespace Truckleer.Creative
                 }
             }
             else
-            {                
-                sideBarMenu.Width -= 10;
+            {
+                sideBarMenu.Width -= 200;
                 if (sideBarMenu.Size.Width == sideBarMenu.MinimumSize.Width)
                 {
                     timerMenu.Stop();
-                    CloseSideMenu();
                     menuIsCollapsed = true;
                 }
-                
+
             }
 
         }
 
+        //Method Collapse Side Menu
+        bool IsCollapsed = true;
+        private void Timer_Tick(object sender, EventArgs e)
+        {
+            if (IsCollapsed)
+            {
+                currentPanel.Height += 10;
+                if (currentPanel.Size.Height == currentPanel.MaximumSize.Height)
+                {
+                    timer.Stop();
+                    IsCollapsed = false;
+                }
+            }
+            else
+            {
+                currentPanel.Height -= 10;
+                if (currentPanel.Size.Height == currentPanel.MinimumSize.Height)
+                {
+                    timer.Stop();
+                    IsCollapsed = true;
+                }
+            }
+        }
+        /*
         // Animation Supply Menu 
         bool supplyIsCollapsed = true;
         private void SupplyTimer_Tick(object sender, EventArgs e)
@@ -92,7 +116,7 @@ namespace Truckleer.Creative
                 }
             }
         }
-
+        
         // Animation Vehicle Menu
         bool vehicleIsCollapsed = true;
         private void VehicleTimer_Tick(object sender, EventArgs e)
@@ -212,6 +236,7 @@ namespace Truckleer.Creative
                 }
             }
         }
+        */
 
         // Method Remove Buttons Color
         public void Uncolor()
@@ -238,114 +263,56 @@ namespace Truckleer.Creative
             btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
             btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
         }
-
-        // Method Close Menus
-        public void CloseMenu()
+        //Call the UserControls
+        public void Call(UserControl screen)
         {
-            supplyIsCollapsed = true;
-            vehicleIsCollapsed = true;
-            driverIsCollapsed = true;
-            routeIsCollapsed = true;
-            maintenceIsCollapsed = true;
-            tripIsCollapsed = true;
-            groupSupply.Size = groupSupply.MinimumSize;
-            groupVehicle.Size = groupVehicle.MinimumSize;
-            groupDriver.Size = groupDriver.MinimumSize;
-            groupRoute.Size = groupRoute.MinimumSize;
-            groupMaintence.Size = groupMaintence.MinimumSize;
-            groupTrip.Size = groupTrip.MinimumSize;
+            truckleerCallcontainer.Controls.Clear();
+            truckleerCallcontainer.Controls.Add(screen);
+            screen.BringToFront();
         }
-
-        private void CloseSideMenu()
-        {
-            btnDash.Text = "";
-            btnAbastecimento.Text = "";
-            btnAbastecimento.BackgroundImage = null;
-            btnVeiculo.Text = "";
-            btnVeiculo.BackgroundImage = null;
-            btnDriver.Text = "";
-            btnDriver.BackgroundImage = null;
-            btnRoutes.Text = "";
-            btnRoutes.BackgroundImage = null;
-            btnMaintence.Text = "";
-            btnMaintence.BackgroundImage = null;
-            btnTrip.Text = "";
-            btnTrip.BackgroundImage = null;
-            CloseMenu();
-        }
-
-        private void OpenSideMenu()
-        {
-            timerSideMenu.Start();
-            btnDash.Text = "Dashboard";
-            btnAbastecimento.Text = "Abastecimento";
-            btnAbastecimento.BackgroundImage = Properties.Resources.iconArrowUp;
-            btnVeiculo.Text = "Veículo";
-            btnVeiculo.BackgroundImage = Properties.Resources.iconArrowUp;
-            btnDriver.Text = "Motorista";
-            btnDriver.BackgroundImage = Properties.Resources.iconArrowUp;
-            btnRoutes.Text = "Rotas";
-            btnRoutes.BackgroundImage = Properties.Resources.iconArrowUp;
-            btnMaintence.Text = "Manutenção";
-            btnMaintence.BackgroundImage = Properties.Resources.iconArrowUp;
-            btnTrip.Text = "Viagem";
-            btnTrip.BackgroundImage = Properties.Resources.iconArrowUp;
-
-        }
-
+        //Turn Background Image Up
         public void BackImageUp(Button botao)
         {
             Image up = Properties.Resources.iconArrowUp;
             botao.BackgroundImage = up;
         }
-
-        public void BackImageDown()
-        {
-            Image down = Properties.Resources.iconArrowDown;
-            btnAbastecimento.BackgroundImage = down;
-            btnVeiculo.BackgroundImage = down;
-            btnDriver.BackgroundImage = down;
-            btnRoutes.BackgroundImage = down;
-            btnMaintence.BackgroundImage = down;
-            btnTrip.BackgroundImage = down;
-        }
-
+        
+        //Button Dash Properties        
         private void BtnDash_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(dash);
-            dash.BringToFront();
-
-            //Close Other Panels
-            CloseMenu();
-
+            Call(dash);
+            
             // Unset Colors
             Uncolor();
-            BackImageDown();
+            timerSideMenu.Start();
             btnDash.BackColor = Color.FromArgb(25, 137, 186);
 
         }
 
+        //Button Abastecimento Properties
         private void BtnAbastecimento_Click(object sender, EventArgs e)
         {
-            supplyTimer.Start();
-            OpenSideMenu();
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupSupply;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupSupply.Size.Height == groupSupply.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
 
-            //Close others panels
-            CloseMenu();
-            BackImageDown();
             BackImageUp(btnAbastecimento);
 
         }
 
+        //Button Abastecer Properties
         private void BtnAbastecer_Click(object sender, EventArgs e)
         {
             //Call the supply Panel
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(supply);
-            supply.BringToFront();
-
-
+            Call(supply);
             // Unset Colors
             Uncolor();
             btnAbastecimento.BackColor = Color.FromArgb(25, 137, 186);
@@ -353,72 +320,78 @@ namespace Truckleer.Creative
 
         }
 
+        //Button Listar Abastecimentos Properties
         private void BtnListAbastecimentos_Click(object sender, EventArgs e)
         {
             //Call the supply Panel
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(listSupply);
-            listSupply.BringToFront();
-
+            Call(listSupply);
             // Unset Colors
             Uncolor();
             btnAbastecimento.BackColor = Color.FromArgb(25, 137, 186);
             btnListAbastecimentos.BackColor = Color.Gray;
         }
 
+        //Button Veículo Properties
         private void BtnVeiculo_Click(object sender, EventArgs e)
         {
-            vehicleTimer.Start();
-            OpenSideMenu();
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupVehicle;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupVehicle.Size.Height == groupVehicle.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
 
-            //Close others panels
-            CloseMenu();
-            BackImageDown();
             BackImageUp(btnVeiculo);
         }
 
+        //Button Cadastrar Veículo Properties
         private void BtnMakeVehicle_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(vehicle);
-            vehicle.BringToFront();
-
+            Call(vehicle);
             // Unset Colors
             Uncolor();
             btnVeiculo.BackColor = Color.FromArgb(25, 137, 186);
             btnMakeVehicle.BackColor = Color.Gray;
         }
 
+        //Button Listar Veículos Properties
         private void BtnListVehicle_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(listVehicle);
-            listVehicle.BringToFront();
-
+            Call(listVehicle);
             // Unset Colors
             Uncolor();
             btnVeiculo.BackColor = Color.FromArgb(25, 137, 186);
             btnListVehicle.BackColor = Color.Gray;
         }
 
+        //Button Motorista Properties
         private void BtnDriver_Click_1(object sender, EventArgs e)
         {
-            driverTimer.Start();
-            OpenSideMenu();
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupDriver;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupDriver.Size.Height == groupDriver.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
 
-            //Close Others Panels
-            CloseMenu();
-            BackImageDown();
             BackImageUp(btnDriver);
 
         }
 
+        //Button Cadastrar Motorista Properties
         private void BtnMakeDriver_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(driver);
-            driver.BringToFront();
-
+            Call(driver);
             // Unset Colors
             Uncolor();
             btnDriver.BackColor = Color.FromArgb(25, 137, 186);
@@ -426,12 +399,10 @@ namespace Truckleer.Creative
 
         }
 
+        //Button Listar Motoristas Properties
         private void BtnListDrivers_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(listDriver);
-            listDriver.BringToFront();
-
+            Call(listDriver);
             // Unset Colors
             Uncolor();
             btnDriver.BackColor = Color.FromArgb(25, 137, 186);
@@ -439,110 +410,156 @@ namespace Truckleer.Creative
 
         }
 
+        //Button Rotas Properties
         private void BtnRoutes_Click(object sender, EventArgs e)
         {
-            routeTimer.Start();
-            OpenSideMenu();
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupRoute;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupRoute.Size.Height == groupRoute.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
 
-            //Close Others Panels
-            CloseMenu();
-            BackImageDown();
             BackImageUp(btnRoutes);
         }
 
+        //Button Cadastrar Rotas Properties
         private void BtnMakeRoute_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(route);
-            route.BringToFront();
-
+            Call(route);
             // Unset Colors
             Uncolor();
             btnRoutes.BackColor = Color.FromArgb(25, 137, 186);
             btnMakeRoute.BackColor = Color.Gray;
         }
 
+        //Button Listar Rotas Properties
         private void BtnListRoutes_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(listRoute);
-            listRoute.BringToFront();
-
+            Call(listRoute);
             // Unset Colors
             Uncolor();
             btnRoutes.BackColor = Color.FromArgb(25, 137, 186);
             btnListRoutes.BackColor = Color.Gray;
         }
 
+        //Button Manutenção Properties
         private void BtnMaintence_Click(object sender, EventArgs e)
         {
-            maintenceTimer.Start();
-            OpenSideMenu();
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupMaintence;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupMaintence.Size.Height == groupMaintence.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
 
-            //Close Others Panels
-            CloseMenu();
-            BackImageDown();
             BackImageUp(btnMaintence);
         }
 
+        //Button Cadastrar Manutenção Properties
         private void BtnMakeMaintence_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(maintence);
-            maintence.BringToFront();
-
+            Call(maintence);
             // Unset Colors
             Uncolor();
             btnMaintence.BackColor = Color.FromArgb(25, 137, 186);
             btnMakeMaintence.BackColor = Color.Gray;
         }
 
+        //Button Listar Manutenção Properties
         private void BtnListMaintence_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(listMaintece);
-            listMaintece.BringToFront();
-
+            Call(listMaintece);
             // Unset Colors
             Uncolor();
             btnMaintence.BackColor = Color.FromArgb(25, 137, 186);
             btnListMaintence.BackColor = Color.Gray;
         }
 
+        //Button Alerta Manutenção Properties
         private void BtnAlertMaintence_Click_1(object sender, EventArgs e)
         {
-
+            Call(aleratManutencao);
+            // Unset Colors
+            Uncolor();
+            btnMaintence.BackColor = Color.FromArgb(25, 137, 186);
+            btnAlertMaintence.BackColor = Color.Gray;
         }
 
+        //Button Viagem Properties
         private void BtnTrip_Click(object sender, EventArgs e)
         {
-            tripTimer.Start();
-            OpenSideMenu();
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupTrip;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupTrip.Size.Height == groupTrip.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
 
-            //Close Others Panels
-            CloseMenu();
-            BackImageDown();
             BackImageUp(btnTrip);
 
         }
 
+        //Button Cadastrar Viagem Properties
         private void BtnMakeTrip_Click(object sender, EventArgs e)
         {
-            truckleerCallcontainer.Controls.Clear();
-            truckleerCallcontainer.Controls.Add(trip);
-            trip.BringToFront();
-
-            //Unset Colors
+            Call(trip);
+            // Unset Colors
             Uncolor();
             btnTrip.BackColor = Color.FromArgb(25, 137, 186);
             btnMakeTrip.BackColor = Color.Gray;
         }
 
-        private void BtnListTrip_Click_1(object sender, EventArgs e)
+        //Button Listar Viagens Properties
+        private void BtnListTrip_Click(object sender, EventArgs e)
         {
 
         }
 
+        //Button Usuário Properties
+        private void BtnUser_Click(object sender, EventArgs e)
+        {
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupUser;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupUser.Size.Height == groupUser.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
+
+            BackImageUp(btnTrip);
+        }
+
+        //Button Novo Usuário
+        private void BtnNewUser_Click(object sender, EventArgs e)
+        {
+            Call(user);
+            //Unset Colors
+            Uncolor();
+            BtnUser.BackColor = Color.FromArgb(25, 137, 186);
+            BtnNewUser.BackColor = Color.Gray;
+        }
+
+        //Timer Open Side Menu When Other Button Is Clicked
         private void TimerSideMenu_Tick(object sender, EventArgs e)
         {
             sideBarMenu.Width += 10;
@@ -552,15 +569,18 @@ namespace Truckleer.Creative
                 menuIsCollapsed = false;
             }
         }
-
+        
+        //Open and Close SideBar Menu By Click on Hamburguer Button
         private void HamburguerMenu_Click(object sender, EventArgs e)
         {
             timerMenu.Start();            
         }
 
+        //Does Nothing
         private void LoadScreen_Tick(object sender, EventArgs e)
         {
 
         }
+
     }
 }

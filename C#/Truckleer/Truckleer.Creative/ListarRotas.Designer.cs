@@ -31,16 +31,23 @@
             this.container = new System.Windows.Forms.Panel();
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.filter = new System.Windows.Forms.Panel();
+            this.PanelRoutes = new System.Windows.Forms.Panel();
+            this.PanelFilter = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ButtonHome = new System.Windows.Forms.Button();
+            this.PageDescription = new System.Windows.Forms.Label();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
+            this.PanelFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // container
             // 
-            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(34)))));
+            this.container.Controls.Add(this.ButtonHome);
+            this.container.Controls.Add(this.PageDescription);
             this.container.Controls.Add(this.layoutFlex);
             this.container.Dock = System.Windows.Forms.DockStyle.Fill;
             this.container.Location = new System.Drawing.Point(0, 0);
@@ -68,8 +75,8 @@
             // MainPanel
             // 
             this.MainPanel.BackColor = System.Drawing.Color.Transparent;
-            this.MainPanel.Controls.Add(this.panel4);
-            this.MainPanel.Controls.Add(this.filter);
+            this.MainPanel.Controls.Add(this.PanelRoutes);
+            this.MainPanel.Controls.Add(this.PanelFilter);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -77,24 +84,74 @@
             this.MainPanel.Size = new System.Drawing.Size(1141, 693);
             this.MainPanel.TabIndex = 0;
             // 
-            // panel4
+            // PanelRoutes
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 100);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1141, 593);
-            this.panel4.TabIndex = 1;
+            this.PanelRoutes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.PanelRoutes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelRoutes.Location = new System.Drawing.Point(0, 100);
+            this.PanelRoutes.Name = "PanelRoutes";
+            this.PanelRoutes.Size = new System.Drawing.Size(1141, 593);
+            this.PanelRoutes.TabIndex = 1;
             // 
-            // filter
+            // PanelFilter
             // 
-            this.filter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(55)))), ((int)(((byte)(59)))));
-            this.filter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.filter.Location = new System.Drawing.Point(0, 0);
-            this.filter.Margin = new System.Windows.Forms.Padding(0);
-            this.filter.Name = "filter";
-            this.filter.Size = new System.Drawing.Size(1141, 100);
-            this.filter.TabIndex = 0;
+            this.PanelFilter.BackColor = System.Drawing.Color.Orange;
+            this.PanelFilter.Controls.Add(this.textBox1);
+            this.PanelFilter.Controls.Add(this.label1);
+            this.PanelFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelFilter.Location = new System.Drawing.Point(0, 0);
+            this.PanelFilter.Margin = new System.Windows.Forms.Padding(0);
+            this.PanelFilter.MaximumSize = new System.Drawing.Size(2000, 100);
+            this.PanelFilter.Name = "PanelFilter";
+            this.PanelFilter.Size = new System.Drawing.Size(1141, 100);
+            this.PanelFilter.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(18, 50);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(299, 31);
+            this.textBox1.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Azure;
+            this.label1.Location = new System.Drawing.Point(13, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(118, 25);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Buscar Rota";
+            // 
+            // ButtonHome
+            // 
+            this.ButtonHome.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ButtonHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ButtonHome.FlatAppearance.BorderSize = 0;
+            this.ButtonHome.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonHome.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonHome.ForeColor = System.Drawing.Color.Azure;
+            this.ButtonHome.Location = new System.Drawing.Point(981, 5);
+            this.ButtonHome.Name = "ButtonHome";
+            this.ButtonHome.Size = new System.Drawing.Size(76, 31);
+            this.ButtonHome.TabIndex = 49;
+            this.ButtonHome.Text = "Home";
+            this.ButtonHome.UseVisualStyleBackColor = true;
+            // 
+            // PageDescription
+            // 
+            this.PageDescription.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.PageDescription.AutoSize = true;
+            this.PageDescription.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PageDescription.ForeColor = System.Drawing.Color.Azure;
+            this.PageDescription.Location = new System.Drawing.Point(812, 3);
+            this.PageDescription.Name = "PageDescription";
+            this.PageDescription.Size = new System.Drawing.Size(175, 31);
+            this.PageDescription.TabIndex = 48;
+            this.PageDescription.Text = "Listar Rotas /";
             // 
             // ListarRotas
             // 
@@ -106,8 +163,11 @@
             this.Size = new System.Drawing.Size(1170, 759);
             this.Load += new System.EventHandler(this.ListarRotas_Load);
             this.container.ResumeLayout(false);
+            this.container.PerformLayout();
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
+            this.PanelFilter.ResumeLayout(false);
+            this.PanelFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -117,7 +177,11 @@
         private System.Windows.Forms.Panel container;
         private System.Windows.Forms.TableLayoutPanel layoutFlex;
         private System.Windows.Forms.Panel MainPanel;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel filter;
+        private System.Windows.Forms.Panel PanelRoutes;
+        private System.Windows.Forms.Panel PanelFilter;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button ButtonHome;
+        private System.Windows.Forms.Label PageDescription;
     }
 }

@@ -32,7 +32,6 @@ namespace Truckleer.Creative
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Truckleer));
-            this.supplyTimer = new System.Windows.Forms.Timer(this.components);
             this.truckleerContainer1 = new System.Windows.Forms.TableLayoutPanel();
             this.mainContainer = new System.Windows.Forms.TableLayoutPanel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -46,6 +45,10 @@ namespace Truckleer.Creative
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.groupUser = new System.Windows.Forms.Panel();
+            this.BtnListUser = new System.Windows.Forms.Button();
+            this.BtnNewUser = new System.Windows.Forms.Button();
+            this.BtnUser = new System.Windows.Forms.Button();
             this.groupTrip = new System.Windows.Forms.Panel();
             this.btnListTrip = new System.Windows.Forms.Button();
             this.btnMakeTrip = new System.Windows.Forms.Button();
@@ -74,14 +77,10 @@ namespace Truckleer.Creative
             this.btnDash = new System.Windows.Forms.Button();
             this.sideBarTop = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.vehicleTimer = new System.Windows.Forms.Timer(this.components);
-            this.driverTimer = new System.Windows.Forms.Timer(this.components);
-            this.routeTimer = new System.Windows.Forms.Timer(this.components);
-            this.maintenceTimer = new System.Windows.Forms.Timer(this.components);
-            this.tripTimer = new System.Windows.Forms.Timer(this.components);
             this.timerMenu = new System.Windows.Forms.Timer(this.components);
             this.subMenuCollapsed = new System.Windows.Forms.Timer(this.components);
             this.timerSideMenu = new System.Windows.Forms.Timer(this.components);
+            this.timer = new System.Windows.Forms.Timer(this.components);
             this.truckleerContainer1.SuspendLayout();
             this.mainContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -92,6 +91,7 @@ namespace Truckleer.Creative
             this.tableLayoutPanel3.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.menuPanel.SuspendLayout();
+            this.groupUser.SuspendLayout();
             this.groupTrip.SuspendLayout();
             this.groupMaintence.SuspendLayout();
             this.groupRoute.SuspendLayout();
@@ -101,11 +101,6 @@ namespace Truckleer.Creative
             this.sideBarTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // supplyTimer
-            // 
-            this.supplyTimer.Interval = 15;
-            this.supplyTimer.Tick += new System.EventHandler(this.SupplyTimer_Tick);
             // 
             // truckleerContainer1
             // 
@@ -232,6 +227,10 @@ namespace Truckleer.Creative
             this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
             this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
             this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
+            this.truckleerCallcontainer.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 677F));
             this.truckleerCallcontainer.Size = new System.Drawing.Size(880, 677);
             this.truckleerCallcontainer.TabIndex = 1;
             // 
@@ -275,6 +274,7 @@ namespace Truckleer.Creative
             // 
             // menuPanel
             // 
+            this.menuPanel.Controls.Add(this.groupUser);
             this.menuPanel.Controls.Add(this.groupTrip);
             this.menuPanel.Controls.Add(this.groupMaintence);
             this.menuPanel.Controls.Add(this.groupRoute);
@@ -288,6 +288,73 @@ namespace Truckleer.Creative
             this.menuPanel.Size = new System.Drawing.Size(190, 504);
             this.menuPanel.TabIndex = 13;
             // 
+            // groupUser
+            // 
+            this.groupUser.Controls.Add(this.BtnListUser);
+            this.groupUser.Controls.Add(this.BtnNewUser);
+            this.groupUser.Controls.Add(this.BtnUser);
+            this.groupUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupUser.Location = new System.Drawing.Point(0, 284);
+            this.groupUser.MaximumSize = new System.Drawing.Size(190, 121);
+            this.groupUser.MinimumSize = new System.Drawing.Size(190, 41);
+            this.groupUser.Name = "groupUser";
+            this.groupUser.Size = new System.Drawing.Size(190, 41);
+            this.groupUser.TabIndex = 21;
+            // 
+            // BtnListUser
+            // 
+            this.BtnListUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.BtnListUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnListUser.FlatAppearance.BorderSize = 0;
+            this.BtnListUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.BtnListUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListUser.ForeColor = System.Drawing.Color.Silver;
+            this.BtnListUser.Location = new System.Drawing.Point(0, 81);
+            this.BtnListUser.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnListUser.Name = "BtnListUser";
+            this.BtnListUser.Size = new System.Drawing.Size(190, 40);
+            this.BtnListUser.TabIndex = 24;
+            this.BtnListUser.Text = "Listar Usuários";
+            this.BtnListUser.UseVisualStyleBackColor = false;
+            // 
+            // BtnNewUser
+            // 
+            this.BtnNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.BtnNewUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnNewUser.FlatAppearance.BorderSize = 0;
+            this.BtnNewUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.BtnNewUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNewUser.ForeColor = System.Drawing.Color.Silver;
+            this.BtnNewUser.Location = new System.Drawing.Point(0, 41);
+            this.BtnNewUser.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnNewUser.Name = "BtnNewUser";
+            this.BtnNewUser.Size = new System.Drawing.Size(190, 40);
+            this.BtnNewUser.TabIndex = 23;
+            this.BtnNewUser.Text = "Novo Usuário";
+            this.BtnNewUser.UseVisualStyleBackColor = false;
+            this.BtnNewUser.Click += new System.EventHandler(this.BtnNewUser_Click);
+            // 
+            // BtnUser
+            // 
+            this.BtnUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUser.BackgroundImage")));
+            this.BtnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnUser.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnUser.FlatAppearance.BorderSize = 0;
+            this.BtnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.BtnUser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUser.ForeColor = System.Drawing.Color.Silver;
+            this.BtnUser.Image = global::Truckleer.Creative.Properties.Resources.tripMin;
+            this.BtnUser.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnUser.Location = new System.Drawing.Point(0, 0);
+            this.BtnUser.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnUser.Name = "BtnUser";
+            this.BtnUser.Size = new System.Drawing.Size(190, 41);
+            this.BtnUser.TabIndex = 21;
+            this.BtnUser.Text = "Usuário";
+            this.BtnUser.UseVisualStyleBackColor = true;
+            this.BtnUser.Click += new System.EventHandler(this.BtnUser_Click);
+            // 
             // groupTrip
             // 
             this.groupTrip.Controls.Add(this.btnListTrip);
@@ -297,9 +364,9 @@ namespace Truckleer.Creative
             this.groupTrip.Location = new System.Drawing.Point(0, 244);
             this.groupTrip.Margin = new System.Windows.Forms.Padding(0);
             this.groupTrip.MaximumSize = new System.Drawing.Size(0, 120);
-            this.groupTrip.MinimumSize = new System.Drawing.Size(0, 40);
+            this.groupTrip.MinimumSize = new System.Drawing.Size(195, 40);
             this.groupTrip.Name = "groupTrip";
-            this.groupTrip.Size = new System.Drawing.Size(190, 40);
+            this.groupTrip.Size = new System.Drawing.Size(195, 40);
             this.groupTrip.TabIndex = 19;
             // 
             // btnListTrip
@@ -313,11 +380,11 @@ namespace Truckleer.Creative
             this.btnListTrip.Location = new System.Drawing.Point(0, 81);
             this.btnListTrip.Margin = new System.Windows.Forms.Padding(0);
             this.btnListTrip.Name = "btnListTrip";
-            this.btnListTrip.Size = new System.Drawing.Size(190, 40);
-            this.btnListTrip.TabIndex = 2;
+            this.btnListTrip.Size = new System.Drawing.Size(195, 40);
+            this.btnListTrip.TabIndex = 4;
             this.btnListTrip.Text = "Listar Viagens";
             this.btnListTrip.UseVisualStyleBackColor = false;
-            this.btnListTrip.Click += new System.EventHandler(this.BtnListTrip_Click_1);
+            this.btnListTrip.Click += new System.EventHandler(this.BtnListTrip_Click);
             // 
             // btnMakeTrip
             // 
@@ -326,16 +393,15 @@ namespace Truckleer.Creative
             this.btnMakeTrip.FlatAppearance.BorderSize = 0;
             this.btnMakeTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
             this.btnMakeTrip.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMakeTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnMakeTrip.ForeColor = System.Drawing.Color.Silver;
             this.btnMakeTrip.Location = new System.Drawing.Point(0, 41);
             this.btnMakeTrip.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeTrip.Name = "btnMakeTrip";
-            this.btnMakeTrip.Size = new System.Drawing.Size(190, 40);
-            this.btnMakeTrip.TabIndex = 1;
+            this.btnMakeTrip.Size = new System.Drawing.Size(195, 40);
+            this.btnMakeTrip.TabIndex = 3;
             this.btnMakeTrip.Text = "Abrir Viagem";
             this.btnMakeTrip.UseVisualStyleBackColor = false;
-            this.btnMakeTrip.Click += new System.EventHandler(this.BtnTrip_Click);
+            this.btnMakeTrip.Click += new System.EventHandler(this.BtnMakeTrip_Click);
             // 
             // btnTrip
             // 
@@ -352,7 +418,7 @@ namespace Truckleer.Creative
             this.btnTrip.Location = new System.Drawing.Point(0, 0);
             this.btnTrip.Margin = new System.Windows.Forms.Padding(0);
             this.btnTrip.Name = "btnTrip";
-            this.btnTrip.Size = new System.Drawing.Size(190, 41);
+            this.btnTrip.Size = new System.Drawing.Size(195, 41);
             this.btnTrip.TabIndex = 0;
             this.btnTrip.Text = "Viagens";
             this.btnTrip.UseVisualStyleBackColor = true;
@@ -368,9 +434,9 @@ namespace Truckleer.Creative
             this.groupMaintence.Location = new System.Drawing.Point(0, 204);
             this.groupMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.groupMaintence.MaximumSize = new System.Drawing.Size(0, 161);
-            this.groupMaintence.MinimumSize = new System.Drawing.Size(0, 40);
+            this.groupMaintence.MinimumSize = new System.Drawing.Size(195, 40);
             this.groupMaintence.Name = "groupMaintence";
-            this.groupMaintence.Size = new System.Drawing.Size(190, 40);
+            this.groupMaintence.Size = new System.Drawing.Size(195, 40);
             this.groupMaintence.TabIndex = 18;
             // 
             // btnAlertMaintence
@@ -384,7 +450,7 @@ namespace Truckleer.Creative
             this.btnAlertMaintence.Location = new System.Drawing.Point(0, 121);
             this.btnAlertMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnAlertMaintence.Name = "btnAlertMaintence";
-            this.btnAlertMaintence.Size = new System.Drawing.Size(190, 40);
+            this.btnAlertMaintence.Size = new System.Drawing.Size(195, 40);
             this.btnAlertMaintence.TabIndex = 3;
             this.btnAlertMaintence.Text = "Alertas Manutenções";
             this.btnAlertMaintence.UseVisualStyleBackColor = false;
@@ -402,7 +468,7 @@ namespace Truckleer.Creative
             this.btnListMaintence.Location = new System.Drawing.Point(0, 81);
             this.btnListMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnListMaintence.Name = "btnListMaintence";
-            this.btnListMaintence.Size = new System.Drawing.Size(190, 40);
+            this.btnListMaintence.Size = new System.Drawing.Size(195, 40);
             this.btnListMaintence.TabIndex = 2;
             this.btnListMaintence.Text = "Listar Manutenções";
             this.btnListMaintence.UseVisualStyleBackColor = false;
@@ -420,7 +486,7 @@ namespace Truckleer.Creative
             this.btnMakeMaintence.Location = new System.Drawing.Point(0, 41);
             this.btnMakeMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeMaintence.Name = "btnMakeMaintence";
-            this.btnMakeMaintence.Size = new System.Drawing.Size(190, 40);
+            this.btnMakeMaintence.Size = new System.Drawing.Size(195, 40);
             this.btnMakeMaintence.TabIndex = 1;
             this.btnMakeMaintence.Text = "Realizar Manutenção";
             this.btnMakeMaintence.UseVisualStyleBackColor = false;
@@ -441,7 +507,7 @@ namespace Truckleer.Creative
             this.btnMaintence.Location = new System.Drawing.Point(0, 0);
             this.btnMaintence.Margin = new System.Windows.Forms.Padding(0);
             this.btnMaintence.Name = "btnMaintence";
-            this.btnMaintence.Size = new System.Drawing.Size(190, 41);
+            this.btnMaintence.Size = new System.Drawing.Size(195, 41);
             this.btnMaintence.TabIndex = 0;
             this.btnMaintence.Text = "Manutenção";
             this.btnMaintence.UseVisualStyleBackColor = true;
@@ -456,9 +522,9 @@ namespace Truckleer.Creative
             this.groupRoute.Location = new System.Drawing.Point(0, 163);
             this.groupRoute.Margin = new System.Windows.Forms.Padding(0);
             this.groupRoute.MaximumSize = new System.Drawing.Size(0, 123);
-            this.groupRoute.MinimumSize = new System.Drawing.Size(0, 41);
+            this.groupRoute.MinimumSize = new System.Drawing.Size(195, 41);
             this.groupRoute.Name = "groupRoute";
-            this.groupRoute.Size = new System.Drawing.Size(190, 41);
+            this.groupRoute.Size = new System.Drawing.Size(195, 41);
             this.groupRoute.TabIndex = 17;
             // 
             // btnListRoutes
@@ -473,7 +539,7 @@ namespace Truckleer.Creative
             this.btnListRoutes.Location = new System.Drawing.Point(0, 81);
             this.btnListRoutes.Margin = new System.Windows.Forms.Padding(0);
             this.btnListRoutes.Name = "btnListRoutes";
-            this.btnListRoutes.Size = new System.Drawing.Size(190, 40);
+            this.btnListRoutes.Size = new System.Drawing.Size(195, 40);
             this.btnListRoutes.TabIndex = 2;
             this.btnListRoutes.Text = "Listar Rotas";
             this.btnListRoutes.UseVisualStyleBackColor = false;
@@ -490,7 +556,7 @@ namespace Truckleer.Creative
             this.btnMakeRoute.Location = new System.Drawing.Point(0, 41);
             this.btnMakeRoute.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeRoute.Name = "btnMakeRoute";
-            this.btnMakeRoute.Size = new System.Drawing.Size(190, 40);
+            this.btnMakeRoute.Size = new System.Drawing.Size(195, 40);
             this.btnMakeRoute.TabIndex = 1;
             this.btnMakeRoute.Text = "Cadastrar Rota";
             this.btnMakeRoute.UseVisualStyleBackColor = false;
@@ -511,7 +577,7 @@ namespace Truckleer.Creative
             this.btnRoutes.Location = new System.Drawing.Point(0, 0);
             this.btnRoutes.Margin = new System.Windows.Forms.Padding(0);
             this.btnRoutes.Name = "btnRoutes";
-            this.btnRoutes.Size = new System.Drawing.Size(190, 41);
+            this.btnRoutes.Size = new System.Drawing.Size(195, 41);
             this.btnRoutes.TabIndex = 0;
             this.btnRoutes.Text = "Rotas";
             this.btnRoutes.UseVisualStyleBackColor = true;
@@ -526,9 +592,9 @@ namespace Truckleer.Creative
             this.groupDriver.Location = new System.Drawing.Point(0, 122);
             this.groupDriver.Margin = new System.Windows.Forms.Padding(0);
             this.groupDriver.MaximumSize = new System.Drawing.Size(0, 123);
-            this.groupDriver.MinimumSize = new System.Drawing.Size(0, 41);
+            this.groupDriver.MinimumSize = new System.Drawing.Size(195, 41);
             this.groupDriver.Name = "groupDriver";
-            this.groupDriver.Size = new System.Drawing.Size(190, 41);
+            this.groupDriver.Size = new System.Drawing.Size(195, 41);
             this.groupDriver.TabIndex = 16;
             // 
             // btnListDrivers
@@ -543,7 +609,7 @@ namespace Truckleer.Creative
             this.btnListDrivers.Location = new System.Drawing.Point(0, 81);
             this.btnListDrivers.Margin = new System.Windows.Forms.Padding(0);
             this.btnListDrivers.Name = "btnListDrivers";
-            this.btnListDrivers.Size = new System.Drawing.Size(190, 40);
+            this.btnListDrivers.Size = new System.Drawing.Size(195, 40);
             this.btnListDrivers.TabIndex = 2;
             this.btnListDrivers.Text = "Listar Motoristas";
             this.btnListDrivers.UseVisualStyleBackColor = false;
@@ -561,7 +627,7 @@ namespace Truckleer.Creative
             this.btnMakeDriver.Location = new System.Drawing.Point(0, 41);
             this.btnMakeDriver.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeDriver.Name = "btnMakeDriver";
-            this.btnMakeDriver.Size = new System.Drawing.Size(190, 40);
+            this.btnMakeDriver.Size = new System.Drawing.Size(195, 40);
             this.btnMakeDriver.TabIndex = 1;
             this.btnMakeDriver.Text = "Cadastrar Motorista";
             this.btnMakeDriver.UseVisualStyleBackColor = false;
@@ -582,7 +648,7 @@ namespace Truckleer.Creative
             this.btnDriver.Location = new System.Drawing.Point(0, 0);
             this.btnDriver.Margin = new System.Windows.Forms.Padding(0);
             this.btnDriver.Name = "btnDriver";
-            this.btnDriver.Size = new System.Drawing.Size(190, 41);
+            this.btnDriver.Size = new System.Drawing.Size(195, 41);
             this.btnDriver.TabIndex = 0;
             this.btnDriver.Text = "Motorista";
             this.btnDriver.UseVisualStyleBackColor = true;
@@ -597,9 +663,9 @@ namespace Truckleer.Creative
             this.groupVehicle.Location = new System.Drawing.Point(0, 81);
             this.groupVehicle.Margin = new System.Windows.Forms.Padding(0);
             this.groupVehicle.MaximumSize = new System.Drawing.Size(0, 123);
-            this.groupVehicle.MinimumSize = new System.Drawing.Size(0, 41);
+            this.groupVehicle.MinimumSize = new System.Drawing.Size(195, 41);
             this.groupVehicle.Name = "groupVehicle";
-            this.groupVehicle.Size = new System.Drawing.Size(190, 41);
+            this.groupVehicle.Size = new System.Drawing.Size(195, 41);
             this.groupVehicle.TabIndex = 15;
             // 
             // btnListVehicle
@@ -615,7 +681,7 @@ namespace Truckleer.Creative
             this.btnListVehicle.Location = new System.Drawing.Point(0, 81);
             this.btnListVehicle.Margin = new System.Windows.Forms.Padding(0);
             this.btnListVehicle.Name = "btnListVehicle";
-            this.btnListVehicle.Size = new System.Drawing.Size(190, 40);
+            this.btnListVehicle.Size = new System.Drawing.Size(195, 40);
             this.btnListVehicle.TabIndex = 2;
             this.btnListVehicle.Text = "Listar Veículos";
             this.btnListVehicle.UseVisualStyleBackColor = false;
@@ -634,7 +700,7 @@ namespace Truckleer.Creative
             this.btnMakeVehicle.Location = new System.Drawing.Point(0, 41);
             this.btnMakeVehicle.Margin = new System.Windows.Forms.Padding(0);
             this.btnMakeVehicle.Name = "btnMakeVehicle";
-            this.btnMakeVehicle.Size = new System.Drawing.Size(190, 40);
+            this.btnMakeVehicle.Size = new System.Drawing.Size(195, 40);
             this.btnMakeVehicle.TabIndex = 1;
             this.btnMakeVehicle.Text = "Cadastrar Veículo";
             this.btnMakeVehicle.UseVisualStyleBackColor = false;
@@ -655,7 +721,7 @@ namespace Truckleer.Creative
             this.btnVeiculo.Location = new System.Drawing.Point(0, 0);
             this.btnVeiculo.Margin = new System.Windows.Forms.Padding(0);
             this.btnVeiculo.Name = "btnVeiculo";
-            this.btnVeiculo.Size = new System.Drawing.Size(190, 41);
+            this.btnVeiculo.Size = new System.Drawing.Size(195, 41);
             this.btnVeiculo.TabIndex = 0;
             this.btnVeiculo.Text = "Veículo";
             this.btnVeiculo.UseVisualStyleBackColor = true;
@@ -671,9 +737,9 @@ namespace Truckleer.Creative
             this.groupSupply.Location = new System.Drawing.Point(0, 40);
             this.groupSupply.Margin = new System.Windows.Forms.Padding(0);
             this.groupSupply.MaximumSize = new System.Drawing.Size(0, 123);
-            this.groupSupply.MinimumSize = new System.Drawing.Size(0, 41);
+            this.groupSupply.MinimumSize = new System.Drawing.Size(195, 41);
             this.groupSupply.Name = "groupSupply";
-            this.groupSupply.Size = new System.Drawing.Size(190, 41);
+            this.groupSupply.Size = new System.Drawing.Size(195, 41);
             this.groupSupply.TabIndex = 14;
             // 
             // btnListAbastecimentos
@@ -688,7 +754,7 @@ namespace Truckleer.Creative
             this.btnListAbastecimentos.Location = new System.Drawing.Point(0, 81);
             this.btnListAbastecimentos.Margin = new System.Windows.Forms.Padding(0);
             this.btnListAbastecimentos.Name = "btnListAbastecimentos";
-            this.btnListAbastecimentos.Size = new System.Drawing.Size(190, 40);
+            this.btnListAbastecimentos.Size = new System.Drawing.Size(195, 40);
             this.btnListAbastecimentos.TabIndex = 2;
             this.btnListAbastecimentos.Text = "Listar Abastecimentos";
             this.btnListAbastecimentos.UseVisualStyleBackColor = false;
@@ -706,7 +772,7 @@ namespace Truckleer.Creative
             this.btnAbastecer.Location = new System.Drawing.Point(0, 41);
             this.btnAbastecer.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbastecer.Name = "btnAbastecer";
-            this.btnAbastecer.Size = new System.Drawing.Size(190, 40);
+            this.btnAbastecer.Size = new System.Drawing.Size(195, 40);
             this.btnAbastecer.TabIndex = 1;
             this.btnAbastecer.Text = "Abastecer";
             this.btnAbastecer.UseVisualStyleBackColor = false;
@@ -727,7 +793,7 @@ namespace Truckleer.Creative
             this.btnAbastecimento.Location = new System.Drawing.Point(0, 0);
             this.btnAbastecimento.Margin = new System.Windows.Forms.Padding(0);
             this.btnAbastecimento.Name = "btnAbastecimento";
-            this.btnAbastecimento.Size = new System.Drawing.Size(190, 41);
+            this.btnAbastecimento.Size = new System.Drawing.Size(195, 41);
             this.btnAbastecimento.TabIndex = 0;
             this.btnAbastecimento.Text = "Abastecimento";
             this.btnAbastecimento.UseVisualStyleBackColor = true;
@@ -746,8 +812,9 @@ namespace Truckleer.Creative
             this.btnDash.Image = global::Truckleer.Creative.Properties.Resources.homeMin;
             this.btnDash.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDash.Location = new System.Drawing.Point(0, 0);
+            this.btnDash.MinimumSize = new System.Drawing.Size(195, 0);
             this.btnDash.Name = "btnDash";
-            this.btnDash.Size = new System.Drawing.Size(190, 40);
+            this.btnDash.Size = new System.Drawing.Size(195, 40);
             this.btnDash.TabIndex = 13;
             this.btnDash.Text = "DashBoard";
             this.btnDash.UseVisualStyleBackColor = false;
@@ -775,40 +842,20 @@ namespace Truckleer.Creative
             this.pictureBox3.TabIndex = 1;
             this.pictureBox3.TabStop = false;
             // 
-            // vehicleTimer
-            // 
-            this.vehicleTimer.Interval = 15;
-            this.vehicleTimer.Tick += new System.EventHandler(this.VehicleTimer_Tick);
-            // 
-            // driverTimer
-            // 
-            this.driverTimer.Interval = 15;
-            this.driverTimer.Tick += new System.EventHandler(this.DriverTimer_Tick);
-            // 
-            // routeTimer
-            // 
-            this.routeTimer.Interval = 15;
-            this.routeTimer.Tick += new System.EventHandler(this.RouteTimer_Tick);
-            // 
-            // maintenceTimer
-            // 
-            this.maintenceTimer.Interval = 15;
-            this.maintenceTimer.Tick += new System.EventHandler(this.MaintenceTimer_Tick);
-            // 
-            // tripTimer
-            // 
-            this.tripTimer.Interval = 15;
-            this.tripTimer.Tick += new System.EventHandler(this.TripTimer_Tick);
-            // 
             // timerMenu
             // 
-            this.timerMenu.Interval = 2;
+            this.timerMenu.Interval = 1;
             this.timerMenu.Tick += new System.EventHandler(this.TimerMenu_Tick);
             // 
             // timerSideMenu
             // 
-            this.timerSideMenu.Interval = 10;
+            this.timerSideMenu.Interval = 1;
             this.timerSideMenu.Tick += new System.EventHandler(this.TimerSideMenu_Tick);
+            // 
+            // timer
+            // 
+            this.timer.Interval = 10;
+            this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
             // Truckleer
             // 
@@ -834,6 +881,7 @@ namespace Truckleer.Creative
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.menuPanel.ResumeLayout(false);
+            this.groupUser.ResumeLayout(false);
             this.groupTrip.ResumeLayout(false);
             this.groupMaintence.ResumeLayout(false);
             this.groupRoute.ResumeLayout(false);
@@ -847,13 +895,7 @@ namespace Truckleer.Creative
         }
 
         #endregion
-        private System.Windows.Forms.Timer supplyTimer;
         private System.Windows.Forms.TableLayoutPanel truckleerContainer1;
-        private System.Windows.Forms.Timer vehicleTimer;
-        private System.Windows.Forms.Timer driverTimer;
-        private System.Windows.Forms.Timer routeTimer;
-        private System.Windows.Forms.Timer maintenceTimer;
-        private System.Windows.Forms.Timer tripTimer;
         private System.Windows.Forms.TableLayoutPanel mainContainer;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panelNavbar;
@@ -870,8 +912,6 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Panel panelMenu;
         private System.Windows.Forms.Panel menuPanel;
         private System.Windows.Forms.Panel groupTrip;
-        private System.Windows.Forms.Button btnListTrip;
-        private System.Windows.Forms.Button btnMakeTrip;
         private System.Windows.Forms.Button btnTrip;
         private System.Windows.Forms.Panel groupMaintence;
         private System.Windows.Forms.Button btnAlertMaintence;
@@ -897,6 +937,13 @@ namespace Truckleer.Creative
         public System.Windows.Forms.Button btnDash;
         private System.Windows.Forms.Panel sideBarTop;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Button btnListTrip;
+        private System.Windows.Forms.Button btnMakeTrip;
+        private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Panel groupUser;
+        private System.Windows.Forms.Button BtnUser;
+        private System.Windows.Forms.Button BtnNewUser;
+        private System.Windows.Forms.Button BtnListUser;
     }
 }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Api.Classes
 {
-    class User
+    public class User
     {
         //Constructor
         public User()

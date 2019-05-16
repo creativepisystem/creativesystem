@@ -22,13 +22,13 @@ namespace Truckleer.Creative
             this.Dock = DockStyle.Fill;
         }
 
-       /* bool isCollapsed = false; 
+        bool isCollapsed = false;
         private void TimerFilter_Tick(object sender, EventArgs e)
         {
             if (isCollapsed)
             {
-                filter.Height += 10;
-                if (filter.Size.Height == filter.MaximumSize.Height)
+                TitleFilter.Height += 40;
+                if (TitleFilter.Size.Height == TitleFilter.MaximumSize.Height)
                 {
                     timerFilter.Stop();
                     isCollapsed = false;
@@ -36,8 +36,8 @@ namespace Truckleer.Creative
             }
             else
             {
-                filter.Height -= 10;
-                if (filter.Size.Height == filter.MinimumSize.Height)
+                TitleFilter.Height -= 40;
+                if (TitleFilter.Size.Height == TitleFilter.MinimumSize.Height)
                 {
                     timerFilter.Stop();
                     isCollapsed = true;
@@ -45,10 +45,30 @@ namespace Truckleer.Creative
             }
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        private void Button1_Click_1(object sender, EventArgs e)
         {
             timerFilter.Start();
-        }*/
+        }
+
+        private void Label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void DateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
     
 }
