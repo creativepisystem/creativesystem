@@ -15,14 +15,20 @@ namespace Truckleer
             {
                 driver = new Driver()
                 {
-                    id = "eySPZJGHlI2d4EHaPaA4"
-                }
+                    Id = "eySPZJGHlI2d4EHaPaA4"
+                },
+                vehicle = new Vehicle()
+                {
+                    id = "qhLN3PhDdxi1BukZLiSU"
+                },
+                route = new Route()
+                {
+                    Id = "lAmH6BGm8lUjRk06vEoP"
+                },
 
             };
 
             List<Supply> result = supplyFilter.Filter();
-
-            Console.WriteLine(result.Count);
 
             Console.ReadKey();
         }

@@ -42,14 +42,14 @@ namespace Truckleer.Modules
             {
                 //Convert Document in a Supply class
                 Supply us = queryResult.ConvertTo<Supply>();
-                //Set id of supply
-                us.id = queryResult.Id;
+                //Set Id of supply
+                us.Id = queryResult.Id;
                 string Route = queryResult.GetValue<string>("route");
                 if (Route != null)
-                    us.route = RouteService.FindOne(Route);
-                us.vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
-                us.driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
-                us.trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
+                    us.Route = RouteService.FindOne(Route);
+                us.Vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
+                us.Driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
+                us.Trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
                 //Add supply to list
                 supplys.Add(us);
             }
@@ -59,7 +59,7 @@ namespace Truckleer.Modules
         //Method for find One supply by Id
         async public Task<Supply> Find(string Id)
         {
-            //Create a Document Reference with id like /supplys/id_value
+            //Create a Document Reference with Id like /supplys/Id_value
             DocumentSnapshot DocRef = await Reference.Document(Id).GetSnapshotAsync();
             //Initializate a supply  with null value
             Supply us = null;
@@ -68,14 +68,14 @@ namespace Truckleer.Modules
             {
                 //Convert document to a Supply class
                 us = DocRef.ConvertTo<Supply>();
-                //Set id of supply
-                us.id = DocRef.Id;
+                //Set Id of supply
+                us.Id = DocRef.Id;
                 string Route = DocRef.GetValue<string>("route");
                 if (Route != null)
-                    us.route = RouteService.FindOne(Route);
-                us.vehicle = VehicleService.FindOne(DocRef.GetValue<string>("vehicle"));
-                us.driver = DriverService.FindOne(DocRef.GetValue<string>("driver"));
-                us.trip = TripService.FindOne(DocRef.GetValue<string>("travel"));
+                    us.Route = RouteService.FindOne(Route);
+                us.Vehicle = VehicleService.FindOne(DocRef.GetValue<string>("vehicle"));
+                us.Driver = DriverService.FindOne(DocRef.GetValue<string>("driver"));
+                us.Trip = TripService.FindOne(DocRef.GetValue<string>("travel"));
             }
             //Return supply
             return us;
@@ -84,7 +84,7 @@ namespace Truckleer.Modules
         async public Task<bool> Save(Supply supply)
         {
             //Check if supply exisit
-            if (supply.id == null)//If not exist
+            if (supply.Id == null)//If not exist
             {
                 //Create new supply
                 DocumentReference snapshot = await Reference.AddAsync(supply.ToObject());
@@ -94,7 +94,7 @@ namespace Truckleer.Modules
             else
             {
                 //update supply and merge values
-                WriteResult snapshot = await Reference.Document(supply.id).SetAsync(supply.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(supply.Id).SetAsync(supply.ToObject(), SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }
@@ -105,14 +105,14 @@ namespace Truckleer.Modules
             List<Supply> supplys = new List<Supply>();
 
             Console.WriteLine(supplyFilter.driver != null);
-            Query query = Reference.OrderByDescending("date");
+            Query query = Reference;
             
-            query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(supplyFilter.startAt));
+            query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(supplyFilter.startAt)).OrderByDescending("date");
             //query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(supplyFilter.endAt));
             if (supplyFilter.driver != null)
-                query = query.WhereEqualTo("driver", supplyFilter.driver.id);
+                query = query.WhereEqualTo("driver", supplyFilter.driver.Id);
             if (supplyFilter.route != null)
-                query = query.WhereEqualTo("route", supplyFilter.route.id);
+                query = query.WhereEqualTo("route", supplyFilter.route.Id);
             if (supplyFilter.trip != null)
                 query = query.WhereEqualTo("travel", supplyFilter.trip.id);
             if (supplyFilter.vehicle != null)
@@ -126,8 +126,8 @@ namespace Truckleer.Modules
             {
                 //Convert Document in a Supply class
                 Supply us = queryResult.ConvertTo<Supply>();
-                //Set id of supply
-                us.id = queryResult.Id;
+                //Set Id of supply
+                us.Id = queryResult.Id;
                 string Route = null;
                 try
                 {
@@ -135,10 +135,10 @@ namespace Truckleer.Modules
                
                 
                 if (Route != null)
-                    us.route = RouteService.FindOne(Route);
-                us.vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
-                us.driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
-                us.trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
+                    us.Route = RouteService.FindOne(Route);
+                us.Vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
+                us.Driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
+                us.Trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
                 }
                 catch { }
                 //Add supply to list

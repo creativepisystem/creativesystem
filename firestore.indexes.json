@@ -1,0 +1,285 @@
+{
+  "indexes": [
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        } ,
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+        
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+        
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "vehicle",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "travel",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    },
+    {
+      "collectionGroup": "supplys",
+      "queryScope": "COLLECTION",
+      "fields": [
+        {
+          "fieldPath": "route",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "driver",
+          "order": "ASCENDING"
+        },
+        {
+          "fieldPath": "date",
+          "order": "DESCENDING"
+        }
+      ]
+    }
+  ],
+  "fieldOverrides": []
+}

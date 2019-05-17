@@ -68,7 +68,7 @@ namespace Truckleer.Modules
                 };
             if (route != null)
             {
-                if(RouteService.FindOne(route.id) == null)
+                if(RouteService.FindOne(route.Id) == null)
                 {
                     return new Message()
                     {
@@ -77,7 +77,7 @@ namespace Truckleer.Modules
                     };
                 }
             }
-            if(DriverService.FindOne(driver.id) == null)
+            if(DriverService.FindOne(driver.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -105,9 +105,9 @@ namespace Truckleer.Modules
             if (name != null)
                 us.name = name;
             if (route != null)
-                us.route = route.id;
+                us.route = route.Id;
             if (driver != null)
-                us.driver = driver.id;
+                us.driver = driver.Id;
             if (status.GetType() == typeof(TripStatus))
                 us.status = status;
             if (vehicle != null)

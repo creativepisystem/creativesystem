@@ -50,6 +50,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modules\Config\ConnectionFirestore.cs" />
+    <Compile Include="Modules\CustomConvert\CustomCnhTypeConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomDateTimeConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomDriverConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomFloatConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomRouteConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomTripConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomUserConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomVehicleConvert.cs" />
     <Compile Include="Modules\Driver\CnhType.cs" />
     <Compile Include="Modules\Driver\Driver.cs" />
     <Compile Include="Modules\Driver\DriverRepository.cs" />

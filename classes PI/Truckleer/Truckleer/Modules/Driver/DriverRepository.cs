@@ -37,12 +37,7 @@ namespace Truckleer.Modules
                 //Convert Document in a Driver class
                 Driver us = queryResult.ConvertTo<Driver>();
                 //Set id of driver
-                us.id = queryResult.Id;
-                try
-                {
-                    us.user = userService.FindOne(queryResult.GetValue<string>("user"));
-                }
-                catch { }
+                us.Id = queryResult.Id;
                 //Add driver to list
                 drivers.Add(us);
             }
@@ -61,13 +56,8 @@ namespace Truckleer.Modules
             {
                 //Convert document to a Driver class
                 us = DocRef.ConvertTo<Driver>();
-                try
-                {
-                    us.user = userService.FindOne(DocRef.GetValue<string>("user"));
-                }
-                catch { }
                 //Set id of driver
-                us.id = DocRef.Id;
+                us.Id = DocRef.Id;
             }
             //Return driver
             return us;
@@ -76,7 +66,7 @@ namespace Truckleer.Modules
         async public Task<bool> Save(Driver driver)
         {
             //Check if driver exisit
-            if (driver.id == null)//If not exist
+            if (driver.Id == null)//If not exist
             {
                 //Create new driver
                 DocumentReference snapshot = await Reference.AddAsync(driver.ToObject());
@@ -86,7 +76,7 @@ namespace Truckleer.Modules
             else
             {
                 //update driver and merge values
-                WriteResult snapshot = await Reference.Document(driver.id).SetAsync(driver.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(driver.Id).SetAsync(driver.ToObject(), SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

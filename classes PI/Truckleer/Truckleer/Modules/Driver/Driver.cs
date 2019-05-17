@@ -1,6 +1,8 @@
 ﻿using Google.Cloud.Firestore;
 using System;
 using System.Dynamic;
+using Truckleer.Modules.CustomConvert;
+
 namespace Truckleer.Modules
 {
     [FirestoreData]
@@ -13,92 +15,93 @@ namespace Truckleer.Modules
             userService = new UserService();
         }
         //Atributes
-        public string id { get; set; }
+        public string Id { get; set; }
+        [FirestoreProperty("name")]
+        public string Name { get; set; }
+        [FirestoreProperty("cpf")]
+        public string Cpf { get; set; }
+        [FirestoreProperty(Name = "cnh", ConverterType = typeof(CustomCnhTypeConvert))]
+        public CnhType Cnh { get; set; }
+        [FirestoreProperty("cnh_number")]
+        public string Cnh_number { get; set; }
+        [FirestoreProperty(Name = "birth_date", ConverterType = typeof(CustomDateTimeConvert))]
+        public DateTime Birth_date { get; set; }
         [FirestoreProperty]
-        public string name { get; set; }
+        public string Phone { get; set; }
         [FirestoreProperty]
-        public string cpf { get; set; }
-        //[FirestoreProperty]
-        public CnhType cnh { get; set; }
+        public string Email { get; set; }
+        [FirestoreProperty(Name = "cnh_expiration", ConverterType = typeof(CustomDateTimeConvert))]
+        public DateTime Cnh_expiration { get; set; }
         [FirestoreProperty]
-        public string cnh_number { get; set; }
-        [FirestoreProperty]
-        public DateTime birth_date { get; set; }
-        [FirestoreProperty]
-        public string phone { get; set; }
-        [FirestoreProperty]
-        public string email { get; set; }
-        //[FirestoreProperty]
-        public DateTime cnh_expiration { get; set; }
-        [FirestoreProperty]
-        public string photo { get; set; }
-        [FirestoreProperty]
-        public string obs { get; set; }
-        public User user { get; set; }
+        public string Photo { get; set; }
+        [FirestoreProperty("obs")]
+        public string Obs { get; set; }
+        [FirestoreProperty(Name = "user", ConverterType = typeof(CustomUserConvert))]
+        public User User { get; set; }
         public Message IsValid()
         {
-            if (name == null || name.Length < 2 || name.Length> 40)
+            if (Name == null || Name.Length < 2 || Name.Length> 40)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O nome deve conter de 2 a 40 letras!"
                 };
-            if (cpf == null || Validator.IsValidCpf(cpf))
+            if (Cpf == null || Validator.IsValidCpf(Cpf))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Cpf inválido!"
                 };
-            if (! (cnh.GetType() == typeof(CnhType)))
+            if (! (Cnh.GetType() == typeof(CnhType)))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Tipo de cnh inválida"
                 };
-            if (cnh_number == null || Validator.IsValidCnh(cnh_number))
+            if (Cnh_number == null || Validator.IsValidCnh(Cnh_number))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Cnh inválida!"
                 };
-            if (birth_date == null || birth_date.Year > new DateTime().Year -18 )
+            if (Birth_date == null || Birth_date.Year > new DateTime().Year -18 )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Data de nascimento inválida!"
                 };
-            if (phone != null &&phone.Length >15)
+            if (Phone != null &&Phone.Length >15)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Telefone inválido!"
                 };
-            if (email == null || Validator.IsValidEmail(email))
+            if (Email == null || Validator.IsValidEmail(Email))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Email inválido"
                 };
-            if (cnh_expiration == null || cnh_expiration.Year < 1900 || cnh_expiration.Year > new DateTime().Year+5)
+            if (Cnh_expiration == null || Cnh_expiration.Year < 1900 || Cnh_expiration.Year > new DateTime().Year+5)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A data de experiração da cnh é inválida!"
                 };
-            if (obs != null || obs.Length <0 || obs.Length>100)
+            if (Obs != null || Obs.Length <0 || Obs.Length>100)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A observação deve conter no máximo 100 caracteres!"
                 };
-            if (user == null)
+            if (User == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Usuario é um campo obrigatório!"
 
                 };
-            else if (userService.FindOne(user.id) == null)
+            else if (userService.FindOne(User.id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -117,28 +120,28 @@ namespace Truckleer.Modules
         {
             //Initializate us
             dynamic us = new ExpandoObject();
-            if (name != null)
-                us.name = name;
-            if (cpf != null)
-                us.cpf = cpf;
-            if (cnh.GetType() == typeof(CnhType))
-                us.cnh = cnh;
-            if (cnh_number != null)
-                us.cnh_number = cnh_number;
-            if (birth_date != null)
-                us.birth_date = birth_date;
-            if (phone != null)
-                us.phone = phone;
-            if (email != null)
-                us.email = email;
-            if (cnh_expiration != null)
-                us.cnh_expiration = cnh_expiration;
-            if (photo != null)
-                us.photo = photo;
-            if (obs != null)
-                us.obs = obs;
-            if (user != null)
-                us.user = user.id;
+            if (Name != null)
+                us.name = Name;
+            if (Cpf != null)
+                us.cpf = Cpf;
+            if (Cnh.GetType() == typeof(CnhType))
+                us.cnh = Cnh;
+            if (Cnh_number != null)
+                us.cnh_number = Cnh_number;
+            if (Birth_date != null)
+                us.birth_date = Birth_date;
+            if (Phone != null)
+                us.phone = Phone;
+            if (Email != null)
+                us.email = Email;
+            if (Cnh_expiration != null)
+                us.cnh_expiration = Cnh_expiration;
+            if (Photo != null)
+                us.photo = Photo;
+            if (Obs != null)
+                us.obs = Obs;
+            if (User != null)
+                us.user = User.id;
             return us;
         }
     }
