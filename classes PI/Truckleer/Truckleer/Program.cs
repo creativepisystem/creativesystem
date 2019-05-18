@@ -10,25 +10,19 @@ namespace Truckleer
     {
         static void Main(string[] args)
         {
+            UserService userService = new UserService();
+            RouteService routeService = new RouteService();
+            DriverService driverService = new DriverService();
+            VehicleService vehicleService = new VehicleService();
+            TripService tripService = new TripService();
+            SupplyService supplyService = new SupplyService();
 
-            SupplyFilter supplyFilter = new SupplyFilter()
-            {
-                driver = new Driver()
-                {
-                    Id = "eySPZJGHlI2d4EHaPaA4"
-                },
-                vehicle = new Vehicle()
-                {
-                    id = "qhLN3PhDdxi1BukZLiSU"
-                },
-                route = new Route()
-                {
-                    Id = "lAmH6BGm8lUjRk06vEoP"
-                },
-
-            };
-
-            List<Supply> result = supplyFilter.Filter();
+            userService.FindAll();
+            routeService.FindAll();
+            driverService.FindAll();
+            vehicleService.FindAll();
+            tripService.FindAll();
+            supplyService.FindAll();
 
             Console.ReadKey();
         }

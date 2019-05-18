@@ -66,14 +66,14 @@ namespace Truckleer.Modules
             if (route.Id == null)//If not exist
             {
                 //Create new route
-                DocumentReference snapshot = await Reference.AddAsync(route.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(route);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update route and merge values
-                WriteResult snapshot = await Reference.Document(route.Id).SetAsync(route.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(route.Id).SetAsync(route, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

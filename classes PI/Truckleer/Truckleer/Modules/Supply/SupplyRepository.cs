@@ -12,21 +12,12 @@ namespace Truckleer.Modules
         //Collection reference property
         readonly CollectionReference Reference;
         //Constructor Class
-        DriverService DriverService;
-        VehicleService VehicleService;
-        RouteService RouteService;
-        TripService TripService;
         public SupplyRepository()
         {
             //Create firestore connection
             ConnectionFirestore coon = new ConnectionFirestore();
             //Initializate Reference
             Reference = coon.Db.Collection("supplys");
-
-            DriverService = new DriverService();
-            VehicleService = new VehicleService();
-            RouteService = new RouteService();
-            TripService = new TripService();
         }
 
         //Method for get All supplys
@@ -44,12 +35,6 @@ namespace Truckleer.Modules
                 Supply us = queryResult.ConvertTo<Supply>();
                 //Set Id of supply
                 us.Id = queryResult.Id;
-                string Route = queryResult.GetValue<string>("route");
-                if (Route != null)
-                    us.Route = RouteService.FindOne(Route);
-                us.Vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
-                us.Driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
-                us.Trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
                 //Add supply to list
                 supplys.Add(us);
             }
@@ -70,12 +55,6 @@ namespace Truckleer.Modules
                 us = DocRef.ConvertTo<Supply>();
                 //Set Id of supply
                 us.Id = DocRef.Id;
-                string Route = DocRef.GetValue<string>("route");
-                if (Route != null)
-                    us.Route = RouteService.FindOne(Route);
-                us.Vehicle = VehicleService.FindOne(DocRef.GetValue<string>("vehicle"));
-                us.Driver = DriverService.FindOne(DocRef.GetValue<string>("driver"));
-                us.Trip = TripService.FindOne(DocRef.GetValue<string>("travel"));
             }
             //Return supply
             return us;
@@ -87,14 +66,14 @@ namespace Truckleer.Modules
             if (supply.Id == null)//If not exist
             {
                 //Create new supply
-                DocumentReference snapshot = await Reference.AddAsync(supply.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(supply);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update supply and merge values
-                WriteResult snapshot = await Reference.Document(supply.Id).SetAsync(supply.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(supply.Id).SetAsync(supply, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }
@@ -114,7 +93,7 @@ namespace Truckleer.Modules
             if (supplyFilter.route != null)
                 query = query.WhereEqualTo("route", supplyFilter.route.Id);
             if (supplyFilter.trip != null)
-                query = query.WhereEqualTo("travel", supplyFilter.trip.id);
+                query = query.WhereEqualTo("travel", supplyFilter.trip.Id);
             if (supplyFilter.vehicle != null)
                 query = query.WhereEqualTo("vehicle", supplyFilter.vehicle.id);
 
@@ -128,19 +107,6 @@ namespace Truckleer.Modules
                 Supply us = queryResult.ConvertTo<Supply>();
                 //Set Id of supply
                 us.Id = queryResult.Id;
-                string Route = null;
-                try
-                {
-                    Route = queryResult.GetValue<string>("route");
-               
-                
-                if (Route != null)
-                    us.Route = RouteService.FindOne(Route);
-                us.Vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
-                us.Driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
-                us.Trip = TripService.FindOne(queryResult.GetValue<string>("travel"));
-                }
-                catch { }
                 //Add supply to list
                 supplys.Add(us);
             }

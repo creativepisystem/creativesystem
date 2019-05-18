@@ -26,13 +26,13 @@ namespace Truckleer.Modules
         public string Cnh_number { get; set; }
         [FirestoreProperty(Name = "birth_date", ConverterType = typeof(CustomDateTimeConvert))]
         public DateTime Birth_date { get; set; }
-        [FirestoreProperty]
+        [FirestoreProperty("phone")]
         public string Phone { get; set; }
-        [FirestoreProperty]
+        [FirestoreProperty("email")]
         public string Email { get; set; }
         [FirestoreProperty(Name = "cnh_expiration", ConverterType = typeof(CustomDateTimeConvert))]
         public DateTime Cnh_expiration { get; set; }
-        [FirestoreProperty]
+        [FirestoreProperty("photo")]
         public string Photo { get; set; }
         [FirestoreProperty("obs")]
         public string Obs { get; set; }

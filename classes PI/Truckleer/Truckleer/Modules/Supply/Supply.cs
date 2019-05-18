@@ -127,7 +127,7 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O veículo é inválido!"
                 };
-            if (TripService.FindOne(Trip.id) == null)
+            if (TripService.FindOne(Trip.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -158,7 +158,7 @@ namespace Truckleer.Modules
             if (Price < 0)
                 us.price = Price;
             if (Trip != null)
-                us.trip = Trip.id;
+                us.trip = Trip.Id;
             if (Driver != null)
                 us.driver = Driver.Id;
             if (Vehicle != null)

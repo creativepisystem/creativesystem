@@ -14,6 +14,6 @@ namespace Truckleer.Modules.CustomConvert
             return new TripService().FindOne(Convert.ToString(value));
         }
 
-        public object ToFirestore(Trip value) => value.id;
+        public object ToFirestore(Trip value) => value.Id;
     }
 }
