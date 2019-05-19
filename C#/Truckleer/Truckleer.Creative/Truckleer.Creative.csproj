@@ -53,61 +53,91 @@
     <PackageReference Include="Google.Cloud.Firestore" Version="1.0.0-beta19" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Abastecimento.cs">
+    <Compile Include="Screens\Abastecimento\Abastecimento.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Abastecimento.Designer.cs">
+    <Compile Include="Screens\Abastecimento\Abastecimento.Designer.cs">
       <DependentUpon>Abastecimento.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlertaManutencao.cs">
+    <Compile Include="Screens\Abastecimento\CustomSupplyList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Manutencao\AlertaManutencao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="AlertaManutencao.Designer.cs">
+    <Compile Include="Screens\Manutencao\AlertaManutencao.Designer.cs">
       <DependentUpon>AlertaManutencao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Api\Classes\Driver\Driver.cs" />
-    <Compile Include="Api\Classes\Route\Route.cs" />
-    <Compile Include="Api\Classes\Supply\Supply.cs" />
-    <Compile Include="Api\Classes\Trip\Trip.cs" />
-    <Compile Include="Api\Classes\User\User.cs" />
-    <Compile Include="Api\Classes\User\UserType.cs" />
-    <Compile Include="Api\Classes\Vehicle\Vehicle.cs" />
-    <Compile Include="Api\FireConnection\FirestoreDb.cs" />
-    <Compile Include="Api\FireConnection\Serializer.cs" />
-    <Compile Include="Dashboard.cs">
+    <Compile Include="Modules\Config\ConnectionFirestore.cs" />
+    <Compile Include="Modules\Driver\CnhType.cs" />
+    <Compile Include="Modules\Driver\Driver.cs" />
+    <Compile Include="Modules\Driver\DriverRepository.cs" />
+    <Compile Include="Modules\Driver\DriverService.cs" />
+    <Compile Include="Modules\Interface\IModule.cs" />
+    <Compile Include="Modules\Message\Message.cs" />
+    <Compile Include="Modules\Message\MessageType.cs" />
+    <Compile Include="Modules\Route\Route.cs" />
+    <Compile Include="Modules\Route\RouteRepository.cs" />
+    <Compile Include="Modules\Route\RouteService.cs" />
+    <Compile Include="Modules\Supply\Supply.cs" />
+    <Compile Include="Modules\Supply\SupplyRepository.cs" />
+    <Compile Include="Modules\Supply\SupplyService.cs" />
+    <Compile Include="Modules\Trip\Trip.cs" />
+    <Compile Include="Modules\Trip\TripService.cs" />
+    <Compile Include="Modules\Trip\TripRepository.cs" />
+    <Compile Include="Modules\Trip\TripStatus.cs" />
+    <Compile Include="Modules\User\User.cs" />
+    <Compile Include="Modules\User\UserRepository.cs" />
+    <Compile Include="Modules\User\UserService.cs" />
+    <Compile Include="Modules\User\UserType.cs" />
+    <Compile Include="Modules\Util\Validator.cs" />
+    <Compile Include="Modules\Vehicle\Vehicle.cs" />
+    <Compile Include="Modules\Vehicle\VehicleColor.cs" />
+    <Compile Include="Modules\Vehicle\VehicleRepository.cs" />
+    <Compile Include="Modules\Vehicle\VehicleService.cs" />
+    <Compile Include="Screens\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Dashboard.Designer.cs">
+    <Compile Include="Screens\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarAbastecimentos.cs">
+    <Compile Include="Screens\Abastecimento\ListarAbastecimentos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListarAbastecimentos.Designer.cs">
+    <Compile Include="Screens\Abastecimento\ListarAbastecimentos.Designer.cs">
       <DependentUpon>ListarAbastecimentos.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarManutencao.cs">
+    <Compile Include="Screens\Manutencao\ListarManutencao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListarManutencao.Designer.cs">
+    <Compile Include="Screens\Manutencao\ListarManutencao.Designer.cs">
       <DependentUpon>ListarManutencao.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarMotoristas.cs">
+    <Compile Include="Screens\Motorista\CustomDriverList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Motorista\ListarMotoristas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListarMotoristas.Designer.cs">
+    <Compile Include="Screens\Motorista\ListarMotoristas.Designer.cs">
       <DependentUpon>ListarMotoristas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarRotas.cs">
+    <Compile Include="Screens\Rotas\CustomRouteList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Rotas\ListarRotas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListarRotas.Designer.cs">
+    <Compile Include="Screens\Rotas\ListarRotas.Designer.cs">
       <DependentUpon>ListarRotas.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListarVeiculos.cs">
+    <Compile Include="Screens\Veiculo\CustomVehicleList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Veiculo\ListarVeiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ListarVeiculos.Designer.cs">
+    <Compile Include="Screens\Veiculo\ListarVeiculos.Designer.cs">
       <DependentUpon>ListarVeiculos.cs</DependentUpon>
     </Compile>
     <Compile Include="LoadingForm.cs">
@@ -116,87 +146,96 @@
     <Compile Include="LoadingForm.Designer.cs">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Manutencao.cs">
+    <Compile Include="Screens\Manutencao\Manutencao.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Manutencao.Designer.cs">
+    <Compile Include="Screens\Manutencao\Manutencao.Designer.cs">
       <DependentUpon>Manutencao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Motorista.cs">
+    <Compile Include="Screens\Motorista\Motorista.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Motorista.Designer.cs">
+    <Compile Include="Screens\Motorista\Motorista.Designer.cs">
       <DependentUpon>Motorista.cs</DependentUpon>
     </Compile>
-    <Compile Include="Rotas.cs">
+    <Compile Include="Screens\Rotas\Rotas.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Rotas.Designer.cs">
+    <Compile Include="Screens\Rotas\Rotas.Designer.cs">
       <DependentUpon>Rotas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Truckleer.cs">
+    <Compile Include="Screens\Truckleer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Truckleer.Designer.cs">
+    <Compile Include="Screens\Truckleer.Designer.cs">
       <DependentUpon>Truckleer.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Usuarios.cs">
+    <Compile Include="Screens\Usuario\Usuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Usuarios.Designer.cs">
+    <Compile Include="Screens\Usuario\Usuarios.Designer.cs">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Veiculos.cs">
+    <Compile Include="Screens\Veiculo\Veiculos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Veiculos.Designer.cs">
+    <Compile Include="Screens\Veiculo\Veiculos.Designer.cs">
       <DependentUpon>Veiculos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Viagens.cs">
+    <Compile Include="Screens\Viagem\CustomTripList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Viagem\ListarViagens.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Viagens.Designer.cs">
+    <Compile Include="Screens\Viagem\ListarViagens.Designer.cs">
+      <DependentUpon>ListarViagens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Viagem\Viagens.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Viagem\Viagens.Designer.cs">
       <DependentUpon>Viagens.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Abastecimento.resx">
+    <EmbeddedResource Include="Screens\Abastecimento\Abastecimento.resx">
       <DependentUpon>Abastecimento.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlertaManutencao.resx">
+    <EmbeddedResource Include="Screens\Manutencao\AlertaManutencao.resx">
       <DependentUpon>AlertaManutencao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Dashboard.resx">
+    <EmbeddedResource Include="Screens\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarAbastecimentos.resx">
+    <EmbeddedResource Include="Screens\Abastecimento\ListarAbastecimentos.resx">
       <DependentUpon>ListarAbastecimentos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarManutencao.resx">
+    <EmbeddedResource Include="Screens\Manutencao\ListarManutencao.resx">
       <DependentUpon>ListarManutencao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarMotoristas.resx">
+    <EmbeddedResource Include="Screens\Motorista\ListarMotoristas.resx">
       <DependentUpon>ListarMotoristas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarRotas.resx">
+    <EmbeddedResource Include="Screens\Rotas\ListarRotas.resx">
       <DependentUpon>ListarRotas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListarVeiculos.resx">
+    <EmbeddedResource Include="Screens\Veiculo\ListarVeiculos.resx">
       <DependentUpon>ListarVeiculos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoadingForm.resx">
       <DependentUpon>LoadingForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Manutencao.resx">
+    <EmbeddedResource Include="Screens\Manutencao\Manutencao.resx">
       <DependentUpon>Manutencao.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Motorista.resx">
+    <EmbeddedResource Include="Screens\Motorista\Motorista.resx">
       <DependentUpon>Motorista.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Rotas.resx">
+    <EmbeddedResource Include="Screens\Rotas\Rotas.resx">
       <DependentUpon>Rotas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Truckleer.resx">
+    <EmbeddedResource Include="Screens\Truckleer.resx">
       <DependentUpon>Truckleer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -209,13 +248,16 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Usuarios.resx">
+    <EmbeddedResource Include="Screens\Usuario\Usuarios.resx">
       <DependentUpon>Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Veiculos.resx">
+    <EmbeddedResource Include="Screens\Veiculo\Veiculos.resx">
       <DependentUpon>Veiculos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Viagens.resx">
+    <EmbeddedResource Include="Screens\Viagem\ListarViagens.resx">
+      <DependentUpon>ListarViagens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Viagem\Viagens.resx">
       <DependentUpon>Viagens.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\Rotas.datasource" />
@@ -344,6 +386,15 @@
     <PackageReference Include="Google.Apis.Firestore.v1beta2">
       <Version>1.39.0.1542</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\truckList.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\editNote.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
