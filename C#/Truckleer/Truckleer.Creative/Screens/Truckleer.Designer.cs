@@ -290,7 +290,7 @@ namespace Truckleer.Creative
             this.groupUser.Controls.Add(this.BtnNewUser);
             this.groupUser.Controls.Add(this.BtnUser);
             this.groupUser.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupUser.Location = new System.Drawing.Point(0, 364);
+            this.groupUser.Location = new System.Drawing.Point(0, 284);
             this.groupUser.MaximumSize = new System.Drawing.Size(190, 121);
             this.groupUser.MinimumSize = new System.Drawing.Size(190, 41);
             this.groupUser.Name = "groupUser";
@@ -362,7 +362,7 @@ namespace Truckleer.Creative
             this.groupTrip.MaximumSize = new System.Drawing.Size(0, 120);
             this.groupTrip.MinimumSize = new System.Drawing.Size(195, 40);
             this.groupTrip.Name = "groupTrip";
-            this.groupTrip.Size = new System.Drawing.Size(195, 120);
+            this.groupTrip.Size = new System.Drawing.Size(195, 40);
             this.groupTrip.TabIndex = 19;
             // 
             // btnListTrip

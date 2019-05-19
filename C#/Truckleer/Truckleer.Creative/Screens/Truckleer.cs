@@ -111,6 +111,7 @@ namespace Truckleer.Creative
             btnListMaintence.BackColor = Color.FromArgb(90, 90, 90);
             btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
             btnMakeTrip.BackColor = Color.FromArgb(90, 90, 90);
+            btnListTrip.BackColor = Color.FromArgb(90, 90, 90);
         }
         //Call the UserControls
         public void Call(UserControl screen)
@@ -118,6 +119,20 @@ namespace Truckleer.Creative
             truckleerCallcontainer.Controls.Clear();
             truckleerCallcontainer.Controls.Add(screen);
             screen.BringToFront();
+        }
+        //Close Groups
+        public void CloseGroup(UserControl group)
+        {
+            if(group != null)
+                group.Size = group.MaximumSize;
+
+            groupSupply.Size = groupSupply.MinimumSize;
+            groupVehicle.Size = groupSupply.MinimumSize;
+            groupDriver.Size = groupSupply.MinimumSize;
+            groupRoute.Size = groupSupply.MinimumSize;
+            groupMaintence.Size = groupSupply.MinimumSize;
+            groupTrip.Size = groupSupply.MinimumSize;
+            groupUser.Size = groupSupply.MinimumSize;
         }
         //Turn Background Image Up
         public void BackImageUp(Button botao)
@@ -133,6 +148,8 @@ namespace Truckleer.Creative
             
             // Unset Colors
             Uncolor();
+            //Call CloseGroup Function
+            CloseGroup(null);
             timerSideMenu.Start();
             btnDash.BackColor = Color.FromArgb(25, 137, 186);
 
@@ -152,6 +169,9 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+
+            //Call CloseGroup Function
+            CloseGroup(supply);
 
             BackImageUp(btnAbastecimento);
 
@@ -194,6 +214,8 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(vehicle);
 
             BackImageUp(btnVeiculo);
         }
@@ -232,6 +254,8 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(driver);
 
             BackImageUp(btnDriver);
 
@@ -273,6 +297,8 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(route);
 
             BackImageUp(btnRoutes);
         }
@@ -311,6 +337,8 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(maintence);
 
             BackImageUp(btnMaintence);
         }
@@ -359,6 +387,8 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(trip);
 
             BackImageUp(btnTrip);
 
@@ -398,6 +428,8 @@ namespace Truckleer.Creative
             timer.Start();
             //Opens the sideBar menu when the button is clicked and the menu is collapsed
             timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(user);
 
             BackImageUp(btnTrip);
         }
@@ -426,7 +458,9 @@ namespace Truckleer.Creative
         //Open and Close SideBar Menu By Click on Hamburguer Button
         private void HamburguerMenu_Click(object sender, EventArgs e)
         {
-            timerMenu.Start();            
+            timerMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(null);
         }
 
         //Does Nothing

@@ -28,7 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.container = new System.Windows.Forms.Panel();
+            this.ButtonFilter = new System.Windows.Forms.Button();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.PageDescription = new System.Windows.Forms.Label();
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
@@ -36,21 +38,23 @@
             this.PanelR = new System.Windows.Forms.Panel();
             this.FlowRoute = new System.Windows.Forms.FlowLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.PanelFilter = new System.Windows.Forms.Panel();
+            this.TitleFilter = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.ButtonCadastro = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.filtro = new System.Windows.Forms.Timer(this.components);
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.PanelR.SuspendLayout();
-            this.PanelFilter.SuspendLayout();
+            this.TitleFilter.SuspendLayout();
             this.SuspendLayout();
             // 
             // container
             // 
             this.container.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(33)))), ((int)(((byte)(34)))));
+            this.container.Controls.Add(this.ButtonFilter);
             this.container.Controls.Add(this.ButtonHome);
             this.container.Controls.Add(this.PageDescription);
             this.container.Controls.Add(this.layoutFlex);
@@ -59,6 +63,20 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(1170, 759);
             this.container.TabIndex = 1;
+            // 
+            // ButtonFilter
+            // 
+            this.ButtonFilter.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.ButtonFilter.FlatAppearance.BorderSize = 0;
+            this.ButtonFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ButtonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ButtonFilter.Location = new System.Drawing.Point(33, 6);
+            this.ButtonFilter.Name = "ButtonFilter";
+            this.ButtonFilter.Size = new System.Drawing.Size(75, 28);
+            this.ButtonFilter.TabIndex = 50;
+            this.ButtonFilter.Text = "Filtros";
+            this.ButtonFilter.UseVisualStyleBackColor = false;
+            this.ButtonFilter.Click += new System.EventHandler(this.ButtonFilter_Click);
             // 
             // ButtonHome
             // 
@@ -108,7 +126,7 @@
             // 
             this.MainPanel.BackColor = System.Drawing.Color.Transparent;
             this.MainPanel.Controls.Add(this.PanelR);
-            this.MainPanel.Controls.Add(this.PanelFilter);
+            this.MainPanel.Controls.Add(this.TitleFilter);
             this.MainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.MainPanel.Location = new System.Drawing.Point(0, 0);
             this.MainPanel.Margin = new System.Windows.Forms.Padding(0);
@@ -144,20 +162,20 @@
             this.panel20.Size = new System.Drawing.Size(10, 42);
             this.panel20.TabIndex = 13;
             // 
-            // PanelFilter
+            // TitleFilter
             // 
-            this.PanelFilter.BackColor = System.Drawing.Color.Orange;
-            this.PanelFilter.Controls.Add(this.panel1);
-            this.PanelFilter.Controls.Add(this.ButtonCadastro);
-            this.PanelFilter.Controls.Add(this.textBox1);
-            this.PanelFilter.Controls.Add(this.label1);
-            this.PanelFilter.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelFilter.Location = new System.Drawing.Point(0, 0);
-            this.PanelFilter.Margin = new System.Windows.Forms.Padding(0);
-            this.PanelFilter.MaximumSize = new System.Drawing.Size(2000, 100);
-            this.PanelFilter.Name = "PanelFilter";
-            this.PanelFilter.Size = new System.Drawing.Size(1141, 100);
-            this.PanelFilter.TabIndex = 0;
+            this.TitleFilter.BackColor = System.Drawing.Color.Orange;
+            this.TitleFilter.Controls.Add(this.panel1);
+            this.TitleFilter.Controls.Add(this.ButtonCadastro);
+            this.TitleFilter.Controls.Add(this.textBox1);
+            this.TitleFilter.Controls.Add(this.label1);
+            this.TitleFilter.Dock = System.Windows.Forms.DockStyle.Top;
+            this.TitleFilter.Location = new System.Drawing.Point(0, 0);
+            this.TitleFilter.Margin = new System.Windows.Forms.Padding(0);
+            this.TitleFilter.MaximumSize = new System.Drawing.Size(2000, 100);
+            this.TitleFilter.Name = "TitleFilter";
+            this.TitleFilter.Size = new System.Drawing.Size(1141, 100);
+            this.TitleFilter.TabIndex = 0;
             // 
             // panel1
             // 
@@ -204,6 +222,10 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar Rota";
             // 
+            // filtro
+            // 
+            this.filtro.Tick += new System.EventHandler(this.Filtro_Tick);
+            // 
             // ListarRotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,8 +240,8 @@
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.PanelR.ResumeLayout(false);
-            this.PanelFilter.ResumeLayout(false);
-            this.PanelFilter.PerformLayout();
+            this.TitleFilter.ResumeLayout(false);
+            this.TitleFilter.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -230,7 +252,7 @@
         private System.Windows.Forms.TableLayoutPanel layoutFlex;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel PanelR;
-        private System.Windows.Forms.Panel PanelFilter;
+        private System.Windows.Forms.Panel TitleFilter;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button ButtonHome;
@@ -239,5 +261,7 @@
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.FlowLayoutPanel FlowRoute;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button ButtonFilter;
+        private System.Windows.Forms.Timer filtro;
     }
 }

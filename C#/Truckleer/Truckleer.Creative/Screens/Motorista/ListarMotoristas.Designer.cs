@@ -38,13 +38,13 @@
             this.PanelListDriver = new System.Windows.Forms.Panel();
             this.FlowDriver = new System.Windows.Forms.FlowLayoutPanel();
             this.TitleFilter = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.ButtonCadastro = new System.Windows.Forms.Button();
             this.LabelChn = new System.Windows.Forms.Label();
             this.BoxCnh = new System.Windows.Forms.ComboBox();
             this.LabelDriver = new System.Windows.Forms.Label();
             this.BoxDriver = new System.Windows.Forms.ComboBox();
             this.filtro = new System.Windows.Forms.Timer(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -98,7 +98,7 @@
             this.ButtonFilter.FlatAppearance.BorderSize = 0;
             this.ButtonFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ButtonFilter.Location = new System.Drawing.Point(32, 19);
+            this.ButtonFilter.Location = new System.Drawing.Point(32, 5);
             this.ButtonFilter.Name = "ButtonFilter";
             this.ButtonFilter.Size = new System.Drawing.Size(75, 28);
             this.ButtonFilter.TabIndex = 26;
@@ -171,6 +171,15 @@
             this.TitleFilter.Size = new System.Drawing.Size(1141, 100);
             this.TitleFilter.TabIndex = 0;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1141, 1);
+            this.panel1.TabIndex = 71;
+            // 
             // ButtonCadastro
             // 
             this.ButtonCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -228,15 +237,6 @@
             // filtro
             // 
             this.filtro.Tick += new System.EventHandler(this.Filtro_Tick);
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1141, 1);
-            this.panel1.TabIndex = 71;
             // 
             // ListarMotoristas
             // 

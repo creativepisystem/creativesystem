@@ -30,5 +30,33 @@ namespace Truckleer.Creative
         {
 
         }
+
+        private void ButtonFilter_Click(object sender, EventArgs e)
+        {
+            filtro.Start();
+        }
+
+        bool isCollapsed = false;
+        private void Fdiltro_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                TitleFilter.Height += 40;
+                if (TitleFilter.Size.Height == TitleFilter.MaximumSize.Height)
+                {
+                    filtro.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                TitleFilter.Height -= 40;
+                if (TitleFilter.Size.Height == TitleFilter.MinimumSize.Height)
+                {
+                    filtro.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
     }
 }

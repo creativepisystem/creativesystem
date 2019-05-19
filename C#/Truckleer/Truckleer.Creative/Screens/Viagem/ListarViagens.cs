@@ -17,12 +17,17 @@ namespace Truckleer.Creative.Screens.Viagem
         {
             InitializeComponent();
             for (int i = 0; i < 20; i++)
-                PanelRoute.Controls.Add(new CustomTripList(i, new Trip()));
+                LayoutRoute.Controls.Add(new CustomTripList(i, new Trip()));
         }
 
         private void ButtonCadastro_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ListarViagens_Load(object sender, EventArgs e)
+        {
+            Dock = DockStyle.Fill;
         }
     }
 }
