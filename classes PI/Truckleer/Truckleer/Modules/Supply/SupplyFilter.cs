@@ -8,12 +8,12 @@ namespace Truckleer.Modules
 {
     public class SupplyFilter:IFilter<Supply>
     {
-        public DateTime StartAt { get; set; }
-        public DateTime EndAt { get; set; }
-        public Trip Trip { get; set; }
-        public Driver Driver { get; set; }
-        public Vehicle Vehicle { get; set; }
-        public Route Route { get; set; }
+        public DateTime startAt { get; set; }
+        public DateTime endAt { get; set; }
+        public Trip trip { get; set; }
+        public Driver driver { get; set; }
+        public Vehicle vehicle { get; set; }
+        public Route route { get; set; }
 
         private readonly SupplyService supplyService;
         public SupplyFilter(){

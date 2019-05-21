@@ -49,6 +49,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\*\*.cs" />
     <Compile Include="Modules\Config\ConnectionFirestore.cs" />
     <Compile Include="Modules\CustomConvert\CustomCnhTypeConvert.cs" />
     <Compile Include="Modules\CustomConvert\CustomDateTimeConvert.cs" />

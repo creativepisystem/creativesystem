@@ -224,7 +224,7 @@
             // 
             // filtro
             // 
-            this.filtro.Tick += new System.EventHandler(this.Filtro_Tick);
+            //this.filtro.Tick += new System.EventHandler(this.Filtro_Tick);
             // 
             // ListarRotas
             // 

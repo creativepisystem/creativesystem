@@ -31,7 +31,7 @@ namespace Truckleer.Modules
         public Route Route { get; set; }
         [FirestoreProperty(Name = "driver", ConverterType = typeof(CustomDriverConvert))]
         public Driver Driver { get; set; }
-        [FirestoreProperty(Name= "status", ConverterType = typeof(CustomTripStatusConvert))]
+        [FirestoreProperty("status")]
         public TripStatus Status { get; set; }
         [FirestoreProperty(Name = "vehicle", ConverterType = typeof(CustomVehicleConvert))]
         public Vehicle Vehicle { get; set; }
@@ -86,7 +86,7 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é inválido!"
                 };
-            if (VehicleService.FindOne(Vehicle.Id) == null)
+            if (VehicleService.FindOne(Vehicle.id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -114,7 +114,7 @@ namespace Truckleer.Modules
             if (Status.GetType() == typeof(TripStatus))
                 us.status = Status;
             if (Vehicle != null)
-                us.vehicle = Vehicle.Id;
+                us.vehicle = Vehicle.id;
             return us;
         }
     }
