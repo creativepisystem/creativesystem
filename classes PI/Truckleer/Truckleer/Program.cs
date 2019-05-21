@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Truckleer.Modules;
 namespace Truckleer
 {
@@ -23,7 +19,7 @@ namespace Truckleer
             vehicleService.FindAll();
             tripService.FindAll();
             supplyService.FindAll();
-
+            Console.WriteLine("Finalizado");
             Console.ReadKey();
         }
     }

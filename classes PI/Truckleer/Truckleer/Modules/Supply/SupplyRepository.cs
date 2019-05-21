@@ -87,7 +87,7 @@ namespace Truckleer.Modules
             Query query = Reference;
             
             query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(supplyFilter.startAt)).OrderByDescending("date");
-            //query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(supplyFilter.endAt));
+            query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(supplyFilter.endAt));
             if (supplyFilter.driver != null)
                 query = query.WhereEqualTo("driver", supplyFilter.driver.Id);
             if (supplyFilter.route != null)

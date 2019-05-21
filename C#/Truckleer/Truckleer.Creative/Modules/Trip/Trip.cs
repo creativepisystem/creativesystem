@@ -5,7 +5,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Truckleer.Modules.CustomConvert;
 
 namespace Truckleer.Modules
 {
@@ -22,53 +22,56 @@ namespace Truckleer.Modules
             RouteService = new RouteService();
         }
 
-        public string id { get; set; }
-        [FirestoreProperty]
-        public DateTime date { get; set; }
-        [FirestoreProperty]
-        public string name { get; set; }
-        public Route route { get; set; }
-        public Driver driver { get; set; }
-        [FirestoreProperty]
-        public TripStatus status { get; set; }
-        public Vehicle vehicle { get; set; }
+        public string Id { get; set; }
+        [FirestoreProperty(Name = "date", ConverterType = typeof(CustomDateTimeConvert))]
+        public DateTime Date { get; set; }
+        [FirestoreProperty("name")]
+        public string Name { get; set; }
+        [FirestoreProperty(Name = "route", ConverterType = typeof(CustomRouteConvert))]
+        public Route Route { get; set; }
+        [FirestoreProperty(Name = "driver", ConverterType = typeof(CustomDriverConvert))]
+        public Driver Driver { get; set; }
+        [FirestoreProperty("status")]
+        public TripStatus Status { get; set; }
+        [FirestoreProperty(Name = "vehicle", ConverterType = typeof(CustomVehicleConvert))]
+        public Vehicle Vehicle { get; set; }
 
         public Message IsValid()
         {
-            if (date == null || date < new DateTime() )
+            if (Date == null || Date < new DateTime() )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A data é inválida!"
                 };
-            if (name == null || name.Length <2 || name.Length> 30)
+            if (Name == null || Name.Length <2 || Name.Length> 30)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A nome é invalida!O nome deve conter entre 2 e 30 caracteres!"
                 };
-            if (!(status.GetType() == typeof(TripStatus)))
+            if (!(Status.GetType() == typeof(TripStatus)))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O status da viagem é inválido!"
                 };
 
-            if (driver == null)
+            if (Driver == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é obrigatótio!"
                 };
-            if (vehicle == null)
+            if (Vehicle == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O Veículo é obrigatório!"
                 };
-            if (route != null)
+            if (Route != null)
             {
-                if(RouteService.FindOne(route.id) == null)
+                if(RouteService.FindOne(Route.Id) == null)
                 {
                     return new Message()
                     {
@@ -77,13 +80,13 @@ namespace Truckleer.Modules
                     };
                 }
             }
-            if(DriverService.FindOne(driver.id) == null)
+            if(DriverService.FindOne(Driver.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é inválido!"
                 };
-            if (VehicleService.FindOne(vehicle.id) == null)
+            if (VehicleService.FindOne(Vehicle.id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -100,18 +103,18 @@ namespace Truckleer.Modules
         {
             //Initializate us
             dynamic us = new ExpandoObject();
-            if (date != null)
-                us.date = date;
-            if (name != null)
-                us.name = name;
-            if (route != null)
-                us.route = route.id;
-            if (driver != null)
-                us.driver = driver.id;
-            if (status.GetType() == typeof(TripStatus))
-                us.status = status;
-            if (vehicle != null)
-                us.vehicle = vehicle.id;
+            if (Date != null)
+                us.date = Date;
+            if (Name != null)
+                us.name = Name;
+            if (Route != null)
+                us.route = Route.Id;
+            if (Driver != null)
+                us.driver = Driver.Id;
+            if (Status.GetType() == typeof(TripStatus))
+                us.status = Status;
+            if (Vehicle != null)
+                us.vehicle = Vehicle.id;
             return us;
         }
     }
