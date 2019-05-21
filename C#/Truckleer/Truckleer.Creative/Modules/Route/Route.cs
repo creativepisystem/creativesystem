@@ -25,22 +25,6 @@ namespace Truckleer.Modules
         [FirestoreProperty("stops")]
         public List <string> Stops { get; set; }
 
-        //Convert route to dynamic object
-        public dynamic ToObject()
-        {
-            //Initializate us
-            dynamic us = new ExpandoObject();
-
-            //verify properties and set in dynamic object
-            if (Origin != null)
-                us.origin = Origin;
-            if (Stops != null)
-                us.stops = Stops;
-            if (Destination != null)
-                us.destination = Destination;
-            //return us
-            return us;
-        }
         public Message IsValid()
         {
             //Check if has a origin and the length

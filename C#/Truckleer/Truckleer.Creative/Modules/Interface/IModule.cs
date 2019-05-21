@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Truckleer.Modules
+﻿namespace Truckleer.Modules
 {
     public interface IModule
     {
-        dynamic ToObject();
         Message IsValid();
     }
 }

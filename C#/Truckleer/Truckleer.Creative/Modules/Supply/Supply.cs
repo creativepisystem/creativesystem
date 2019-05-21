@@ -140,57 +140,5 @@ namespace Truckleer.Modules
                 MessageText = "O abstecimento é válido!"
             };
         }
-
-        public dynamic ToObject()
-        {
-            dynamic us = new ExpandoObject();
-
-<<<<<<< HEAD
-            if (date != null)
-                us.date = date;
-            if (liters < 0)
-                us.liters = liters;
-            if (total < 0)
-                us.total = total;
-            if (current_Km < 0)
-                us.current_Km = current_Km;
-            if (station != null)
-                us.station = station;
-            if (price < 0)
-                us.price = price;
-            if (trip != null)
-                us.trip = trip.id;
-            if (driver != null)
-                us.driver = driver.id;
-            if (vehicle != null)
-                us.vehicle = vehicle.id;
-            if (route != null)
-                us.route = route.id;
-            
-=======
-            if (Date != null)
-                us.date = Date;
-            if (Liters < 0)
-                us.liters = Liters;
-            if (Total < 0)
-                us.total = Total;
-            if (Current_Km < 0)
-                us.current_Km = Current_Km;
-            if (Station != null)
-                us.station = Station;
-            if (Price < 0)
-                us.price = Price;
-            if (Trip != null)
-                us.trip = Trip.Id;
-            if (Driver != null)
-                us.driver = Driver.Id;
-            if (Vehicle != null)
-                us.vehicle = Vehicle.id;
-            if (Route != null)
-                us.route = Route.Id;
-
->>>>>>> ea80732b1ff9d02552bcdc5cce713cd6b350b0f7
-            return us;
-        }
     }
 }

@@ -115,34 +115,5 @@ namespace Truckleer.Modules
 
             };
         }
-
-        public dynamic ToObject()
-        {
-            //Initializate us
-            dynamic us = new ExpandoObject();
-            if (Name != null)
-                us.name = Name;
-            if (Cpf != null)
-                us.cpf = Cpf;
-            if (Cnh.GetType() == typeof(CnhType))
-                us.cnh = Cnh;
-            if (Cnh_number != null)
-                us.cnh_number = Cnh_number;
-            if (Birth_date != null)
-                us.birth_date = Birth_date;
-            if (Phone != null)
-                us.phone = Phone;
-            if (Email != null)
-                us.email = Email;
-            if (Cnh_expiration != null)
-                us.cnh_expiration = Cnh_expiration;
-            if (Photo != null)
-                us.photo = Photo;
-            if (Obs != null)
-                us.obs = Obs;
-            if (User != null)
-                us.user = User.id;
-            return us;
-        }
     }
 }

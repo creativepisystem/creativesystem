@@ -76,5 +76,12 @@ namespace Truckleer.Modules
                 return snapshot.UpdateTime != null;
             }
         }
+        //Method for filter Trip
+        async public Task<List<Trip>> Filter(TripFilter tripFilter)
+        {
+            List<Trip> trips = new List<Trip>();
+
+            return trips;
+        }
     }
 }

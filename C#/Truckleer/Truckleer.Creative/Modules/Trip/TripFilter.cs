@@ -21,7 +21,7 @@ namespace Truckleer.Modules
         }
         public List<Trip> Filter()
         {
-            return new List<Trip>();//tripService.Filter(this);
+            return tripService.Filter(this);
         }
     }
 }

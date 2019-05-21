@@ -98,24 +98,5 @@ namespace Truckleer.Modules
                 MessageText = "A viagem é válida!"
             };
         }
-
-        public dynamic ToObject()
-        {
-            //Initializate us
-            dynamic us = new ExpandoObject();
-            if (Date != null)
-                us.date = Date;
-            if (Name != null)
-                us.name = Name;
-            if (Route != null)
-                us.route = Route.Id;
-            if (Driver != null)
-                us.driver = Driver.Id;
-            if (Status.GetType() == typeof(TripStatus))
-                us.status = Status;
-            if (Vehicle != null)
-                us.vehicle = Vehicle.id;
-            return us;
-        }
     }
 }

@@ -31,5 +31,9 @@ namespace Truckleer.Modules
         {
             return repository.Save(trip).Result;
         }
+        public List<Trip> Filter(TripFilter tripFilter)
+        {
+            return repository.Filter(tripFilter).Result;
+        }
     }
 }

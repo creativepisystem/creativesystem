@@ -30,25 +30,6 @@ namespace Truckleer.Modules
         [FirestoreProperty("email")]
         public string Email { get; set; }
 
-        //Convert user to dynamic object
-        public dynamic ToObject()
-        {
-            //Initializate us
-            dynamic us = new ExpandoObject();
-            //verify properties and set in dynamic object
-            if (Login != null)
-                us.user = Login;
-            if (Password != null)
-                us.password = Password;
-            if (Email != null)
-                us.email = Email;
-            if (Type == UserType.ADMIN || Type == UserType.DRIVER || Type == UserType.CLIENT)
-                us.type = Type;
-            if (Auth != null)
-                us.auth = Auth;
-            //return us
-            return us;
-        }
         //Method to check if values of user is valid 
         public Message IsValid()
         {
