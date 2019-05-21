@@ -63,6 +63,16 @@ namespace Truckleer.Creative.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap delete {
+            get {
+                object obj = ResourceManager.GetObject("delete", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap driver {
             get {
                 object obj = ResourceManager.GetObject("driver", resourceCulture);
@@ -96,6 +106,16 @@ namespace Truckleer.Creative.Properties {
         internal static System.Drawing.Bitmap driverSelectedMin {
             get {
                 object obj = ResourceManager.GetObject("driverSelectedMin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap editNote {
+            get {
+                object obj = ResourceManager.GetObject("editNote", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -356,6 +376,16 @@ namespace Truckleer.Creative.Properties {
         internal static System.Drawing.Bitmap truck {
             get {
                 object obj = ResourceManager.GetObject("truck", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap truckList {
+            get {
+                object obj = ResourceManager.GetObject("truckList", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

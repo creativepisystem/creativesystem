@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using Truckleer.Modules;
+using Truckleer.Creative.Screens.Motorista;
+
+namespace Truckleer.Creative
+{
+    public partial class ListarMotoristas : UserControl
+    {
+        public ListarMotoristas()
+        {
+            InitializeComponent();
+            for (int i = 0; i < 20; i++)
+                FlowDriver.Controls.Add(new CustomDriverList(i, new Driver()));
+        }
+
+        private void ListarMotoristas_Load(object sender, EventArgs e)
+        {
+            this.Dock = DockStyle.Fill;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            filtro.Start();
+        }
+
+        bool isCollapsed = false;
+        private void Filtro_Tick(object sender, EventArgs e)
+        {            
+                if (isCollapsed)
+                {
+                    TitleFilter.Height += 40;
+                    if (TitleFilter.Size.Height == TitleFilter.MaximumSize.Height)
+                    {
+                        filtro.Stop();
+                        isCollapsed = false;
+                    }
+                }
+                else
+                {
+                    TitleFilter.Height -= 40;
+                    if (TitleFilter.Size.Height == TitleFilter.MinimumSize.Height)
+                    {
+                        filtro.Stop();
+                        isCollapsed = true;
+                    }
+                }
+            
+        }
+
+        private void ButtonCadastro_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
+}
