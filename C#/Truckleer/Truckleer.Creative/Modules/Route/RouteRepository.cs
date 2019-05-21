@@ -34,7 +34,7 @@ namespace Truckleer.Modules
                 //Convert Document in a Route class
                 Route us = queryResult.ConvertTo<Route>();
                 //Set id of route
-                us.id = queryResult.Id;
+                us.Id = queryResult.Id;
                 //Add route to list
                 routes.Add(us);
             }
@@ -54,7 +54,7 @@ namespace Truckleer.Modules
                 //Convert document to a Route class
                 us = DocRef.ConvertTo<Route>();
                 //Set id of route
-                us.id = DocRef.Id;
+                us.Id = DocRef.Id;
             }
             //Return route
             return us;
@@ -63,17 +63,17 @@ namespace Truckleer.Modules
         async public Task<bool> Save(Route route)
         {
             //Check if route exisit
-            if (route.id == null)//If not exist
+            if (route.Id == null)//If not exist
             {
                 //Create new route
-                DocumentReference snapshot = await Reference.AddAsync(route.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(route);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update route and merge values
-                WriteResult snapshot = await Reference.Document(route.id).SetAsync(route.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(route.Id).SetAsync(route, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

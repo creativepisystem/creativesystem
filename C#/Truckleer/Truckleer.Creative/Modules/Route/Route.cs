@@ -17,13 +17,13 @@ namespace Truckleer.Modules
         }
 
         //Atributes
-        public string id { get; set; }
-        [FirestoreProperty]
-        public string origin { get; set; }
-        [FirestoreProperty]
-        public string destination { get; set; }
-        [FirestoreProperty]
-        public List <string> stops { get; set; }
+        public string Id { get; set; }
+        [FirestoreProperty("origin")]
+        public string Origin { get; set; }
+        [FirestoreProperty("destination")]
+        public string Destination { get; set; }
+        [FirestoreProperty("stops")]
+        public List <string> Stops { get; set; }
 
         //Convert route to dynamic object
         public dynamic ToObject()
@@ -32,33 +32,33 @@ namespace Truckleer.Modules
             dynamic us = new ExpandoObject();
 
             //verify properties and set in dynamic object
-            if (origin != null)
-                us.origin = origin;
-            if (stops != null)
-                us.stops = stops;
-            if (destination != null)
-                us.destination = destination;
+            if (Origin != null)
+                us.origin = Origin;
+            if (Stops != null)
+                us.stops = Stops;
+            if (Destination != null)
+                us.destination = Destination;
             //return us
             return us;
         }
         public Message IsValid()
         {
             //Check if has a origin and the length
-            if (origin == null || origin.Length < 2 || origin.Length > 100)
+            if (Origin == null || Origin.Length < 2 || Origin.Length > 100)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A origem deve conter no mínimo 2 e no máximo 100 letras!"
                 };
             //Check if has a destination and the length
-            if (destination == null || destination.Length < 2 || destination.Length > 100)
+            if (Destination == null || Destination.Length < 2 || Destination.Length > 100)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O destino deve conter no mínimo 2 e no máximo 100 letras!"
                 };
-            if(stops != null)
-                foreach(string city in stops)
+            if(Stops != null)
+                foreach(string city in Stops)
                 {
                     if(city == null || city.Length < 2 || city.Length > 100)
                     {

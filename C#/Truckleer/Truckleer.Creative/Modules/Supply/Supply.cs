@@ -5,7 +5,7 @@ using System.Dynamic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Truckleer.Modules.CustomConvert;
 
 namespace Truckleer.Modules
 {
@@ -20,88 +20,93 @@ namespace Truckleer.Modules
         {
             DriverService = new DriverService();
             VehicleService = new VehicleService();
-            TripService = new TripService();
             RouteService = new RouteService();
+            TripService = new TripService();
         }
+        
+        public string Id{ get; set; }
 
-        public string id { get; set; }
+        [FirestoreProperty(Name = "date", ConverterType = typeof(CustomDateTimeConvert))]
+        public DateTime Date { get; set; }
+        [FirestoreProperty(Name = "driver", ConverterType = typeof(CustomDriverConvert))]
+        public Driver Driver { get; set; }
+        [FirestoreProperty(Name = "vehicle", ConverterType = typeof(CustomVehicleConvert))]
+        public Vehicle Vehicle { get; set; }
+        [FirestoreProperty(Name = "route", ConverterType = typeof(CustomRouteConvert))]
+        public Route Route { get; set; }
+        [FirestoreProperty(Name = "liters", ConverterType = typeof(CustomFloatConvert))]
+        public float Liters { get; set; }
+        [FirestoreProperty(Name = "total", ConverterType = typeof(CustomFloatConvert))]
+        public float Total { get; set; }
+        [FirestoreProperty(Name = "current_km", ConverterType = typeof(CustomFloatConvert))]
+        public float Current_Km { get; set; }
         [FirestoreProperty]
-        public DateTime date { get; set; }
-        public Driver driver { get; set; }
-        public Vehicle vehicle { get; set; }
-        public Route route { get; set; }
-        [FirestoreProperty]
-        public float liters { get; set; }
-        [FirestoreProperty]
-        public float total { get; set; }
-        [FirestoreProperty]
-        public float current_Km { get; set; }
-        [FirestoreProperty]
-        public string station { get; set; }
-        [FirestoreProperty]
-        public float price { get; set; }
-        public Trip trip { get; set; }
+        public string Station { get; set; }
+        [FirestoreProperty(Name = "price", ConverterType = typeof(CustomFloatConvert))]
+        public float Price { get; set; }
+        [FirestoreProperty(Name = "trip", ConverterType = typeof(CustomTripConvert))]
+        public Trip Trip { get; set; }
 
         public Message IsValid()
         {
-            if (date == null || date > new DateTime())
+            if (Date == null || Date > new DateTime())
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A data é inválida!"
                 };
             
-            if (total < 0 )
+            if (Total < 0 )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O total é inválido!"
                 };
-            if (current_Km <1)
+            if (Current_Km <1)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O km é inválido!"
                 };
-            if (station == null || station.Length < 2 || station.Length > 30)
+            if (Station == null || Station.Length < 2 || Station.Length > 30)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O posto deve conter entre 2 e 30 caracteres!"
                 };
-            if (price < 0 || price> 10)
+            if (Price < 0 || Price> 10)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O preço é inválido!"
                 };
-            if (trip == null)
+            if (Trip == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A Viagem é obrigatória!"
                 };
-            if (driver == null)
+            if (Driver == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é obrigatório!"
                 };
-            if (vehicle == null)
+            if (Vehicle == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O Veículo é obrigatório!"
                 };
-            if (liters < 0 || liters > vehicle.tank_capacity)
+            if (Liters < 0 || Liters > Vehicle.Tank_capacity)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Quantidade litros inválido!"
                 };
-            if (route != null)
+            if (Route != null)
             {
-                if (RouteService.FindOne(route.id) == null)
+                if (RouteService.FindOne(Route.Id) == null)
                 {
                     return new Message()
                     {
@@ -110,19 +115,19 @@ namespace Truckleer.Modules
                     };
                 }
             }
-            if (DriverService.FindOne(driver.id) == null)
+            if (DriverService.FindOne(Driver.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é inválido!"
                 };
-            if (VehicleService.FindOne(vehicle.id) == null)
+            if (VehicleService.FindOne(Vehicle.id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O veículo é inválido!"
                 };
-            if (TripService.FindOne(trip.id) == null)
+            if (TripService.FindOne(Trip.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -140,26 +145,26 @@ namespace Truckleer.Modules
         {
             dynamic us = new ExpandoObject();
 
-            if (date != null)
-                us.date = date;
-            if (liters < 0)
-                us.liters = liters;
-            if (total < 0)
-                us.total = total;
-            if (current_Km < 0)
-                us.current_Km = current_Km;
-            if (station != null)
-                us.station = station;
-            if (price < 0)
-                us.price = price;
-            if (trip != null)
-                us.trip = trip.id;
-            if (driver != null)
-                us.driver = driver.id;
-            if (vehicle != null)
-                us.vehicle = vehicle.id;
-            if (route != null)
-                us.route = route.id;
+            if (Date != null)
+                us.date = Date;
+            if (Liters < 0)
+                us.liters = Liters;
+            if (Total < 0)
+                us.total = Total;
+            if (Current_Km < 0)
+                us.current_Km = Current_Km;
+            if (Station != null)
+                us.station = Station;
+            if (Price < 0)
+                us.price = Price;
+            if (Trip != null)
+                us.trip = Trip.Id;
+            if (Driver != null)
+                us.driver = Driver.Id;
+            if (Vehicle != null)
+                us.vehicle = Vehicle.id;
+            if (Route != null)
+                us.route = Route.Id;
 
             return us;
         }

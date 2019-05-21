@@ -1,8 +1,5 @@
 ﻿using Google.Cloud.Firestore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace Truckleer.Modules
@@ -11,7 +8,6 @@ namespace Truckleer.Modules
     {
         //Collection reference property
         readonly CollectionReference Reference;
-        readonly UserService userService;
         //Constructor Class
         public DriverRepository()
         {
@@ -19,8 +15,6 @@ namespace Truckleer.Modules
             ConnectionFirestore coon = new ConnectionFirestore();
             //Initializate Reference
             Reference = coon.Db.Collection("drivers");
-
-            userService = new UserService();
         }
 
         //Method for get All drivers
@@ -37,9 +31,7 @@ namespace Truckleer.Modules
                 //Convert Document in a Driver class
                 Driver us = queryResult.ConvertTo<Driver>();
                 //Set id of driver
-                us.id = queryResult.Id;
-                us.user = userService.FindOne(queryResult.GetValue<string>("user"));
-                
+                us.Id = queryResult.Id;
                 //Add driver to list
                 drivers.Add(us);
             }
@@ -58,9 +50,8 @@ namespace Truckleer.Modules
             {
                 //Convert document to a Driver class
                 us = DocRef.ConvertTo<Driver>();
-                us.user = userService.FindOne(DocRef.GetValue<string>("user"));
                 //Set id of driver
-                us.id = DocRef.Id;
+                us.Id = DocRef.Id;
             }
             //Return driver
             return us;
@@ -69,17 +60,17 @@ namespace Truckleer.Modules
         async public Task<bool> Save(Driver driver)
         {
             //Check if driver exisit
-            if (driver.id == null)//If not exist
+            if (driver.Id == null)//If not exist
             {
                 //Create new driver
-                DocumentReference snapshot = await Reference.AddAsync(driver.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(driver);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update driver and merge values
-                WriteResult snapshot = await Reference.Document(driver.id).SetAsync(driver.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(driver.Id).SetAsync(driver, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

@@ -10,19 +10,12 @@ namespace Truckleer.Modules
         //Collection reference property
         readonly CollectionReference Reference;
         //Constructor Class
-        DriverService DriverService;
-        VehicleService VehicleService;
-        RouteService RouteService;
         public TripRepository()
         {
             //Create firestore connection
             ConnectionFirestore coon = new ConnectionFirestore();
             //Initializate Reference
             Reference = coon.Db.Collection("travels");
-
-            DriverService = new DriverService();
-            VehicleService = new VehicleService();
-            RouteService = new RouteService();
         }
 
         //Method for get All trips
@@ -39,12 +32,7 @@ namespace Truckleer.Modules
                 //Convert Document in a Trip class
                 Trip us = queryResult.ConvertTo<Trip>();
                 //Set id of trip
-                us.id = queryResult.Id;
-                string Route = queryResult.GetValue<string>("route");
-                if (Route != null)
-                    us.route = RouteService.FindOne(Route);
-                us.vehicle = VehicleService.FindOne(queryResult.GetValue<string>("vehicle"));
-                us.driver = DriverService.FindOne(queryResult.GetValue<string>("driver"));
+                us.Id = queryResult.Id;
                 //Add trip to list
                 trips.Add(us);
             }
@@ -64,12 +52,7 @@ namespace Truckleer.Modules
                 //Convert document to a Trip class
                 us = DocRef.ConvertTo<Trip>();
                 //Set id of trip
-                us.id = DocRef.Id;
-                string Route = DocRef.GetValue<string>("route");
-                if (Route != null)
-                    us.route = RouteService.FindOne(Route);
-                us.vehicle = VehicleService.FindOne(DocRef.GetValue<string>("vehicle"));
-                us.driver = DriverService.FindOne(DocRef.GetValue<string>("driver"));
+                us.Id = DocRef.Id;
             }
             //Return trip
             return us;
@@ -78,17 +61,17 @@ namespace Truckleer.Modules
         async public Task<bool> Save(Trip trip)
         {
             //Check if trip exisit
-            if (trip.id == null)//If not exist
+            if (trip.Id == null)//If not exist
             {
                 //Create new trip
-                DocumentReference snapshot = await Reference.AddAsync(trip.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(trip);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update trip and merge values
-                WriteResult snapshot = await Reference.Document(trip.id).SetAsync(trip.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(trip.Id).SetAsync(trip, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

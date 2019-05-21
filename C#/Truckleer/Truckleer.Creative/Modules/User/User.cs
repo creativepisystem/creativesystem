@@ -19,16 +19,16 @@ namespace Truckleer.Modules
 
         //Properties
         public string id { get; set; }
-        [FirestoreProperty]
-        public string user { get; set; }
-        [FirestoreProperty]
-        public string password { get; set; }
-        [FirestoreProperty]
-        public UserType type { get; set; }
-        [FirestoreProperty]
-        public string auth { get; set; }
-        [FirestoreProperty]
-        public string email { get; set; }
+        [FirestoreProperty("user")]
+        public string Login { get; set; }
+        [FirestoreProperty("password")]
+        public string Password { get; set; }
+        [FirestoreProperty("type")]
+        public UserType Type { get; set; }
+        [FirestoreProperty("auth")]
+        public string Auth { get; set; }
+        [FirestoreProperty("email")]
+        public string Email { get; set; }
 
         //Convert user to dynamic object
         public dynamic ToObject()
@@ -36,16 +36,16 @@ namespace Truckleer.Modules
             //Initializate us
             dynamic us = new ExpandoObject();
             //verify properties and set in dynamic object
-            if (user != null)
-                us.user = user;
-            if (password != null)
-                us.password = password;
-            if (email != null)
-                us.email = email;
-            if (type == UserType.ADMIN || type == UserType.DRIVER || type == UserType.CLIENT)
-                us.type = type;
-            if (auth != null)
-                us.auth = auth;
+            if (Login != null)
+                us.user = Login;
+            if (Password != null)
+                us.password = Password;
+            if (Email != null)
+                us.email = Email;
+            if (Type == UserType.ADMIN || Type == UserType.DRIVER || Type == UserType.CLIENT)
+                us.type = Type;
+            if (Auth != null)
+                us.auth = Auth;
             //return us
             return us;
         }
@@ -53,28 +53,28 @@ namespace Truckleer.Modules
         public Message IsValid()
         {
             //Check if has a user and the length
-            if (user == null || user.Length < 5 || user.Length > 30)
+            if (Login == null || Login.Length < 5 || Login.Length > 30)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O usuário deve conter no mínimo 5 e no máximo 30 letras!"
                 };
             //Check if has a password and the length
-            if (password == null || password.Length < 5 || password.Length > 30)
+            if (Password == null || Password.Length < 5 || Password.Length > 30)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A senha deve conter no mínimo 5 e no máximo 30 letras!"
                 };
             //Check if type is valid
-            if (type != UserType.ADMIN && type != UserType.DRIVER && type != UserType.CLIENT)
+            if (Type != UserType.ADMIN && Type != UserType.DRIVER && Type != UserType.CLIENT)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O tipo do usário é inválido!"
                 };
             //check if email is valid
-            if (email == null || !Validator.IsValidEmail(email))
+            if (Email == null || !Validator.IsValidEmail(Email))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -84,7 +84,7 @@ namespace Truckleer.Modules
             if(id == null)
             {
                 //Check if user is unique
-                if (new UserService().FindByUser(user) != null)
+                if (new UserService().FindByUser(Login) != null)
                     return new Message()
                     {
                         Type = MessageType.ERROR,
@@ -94,7 +94,7 @@ namespace Truckleer.Modules
             else
             {
                 //Check if user is unique
-                User us = new UserService().FindByUser(user);
+                User us = new UserService().FindByUser(Login);
                 if (us != null)
                 {
                     if(us.id != id)
