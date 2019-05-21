@@ -222,10 +222,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar Rota";
             // 
-            // filtro
-            // 
-            this.filtro.Tick += new System.EventHandler(this.Filtro_Tick);
-            // 
             // ListarRotas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

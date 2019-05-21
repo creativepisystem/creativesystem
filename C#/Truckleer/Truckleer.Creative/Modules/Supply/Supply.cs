@@ -160,7 +160,7 @@ namespace Truckleer.Modules
                 us.vehicle = vehicle.id;
             if (route != null)
                 us.route = route.id;
-
+            
             return us;
         }
     }

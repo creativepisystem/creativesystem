@@ -33,30 +33,24 @@ namespace Truckleer.Creative
         {
             this.Dock = DockStyle.Fill;
         }
-
-        private void Label1_Click(object sender, EventArgs e)
+        
+        //Call Dashboard
+        private void Button2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void ButtonSave_Click(object sender, EventArgs e)
         {
-
+            Supply.vehicle.license_plate = BoxVehicle.ToString();
+            Supply.liters = Convert.ToSingle(TextLiters);
+            Supply.route.origin = BoxRoute.ToString();
         }
 
-        private void TextBoxLitersSupply_TextChanged(object sender, EventArgs e)
+        private void BoxVehicle_SelectedIndexChanged(object sender, EventArgs e)
         {
-
-        }
-       
-        private void BtnSaveSupply_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void TableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
+            VehicleService veiculos = new VehicleService();
+            MessageBox.Show(veiculos.FindAll().ToString());
         }
     }
 }

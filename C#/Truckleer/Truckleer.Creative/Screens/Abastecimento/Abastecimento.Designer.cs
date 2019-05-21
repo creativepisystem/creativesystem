@@ -104,6 +104,7 @@ namespace Truckleer.Creative
             this.button2.TabIndex = 43;
             this.button2.Text = "Home";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // layoutFlex
             // 
@@ -287,6 +288,7 @@ namespace Truckleer.Creative
             this.ButtonSave.TabIndex = 69;
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // BoxDriver
             // 
@@ -417,6 +419,7 @@ namespace Truckleer.Creative
             this.BoxVehicle.Name = "BoxVehicle";
             this.BoxVehicle.Size = new System.Drawing.Size(194, 28);
             this.BoxVehicle.TabIndex = 55;
+            this.BoxVehicle.SelectedIndexChanged += new System.EventHandler(this.BoxVehicle_SelectedIndexChanged);
             // 
             // BoxRoute
             // 
@@ -447,7 +450,7 @@ namespace Truckleer.Creative
             // 
             this.TextLiters.BackColor = System.Drawing.Color.LightGray;
             this.TextLiters.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextLiters.Location = new System.Drawing.Point(181, 258);
+            this.TextLiters.Location = new System.Drawing.Point(181, 257);
             this.TextLiters.MaxLength = 10;
             this.TextLiters.Name = "TextLiters";
             this.TextLiters.Size = new System.Drawing.Size(194, 19);
