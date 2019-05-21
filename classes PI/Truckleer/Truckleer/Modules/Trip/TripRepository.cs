@@ -1,4 +1,5 @@
 ﻿using Google.Cloud.Firestore;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -17,7 +18,6 @@ namespace Truckleer.Modules
             //Initializate Reference
             Reference = coon.Db.Collection("travels");
         }
-
         //Method for get All trips
         async public Task<List<Trip>> FindAll()
         {
@@ -75,6 +75,32 @@ namespace Truckleer.Modules
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }
+        }
+        async public Task<List<Trip>> Filter(TripFilter tripFilter)
+        {
+            //Create a list of trips
+            List<Trip> trips = new List<Trip>();
+            Query query = Reference;
+            query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(tripFilter.StartAt)).OrderByDescending("date");
+            query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(tripFilter.EndAt));
+            if (tripFilter.Driver != null)
+                query = query.WhereEqualTo("driver", tripFilter.Driver.Id);
+            if (tripFilter.Route != null)
+                query = query.WhereEqualTo("route", tripFilter.Route.Id);
+            if (tripFilter.Vehicle != null)
+                query = query.WhereEqualTo("vehicle", tripFilter.Vehicle.Id);
+            QuerySnapshot snapshot = await query.GetSnapshotAsync();
+            //Pass all Documents
+            foreach (DocumentSnapshot queryResult in snapshot.Documents)
+            {
+                //Convert Document in a Trip class
+                Trip us = queryResult.ConvertTo<Trip>();
+                //Set Id of trip
+                us.Id = queryResult.Id;
+                //Add trip to list
+                trips.Add(us);
+            }
+            return trips;
         }
     }
 }

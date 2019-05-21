@@ -27,5 +27,10 @@ namespace Truckleer.Modules
         {
             return repository.Save(vehicle).Result;
         }
+
+        public List<Vehicle> Filter(VehicleFilter vehicleFilter)
+        {
+            return repository.Filter(vehicleFilter).Result;
+        }
     }
 }

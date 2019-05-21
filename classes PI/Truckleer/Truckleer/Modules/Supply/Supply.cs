@@ -121,7 +121,7 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é inválido!"
                 };
-            if (VehicleService.FindOne(Vehicle.id) == null)
+            if (VehicleService.FindOne(Vehicle.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -162,7 +162,7 @@ namespace Truckleer.Modules
             if (Driver != null)
                 us.driver = Driver.Id;
             if (Vehicle != null)
-                us.vehicle = Vehicle.id;
+                us.vehicle = Vehicle.Id;
             if (Route != null)
                 us.route = Route.Id;
 

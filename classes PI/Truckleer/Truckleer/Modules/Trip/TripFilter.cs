@@ -6,23 +6,21 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Modules
 {
-    public class SupplyFilter:IFilter<Supply>
+    class TripFilter : IFilter<Trip>
     {
         public DateTime StartAt { get; set; }
         public DateTime EndAt { get; set; }
-        public Trip Trip { get; set; }
         public Driver Driver { get; set; }
         public Vehicle Vehicle { get; set; }
         public Route Route { get; set; }
-
-        private readonly SupplyService supplyService;
-        public SupplyFilter(){
-            supplyService = new SupplyService();
+        private readonly TripService tripService;
+        public TripFilter()
+        {
+            tripService = new TripService();
         }
-
-        public List<Supply> Filter()
-        { 
-            return supplyService.Filter(this);
+        public List<Trip> Filter()
+        {
+            return tripService.Filter(this);
         }
     }
 }
