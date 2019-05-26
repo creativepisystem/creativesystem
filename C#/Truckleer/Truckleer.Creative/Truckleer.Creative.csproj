@@ -50,6 +50,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="CircularProgressBar">
+      <Version>2.7.0.7</Version>
+    </PackageReference>
     <PackageReference Include="Google.Cloud.Firestore" Version="1.0.0-beta19" />
   </ItemGroup>
   <ItemGroup>
@@ -68,7 +71,6 @@
     <Compile Include="Screens\Manutencao\AlertaManutencao.Designer.cs">
       <DependentUpon>AlertaManutencao.cs</DependentUpon>
     </Compile>
-    <Compile Include="Modules\*\*.cs" />
     <Compile Include="Screens\Dashboard.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -95,6 +97,9 @@
     </Compile>
     <Compile Include="Screens\Motorista\ListarMotoristas.Designer.cs">
       <DependentUpon>ListarMotoristas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ProgressBar\CustomProgressBar.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Screens\Rotas\CustomRouteList.cs">
       <SubType>Component</SubType>
@@ -173,6 +178,48 @@
     <Compile Include="Screens\Viagem\Viagens.Designer.cs">
       <DependentUpon>Viagens.cs</DependentUpon>
     </Compile>
+    <Compile Include="Modules\Config\ConnectionFirestore.cs" />
+    <Compile Include="Modules\CustomConvert\CustomCnhTypeConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomDateTimeConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomDriverConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomFloatConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomRouteConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomTripConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomTripStatusConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomUserConvert.cs" />
+    <Compile Include="Modules\CustomConvert\CustomVehicleConvert.cs" />
+    <Compile Include="Modules\Driver\CnhType.cs" />
+    <Compile Include="Modules\Driver\Driver.cs" />
+    <Compile Include="Modules\Driver\DriverRepository.cs" />
+    <Compile Include="Modules\Driver\DriverService.cs" />
+    <Compile Include="Modules\Driver\DriverFilter.cs" />
+    <Compile Include="Modules\Interface\IFilter.cs" />
+    <Compile Include="Modules\Interface\IModule.cs" />
+    <Compile Include="Modules\Message\Message.cs" />
+    <Compile Include="Modules\Message\MessageType.cs" />
+    <Compile Include="Modules\Route\Route.cs" />
+    <Compile Include="Modules\Route\RouteRepository.cs" />
+    <Compile Include="Modules\Route\RouteService.cs" />
+    <Compile Include="Modules\Supply\Supply.cs" />
+    <Compile Include="Modules\Supply\SupplyFilter.cs" />
+    <Compile Include="Modules\Supply\SupplyRepository.cs" />
+    <Compile Include="Modules\Supply\SupplyService.cs" />
+    <Compile Include="Modules\Trip\Trip.cs" />
+    <Compile Include="Modules\Trip\TripService.cs" />
+    <Compile Include="Modules\Trip\TripRepository.cs" />
+    <Compile Include="Modules\Trip\TripFilter.cs" />
+    <Compile Include="Modules\Trip\TripStatus.cs" />
+    <Compile Include="Modules\User\User.cs" />
+    <Compile Include="Modules\User\UserRepository.cs" />
+    <Compile Include="Modules\User\UserService.cs" />
+    <Compile Include="Modules\User\UserType.cs" />
+    <Compile Include="Modules\Util\DateUtil.cs" />
+    <Compile Include="Modules\Util\Validator.cs" />
+    <Compile Include="Modules\Vehicle\Vehicle.cs" />
+    <Compile Include="Modules\Vehicle\VehicleColor.cs" />
+    <Compile Include="Modules\Vehicle\VehicleRepository.cs" />
+    <Compile Include="Modules\Vehicle\VehicleService.cs" />
+    <Compile Include="Modules\Vehicle\VehicleFilter.cs" />
     <EmbeddedResource Include="Screens\Abastecimento\Abastecimento.resx">
       <DependentUpon>Abastecimento.cs</DependentUpon>
     </EmbeddedResource>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Truckleer.Modules
 {
@@ -83,19 +84,19 @@ namespace Truckleer.Modules
             //Create a list of supplys
             List<Supply> supplys = new List<Supply>();
 
-            Console.WriteLine(supplyFilter.driver != null);
+            Console.WriteLine(supplyFilter.Driver != null);
             Query query = Reference;
             
-            query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(supplyFilter.startAt)).OrderByDescending("date");
-            //query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(supplyFilter.endAt));
-            if (supplyFilter.driver != null)
-                query = query.WhereEqualTo("driver", supplyFilter.driver.Id);
-            if (supplyFilter.route != null)
-                query = query.WhereEqualTo("route", supplyFilter.route.Id);
-            if (supplyFilter.trip != null)
-                query = query.WhereEqualTo("travel", supplyFilter.trip.Id);
-            if (supplyFilter.vehicle != null)
-                query = query.WhereEqualTo("vehicle", supplyFilter.vehicle.id);
+            query = query.WhereGreaterThanOrEqualTo("date", DateUtil.DateTimeToTimeStamp(supplyFilter.StartAt)).OrderByDescending("date");
+            query = query.WhereLessThan("date", DateUtil.DateTimeToTimeStamp(supplyFilter.EndAt));
+            if (supplyFilter.Driver != null)
+                query = query.WhereEqualTo("driver", supplyFilter.Driver.Id);
+            if (supplyFilter.Route != null)
+                query = query.WhereEqualTo("route", supplyFilter.Route.Id);
+            if (supplyFilter.Trip != null)
+                query = query.WhereEqualTo("travel", supplyFilter.Trip.Id);
+            if (supplyFilter.Vehicle != null)
+                query = query.WhereEqualTo("vehicle", supplyFilter.Vehicle.Id);
 
             QuerySnapshot snapshot = await query
                 .GetSnapshotAsync();

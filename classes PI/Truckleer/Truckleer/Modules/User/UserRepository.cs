@@ -32,7 +32,7 @@ namespace Truckleer.Modules
                 //Convert Document in a User class
                 User us = queryResult.ConvertTo<User>();
                 //Set id of user
-                us.id = queryResult.Id;
+                us.Id = queryResult.Id;
                 //Add user to list
                 users.Add(us);
             }
@@ -52,7 +52,7 @@ namespace Truckleer.Modules
                 //Convert document to a User class
                 us = DocRef.ConvertTo<User>();
                 //Set id of user
-                us.id = DocRef.Id;
+                us.Id = DocRef.Id;
             }
             //Return user
             return us;
@@ -70,7 +70,7 @@ namespace Truckleer.Modules
                 //Convert document to a User class
                 us = result.Documents[0].ConvertTo<User>();
                 //Set id of user
-                us.id = result.Documents[0].Id;
+                us.Id = result.Documents[0].Id;
             }
             //Return User
             return us;
@@ -79,17 +79,17 @@ namespace Truckleer.Modules
         async public Task<bool> Save(User user)
         { 
             //Check if user exisit
-            if (user.id == null)//If not exist
+            if (user.Id == null)//If not exist
             {
                 //Create new user
-                DocumentReference snapshot = await Reference.AddAsync(user.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(user);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update user and merge values
-                WriteResult snapshot = await Reference.Document(user.id).SetAsync(user.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(user.Id).SetAsync(user, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

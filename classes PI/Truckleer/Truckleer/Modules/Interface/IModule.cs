@@ -7,8 +7,7 @@ using System.Threading.Tasks;
 namespace Truckleer.Modules
 {
     public interface IModule
-    {
-        dynamic ToObject();
+    { 
         Message IsValid();
     }
 }

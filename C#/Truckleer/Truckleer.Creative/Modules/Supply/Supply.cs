@@ -22,6 +22,7 @@ namespace Truckleer.Modules
             VehicleService = new VehicleService();
             RouteService = new RouteService();
             TripService = new TripService();
+            Liters = -1;
         }
         
         public string Id{ get; set; }
@@ -40,23 +41,23 @@ namespace Truckleer.Modules
         public float Total { get; set; }
         [FirestoreProperty(Name = "current_km", ConverterType = typeof(CustomFloatConvert))]
         public float Current_Km { get; set; }
-        [FirestoreProperty]
+        [FirestoreProperty("station")]
         public string Station { get; set; }
         [FirestoreProperty(Name = "price", ConverterType = typeof(CustomFloatConvert))]
         public float Price { get; set; }
-        [FirestoreProperty(Name = "trip", ConverterType = typeof(CustomTripConvert))]
+        [FirestoreProperty(Name = "travel", ConverterType = typeof(CustomTripConvert))]
         public Trip Trip { get; set; }
 
         public Message IsValid()
         {
-            if (Date == null || Date > new DateTime())
+            if (Date == null || Date >DateTime.Now)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A data é inválida!"
                 };
             
-            if (Total < 0 )
+            if (Total <= 0 )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -74,7 +75,7 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O posto deve conter entre 2 e 30 caracteres!"
                 };
-            if (Price < 0 || Price> 10)
+            if (Price <= 0 || Price> 10)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -98,41 +99,41 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O Veículo é obrigatório!"
                 };
-            if (Liters < 0 || Liters > Vehicle.Tank_capacity)
+            if (Liters <= 0 || Liters > Vehicle.Tank_capacity)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Quantidade litros inválido!"
                 };
-            if (Route != null)
-            {
-                if (RouteService.FindOne(Route.Id) == null)
-                {
-                    return new Message()
-                    {
-                        Type = MessageType.ERROR,
-                        MessageText = "A rota é inválida!"
-                    };
-                }
-            }
-            if (DriverService.FindOne(Driver.Id) == null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "O Motorista é inválido!"
-                };
-            if (VehicleService.FindOne(Vehicle.id) == null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "O veículo é inválido!"
-                };
-            if (TripService.FindOne(Trip.Id) == null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "A viagem é inválida!"
-                };
+            //if (Route != null)
+            //{
+            //    if (RouteService.FindOne(Route.Id) == null)
+            //    {
+            //        return new Message()
+            //        {
+            //            Type = MessageType.ERROR,
+            //            MessageText = "A rota é inválida!"
+            //        };
+            //    }
+            //}
+            //if (DriverService.FindOne(Driver.Id) == null)
+            //    return new Message()
+            //    {
+            //        Type = MessageType.ERROR,
+            //        MessageText = "O Motorista é inválido!"
+            //    };
+            //if (VehicleService.FindOne(Vehicle.Id) == null)
+            //    return new Message()
+            //    {
+            //        Type = MessageType.ERROR,
+            //        MessageText = "O veículo é inválido!"
+            //    };
+            //if (TripService.FindOne(Trip.Id) == null)
+            //    return new Message()
+            //    {
+            //        Type = MessageType.ERROR,
+            //        MessageText = "A viagem é inválida!"
+            //    };
 
             return new Message()
             {
@@ -140,5 +141,6 @@ namespace Truckleer.Modules
                 MessageText = "O abstecimento é válido!"
             };
         }
+
     }
 }

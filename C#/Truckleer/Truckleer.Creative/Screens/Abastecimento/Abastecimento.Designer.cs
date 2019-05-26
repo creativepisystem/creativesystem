@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using System.ComponentModel;
+using Truckleer.Creative.Screens.ProgressBar;
 
 namespace Truckleer.Creative
 {
@@ -8,7 +9,11 @@ namespace Truckleer.Creative
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private BackgroundWorker driverWorker;
+        private BackgroundWorker routeWorker;
+        private BackgroundWorker vehicleWorker;
+        private BackgroundWorker tripWorker;
+        private BackgroundWorker supplyWorker;
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
         /// </summary>
@@ -36,6 +41,7 @@ namespace Truckleer.Creative
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.PanelAbastecer = new System.Windows.Forms.Panel();
+            this.TextStation = new System.Windows.Forms.TextBox();
             this.BorderPanel8 = new System.Windows.Forms.Panel();
             this.BorderPanel7 = new System.Windows.Forms.Panel();
             this.BorderPanel6 = new System.Windows.Forms.Panel();
@@ -48,7 +54,6 @@ namespace Truckleer.Creative
             this.ButtonCancel = new System.Windows.Forms.Button();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.BoxDriver = new System.Windows.Forms.ComboBox();
-            this.BoxStation = new System.Windows.Forms.ComboBox();
             this.BoxTrip = new System.Windows.Forms.ComboBox();
             this.TextPrice = new System.Windows.Forms.TextBox();
             this.TextKm = new System.Windows.Forms.TextBox();
@@ -60,7 +65,7 @@ namespace Truckleer.Creative
             this.LabelKm = new System.Windows.Forms.Label();
             this.BoxVehicle = new System.Windows.Forms.ComboBox();
             this.BoxRoute = new System.Windows.Forms.ComboBox();
-            this.DatePicker = new System.Windows.Forms.DateTimePicker();
+            this.DateSupply = new System.Windows.Forms.DateTimePicker();
             this.TextLiters = new System.Windows.Forms.TextBox();
             this.LabelDriver = new System.Windows.Forms.Label();
             this.LabelData = new System.Windows.Forms.Label();
@@ -70,6 +75,11 @@ namespace Truckleer.Creative
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
+            this.driverWorker = new System.ComponentModel.BackgroundWorker();
+            this.vehicleWorker = new System.ComponentModel.BackgroundWorker();
+            this.tripWorker = new System.ComponentModel.BackgroundWorker();
+            this.routeWorker = new System.ComponentModel.BackgroundWorker();
+            this.supplyWorker = new System.ComponentModel.BackgroundWorker();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -148,6 +158,7 @@ namespace Truckleer.Creative
             // 
             this.PanelAbastecer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelAbastecer.BackColor = System.Drawing.Color.LightGray;
+            this.PanelAbastecer.Controls.Add(this.TextStation);
             this.PanelAbastecer.Controls.Add(this.BorderPanel8);
             this.PanelAbastecer.Controls.Add(this.BorderPanel7);
             this.PanelAbastecer.Controls.Add(this.BorderPanel6);
@@ -160,7 +171,6 @@ namespace Truckleer.Creative
             this.PanelAbastecer.Controls.Add(this.ButtonCancel);
             this.PanelAbastecer.Controls.Add(this.ButtonSave);
             this.PanelAbastecer.Controls.Add(this.BoxDriver);
-            this.PanelAbastecer.Controls.Add(this.BoxStation);
             this.PanelAbastecer.Controls.Add(this.BoxTrip);
             this.PanelAbastecer.Controls.Add(this.TextPrice);
             this.PanelAbastecer.Controls.Add(this.TextKm);
@@ -172,7 +182,7 @@ namespace Truckleer.Creative
             this.PanelAbastecer.Controls.Add(this.LabelKm);
             this.PanelAbastecer.Controls.Add(this.BoxVehicle);
             this.PanelAbastecer.Controls.Add(this.BoxRoute);
-            this.PanelAbastecer.Controls.Add(this.DatePicker);
+            this.PanelAbastecer.Controls.Add(this.DateSupply);
             this.PanelAbastecer.Controls.Add(this.TextLiters);
             this.PanelAbastecer.Controls.Add(this.LabelDriver);
             this.PanelAbastecer.Controls.Add(this.LabelData);
@@ -186,6 +196,16 @@ namespace Truckleer.Creative
             this.PanelAbastecer.Name = "PanelAbastecer";
             this.PanelAbastecer.Size = new System.Drawing.Size(970, 589);
             this.PanelAbastecer.TabIndex = 0;
+            // 
+            // TextStation
+            // 
+            this.TextStation.BackColor = System.Drawing.Color.LightGray;
+            this.TextStation.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextStation.Location = new System.Drawing.Point(629, 399);
+            this.TextStation.MaxLength = 10;
+            this.TextStation.Name = "TextStation";
+            this.TextStation.Size = new System.Drawing.Size(201, 19);
+            this.TextStation.TabIndex = 77;
             // 
             // BorderPanel8
             // 
@@ -301,17 +321,6 @@ namespace Truckleer.Creative
             this.BoxDriver.Size = new System.Drawing.Size(194, 28);
             this.BoxDriver.TabIndex = 68;
             // 
-            // BoxStation
-            // 
-            this.BoxStation.AllowDrop = true;
-            this.BoxStation.BackColor = System.Drawing.Color.LightGray;
-            this.BoxStation.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BoxStation.FormattingEnabled = true;
-            this.BoxStation.Location = new System.Drawing.Point(629, 391);
-            this.BoxStation.Name = "BoxStation";
-            this.BoxStation.Size = new System.Drawing.Size(201, 28);
-            this.BoxStation.TabIndex = 67;
-            // 
             // BoxTrip
             // 
             this.BoxTrip.AllowDrop = true;
@@ -328,11 +337,12 @@ namespace Truckleer.Creative
             // 
             this.TextPrice.BackColor = System.Drawing.Color.LightGray;
             this.TextPrice.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextPrice.Location = new System.Drawing.Point(629, 323);
+            this.TextPrice.Location = new System.Drawing.Point(629, 319);
             this.TextPrice.MaxLength = 6;
             this.TextPrice.Name = "TextPrice";
             this.TextPrice.Size = new System.Drawing.Size(201, 19);
             this.TextPrice.TabIndex = 63;
+            this.TextPrice.TextChanged += new System.EventHandler(this.PriceTextChange);
             // 
             // TextKm
             // 
@@ -342,6 +352,7 @@ namespace Truckleer.Creative
             this.TextKm.Name = "TextKm";
             this.TextKm.Size = new System.Drawing.Size(201, 19);
             this.TextKm.TabIndex = 62;
+            this.TextKm.TextChanged += new System.EventHandler(this.KmTextChange);
             // 
             // LabelStation
             // 
@@ -372,9 +383,9 @@ namespace Truckleer.Creative
             this.LabelResult.ForeColor = System.Drawing.Color.Black;
             this.LabelResult.Location = new System.Drawing.Point(232, 479);
             this.LabelResult.Name = "LabelResult";
-            this.LabelResult.Size = new System.Drawing.Size(83, 20);
+            this.LabelResult.Size = new System.Drawing.Size(69, 20);
             this.LabelResult.TabIndex = 60;
-            this.LabelResult.Text = "Total Price";
+            this.LabelResult.Text = "R$  0.00";
             // 
             // LabelTotal
             // 
@@ -432,19 +443,23 @@ namespace Truckleer.Creative
             this.BoxRoute.Size = new System.Drawing.Size(195, 28);
             this.BoxRoute.TabIndex = 54;
             // 
-            // DatePicker
+            // DateSupply
             // 
-            this.DatePicker.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
-            this.DatePicker.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.DatePicker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.DatePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DatePicker.Location = new System.Drawing.Point(181, 140);
-            this.DatePicker.Name = "DatePicker";
-            this.DatePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DatePicker.RightToLeftLayout = true;
-            this.DatePicker.Size = new System.Drawing.Size(143, 26);
-            this.DatePicker.TabIndex = 51;
+            this.DateSupply.AllowDrop = true;
+            this.DateSupply.CalendarTitleBackColor = System.Drawing.SystemColors.ControlText;
+            this.DateSupply.CalendarTitleForeColor = System.Drawing.SystemColors.ActiveBorder;
+            this.DateSupply.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.DateSupply.CustomFormat = "dd/MM/yyyy HH:mm";
+            this.DateSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DateSupply.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DateSupply.Location = new System.Drawing.Point(181, 140);
+            this.DateSupply.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.DateSupply.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
+            this.DateSupply.Name = "DateSupply";
+            this.DateSupply.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateSupply.RightToLeftLayout = true;
+            this.DateSupply.Size = new System.Drawing.Size(194, 26);
+            this.DateSupply.TabIndex = 51;
             // 
             // TextLiters
             // 
@@ -455,6 +470,7 @@ namespace Truckleer.Creative
             this.TextLiters.Name = "TextLiters";
             this.TextLiters.Size = new System.Drawing.Size(194, 19);
             this.TextLiters.TabIndex = 53;
+            this.TextLiters.TextChanged += new System.EventHandler(this.LitersTextChange);
             // 
             // LabelDriver
             // 
@@ -545,6 +561,31 @@ namespace Truckleer.Creative
             this.label7.TabIndex = 42;
             this.label7.Text = "Abastecer /";
             // 
+            // driverWorker
+            // 
+            this.driverWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetDrivers);
+            this.driverWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetDriversFinish);
+            // 
+            // vehicleWorker
+            // 
+            this.vehicleWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetVehicles);
+            this.vehicleWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetVehiclesFinish);
+            // 
+            // tripWorker
+            // 
+            this.tripWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetTrips);
+            this.tripWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetTripsFinish);
+            // 
+            // routeWorker
+            // 
+            this.routeWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetRoutes);
+            this.routeWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetRoutesFinish);
+            // 
+            // supplyWorker
+            // 
+            this.supplyWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveSupply);
+            this.supplyWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveSupplyFinish);
+            // 
             // Abastecimento
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -587,7 +628,6 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Button ButtonCancel;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.ComboBox BoxDriver;
-        private System.Windows.Forms.ComboBox BoxStation;
         private System.Windows.Forms.ComboBox BoxTrip;
         private System.Windows.Forms.TextBox TextPrice;
         private System.Windows.Forms.TextBox TextKm;
@@ -599,7 +639,7 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Label LabelKm;
         private System.Windows.Forms.ComboBox BoxVehicle;
         private System.Windows.Forms.ComboBox BoxRoute;
-        private System.Windows.Forms.DateTimePicker DatePicker;
+        private System.Windows.Forms.DateTimePicker DateSupply;
         private System.Windows.Forms.TextBox TextLiters;
         private System.Windows.Forms.Label LabelDriver;
         private System.Windows.Forms.Label LabelData;
@@ -610,5 +650,6 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox TextStation;
     }
 }

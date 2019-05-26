@@ -121,7 +121,7 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O Motorista é inválido!"
                 };
-            if (VehicleService.FindOne(Vehicle.id) == null)
+            if (VehicleService.FindOne(Vehicle.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -141,32 +141,5 @@ namespace Truckleer.Modules
             };
         }
 
-        public dynamic ToObject()
-        {
-            dynamic us = new ExpandoObject();
-
-            if (Date != null)
-                us.date = Date;
-            if (Liters < 0)
-                us.liters = Liters;
-            if (Total < 0)
-                us.total = Total;
-            if (Current_Km < 0)
-                us.current_Km = Current_Km;
-            if (Station != null)
-                us.station = Station;
-            if (Price < 0)
-                us.price = Price;
-            if (Trip != null)
-                us.trip = Trip.Id;
-            if (Driver != null)
-                us.driver = Driver.Id;
-            if (Vehicle != null)
-                us.vehicle = Vehicle.id;
-            if (Route != null)
-                us.route = Route.Id;
-
-            return us;
-        }
     }
 }

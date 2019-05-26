@@ -1,11 +1,5 @@
 ﻿using Google.Cloud.Firestore;
-using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Truckleer.Modules
 {
@@ -18,7 +12,7 @@ namespace Truckleer.Modules
         }
 
         //Properties
-        public string id { get; set; }
+        public string Id { get; set; }
         [FirestoreProperty("user")]
         public string Login { get; set; }
         [FirestoreProperty("password")]
@@ -30,25 +24,6 @@ namespace Truckleer.Modules
         [FirestoreProperty("email")]
         public string Email { get; set; }
 
-        //Convert user to dynamic object
-        public dynamic ToObject()
-        {
-            //Initializate us
-            dynamic us = new ExpandoObject();
-            //verify properties and set in dynamic object
-            if (Login != null)
-                us.user = Login;
-            if (Password != null)
-                us.password = Password;
-            if (Email != null)
-                us.email = Email;
-            if (Type == UserType.ADMIN || Type == UserType.DRIVER || Type == UserType.CLIENT)
-                us.type = Type;
-            if (Auth != null)
-                us.auth = Auth;
-            //return us
-            return us;
-        }
         //Method to check if values of user is valid 
         public Message IsValid()
         {
@@ -81,7 +56,7 @@ namespace Truckleer.Modules
                     MessageText = "O email deve ser similar a example@example.com !"
                 };
             //Check if user exist
-            if(id == null)
+            if(Id == null)
             {
                 //Check if user is unique
                 if (new UserService().FindByUser(Login) != null)
@@ -97,7 +72,7 @@ namespace Truckleer.Modules
                 User us = new UserService().FindByUser(Login);
                 if (us != null)
                 {
-                    if(us.id != id)
+                    if(us.Id != Id)
                         return new Message()
                         {
                             Type = MessageType.ERROR,

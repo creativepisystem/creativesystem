@@ -13,17 +13,19 @@ using Truckleer.Creative.Screens.Abastecimento;
 namespace Truckleer.Creative
 {    
     public partial class ListarAbastecimentos : UserControl
-    {       
+    {
+        private SupplyService supplyService;
+        private List<Supply> supplys = new List<Supply>();
+        
         public ListarAbastecimentos()
         {
             InitializeComponent();
-            for(int i = 0; i < 8; i++)
-                ListPanel.Controls.Add(new CustomSupplyList(1, new User()));
+            supplyService = new SupplyService();
         }
-
-        private void ListarAbastecimentos_Load(object sender, EventArgs e)
+        public void ListarAbastecimentos_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+            supplyListWorker.RunWorkerAsync();
         }
 
         bool isCollapsed = false;
@@ -56,7 +58,20 @@ namespace Truckleer.Creative
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-
+            supplyListWorker.RunWorkerAsync();
+        }       
+        private void FilterSupply(object sender, DoWorkEventArgs e)
+        {
+            e.Result = supplyService.FindAll();
+        }
+        private void FilterSupplyFinish(object sender, RunWorkerCompletedEventArgs e)
+        {
+            
+            supplys = (List<Supply>)e.Result;
+            supplys.Sort((a, b) =>( a.Date.CompareTo(b.Date)));
+            ListPanel.Controls.Clear();
+            for (int i = 0; i < supplys.Count; i++)
+                ListPanel.Controls.Add(new CustomSupplyList(i, supplys[i]));
         }
     }    
 }

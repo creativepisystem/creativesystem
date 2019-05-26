@@ -13,7 +13,7 @@ namespace Truckleer.Modules
 
         public List<Vehicle> Filter()
         {
-            return vehicleService.Filter(this);
+            return null;//vehicleService.Filter(this);
         }
     }
 }

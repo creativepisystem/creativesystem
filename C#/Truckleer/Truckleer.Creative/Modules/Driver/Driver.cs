@@ -101,7 +101,7 @@ namespace Truckleer.Modules
                     MessageText = "Usuario é um campo obrigatório!"
 
                 };
-            else if (userService.FindOne(User.id) == null)
+            else if (userService.FindOne(User.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,

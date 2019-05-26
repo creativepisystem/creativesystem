@@ -13,7 +13,7 @@ namespace Truckleer.Modules
     {
         public Vehicle() { }
 
-        public string id { get; set; }
+        public string Id { get; set; }
         [FirestoreProperty("license_plate")]
         public string License_plate { get; set; }
         [FirestoreProperty("model")]

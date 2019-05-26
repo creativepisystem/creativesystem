@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Truckleer.Modules
 {
-    class TripService
+    public class TripService
     {
         //Trip repository property
         readonly TripRepository repository;
@@ -30,10 +30,6 @@ namespace Truckleer.Modules
         public bool Save(Trip trip)
         {
             return repository.Save(trip).Result;
-        }
-        public List<Trip> Filter(TripFilter tripFilter)
-        {
-            return repository.Filter(tripFilter).Result;
         }
     }
 }

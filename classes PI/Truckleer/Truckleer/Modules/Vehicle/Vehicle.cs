@@ -13,7 +13,7 @@ namespace Truckleer.Modules
     {
         public Vehicle() { }
 
-        public string id { get; set; }
+        public string Id { get; set; }
         [FirestoreProperty("license_plate")]
         public string License_plate { get; set; }
         [FirestoreProperty("model")]
@@ -89,32 +89,6 @@ namespace Truckleer.Modules
                 Type = MessageType.VALID,
                 MessageText = "O veículo é valido!"
             };
-        }
-
-        public dynamic ToObject()
-        {
-            dynamic us = new ExpandoObject();
-            if (id != null)
-                us.id = id;
-            if (License_plate != null)
-                us.license_plate = License_plate;
-            if (Model != null)
-                us.model = Model;
-            if (Brand != null)
-                us.brand = Brand;
-            if (Tank_capacity >0)
-                us.tank_capacity = Tank_capacity;
-            if (Fab_Year >0)
-                us.fab_Year = Fab_Year;
-            if (Mod_Year > 0)
-                us.mod_Year = Mod_Year;
-            if (Color >0)
-                us.color = Color;
-            if (Renavam != null)
-                us.renavam = Renavam;
-            if (Chassi != null)
-                us.chassi = Chassi;
-            return us;
         }
     }
 

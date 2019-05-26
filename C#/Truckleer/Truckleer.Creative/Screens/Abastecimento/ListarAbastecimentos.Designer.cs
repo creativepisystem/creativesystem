@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class ListarAbastecimentos
     {
@@ -6,7 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private BackgroundWorker supplyListWorker;
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
         /// </summary>
@@ -76,6 +78,7 @@
             this.LabelInitial = new System.Windows.Forms.Label();
             this.DatePickerInitial = new System.Windows.Forms.DateTimePicker();
             this.BoxDriver = new System.Windows.Forms.ComboBox();
+            this.supplyListWorker = new System.ComponentModel.BackgroundWorker();
             this.listSupply.SuspendLayout();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
@@ -639,6 +642,13 @@
             this.BoxDriver.Name = "BoxDriver";
             this.BoxDriver.Size = new System.Drawing.Size(211, 21);
             this.BoxDriver.TabIndex = 0;
+
+            // 
+            // driverWorker
+            // 
+            this.supplyListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterSupply);
+            this.supplyListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterSupplyFinish);
+
             // 
             // ListarAbastecimentos
             // 

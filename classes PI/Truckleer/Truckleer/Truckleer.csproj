@@ -49,7 +49,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Modules\*\*.cs" />
+    
     <Compile Include="Modules\Config\ConnectionFirestore.cs" />
     <Compile Include="Modules\CustomConvert\CustomCnhTypeConvert.cs" />
     <Compile Include="Modules\CustomConvert\CustomDateTimeConvert.cs" />
@@ -64,6 +64,7 @@
     <Compile Include="Modules\Driver\Driver.cs" />
     <Compile Include="Modules\Driver\DriverRepository.cs" />
     <Compile Include="Modules\Driver\DriverService.cs" />
+    <Compile Include="Modules\Driver\DriverFilter.cs" />
     <Compile Include="Modules\Interface\IFilter.cs" />
     <Compile Include="Modules\Interface\IModule.cs" />
     <Compile Include="Modules\Message\Message.cs" />
@@ -78,6 +79,7 @@
     <Compile Include="Modules\Trip\Trip.cs" />
     <Compile Include="Modules\Trip\TripService.cs" />
     <Compile Include="Modules\Trip\TripRepository.cs" />
+    <Compile Include="Modules\Trip\TripFilter.cs" />
     <Compile Include="Modules\Trip\TripStatus.cs" />
     <Compile Include="Modules\User\User.cs" />
     <Compile Include="Modules\User\UserRepository.cs" />
@@ -89,6 +91,7 @@
     <Compile Include="Modules\Vehicle\VehicleColor.cs" />
     <Compile Include="Modules\Vehicle\VehicleRepository.cs" />
     <Compile Include="Modules\Vehicle\VehicleService.cs" />
+    <Compile Include="Modules\Vehicle\VehicleFilter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

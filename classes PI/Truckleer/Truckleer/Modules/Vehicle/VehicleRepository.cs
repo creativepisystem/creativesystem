@@ -32,7 +32,7 @@ namespace Truckleer.Modules
                 //Convert Document in a Vehicle class
                 Vehicle us = queryResult.ConvertTo<Vehicle>();
                 //Set id of vehicle
-                us.id = queryResult.Id;
+                us.Id = queryResult.Id;
                 //Add vehicle to list
                 vehicles.Add(us);
             }
@@ -52,7 +52,7 @@ namespace Truckleer.Modules
                 //Convert document to a Vehicle class
                 us = DocRef.ConvertTo<Vehicle>();
                 //Set id of vehicle
-                us.id = DocRef.Id;
+                us.Id = DocRef.Id;
             }
             //Return vehicle
             return us;
@@ -61,17 +61,17 @@ namespace Truckleer.Modules
         async public Task<bool> Save(Vehicle vehicle)
         {
             //Check if vehicle exisit
-            if (vehicle.id == null)//If not exist
+            if (vehicle.Id == null)//If not exist
             {
                 //Create new vehicle
-                DocumentReference snapshot = await Reference.AddAsync(vehicle.ToObject());
+                DocumentReference snapshot = await Reference.AddAsync(vehicle);
                 //return a bool if is successful
                 return snapshot.Id != null;
             }
             else
             {
                 //update vehicle and merge values
-                WriteResult snapshot = await Reference.Document(vehicle.id).SetAsync(vehicle.ToObject(), SetOptions.MergeAll);
+                WriteResult snapshot = await Reference.Document(vehicle.Id).SetAsync(vehicle, SetOptions.MergeAll);
                 //return a bool if is successful
                 return snapshot.UpdateTime != null;
             }

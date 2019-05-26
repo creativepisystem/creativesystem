@@ -10,6 +10,6 @@ namespace Truckleer.Modules.CustomConvert
             return new VehicleService().FindOne(Convert.ToString(value));
         }
 
-        public object ToFirestore(Vehicle value) => value.id;
+        public object ToFirestore(Vehicle value) => value.Id;
     }
 }

@@ -13,7 +13,6 @@ namespace Truckleer.Modules
         public Driver Driver { get; set; }
         public Vehicle Vehicle { get; set; }
         public Route Route { get; set; }
-        public TripStatus TripStatus { get; set; }
         private readonly TripService tripService;
         public TripFilter()
         {
@@ -21,7 +20,7 @@ namespace Truckleer.Modules
         }
         public List<Trip> Filter()
         {
-            return tripService.Filter(this);
+            return null;//tripService.Filter(this);
         }
     }
 }

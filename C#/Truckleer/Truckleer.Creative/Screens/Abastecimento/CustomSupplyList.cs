@@ -13,10 +13,10 @@ namespace Truckleer.Creative.Screens.Abastecimento
         //index - necessario
         readonly int index = 0;
 
-        //Exemplo para classe Usuario
-        readonly User user;
+        
+        readonly private Supply supply;
 
-        public CustomSupplyList(int index, User user)
+        public CustomSupplyList(int index, Supply supply)
         {
             this.index = index;
 
@@ -47,7 +47,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             tableLayoutPanel1 = new TableLayoutPanel();
 
             //Seta o Usuario
-            this.user = user;
+            this.supply = supply;
             InitializeCustomList();
         }
 
@@ -196,7 +196,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListPlate.Name = "LabelListPlate";
             LabelListPlate.Size = new System.Drawing.Size(67, 17);
             LabelListPlate.TabIndex = 1;
-            LabelListPlate.Text = "XXX0000";
+            LabelListPlate.Text = supply.Vehicle.License_plate;
             // 
             // LabelListDriver
             // 
@@ -205,7 +205,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListDriver.Name = "LabelListDriver";
             LabelListDriver.Size = new System.Drawing.Size(83, 40);
             LabelListDriver.TabIndex = 1;
-            LabelListDriver.Text = "Jefferson Dias";
+            LabelListDriver.Text = supply.Driver.Name;
             LabelListDriver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelListPrice
@@ -216,7 +216,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListPrice.Name = "LabelListPrice";
             LabelListPrice.Size = new System.Drawing.Size(36, 17);
             LabelListPrice.TabIndex = 1;
-            LabelListPrice.Text = "3,50";
+            LabelListPrice.Text = supply.Price.ToString();
             // 
             // LabelListKm
             // 
@@ -226,7 +226,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListKm.Name = "LabelListKm";
             LabelListKm.Size = new System.Drawing.Size(56, 17);
             LabelListKm.TabIndex = 1;
-            LabelListKm.Text = "132785";
+            LabelListKm.Text = supply.Current_Km.ToString();
             // 
             // LabelListRoute
             // 
@@ -236,7 +236,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListRoute.Name = "LabelListRoute";
             LabelListRoute.Size = new System.Drawing.Size(70, 17);
             LabelListRoute.TabIndex = 1;
-            LabelListRoute.Text = "Campinas";
+            LabelListRoute.Text = supply.Route.Destination ?? "-";
             // 
             // LabelListTrip
             // 
@@ -246,7 +246,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListTrip.Name = "LabelListTrip";
             LabelListTrip.Size = new System.Drawing.Size(70, 17);
             LabelListTrip.TabIndex = 1;
-            LabelListTrip.Text = "Campinas";
+            LabelListTrip.Text = supply.Trip.Name;
             // 
             // LabelListLiters
             // 
@@ -256,7 +256,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListLiters.Name = "LabelListLiters";
             LabelListLiters.Size = new System.Drawing.Size(32, 17);
             LabelListLiters.TabIndex = 1;
-            LabelListLiters.Text = "140";
+            LabelListLiters.Text = supply.Liters.ToString();
             // 
             // PanelLiters
             // 
@@ -286,7 +286,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelTotalPrice.Name = "LabelTotalPrice";
             LabelTotalPrice.Size = new System.Drawing.Size(52, 17);
             LabelTotalPrice.TabIndex = 2;
-            LabelTotalPrice.Text = "150,20";
+            LabelTotalPrice.Text = supply.Total.ToString();
             // 
             // LabelListStation
             // 
@@ -295,7 +295,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListStation.Name = "LabelListStation";
             LabelListStation.Size = new System.Drawing.Size(65, 40);
             LabelListStation.TabIndex = 2;
-            LabelListStation.Text = "Shell";
+            LabelListStation.Text = supply.Station ?? "-";
             LabelListStation.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // PanelButtons
@@ -339,7 +339,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListDate.Name = "LabelListDate";
             LabelListDate.Size = new System.Drawing.Size(94, 41);
             LabelListDate.TabIndex = 2;
-            LabelListDate.Text = "dd/mm/aaaa 00:00";
+            LabelListDate.Text = supply.Date.ToString();
             LabelListDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         }
 

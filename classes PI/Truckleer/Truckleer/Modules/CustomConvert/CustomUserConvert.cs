@@ -14,6 +14,6 @@ namespace Truckleer.Modules.CustomConvert
             return new UserService().FindOne(Convert.ToString(value));
         }
 
-        public object ToFirestore(User value) => value.id;
+        public object ToFirestore(User value) => value.Id;
     }
 }

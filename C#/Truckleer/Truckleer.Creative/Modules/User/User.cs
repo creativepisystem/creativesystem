@@ -1,11 +1,5 @@
 ﻿using Google.Cloud.Firestore;
-using System;
-using System.Collections.Generic;
 using System.Dynamic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace Truckleer.Modules
 {
@@ -18,7 +12,7 @@ namespace Truckleer.Modules
         }
 
         //Properties
-        public string id { get; set; }
+        public string Id { get; set; }
         [FirestoreProperty("user")]
         public string Login { get; set; }
         [FirestoreProperty("password")]
@@ -62,7 +56,7 @@ namespace Truckleer.Modules
                     MessageText = "O email deve ser similar a example@example.com !"
                 };
             //Check if user exist
-            if(id == null)
+            if(Id == null)
             {
                 //Check if user is unique
                 if (new UserService().FindByUser(Login) != null)
@@ -78,7 +72,7 @@ namespace Truckleer.Modules
                 User us = new UserService().FindByUser(Login);
                 if (us != null)
                 {
-                    if(us.id != id)
+                    if(us.Id != Id)
                         return new Message()
                         {
                             Type = MessageType.ERROR,
