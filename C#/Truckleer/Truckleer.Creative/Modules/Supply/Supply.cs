@@ -23,6 +23,9 @@ namespace Truckleer.Modules
             RouteService = new RouteService();
             TripService = new TripService();
             Liters = -1;
+            Total = -1;
+            Price = -1;
+            Current_Km = -1;
         }
         
         public string Id{ get; set; }
