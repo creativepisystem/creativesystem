@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class ListarVeiculos
     {
@@ -6,6 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private BackgroundWorker vehicleListWorker;
 
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
@@ -43,6 +46,7 @@
             this.BoxYearMod = new System.Windows.Forms.ComboBox();
             this.LabelPlate = new System.Windows.Forms.Label();
             this.BoxPlate = new System.Windows.Forms.ComboBox();
+            this.vehicleListWorker = new System.ComponentModel.BackgroundWorker();
             this.ButtonFilter = new System.Windows.Forms.Button();
             this.PageDescription = new System.Windows.Forms.Label();
             this.ButtonHome = new System.Windows.Forms.Button();
@@ -263,6 +267,12 @@
             this.container.Name = "container";
             this.container.Size = new System.Drawing.Size(1170, 759);
             this.container.TabIndex = 1;
+            //
+            //Vehicle Worker
+            //
+            this.vehicleListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterVehicle);
+            this.vehicleListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterVehicleFinish);
+
             // 
             // ListarVeiculos
             // 

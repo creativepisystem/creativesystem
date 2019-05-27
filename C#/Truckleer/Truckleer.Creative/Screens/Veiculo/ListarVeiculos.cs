@@ -14,16 +14,19 @@ namespace Truckleer.Creative
 {
     public partial class ListarVeiculos : UserControl
     {
+        private VehicleService vehicleService;
+        private List<Vehicle> vehicles = new List<Vehicle>();
+
         public ListarVeiculos()
         {
             InitializeComponent();
-            for (int i = 0; i < 20; i++)
-                FlowVehiclePanel.Controls.Add(new CustomVehicleList(i, new Vehicle()));
+            vehicleService = new VehicleService();
         }
 
         private void ListarVeiculos_Load_1(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+            vehicleListWorker.RunWorkerAsync();
         }
 
         bool isCollapsed = false;
@@ -56,7 +59,21 @@ namespace Truckleer.Creative
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
+            vehicleListWorker.RunWorkerAsync();
+        }
 
+        private void FilterVehicle(object sender, DoWorkEventArgs e)
+        {
+            e.Result = vehicleService.FindAll();
+        }
+
+        private void FilterVehicleFinish(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+            vehicles = (List<Vehicle>)e.Result;
+            FlowVehiclePanel.Controls.Clear();
+            for (int i = 0; i < vehicles.Count; i++)
+                FlowVehiclePanel.Controls.Add(new CustomVehicleList(i, vehicles[i]));
         }
     }
 }

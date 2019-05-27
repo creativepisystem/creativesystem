@@ -117,7 +117,7 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceivePlaca.ForeColor = System.Drawing.Color.Azure;
             LabelReceivePlaca.Size = new System.Drawing.Size(118, 28);
             LabelReceivePlaca.TabIndex = 0;
-            LabelReceivePlaca.Text = "XXX00000";
+            LabelReceivePlaca.Text = vehicle.License_plate.ToString();
             // 
             // LabelPlaca
             // 
@@ -240,7 +240,7 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceiveBrand.Name = "LabelReceiveBrand";
             LabelReceiveBrand.Size = new System.Drawing.Size(37, 17);
             LabelReceiveBrand.TabIndex = 99;
-            LabelReceiveBrand.Text = "Ford";
+            LabelReceiveBrand.Text = vehicle.Brand;
             // 
             // LabelReceiveModel
             // 
@@ -250,7 +250,7 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceiveModel.Name = "LabelReceiveModel";
             LabelReceiveModel.Size = new System.Drawing.Size(74, 17);
             LabelReceiveModel.TabIndex = 100;
-            LabelReceiveModel.Text = "Modelo 10";
+            LabelReceiveModel.Text = vehicle.Model;
             // 
             // LabelReceiveColor
             // 
@@ -260,7 +260,40 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceiveColor.Name = "LabelReceiveColor";
             LabelReceiveColor.Size = new System.Drawing.Size(60, 17);
             LabelReceiveColor.TabIndex = 101;
-            LabelReceiveColor.Text = "Amarelo";
+            switch (vehicle.Color)
+            {
+                case VehicleColor.AMARELO:
+                    LabelReceiveColor.Text = "Amarelo";
+                    break;
+
+                case VehicleColor.AZUL:
+                    LabelReceiveColor.Text = "Azul";
+                    break;
+
+                case VehicleColor.BRANCO:
+                    LabelReceiveColor.Text = "Branco";
+                    break;
+
+                case VehicleColor.CINZA:
+                    LabelReceiveColor.Text = "Cinza";
+                    break;
+
+                case VehicleColor.MARROM:
+                    LabelReceiveColor.Text = "Marrom";
+                    break;
+
+                case VehicleColor.PRETO:
+                    LabelReceiveColor.Text = "Preto";
+                    break;
+
+                case VehicleColor.VERDE:
+                    LabelReceiveColor.Text = "Verde";
+                    break;
+
+                case VehicleColor.VERMELHO:
+                    LabelReceiveColor.Text = "Vermelho";
+                    break;
+            }
             // 
             // LabelReceiveYear
             // 
@@ -270,7 +303,7 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceiveYear.Name = "LabelReceiveYear";
             LabelReceiveYear.Size = new System.Drawing.Size(40, 17);
             LabelReceiveYear.TabIndex = 102;
-            LabelReceiveYear.Text = "2018";
+            LabelReceiveYear.Text = vehicle.Fab_Year.ToString();
             // 
             // LabelReceiveChassi
             // 
@@ -280,7 +313,7 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceiveChassi.Name = "LabelReceiveChassi";
             LabelReceiveChassi.Size = new System.Drawing.Size(126, 17);
             LabelReceiveChassi.TabIndex = 103;
-            LabelReceiveChassi.Text = "JKHDSKFJNSDFKI";
+            LabelReceiveChassi.Text = vehicle.Chassi ?? "-";
             // 
             // LabelReceiveTank
             // 
@@ -290,7 +323,7 @@ namespace Truckleer.Creative.Screens.Veiculo
             LabelReceiveTank.Name = "LabelReceiveTank";
             LabelReceiveTank.Size = new System.Drawing.Size(32, 17);
             LabelReceiveTank.TabIndex = 104;
-            LabelReceiveTank.Text = "160";
+            LabelReceiveTank.Text = vehicle.Tank_capacity.ToString();
             // 
             // ButtonEdit
             // 

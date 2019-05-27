@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class ListarMotoristas
     {
@@ -6,6 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private BackgroundWorker driverListWorker;
 
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
@@ -45,6 +48,7 @@
             this.LabelDriver = new System.Windows.Forms.Label();
             this.BoxDriver = new System.Windows.Forms.ComboBox();
             this.filtro = new System.Windows.Forms.Timer(this.components);
+            this.driverListWorker = new System.ComponentModel.BackgroundWorker();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -237,6 +241,13 @@
             // filtro
             // 
             this.filtro.Tick += new System.EventHandler(this.Filtro_Tick);
+
+            //Driver Worker
+            //
+            //
+            this.driverListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterDriver);
+            this.driverListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterDriverFinish);
+
             // 
             // ListarMotoristas
             // 

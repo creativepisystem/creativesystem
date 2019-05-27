@@ -124,7 +124,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceiveName.Name = "LabelReceiveName";
             LabelReceiveName.Size = new System.Drawing.Size(116, 20);
             LabelReceiveName.TabIndex = 1;
-            LabelReceiveName.Text = "Felipe Barbosa";
+            LabelReceiveName.Text = driver.Name.ToString();
             // 
             // LabelBirthDate
             // 
@@ -204,7 +204,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceiveCpf.Name = "LabelReceiveCpf";
             LabelReceiveCpf.Size = new System.Drawing.Size(109, 17);
             LabelReceiveCpf.TabIndex = 8;
-            LabelReceiveCpf.Text = "397.327.198-42";
+            LabelReceiveCpf.Text = driver.Cpf.ToString();
             // 
             // LabelReceivePhone
             // 
@@ -214,7 +214,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceivePhone.Name = "LabelReceivePhone";
             LabelReceivePhone.Size = new System.Drawing.Size(115, 17);
             LabelReceivePhone.TabIndex = 9;
-            LabelReceivePhone.Text = "(19) 98316-6632";
+            LabelReceivePhone.Text = driver.Phone ?? "-";
             // 
             // LabelReceiveMail
             // 
@@ -224,7 +224,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceiveMail.Name = "LabelReceiveMail";
             LabelReceiveMail.Size = new System.Drawing.Size(199, 17);
             LabelReceiveMail.TabIndex = 10;
-            LabelReceiveMail.Text = "felipe.goulart1999@gmail.com";
+            LabelReceiveMail.Text = driver.Email.ToString();
             // 
             // LabelReceiveBirthDate
             // 
@@ -234,7 +234,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceiveBirthDate.Name = "LabelReceiveBirthDate";
             LabelReceiveBirthDate.Size = new System.Drawing.Size(80, 17);
             LabelReceiveBirthDate.TabIndex = 11;
-            LabelReceiveBirthDate.Text = "19/10/1999";
+            LabelReceiveBirthDate.Text = driver.Birth_date.ToShortDateString();
             // 
             // LAbelReceiveCnh
             // 
@@ -244,7 +244,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LAbelReceiveCnh.Name = "LAbelReceiveCnh";
             LAbelReceiveCnh.Size = new System.Drawing.Size(88, 17);
             LAbelReceiveCnh.TabIndex = 12;
-            LAbelReceiveCnh.Text = "257.6844.88";
+            LAbelReceiveCnh.Text = driver.Cnh.ToString();
             // 
             // LabelReceiveCnhDue
             // 
@@ -254,7 +254,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceiveCnhDue.Name = "LabelReceiveCnhDue";
             LabelReceiveCnhDue.Size = new System.Drawing.Size(80, 17);
             LabelReceiveCnhDue.TabIndex = 13;
-            LabelReceiveCnhDue.Text = "04/06/2022";
+            LabelReceiveCnhDue.Text = driver.Cnh_expiration.ToShortDateString();
             // 
             // LabelReceiveObscervation
             // 
@@ -264,7 +264,7 @@ namespace Truckleer.Creative.Screens.Motorista
             LabelReceiveObscervation.Name = "LabelReceiveObscervation";
             LabelReceiveObscervation.Size = new System.Drawing.Size(232, 17);
             LabelReceiveObscervation.TabIndex = 14;
-            LabelReceiveObscervation.Text = "Nunca capotou o corsa literalmente";
+            LabelReceiveObscervation.Text = driver.Obs ?? "-";
             // 
             // BorderPanel1
             // 

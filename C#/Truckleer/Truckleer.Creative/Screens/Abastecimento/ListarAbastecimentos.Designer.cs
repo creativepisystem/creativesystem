@@ -156,6 +156,7 @@ namespace Truckleer.Creative
             // ButtonFilter
             // 
             this.ButtonFilter.BackColor = System.Drawing.Color.Gainsboro;
+            this.ButtonFilter.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonFilter.FlatAppearance.BorderSize = 0;
             this.ButtonFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -517,6 +518,7 @@ namespace Truckleer.Creative
             // 
             this.ButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonSave.BackColor = System.Drawing.Color.Crimson;
+            this.ButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSave.FlatAppearance.BorderSize = 0;
             this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSave.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -642,13 +644,11 @@ namespace Truckleer.Creative
             this.BoxDriver.Name = "BoxDriver";
             this.BoxDriver.Size = new System.Drawing.Size(211, 21);
             this.BoxDriver.TabIndex = 0;
-
             // 
-            // driverWorker
+            // supplyListWorker
             // 
             this.supplyListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterSupply);
             this.supplyListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterSupplyFinish);
-
             // 
             // ListarAbastecimentos
             // 

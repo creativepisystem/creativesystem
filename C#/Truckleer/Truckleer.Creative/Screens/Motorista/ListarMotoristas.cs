@@ -14,16 +14,20 @@ namespace Truckleer.Creative
 {
     public partial class ListarMotoristas : UserControl
     {
+
+        private DriverService driverService;
+        private List<Driver> drivers = new List<Driver>();
+
         public ListarMotoristas()
         {
             InitializeComponent();
-            for (int i = 0; i < 20; i++)
-                FlowDriver.Controls.Add(new CustomDriverList(i, new Driver()));
+            driverService = new DriverService();
         }
 
         private void ListarMotoristas_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+            driverListWorker.RunWorkerAsync();
         }
 
         private void Button1_Click(object sender, EventArgs e)
@@ -57,7 +61,21 @@ namespace Truckleer.Creative
 
         private void ButtonCadastro_Click(object sender, EventArgs e)
         {
+            driverListWorker.RunWorkerAsync();
+        }
 
+        private void FilterDriver(object sender, DoWorkEventArgs e)
+        {
+            e.Result = driverService.FindAll();
+        }
+
+        private void FilterDriverFinish(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+            drivers = (List<Driver>)e.Result;
+            FlowDriver.Controls.Clear();
+            for (int i = 0; i < drivers.Count; i++)
+                FlowDriver.Controls.Add(new CustomDriverList(i, drivers[i]));
         }
     }
 }

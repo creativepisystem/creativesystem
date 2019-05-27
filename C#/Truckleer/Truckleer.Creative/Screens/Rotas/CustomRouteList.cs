@@ -19,10 +19,7 @@ namespace Truckleer.Creative.Screens.Rotas
         public CustomRouteList(int index, Route route)
         {
             this.index = index;
-
-            ListViewItem listViewItem1 = new ListViewItem("São João");
-            ListViewItem listViewItem2 = new ListViewItem("Dom Pedro");
-            ListViewItem listViewItem3 = new ListViewItem("Não importa o tamanho da string");
+            
             PanelIemList = new Panel();
             PanelTitle = new Panel();
             LabelName = new Label();
@@ -90,7 +87,7 @@ namespace Truckleer.Creative.Screens.Rotas
             LabelReceiveName.Name = "LabelReceiveName";
             LabelReceiveName.Size = new System.Drawing.Size(153, 17);
             LabelReceiveName.TabIndex = 1;
-            LabelReceiveName.Text = "São Paulo x Indaiatuba";
+            LabelReceiveName.Text = route.Origin;
             // 
             // ButtonDelete
             // 

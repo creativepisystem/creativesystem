@@ -174,6 +174,7 @@ namespace Truckleer.Creative
             // 
             this.hamburguerMenu.BackgroundImage = global::Truckleer.Creative.Properties.Resources.menu;
             this.hamburguerMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.hamburguerMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.hamburguerMenu.FlatAppearance.BorderSize = 0;
             this.hamburguerMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.hamburguerMenu.Location = new System.Drawing.Point(191, 8);
@@ -300,6 +301,7 @@ namespace Truckleer.Creative
             // BtnListUser
             // 
             this.BtnListUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.BtnListUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnListUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnListUser.FlatAppearance.BorderSize = 0;
             this.BtnListUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -316,6 +318,7 @@ namespace Truckleer.Creative
             // BtnNewUser
             // 
             this.BtnNewUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.BtnNewUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnNewUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnNewUser.FlatAppearance.BorderSize = 0;
             this.BtnNewUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -334,6 +337,7 @@ namespace Truckleer.Creative
             // 
             this.BtnUser.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnUser.BackgroundImage")));
             this.BtnUser.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnUser.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnUser.Dock = System.Windows.Forms.DockStyle.Top;
             this.BtnUser.FlatAppearance.BorderSize = 0;
             this.BtnUser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -368,6 +372,7 @@ namespace Truckleer.Creative
             // btnListTrip
             // 
             this.btnListTrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListTrip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListTrip.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListTrip.FlatAppearance.BorderSize = 0;
             this.btnListTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -385,6 +390,7 @@ namespace Truckleer.Creative
             // btnMakeTrip
             // 
             this.btnMakeTrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnMakeTrip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMakeTrip.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMakeTrip.FlatAppearance.BorderSize = 0;
             this.btnMakeTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -403,6 +409,7 @@ namespace Truckleer.Creative
             // 
             this.btnTrip.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnTrip.BackgroundImage")));
             this.btnTrip.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnTrip.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnTrip.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnTrip.FlatAppearance.BorderSize = 0;
             this.btnTrip.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -438,6 +445,7 @@ namespace Truckleer.Creative
             // btnAlertMaintence
             // 
             this.btnAlertMaintence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnAlertMaintence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAlertMaintence.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAlertMaintence.FlatAppearance.BorderSize = 0;
             this.btnAlertMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -455,6 +463,7 @@ namespace Truckleer.Creative
             // btnListMaintence
             // 
             this.btnListMaintence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListMaintence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListMaintence.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListMaintence.FlatAppearance.BorderSize = 0;
             this.btnListMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -473,6 +482,7 @@ namespace Truckleer.Creative
             // btnMakeMaintence
             // 
             this.btnMakeMaintence.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnMakeMaintence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMakeMaintence.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMakeMaintence.FlatAppearance.BorderSize = 0;
             this.btnMakeMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -492,6 +502,7 @@ namespace Truckleer.Creative
             // 
             this.btnMaintence.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMaintence.BackgroundImage")));
             this.btnMaintence.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMaintence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMaintence.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMaintence.FlatAppearance.BorderSize = 0;
             this.btnMaintence.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -526,6 +537,7 @@ namespace Truckleer.Creative
             // btnListRoutes
             // 
             this.btnListRoutes.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListRoutes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListRoutes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListRoutes.FlatAppearance.BorderSize = 0;
             this.btnListRoutes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -544,6 +556,7 @@ namespace Truckleer.Creative
             // btnMakeRoute
             // 
             this.btnMakeRoute.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnMakeRoute.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMakeRoute.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMakeRoute.FlatAppearance.BorderSize = 0;
             this.btnMakeRoute.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -562,6 +575,7 @@ namespace Truckleer.Creative
             // 
             this.btnRoutes.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRoutes.BackgroundImage")));
             this.btnRoutes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnRoutes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRoutes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnRoutes.FlatAppearance.BorderSize = 0;
             this.btnRoutes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -596,6 +610,7 @@ namespace Truckleer.Creative
             // btnListDrivers
             // 
             this.btnListDrivers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListDrivers.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListDrivers.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListDrivers.FlatAppearance.BorderSize = 0;
             this.btnListDrivers.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -614,6 +629,7 @@ namespace Truckleer.Creative
             // btnMakeDriver
             // 
             this.btnMakeDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnMakeDriver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMakeDriver.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMakeDriver.FlatAppearance.BorderSize = 0;
             this.btnMakeDriver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -633,6 +649,7 @@ namespace Truckleer.Creative
             // 
             this.btnDriver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnDriver.BackgroundImage")));
             this.btnDriver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDriver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDriver.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDriver.FlatAppearance.BorderSize = 0;
             this.btnDriver.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -667,6 +684,7 @@ namespace Truckleer.Creative
             // btnListVehicle
             // 
             this.btnListVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListVehicle.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListVehicle.FlatAppearance.BorderSize = 0;
             this.btnListVehicle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -686,6 +704,7 @@ namespace Truckleer.Creative
             // btnMakeVehicle
             // 
             this.btnMakeVehicle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnMakeVehicle.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnMakeVehicle.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnMakeVehicle.FlatAppearance.BorderSize = 0;
             this.btnMakeVehicle.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
@@ -706,6 +725,7 @@ namespace Truckleer.Creative
             // 
             this.btnVeiculo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnVeiculo.BackgroundImage")));
             this.btnVeiculo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnVeiculo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVeiculo.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnVeiculo.FlatAppearance.BorderSize = 0;
             this.btnVeiculo.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -741,6 +761,7 @@ namespace Truckleer.Creative
             // btnListAbastecimentos
             // 
             this.btnListAbastecimentos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnListAbastecimentos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListAbastecimentos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnListAbastecimentos.FlatAppearance.BorderSize = 0;
             this.btnListAbastecimentos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -759,6 +780,7 @@ namespace Truckleer.Creative
             // btnAbastecer
             // 
             this.btnAbastecer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.btnAbastecer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbastecer.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAbastecer.FlatAppearance.BorderSize = 0;
             this.btnAbastecer.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
@@ -778,6 +800,7 @@ namespace Truckleer.Creative
             // 
             this.btnAbastecimento.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAbastecimento.BackgroundImage")));
             this.btnAbastecimento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnAbastecimento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbastecimento.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnAbastecimento.FlatAppearance.BorderSize = 0;
             this.btnAbastecimento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
@@ -799,6 +822,7 @@ namespace Truckleer.Creative
             // 
             this.btnDash.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(137)))), ((int)(((byte)(186)))));
             this.btnDash.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnDash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDash.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnDash.FlatAppearance.BorderSize = 0;
             this.btnDash.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));

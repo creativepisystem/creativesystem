@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class ListarRotas
     {
@@ -6,6 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private BackgroundWorker routeListWorker;
 
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
@@ -36,6 +39,7 @@
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelR = new System.Windows.Forms.Panel();
+            this.routeListWorker = new System.ComponentModel.BackgroundWorker();
             this.FlowRoute = new System.Windows.Forms.FlowLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.TitleFilter = new System.Windows.Forms.Panel();
@@ -221,6 +225,12 @@
             this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar Rota";
+            //
+            //Route Worker
+            //
+            this.routeListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterRoute);
+            this.routeListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterRouteFinish);
+
             // 
             // ListarRotas
             // 

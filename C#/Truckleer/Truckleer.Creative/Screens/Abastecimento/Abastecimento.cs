@@ -107,6 +107,7 @@ namespace Truckleer.Creative
         private void BoxVehicle_SelectedIndexChanged(object sender, EventArgs e)
         {
         }
+
         private void GetDrivers(object sender, DoWorkEventArgs e)
         {
             e.Result = driverService.FindAll();
