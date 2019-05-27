@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class Motorista
     {
@@ -6,7 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private BackgroundWorker driverWorker;
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
         /// </summary>
@@ -34,7 +36,11 @@
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.PanelDriver = new System.Windows.Forms.Panel();
+            this.BoxCnhType = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.TextEmail = new System.Windows.Forms.TextBox();
             this.DivPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.BorderPanel5 = new System.Windows.Forms.Panel();
             this.BorderPanel4 = new System.Windows.Forms.Panel();
             this.BorderPanel3 = new System.Windows.Forms.Panel();
@@ -46,14 +52,13 @@
             this.LabelCnhDue = new System.Windows.Forms.Label();
             this.LabelCnh = new System.Windows.Forms.Label();
             this.TextCnh = new System.Windows.Forms.TextBox();
-            this.DatePicker = new System.Windows.Forms.DateTimePicker();
+            this.DateBirthDay = new System.Windows.Forms.DateTimePicker();
             this.LabelBirth = new System.Windows.Forms.Label();
             this.TextPhone = new System.Windows.Forms.TextBox();
             this.LabelPhone = new System.Windows.Forms.Label();
-            this.TextMail = new System.Windows.Forms.TextBox();
             this.TextCpf = new System.Windows.Forms.TextBox();
             this.LabelCpf = new System.Windows.Forms.Label();
-            this.LabelMail = new System.Windows.Forms.Label();
+            this.LabelCnhType = new System.Windows.Forms.Label();
             this.TextName = new System.Windows.Forms.TextBox();
             this.LabelName = new System.Windows.Forms.Label();
             this.ButtonCancel = new System.Windows.Forms.Button();
@@ -61,6 +66,7 @@
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
             this.PageDescription = new System.Windows.Forms.Label();
+            this.driverWorker = new System.ComponentModel.BackgroundWorker();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -138,7 +144,11 @@
             // 
             this.PanelDriver.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelDriver.BackColor = System.Drawing.Color.LightGray;
+            this.PanelDriver.Controls.Add(this.BoxCnhType);
+            this.PanelDriver.Controls.Add(this.panel1);
+            this.PanelDriver.Controls.Add(this.TextEmail);
             this.PanelDriver.Controls.Add(this.DivPanel);
+            this.PanelDriver.Controls.Add(this.label1);
             this.PanelDriver.Controls.Add(this.BorderPanel5);
             this.PanelDriver.Controls.Add(this.BorderPanel4);
             this.PanelDriver.Controls.Add(this.BorderPanel3);
@@ -150,14 +160,13 @@
             this.PanelDriver.Controls.Add(this.LabelCnhDue);
             this.PanelDriver.Controls.Add(this.LabelCnh);
             this.PanelDriver.Controls.Add(this.TextCnh);
-            this.PanelDriver.Controls.Add(this.DatePicker);
+            this.PanelDriver.Controls.Add(this.DateBirthDay);
             this.PanelDriver.Controls.Add(this.LabelBirth);
             this.PanelDriver.Controls.Add(this.TextPhone);
             this.PanelDriver.Controls.Add(this.LabelPhone);
-            this.PanelDriver.Controls.Add(this.TextMail);
             this.PanelDriver.Controls.Add(this.TextCpf);
             this.PanelDriver.Controls.Add(this.LabelCpf);
-            this.PanelDriver.Controls.Add(this.LabelMail);
+            this.PanelDriver.Controls.Add(this.LabelCnhType);
             this.PanelDriver.Controls.Add(this.TextName);
             this.PanelDriver.Controls.Add(this.LabelName);
             this.PanelDriver.Controls.Add(this.ButtonCancel);
@@ -170,6 +179,39 @@
             this.PanelDriver.Size = new System.Drawing.Size(970, 589);
             this.PanelDriver.TabIndex = 0;
             // 
+            // BoxCnhType
+            // 
+            this.BoxCnhType.BackColor = System.Drawing.Color.LightGray;
+            this.BoxCnhType.ForeColor = System.Drawing.Color.Black;
+            this.BoxCnhType.FormattingEnabled = true;
+            this.BoxCnhType.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E"});
+            this.BoxCnhType.Location = new System.Drawing.Point(659, 267);
+            this.BoxCnhType.Name = "BoxCnhType";
+            this.BoxCnhType.Size = new System.Drawing.Size(190, 28);
+            this.BoxCnhType.TabIndex = 94;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(602, 356);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(242, 2);
+            this.panel1.TabIndex = 93;
+            // 
+            // TextEmail
+            // 
+            this.TextEmail.BackColor = System.Drawing.Color.LightGray;
+            this.TextEmail.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextEmail.Location = new System.Drawing.Point(602, 335);
+            this.TextEmail.Name = "TextEmail";
+            this.TextEmail.Size = new System.Drawing.Size(242, 19);
+            this.TextEmail.TabIndex = 92;
+            // 
             // DivPanel
             // 
             this.DivPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -178,12 +220,24 @@
             this.DivPanel.Size = new System.Drawing.Size(2, 343);
             this.DivPanel.TabIndex = 88;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(529, 338);
+            this.label1.Margin = new System.Windows.Forms.Padding(0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(59, 20);
+            this.label1.TabIndex = 91;
+            this.label1.Text = "E-Mail";
+            // 
             // BorderPanel5
             // 
             this.BorderPanel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.BorderPanel5.Location = new System.Drawing.Point(603, 296);
+            this.BorderPanel5.Location = new System.Drawing.Point(659, 296);
             this.BorderPanel5.Name = "BorderPanel5";
-            this.BorderPanel5.Size = new System.Drawing.Size(242, 2);
+            this.BorderPanel5.Size = new System.Drawing.Size(190, 2);
             this.BorderPanel5.TabIndex = 90;
             // 
             // BorderPanel4
@@ -280,15 +334,15 @@
             this.TextCnh.Size = new System.Drawing.Size(242, 19);
             this.TextCnh.TabIndex = 82;
             // 
-            // DatePicker
+            // DateBirthDay
             // 
-            this.DatePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DatePicker.Location = new System.Drawing.Point(271, 144);
-            this.DatePicker.Name = "DatePicker";
-            this.DatePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.DatePicker.RightToLeftLayout = true;
-            this.DatePicker.Size = new System.Drawing.Size(135, 26);
-            this.DatePicker.TabIndex = 80;
+            this.DateBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.DateBirthDay.Location = new System.Drawing.Point(271, 144);
+            this.DateBirthDay.Name = "DateBirthDay";
+            this.DateBirthDay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateBirthDay.RightToLeftLayout = true;
+            this.DateBirthDay.Size = new System.Drawing.Size(135, 26);
+            this.DateBirthDay.TabIndex = 80;
             // 
             // LabelBirth
             // 
@@ -322,15 +376,6 @@
             this.LabelPhone.TabIndex = 75;
             this.LabelPhone.Text = "Telefone";
             // 
-            // TextMail
-            // 
-            this.TextMail.BackColor = System.Drawing.Color.LightGray;
-            this.TextMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextMail.Location = new System.Drawing.Point(603, 275);
-            this.TextMail.Name = "TextMail";
-            this.TextMail.Size = new System.Drawing.Size(242, 19);
-            this.TextMail.TabIndex = 78;
-            // 
             // TextCpf
             // 
             this.TextCpf.BackColor = System.Drawing.Color.LightGray;
@@ -352,17 +397,17 @@
             this.LabelCpf.TabIndex = 73;
             this.LabelCpf.Text = "CPF";
             // 
-            // LabelMail
+            // LabelCnhType
             // 
-            this.LabelMail.AutoSize = true;
-            this.LabelMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelMail.ForeColor = System.Drawing.Color.Gray;
-            this.LabelMail.Location = new System.Drawing.Point(530, 278);
-            this.LabelMail.Margin = new System.Windows.Forms.Padding(0);
-            this.LabelMail.Name = "LabelMail";
-            this.LabelMail.Size = new System.Drawing.Size(59, 20);
-            this.LabelMail.TabIndex = 77;
-            this.LabelMail.Text = "E-Mail";
+            this.LabelCnhType.AutoSize = true;
+            this.LabelCnhType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelCnhType.ForeColor = System.Drawing.Color.Gray;
+            this.LabelCnhType.Location = new System.Drawing.Point(530, 278);
+            this.LabelCnhType.Margin = new System.Windows.Forms.Padding(0);
+            this.LabelCnhType.Name = "LabelCnhType";
+            this.LabelCnhType.Size = new System.Drawing.Size(110, 20);
+            this.LabelCnhType.TabIndex = 77;
+            this.LabelCnhType.Text = "Tipo da CNH";
             // 
             // TextName
             // 
@@ -388,6 +433,7 @@
             // 
             this.ButtonCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonCancel.BackColor = System.Drawing.Color.Transparent;
+            this.ButtonCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonCancel.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.ButtonCancel.FlatAppearance.BorderSize = 2;
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -404,6 +450,7 @@
             // 
             this.ButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ButtonSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ButtonSave.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ButtonSave.FlatAppearance.BorderSize = 0;
             this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSave.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -414,6 +461,7 @@
             this.ButtonSave.TabIndex = 69;
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // PanelTitle
             // 
@@ -448,6 +496,11 @@
             this.PageDescription.Size = new System.Drawing.Size(268, 31);
             this.PageDescription.TabIndex = 42;
             this.PageDescription.Text = "Cadastrar Motorista /";
+            // 
+            // driverWorker
+            // 
+            this.driverWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveDriver);
+            this.driverWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveDriverFinish);
             // 
             // Motorista
             // 
@@ -491,14 +544,13 @@
         private System.Windows.Forms.Label LabelCnhDue;
         private System.Windows.Forms.Label LabelCnh;
         private System.Windows.Forms.TextBox TextCnh;
-        private System.Windows.Forms.DateTimePicker DatePicker;
+        private System.Windows.Forms.DateTimePicker DateBirthDay;
         private System.Windows.Forms.Label LabelBirth;
         private System.Windows.Forms.TextBox TextPhone;
         private System.Windows.Forms.Label LabelPhone;
-        private System.Windows.Forms.TextBox TextMail;
         private System.Windows.Forms.TextBox TextCpf;
         private System.Windows.Forms.Label LabelCpf;
-        private System.Windows.Forms.Label LabelMail;
+        private System.Windows.Forms.Label LabelCnhType;
         private System.Windows.Forms.TextBox TextName;
         private System.Windows.Forms.Label LabelName;
         private System.Windows.Forms.Panel BorderPanel3;
@@ -507,5 +559,9 @@
         private System.Windows.Forms.Panel BorderPanel5;
         private System.Windows.Forms.Panel BorderPanel4;
         private System.Windows.Forms.Panel DivPanel;
+        private System.Windows.Forms.ComboBox BoxCnhType;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox TextEmail;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -46,13 +46,13 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O nome deve conter de 2 a 40 letras!"
                 };
-            if (Cpf == null || Validator.IsValidCpf(Cpf))
+           if (Cpf == null || !Validator.IsValidCpf(Cpf))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Cpf inválido!"
                 };
-            if (! (Cnh.GetType() == typeof(CnhType)))
+            if (! (Cnh.GetType() == typeof(CnhType)) || Cnh< 0)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -64,7 +64,8 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "Cnh inválida!"
                 };
-            if (Birth_date == null || Birth_date.Year > new DateTime().Year -18 )
+            
+            if (Birth_date == null || Birth_date.Year > DateTime.Now.Year - 18 )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -76,38 +77,25 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "Telefone inválido!"
                 };
-            if (Email == null || Validator.IsValidEmail(Email))
+            if (Email == null || !Validator.IsValidEmail(Email))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Email inválido"
                 };
-            if (Cnh_expiration == null || Cnh_expiration.Year < 1900 || Cnh_expiration.Year > new DateTime().Year+5)
+            if (Cnh_expiration == null || Cnh_expiration.Year < 1900 || Cnh_expiration.Year > DateTime.Now.Year + 5)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A data de experiração da cnh é inválida!"
                 };
-            if (Obs != null || Obs.Length <0 || Obs.Length>100)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "A observação deve conter no máximo 100 caracteres!"
-                };
-            if (User == null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "Usuario é um campo obrigatório!"
-
-                };
-            else if (userService.FindOne(User.Id) == null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "Usuario inválido!"
-
-                };
+            if (Obs != null)
+                if (Obs.Length < 0 || Obs.Length > 100)
+                    return new Message()
+                    {
+                        Type = MessageType.ERROR,
+                        MessageText = "A observação deve conter no máximo 100 caracteres!"
+                    };
             return new Message()
             {
                 Type = MessageType.VALID,
