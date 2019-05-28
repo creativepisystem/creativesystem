@@ -17,6 +17,8 @@ namespace Truckleer.Modules.CustomConvert
                     return CnhType.A;
                 case "B":
                     return CnhType.B;
+                case "AB":
+                    return CnhType.AB;
                 case "C":
                     return CnhType.C;
                 case "D":
@@ -34,6 +36,8 @@ namespace Truckleer.Modules.CustomConvert
                     return "A";
                 case CnhType.B:
                     return "B";
+                case CnhType.AB:
+                    return "AB";
                 case CnhType.C:
                     return "C";
                 case CnhType.D:

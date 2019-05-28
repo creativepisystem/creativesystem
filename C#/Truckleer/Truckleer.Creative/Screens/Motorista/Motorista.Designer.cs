@@ -181,12 +181,14 @@ namespace Truckleer.Creative
             // 
             // BoxCnhType
             // 
+            this.BoxCnhType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Append;
             this.BoxCnhType.BackColor = System.Drawing.Color.LightGray;
             this.BoxCnhType.ForeColor = System.Drawing.Color.Black;
             this.BoxCnhType.FormattingEnabled = true;
             this.BoxCnhType.Items.AddRange(new object[] {
             "A",
             "B",
+            "AB",
             "C",
             "D",
             "E"});

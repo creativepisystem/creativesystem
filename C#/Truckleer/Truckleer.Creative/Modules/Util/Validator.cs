@@ -11,6 +11,8 @@ namespace Truckleer.Modules
     {
         public static bool IsValidCpf(string cpf)
             {
+                if (string.IsNullOrEmpty(cpf))
+                    return false;
                 int[] multiplicador1 = new int[9] { 10, 9, 8, 7, 6, 5, 4, 3, 2 };
                 int[] multiplicador2 = new int[10] { 11, 10, 9, 8, 7, 6, 5, 4, 3, 2 };
                 string tempCpf;
@@ -46,6 +48,8 @@ namespace Truckleer.Modules
             }
         public static bool IsValidCnh(string cnh)
         {
+            if (string.IsNullOrEmpty(cnh))
+                return false;
             cnh = cnh.Replace(" ", "");
             cnh = cnh.Replace("-", "");
             cnh = cnh.Replace(".", "");
@@ -53,6 +57,8 @@ namespace Truckleer.Modules
             {
                 return false;
             }
+            if (cnh.Length < 11)
+                return false;
             if (cnh.Equals("11111111111") || cnh.Equals("22222222222") || cnh.Equals("33333333333")
                 || cnh.Equals("44444444444") || cnh.Equals("55555555555") || cnh.Equals("66666666666")
                 || cnh.Equals("77777777777") || cnh.Equals("88888888888") || cnh.Equals("99999999999")
@@ -81,7 +87,8 @@ namespace Truckleer.Modules
                 && d2 == Math.Abs(Convert.ToInt32(cnh.Substring(10, 1))));
         }
         public static bool IsValidEmail(string email)
-        {
+        {   if (string.IsNullOrEmpty(email))
+                return false;
             return (new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$").IsMatch(email));
         }
     }

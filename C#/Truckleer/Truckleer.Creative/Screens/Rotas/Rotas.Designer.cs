@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class Rotas
     {
@@ -19,7 +21,7 @@
             }
             base.Dispose(disposing);
         }
-
+        private BackgroundWorker routeWorker;
         #region Código gerado pelo Designer de Componentes
 
         /// <summary> 
@@ -34,10 +36,12 @@
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.PanelRoute = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.TextStops = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LabelStops = new System.Windows.Forms.Label();
-            this.TextDetination = new System.Windows.Forms.TextBox();
+            this.TextDestination = new System.Windows.Forms.TextBox();
             this.LabelDestination = new System.Windows.Forms.Label();
             this.TextOrigin = new System.Windows.Forms.TextBox();
             this.LabelOrigin = new System.Windows.Forms.Label();
@@ -47,6 +51,7 @@
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
             this.PageDescription = new System.Windows.Forms.Label();
+            this.routeWorker = new System.ComponentModel.BackgroundWorker();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -124,10 +129,12 @@
             // 
             this.PanelRoute.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelRoute.BackColor = System.Drawing.Color.LightGray;
+            this.PanelRoute.Controls.Add(this.label1);
+            this.PanelRoute.Controls.Add(this.TextStops);
             this.PanelRoute.Controls.Add(this.panel2);
             this.PanelRoute.Controls.Add(this.panel1);
             this.PanelRoute.Controls.Add(this.LabelStops);
-            this.PanelRoute.Controls.Add(this.TextDetination);
+            this.PanelRoute.Controls.Add(this.TextDestination);
             this.PanelRoute.Controls.Add(this.LabelDestination);
             this.PanelRoute.Controls.Add(this.TextOrigin);
             this.PanelRoute.Controls.Add(this.LabelOrigin);
@@ -141,6 +148,25 @@
             this.PanelRoute.Name = "PanelRoute";
             this.PanelRoute.Size = new System.Drawing.Size(970, 411);
             this.PanelRoute.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(549, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(213, 15);
+            this.label1.TabIndex = 97;
+            this.label1.Text = "As paradas devem ser sepadas por \",\"";
+            // 
+            // TextStops
+            // 
+            this.TextStops.Location = new System.Drawing.Point(552, 184);
+            this.TextStops.Multiline = true;
+            this.TextStops.Name = "TextStops";
+            this.TextStops.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.TextStops.Size = new System.Drawing.Size(363, 144);
+            this.TextStops.TabIndex = 96;
             // 
             // panel2
             // 
@@ -169,15 +195,15 @@
             this.LabelStops.TabIndex = 93;
             this.LabelStops.Text = "Paradas";
             // 
-            // TextDetination
+            // TextDestination
             // 
-            this.TextDetination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextDetination.BackColor = System.Drawing.Color.LightGray;
-            this.TextDetination.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextDetination.Location = new System.Drawing.Point(103, 292);
-            this.TextDetination.Name = "TextDetination";
-            this.TextDetination.Size = new System.Drawing.Size(201, 19);
-            this.TextDetination.TabIndex = 92;
+            this.TextDestination.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TextDestination.BackColor = System.Drawing.Color.LightGray;
+            this.TextDestination.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextDestination.Location = new System.Drawing.Point(103, 292);
+            this.TextDestination.Name = "TextDestination";
+            this.TextDestination.Size = new System.Drawing.Size(201, 19);
+            this.TextDestination.TabIndex = 92;
             // 
             // LabelDestination
             // 
@@ -249,6 +275,7 @@
             this.ButtonSave.TabIndex = 69;
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // PanelTitle
             // 
@@ -283,6 +310,11 @@
             this.PageDescription.Size = new System.Drawing.Size(228, 31);
             this.PageDescription.TabIndex = 42;
             this.PageDescription.Text = "Cadastrar Rotas /";
+            // 
+            // routeWorker
+            // 
+            this.routeWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveRoute);
+            this.routeWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveRouteFinish);
             // 
             // Rotas
             // 
@@ -321,12 +353,14 @@
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label PageDescription;
         private System.Windows.Forms.Label LabelStops;
-        private System.Windows.Forms.TextBox TextDetination;
+        private System.Windows.Forms.TextBox TextDestination;
         private System.Windows.Forms.Label LabelDestination;
         private System.Windows.Forms.TextBox TextOrigin;
         private System.Windows.Forms.Label LabelOrigin;
         private System.Windows.Forms.Panel DivPanel;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox TextStops;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -8,6 +8,6 @@ namespace Truckleer.Modules
 {
     public enum CnhType
     {
-        A,B,C,D,E
+        A,B,AB,C,D,E
     }
 }

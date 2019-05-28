@@ -21,7 +21,7 @@ namespace Truckleer.Modules
         [FirestoreProperty("cpf")]
         public string Cpf { get; set; }
         [FirestoreProperty(Name = "cnh", ConverterType = typeof(CustomCnhTypeConvert))]
-        public CnhType Cnh { get; set; }
+        public CnhType? Cnh { get; set; }
         [FirestoreProperty("cnh_number")]
         public string Cnh_number { get; set; }
         [FirestoreProperty(Name = "birth_date", ConverterType = typeof(CustomDateTimeConvert))]
@@ -40,24 +40,31 @@ namespace Truckleer.Modules
         public User User { get; set; }
         public Message IsValid()
         {
-            if (Name == null || Name.Length < 2 || Name.Length> 40)
+            if (Name == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O nome deve conter de 2 a 40 letras!"
                 };
-           if (Cpf == null || !Validator.IsValidCpf(Cpf))
+            if (Name.Length < 2 || Name.Length > 40)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "O nome deve conter de 2 a 40 letras!"
+                };
+            if (Cpf == null || !Validator.IsValidCpf(Cpf))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Cpf inválido!"
                 };
-            if (! (Cnh.GetType() == typeof(CnhType)) || Cnh< 0)
+            if (Cnh == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Tipo de cnh inválida"
                 };
+            
             if (Cnh_number == null || Validator.IsValidCnh(Cnh_number))
                 return new Message()
                 {
@@ -65,25 +72,38 @@ namespace Truckleer.Modules
                     MessageText = "Cnh inválida!"
                 };
             
-            if (Birth_date == null || Birth_date.Year > DateTime.Now.Year - 18 )
+            if (Birth_date == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Data de nascimento inválida!"
                 };
-            if (Phone != null &&Phone.Length >15)
+            if (Birth_date.Year > DateTime.Now.Year - 18)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
-                    MessageText = "Telefone inválido!"
+                    MessageText = "Data de nascimento inválida!"
                 };
+            if (Phone != null)
+                if(Phone.Length > 15)
+                    return new Message()
+                    {
+                        Type = MessageType.ERROR,
+                        MessageText = "Telefone inválido!"
+                    };
             if (Email == null || !Validator.IsValidEmail(Email))
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Email inválido"
                 };
-            if (Cnh_expiration == null || Cnh_expiration.Year < 1900 || Cnh_expiration.Year > DateTime.Now.Year + 5)
+            if (Cnh_expiration == null)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "A data de experiração da cnh é inválida!"
+                };
+            if (Cnh_expiration.Year < DateTime.Now.Year || Cnh_expiration.Year > DateTime.Now.Year + 5)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
