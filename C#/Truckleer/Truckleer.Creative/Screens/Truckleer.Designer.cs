@@ -314,6 +314,7 @@ namespace Truckleer.Creative
             this.BtnListUser.TabIndex = 24;
             this.BtnListUser.Text = "Listar Usuários";
             this.BtnListUser.UseVisualStyleBackColor = false;
+            this.BtnListUser.Click += new System.EventHandler(this.BtnListUser_Click);
             // 
             // BtnNewUser
             // 

@@ -8,7 +8,6 @@ namespace Truckleer.Modules
 { 
     class DriverFilter
     {
-            readonly private DriverService driverService;
-           
+            //readonly private DriverService driverService;
     }
 }

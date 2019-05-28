@@ -110,6 +110,15 @@
     <Compile Include="Screens\Rotas\ListarRotas.Designer.cs">
       <DependentUpon>ListarRotas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Usuario\CustomUserList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Usuario\ListarUsuarios.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Usuario\ListarUsuarios.Designer.cs">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Veiculo\CustomVehicleList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -238,8 +247,14 @@
     <EmbeddedResource Include="Screens\Motorista\ListarMotoristas.resx">
       <DependentUpon>ListarMotoristas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Rotas\CustomRouteList.resx">
+      <DependentUpon>CustomRouteList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Screens\Rotas\ListarRotas.resx">
       <DependentUpon>ListarRotas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Usuario\ListarUsuarios.resx">
+      <DependentUpon>ListarUsuarios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Veiculo\ListarVeiculos.resx">
       <DependentUpon>ListarVeiculos.cs</DependentUpon>
@@ -416,6 +431,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\editNote.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shield.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

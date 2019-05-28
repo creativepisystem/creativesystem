@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative.Screens.Viagem
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative.Screens.Viagem
 {
     partial class ListarViagens
     {
@@ -6,6 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
+        private BackgroundWorker tripListWorker;
 
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
@@ -34,7 +37,7 @@
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelRoute = new System.Windows.Forms.Panel();
-            this.LayoutRoute = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowTrip = new System.Windows.Forms.FlowLayoutPanel();
             this.PanelFilter = new System.Windows.Forms.Panel();
             this.LabelFinal = new System.Windows.Forms.Label();
             this.DatePickerFinal = new System.Windows.Forms.DateTimePicker();
@@ -44,6 +47,7 @@
             this.ButtonCadastro = new System.Windows.Forms.Button();
             this.TextTrip = new System.Windows.Forms.TextBox();
             this.LabelSearch = new System.Windows.Forms.Label();
+            this.tripListWorker = new System.ComponentModel.BackgroundWorker();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -122,22 +126,22 @@
             // PanelRoute
             // 
             this.PanelRoute.BackColor = System.Drawing.Color.Gray;
-            this.PanelRoute.Controls.Add(this.LayoutRoute);
+            this.PanelRoute.Controls.Add(this.FlowTrip);
             this.PanelRoute.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelRoute.Location = new System.Drawing.Point(0, 100);
             this.PanelRoute.Name = "PanelRoute";
             this.PanelRoute.Size = new System.Drawing.Size(1191, 824);
             this.PanelRoute.TabIndex = 17;
             // 
-            // LayoutRoute
+            // FlowTrip
             // 
-            this.LayoutRoute.AutoScroll = true;
-            this.LayoutRoute.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LayoutRoute.Location = new System.Drawing.Point(0, 0);
-            this.LayoutRoute.Margin = new System.Windows.Forms.Padding(0);
-            this.LayoutRoute.Name = "LayoutRoute";
-            this.LayoutRoute.Size = new System.Drawing.Size(1191, 824);
-            this.LayoutRoute.TabIndex = 0;
+            this.FlowTrip.AutoScroll = true;
+            this.FlowTrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowTrip.Location = new System.Drawing.Point(0, 0);
+            this.FlowTrip.Margin = new System.Windows.Forms.Padding(0);
+            this.FlowTrip.Name = "FlowTrip";
+            this.FlowTrip.Size = new System.Drawing.Size(1191, 824);
+            this.FlowTrip.TabIndex = 0;
             // 
             // PanelFilter
             // 
@@ -242,6 +246,11 @@
             this.LabelSearch.TabIndex = 0;
             this.LabelSearch.Text = "Buscar Viagem";
             // 
+            // tripListWorker
+            // 
+            this.tripListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterTrip);
+            this.tripListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterTripFinish);
+            // 
             // ListarViagens
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +278,7 @@
         private System.Windows.Forms.TableLayoutPanel layoutFlex;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel PanelRoute;
-        private System.Windows.Forms.FlowLayoutPanel LayoutRoute;
+        private System.Windows.Forms.FlowLayoutPanel FlowTrip;
         private System.Windows.Forms.Panel PanelFilter;
         private System.Windows.Forms.Label LabelFinal;
         private System.Windows.Forms.DateTimePicker DatePickerFinal;

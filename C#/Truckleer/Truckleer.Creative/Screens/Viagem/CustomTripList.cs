@@ -21,6 +21,8 @@ namespace Truckleer.Creative.Screens.Viagem
         {
             this.index = index;
             ItemListDriver = new Panel();
+            panel1 = new Panel();
+            LabelReceiveRoute = new Label();
             BorderPanel3 = new Panel();
             BorderPanel2 = new Panel();
             BorderPanel1 = new Panel();
@@ -32,12 +34,14 @@ namespace Truckleer.Creative.Screens.Viagem
             LabelDate = new Label();
             LabelRoute = new Label();
             TitleItemDriver = new Panel();
-            LabelReceiveName = new Label();
-            LabelName = new Label();
-            panel1 = new Panel();
-            LabelReceiveRoute = new Label();
             ButtonDelete = new Button();
             ButtonEdit = new Button();
+            LabelReceiveName = new Label();
+            LabelName = new Label();
+            panel2 = new Panel();
+            label1 = new Label();
+            label2 = new Label();
+            button1 = new Button();
             SuspendLayout();
             TitleItemDriver.SuspendLayout();
             SuspendLayout();
@@ -54,6 +58,10 @@ namespace Truckleer.Creative.Screens.Viagem
             // ItemListDriver
             // 
             BackColor = System.Drawing.Color.LightGray;
+            Controls.Add(panel2);
+            Controls.Add(label1);
+            Controls.Add(label2);
+            Controls.Add(button1);
             Controls.Add(panel1);
             Controls.Add(LabelReceiveRoute);
             Controls.Add(BorderPanel3);
@@ -70,8 +78,27 @@ namespace Truckleer.Creative.Screens.Viagem
             Location = new System.Drawing.Point(190, 62);
             Margin = new Padding(10, 20, 5, 0);
             Name = "ItemListDriver";
-            Size = new System.Drawing.Size(355, 256);
+            Size = new System.Drawing.Size(355, 281);
             TabIndex = 1;
+            // 
+            // panel1
+            // 
+            panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            panel1.Location = new System.Drawing.Point(74, 225);
+            panel1.Name = "panel1";
+            panel1.Size = new System.Drawing.Size(190, 1);
+            panel1.TabIndex = 20;
+            // 
+            // LabelReceiveRoute
+            // 
+            LabelReceiveRoute.AutoSize = true;
+            LabelReceiveRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            LabelReceiveRoute.Location = new System.Drawing.Point(124, 208);
+            LabelReceiveRoute.Name = "LabelReceiveRoute";
+            LabelReceiveRoute.Size = new System.Drawing.Size(73, 17);
+            LabelReceiveRoute.TabIndex = 19;
+            LabelReceiveRoute.Text = "ROUTE ?";
+            LabelReceiveRoute.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BorderPanel3
             // 
@@ -101,21 +128,23 @@ namespace Truckleer.Creative.Screens.Viagem
             // 
             LabelReceiveDriver.AutoSize = true;
             LabelReceiveDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            LabelReceiveDriver.Location = new System.Drawing.Point(98, 166);
+            LabelReceiveDriver.Location = new System.Drawing.Point(133, 163);
             LabelReceiveDriver.Name = "LabelReceiveDriver";
             LabelReceiveDriver.Size = new System.Drawing.Size(97, 17);
             LabelReceiveDriver.TabIndex = 11;
-            LabelReceiveDriver.Text = "Felipe Goulart";
+            LabelReceiveDriver.Text = trip.Driver.Name;
+            LabelReceiveDriver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveVehicle
             // 
             LabelReceiveVehicle.AutoSize = true;
             LabelReceiveVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            LabelReceiveVehicle.Location = new System.Drawing.Point(105, 124);
+            LabelReceiveVehicle.Location = new System.Drawing.Point(111, 126);
             LabelReceiveVehicle.Name = "LabelReceiveVehicle";
             LabelReceiveVehicle.Size = new System.Drawing.Size(67, 17);
             LabelReceiveVehicle.TabIndex = 9;
-            LabelReceiveVehicle.Text = "XXX0000";
+            LabelReceiveVehicle.Text = trip.Vehicle.License_plate.ToString();
+            LabelReceiveVehicle.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveDate
             // 
@@ -125,7 +154,8 @@ namespace Truckleer.Creative.Screens.Viagem
             LabelReceiveDate.Name = "LabelReceiveDate";
             LabelReceiveDate.Size = new System.Drawing.Size(80, 17);
             LabelReceiveDate.TabIndex = 8;
-            LabelReceiveDate.Text = "22/04/2019";
+            LabelReceiveDate.Text = trip.Date.ToShortDateString();
+            LabelReceiveDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelDriver
             // 
@@ -182,44 +212,6 @@ namespace Truckleer.Creative.Screens.Viagem
             TitleItemDriver.Size = new System.Drawing.Size(355, 67);
             TitleItemDriver.TabIndex = 0;
             // 
-            // LabelReceiveName
-            // 
-            LabelReceiveName.AutoSize = true;
-            LabelReceiveName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            LabelReceiveName.Location = new System.Drawing.Point(107, 33);
-            LabelReceiveName.Name = "LabelReceiveName";
-            LabelReceiveName.Size = new System.Drawing.Size(82, 20);
-            LabelReceiveName.TabIndex = 1;
-            LabelReceiveName.Text = "São Paulo";
-            // 
-            // LabelName
-            // 
-            LabelName.AutoSize = true;
-            LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            LabelName.Location = new System.Drawing.Point(9, 28);
-            LabelName.Name = "LabelName";
-            LabelName.Size = new System.Drawing.Size(92, 25);
-            LabelName.TabIndex = 0;
-            LabelName.Text = "Viagem:";
-            // 
-            // panel1
-            // 
-            panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            panel1.Location = new System.Drawing.Point(74, 225);
-            panel1.Name = "panel1";
-            panel1.Size = new System.Drawing.Size(190, 1);
-            panel1.TabIndex = 20;
-            // 
-            // LabelReceiveRoute
-            // 
-            LabelReceiveRoute.AutoSize = true;
-            LabelReceiveRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            LabelReceiveRoute.Location = new System.Drawing.Point(81, 207);
-            LabelReceiveRoute.Name = "LabelReceiveRoute";
-            LabelReceiveRoute.Size = new System.Drawing.Size(73, 17);
-            LabelReceiveRoute.TabIndex = 19;
-            LabelReceiveRoute.Text = "São Paulo";
-            // 
             // ButtonDelete
             // 
             ButtonDelete.Anchor = ((AnchorStyles)((AnchorStyles.Top | AnchorStyles.Right)));
@@ -247,6 +239,76 @@ namespace Truckleer.Creative.Screens.Viagem
             ButtonEdit.Size = new System.Drawing.Size(25, 25);
             ButtonEdit.TabIndex = 109;
             ButtonEdit.UseVisualStyleBackColor = false;
+            // 
+            // LabelReceiveName
+            // 
+            LabelReceiveName.AutoSize = true;
+            LabelReceiveName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            LabelReceiveName.Location = new System.Drawing.Point(107, 33);
+            LabelReceiveName.Name = "LabelReceiveName";
+            LabelReceiveName.Size = new System.Drawing.Size(82, 20);
+            LabelReceiveName.TabIndex = 1;
+            LabelReceiveName.Text = trip.Name.ToString();
+            // 
+            // LabelName
+            // 
+            LabelName.AutoSize = true;
+            LabelName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            LabelName.Location = new System.Drawing.Point(9, 28);
+            LabelName.Name = "LabelName";
+            LabelName.Size = new System.Drawing.Size(92, 25);
+            LabelName.TabIndex = 0;
+            LabelName.Text = "Viagem:";            
+            // 
+            // panel2
+            // 
+            panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            panel2.Location = new System.Drawing.Point(74, 266);
+            panel2.Name = "panel2";
+            panel2.Size = new System.Drawing.Size(190, 1);
+            panel2.TabIndex = 114;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label1.Location = new System.Drawing.Point(122, 246);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(50, 17);
+            label1.TabIndex = 113;
+            label1.Text = trip.Status.ToString();
+            label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // button1
+            //
+            button1.Anchor = ((AnchorStyles)((AnchorStyles.Top | AnchorStyles.Right)));
+            if (trip.Status != TripStatus.ABERTA)
+            {
+                button1.BackgroundImage = Properties.Resources.shield;
+            }
+            else
+            {
+                button1.BackgroundImage = Properties.Resources.open;
+            }
+            button1.BackColor = System.Drawing.Color.Transparent;
+            button1.BackgroundImageLayout = ImageLayout.Stretch;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Location = new System.Drawing.Point(281, 83);
+            button1.Name = "button1";
+            button1.Size = new System.Drawing.Size(54, 55);
+            button1.TabIndex = 111;
+            button1.UseVisualStyleBackColor = false;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            label2.Location = new System.Drawing.Point(11, 251);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(59, 17);
+            label2.TabIndex = 112;
+            label2.Text = "Status:";
         }
 
         private readonly Panel ItemListDriver;
@@ -267,5 +329,9 @@ namespace Truckleer.Creative.Screens.Viagem
         private Label LabelName;
         private Button ButtonDelete;
         private Button ButtonEdit;
+        private Panel panel2;
+        private Label label1;
+        private Label label2;
+        private Button button1;
     }
 }

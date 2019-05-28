@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Truckleer.Modules;
 using Truckleer.Creative.Screens.Viagem;
+using Truckleer.Creative.Screens.Usuario;
 
 namespace Truckleer.Creative
 {
@@ -29,6 +30,8 @@ namespace Truckleer.Creative
         Viagens trip = new Viagens();
         ListarViagens listTrip = new ListarViagens();
         Usuarios user = new Usuarios();
+        ListarUsuarios listUser = new ListarUsuarios();
+        
 
         Panel currentPanel;
         public Truckleer()
@@ -444,6 +447,16 @@ namespace Truckleer.Creative
             BtnNewUser.BackColor = Color.Gray;
         }
 
+        //Button Listar Usuários Properties
+        private void BtnListUser_Click(object sender, EventArgs e)
+        {
+            Call(listUser);
+            // Unset Colors
+            Uncolor();
+            BtnUser.BackColor = Color.FromArgb(25, 137, 186);
+            BtnListUser.BackColor = Color.Gray;
+        }
+
         //Timer Open Side Menu When Other Button Is Clicked
         private void TimerSideMenu_Tick(object sender, EventArgs e)
         {
@@ -468,6 +481,5 @@ namespace Truckleer.Creative
         {
 
         }
-
     }
 }
