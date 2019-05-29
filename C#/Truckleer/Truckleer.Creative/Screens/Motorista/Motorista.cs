@@ -19,9 +19,14 @@ namespace Truckleer.Creative
 
         private void Motorista_Load(object sender, EventArgs e)
         {
+            if(Driver == null)
+                ClearFields();
             this.Dock = DockStyle.Fill;
         }
+        public static void SetDriver(Driver d)
+        {
 
+        }
         private void PanelRightDriver_Paint(object sender, PaintEventArgs e)
         {
 
@@ -37,6 +42,7 @@ namespace Truckleer.Creative
             if (isSave)
             {
                 MessageBox.Show("Motorista Salvo com Sucesso");
+                ClearFields();
             }
             else
             {
@@ -77,6 +83,18 @@ namespace Truckleer.Creative
             {
                 driverWorker.RunWorkerAsync();
             }
+        }
+        private void ClearFields()
+        {
+            DateBirthDay.Value = DateTime.Now;
+            DateCnhDue.Value = DateTime.Now;
+            TextName.Text = "";
+            TextCnh.Text = "";
+            TextCpf.Text = "";
+            BoxCnhType.Items.Clear();
+            TextPhone.Text = "";
+            TextEmail.Text = "";
+            TextObservation.Text = "";
         }
     }
 }

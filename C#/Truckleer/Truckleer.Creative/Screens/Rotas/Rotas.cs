@@ -25,6 +25,7 @@ namespace Truckleer.Creative
 
         private void Rotas_Load(object sender, EventArgs e)
         {
+            ClearFields();
             this.Dock = DockStyle.Fill;
         }
         private void SaveRoute(object sender, DoWorkEventArgs e)
@@ -37,6 +38,7 @@ namespace Truckleer.Creative
             if (isSave)
             {
                 MessageBox.Show("Rota Salva com Sucesso");
+                ClearFields();
             }
             else
             {
@@ -71,6 +73,12 @@ namespace Truckleer.Creative
             {
                 routeWorker.RunWorkerAsync();
             }
+        }
+        private void ClearFields()
+        {
+            TextDestination.Text = "";
+            TextOrigin.Text = "";
+            TextStops.Text = "";
         }
     }
 }

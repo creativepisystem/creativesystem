@@ -75,12 +75,6 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "O Veículo é obrigatório!"
                 };
-            if (Route != null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "A rota é inválida!"
-                };
             
             return new Message()
             {

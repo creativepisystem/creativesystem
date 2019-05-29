@@ -42,6 +42,8 @@ namespace Truckleer.Creative
 
         private void Abastecimento_Load(object sender, EventArgs e)
         {
+            if(Supply == null)
+                ClearFields();
             this.Dock = DockStyle.Fill;
             driverWorker.RunWorkerAsync();
             routeWorker.RunWorkerAsync();
@@ -186,6 +188,7 @@ namespace Truckleer.Creative
             if (isSave)
             {
                 MessageBox.Show("Abastecimento Salvo com Sucesso");
+                ClearFields();
             }
             else
             {
@@ -222,6 +225,18 @@ namespace Truckleer.Creative
             }
             return text;
         }
-        
+        private void ClearFields()
+        {
+            DateSupply.Value = DateTime.Now;
+            BoxVehicle.Items.Clear();
+            BoxTrip.Items.Clear();
+            BoxRoute.Items.Clear();
+            BoxDriver.Items.Clear();
+            TextLiters.Text = "";
+            TextKm.Text = "";
+            TextPrice.Text = "";
+            TextStation.Text = "";
+            LabelResult.Text = "";
+        }
     }
 }

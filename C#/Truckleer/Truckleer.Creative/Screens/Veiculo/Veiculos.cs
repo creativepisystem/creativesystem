@@ -25,6 +25,7 @@ namespace Truckleer.Creative
 
         private void Veiculos_Load(object sender, EventArgs e)
         {
+            ClearFields();
             this.Dock = DockStyle.Fill;
         }
 
@@ -39,6 +40,7 @@ namespace Truckleer.Creative
             if (isSave)
             {
                 MessageBox.Show("Veiculo Salvo com Sucesso");
+                ClearFields();
             }
             else
             {
@@ -83,6 +85,19 @@ namespace Truckleer.Creative
             {
                 vehicleWorker.RunWorkerAsync();
             }
+        }
+        private void ClearFields()
+        {
+            TextPlate.Text = "";
+            TextBrand.Text = "";
+            TextModel.Text = "";
+            BoxColor.Items.Clear();
+            TextChassi.Text = "";
+            TextYearFab.Text = "";
+            TextYearMod.Text = "";
+            TextYearMod.Text = "";
+            TextRenavam.Text = "";
+            TextTank.Text = "";
         }
     }
 }
