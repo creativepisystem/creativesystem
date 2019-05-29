@@ -456,7 +456,7 @@ namespace Truckleer.Creative
             this.DateSupply.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
             this.DateSupply.MinDate = new System.DateTime(2000, 1, 1, 0, 0, 0, 0);
             this.DateSupply.Name = "DateSupply";
-            this.DateSupply.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateSupply.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DateSupply.RightToLeftLayout = true;
             this.DateSupply.Size = new System.Drawing.Size(194, 26);
             this.DateSupply.TabIndex = 51;

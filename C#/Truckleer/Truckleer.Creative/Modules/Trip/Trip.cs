@@ -32,25 +32,31 @@ namespace Truckleer.Modules
         [FirestoreProperty(Name = "driver", ConverterType = typeof(CustomDriverConvert))]
         public Driver Driver { get; set; }
         [FirestoreProperty(Name ="status", ConverterType = typeof(CustomTripStatusConvert))]
-        public TripStatus Status { get; set; }
+        public TripStatus? Status { get; set; }
         [FirestoreProperty(Name = "vehicle", ConverterType = typeof(CustomVehicleConvert))]
         public Vehicle Vehicle { get; set; }
 
         public Message IsValid()
         {
-            if (Date == null || Date < new DateTime() )
+            if (Date == null )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A data é inválida!"
                 };
-            if (Name == null || Name.Length <2 || Name.Length> 30)
+            if (Name == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "A nome é invalida!O nome deve conter entre 2 e 30 caracteres!"
                 };
-            if (!(Status.GetType() == typeof(TripStatus)))
+            if (Name.Length <2 || Name.Length> 30)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "A nome é invalida!O nome deve conter entre 2 e 30 caracteres!"
+                };
+            if (Status.GetType() == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -70,28 +76,12 @@ namespace Truckleer.Modules
                     MessageText = "O Veículo é obrigatório!"
                 };
             if (Route != null)
-            {
-                if(RouteService.FindOne(Route.Id) == null)
-                {
-                    return new Message()
-                    {
-                        Type = MessageType.ERROR,
-                        MessageText = "A rota é inválida!"
-                    };
-                }
-            }
-            if(DriverService.FindOne(Driver.Id) == null)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
-                    MessageText = "O Motorista é inválido!"
+                    MessageText = "A rota é inválida!"
                 };
-            if (VehicleService.FindOne(Vehicle.Id) == null)
-                return new Message()
-                {
-                    Type = MessageType.ERROR,
-                    MessageText = "O veículo é inválido!"
-                };
+            
             return new Message()
             {
                 Type = MessageType.VALID,

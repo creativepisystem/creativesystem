@@ -38,19 +38,23 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.BorderPanel1 = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.BoxVehicle = new System.Windows.Forms.ComboBox();
             this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ButtonCancel = new System.Windows.Forms.Button();
-            this.boxRoute = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.BoxRoute = new System.Windows.Forms.ComboBox();
+            this.BoxDriver = new System.Windows.Forms.ComboBox();
             this.labelRouteSupplpy = new System.Windows.Forms.Label();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.labelLitrosSupply = new System.Windows.Forms.Label();
-            this.textBoxLitersSupply = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.TxtName = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.DateTimePicker();
             this.labelDataSupply = new System.Windows.Forms.Label();
+            this.driverWorker = new System.ComponentModel.BackgroundWorker();
+            this.routeWorker = new System.ComponentModel.BackgroundWorker();
+            this.vehicleWorker = new System.ComponentModel.BackgroundWorker();
+            this.tripWorker = new System.ComponentModel.BackgroundWorker();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -116,18 +120,18 @@
             this.PanelCadastro.Controls.Add(this.panel2);
             this.PanelCadastro.Controls.Add(this.panel1);
             this.PanelCadastro.Controls.Add(this.BorderPanel1);
-            this.PanelCadastro.Controls.Add(this.comboBox2);
+            this.PanelCadastro.Controls.Add(this.BoxVehicle);
             this.PanelCadastro.Controls.Add(this.title);
             this.PanelCadastro.Controls.Add(this.label2);
             this.PanelCadastro.Controls.Add(this.ButtonCancel);
-            this.PanelCadastro.Controls.Add(this.boxRoute);
-            this.PanelCadastro.Controls.Add(this.comboBox1);
+            this.PanelCadastro.Controls.Add(this.BoxRoute);
+            this.PanelCadastro.Controls.Add(this.BoxDriver);
             this.PanelCadastro.Controls.Add(this.labelRouteSupplpy);
             this.PanelCadastro.Controls.Add(this.ButtonSave);
             this.PanelCadastro.Controls.Add(this.label1);
             this.PanelCadastro.Controls.Add(this.labelLitrosSupply);
-            this.PanelCadastro.Controls.Add(this.textBoxLitersSupply);
-            this.PanelCadastro.Controls.Add(this.dateTimePicker1);
+            this.PanelCadastro.Controls.Add(this.TxtName);
+            this.PanelCadastro.Controls.Add(this.Date);
             this.PanelCadastro.Controls.Add(this.labelDataSupply);
             this.PanelCadastro.Location = new System.Drawing.Point(154, 91);
             this.PanelCadastro.Name = "PanelCadastro";
@@ -174,17 +178,17 @@
             this.BorderPanel1.Size = new System.Drawing.Size(444, 2);
             this.BorderPanel1.TabIndex = 41;
             // 
-            // comboBox2
+            // BoxVehicle
             // 
-            this.comboBox2.AllowDrop = true;
-            this.comboBox2.BackColor = System.Drawing.Color.Azure;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(30, 413);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(195, 28);
-            this.comboBox2.TabIndex = 39;
+            this.BoxVehicle.AllowDrop = true;
+            this.BoxVehicle.BackColor = System.Drawing.Color.Azure;
+            this.BoxVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxVehicle.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxVehicle.FormattingEnabled = true;
+            this.BoxVehicle.Location = new System.Drawing.Point(30, 413);
+            this.BoxVehicle.Name = "BoxVehicle";
+            this.BoxVehicle.Size = new System.Drawing.Size(195, 28);
+            this.BoxVehicle.TabIndex = 39;
             // 
             // title
             // 
@@ -225,29 +229,29 @@
             this.ButtonCancel.Text = "Cancelar";
             this.ButtonCancel.UseVisualStyleBackColor = false;
             // 
-            // boxRoute
+            // BoxRoute
             // 
-            this.boxRoute.AllowDrop = true;
-            this.boxRoute.BackColor = System.Drawing.Color.Azure;
-            this.boxRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxRoute.FormattingEnabled = true;
-            this.boxRoute.Location = new System.Drawing.Point(28, 330);
-            this.boxRoute.Name = "boxRoute";
-            this.boxRoute.Size = new System.Drawing.Size(266, 28);
-            this.boxRoute.TabIndex = 35;
+            this.BoxRoute.AllowDrop = true;
+            this.BoxRoute.BackColor = System.Drawing.Color.Azure;
+            this.BoxRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxRoute.FormattingEnabled = true;
+            this.BoxRoute.Location = new System.Drawing.Point(28, 330);
+            this.BoxRoute.Name = "BoxRoute";
+            this.BoxRoute.Size = new System.Drawing.Size(266, 28);
+            this.BoxRoute.TabIndex = 35;
             // 
-            // comboBox1
+            // BoxDriver
             // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.BackColor = System.Drawing.Color.Azure;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(345, 28);
-            this.comboBox1.TabIndex = 37;
+            this.BoxDriver.AllowDrop = true;
+            this.BoxDriver.BackColor = System.Drawing.Color.Azure;
+            this.BoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxDriver.FormattingEnabled = true;
+            this.BoxDriver.Location = new System.Drawing.Point(28, 242);
+            this.BoxDriver.Name = "BoxDriver";
+            this.BoxDriver.Size = new System.Drawing.Size(345, 28);
+            this.BoxDriver.TabIndex = 37;
             // 
             // labelRouteSupplpy
             // 
@@ -274,6 +278,7 @@
             this.ButtonSave.TabIndex = 38;
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // label1
             // 
@@ -299,29 +304,29 @@
             this.labelLitrosSupply.TabIndex = 32;
             this.labelLitrosSupply.Text = "Nome da Viagem";
             // 
-            // textBoxLitersSupply
+            // TxtName
             // 
-            this.textBoxLitersSupply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TxtName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLitersSupply.BackColor = System.Drawing.Color.Azure;
-            this.textBoxLitersSupply.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLitersSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLitersSupply.Location = new System.Drawing.Point(28, 92);
-            this.textBoxLitersSupply.MaxLength = 10;
-            this.textBoxLitersSupply.Name = "textBoxLitersSupply";
-            this.textBoxLitersSupply.Size = new System.Drawing.Size(444, 23);
-            this.textBoxLitersSupply.TabIndex = 33;
+            this.TxtName.BackColor = System.Drawing.Color.Azure;
+            this.TxtName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TxtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TxtName.Location = new System.Drawing.Point(28, 92);
+            this.TxtName.MaxLength = 10;
+            this.TxtName.Name = "TxtName";
+            this.TxtName.Size = new System.Drawing.Size(444, 23);
+            this.TxtName.TabIndex = 33;
             // 
-            // dateTimePicker1
+            // Date
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(28, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 26);
-            this.dateTimePicker1.TabIndex = 31;
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Date.Location = new System.Drawing.Point(28, 160);
+            this.Date.Name = "Date";
+            this.Date.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Date.RightToLeftLayout = true;
+            this.Date.Size = new System.Drawing.Size(141, 26);
+            this.Date.TabIndex = 31;
             // 
             // labelDataSupply
             // 
@@ -333,6 +338,26 @@
             this.labelDataSupply.Size = new System.Drawing.Size(48, 20);
             this.labelDataSupply.TabIndex = 30;
             this.labelDataSupply.Text = "Data";
+            // 
+            // driverWorker
+            // 
+            this.driverWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetDrivers);
+            this.driverWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetDriversFinish);
+            // 
+            // routeWorker
+            // 
+            this.routeWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetRoutes);
+            this.routeWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetRoutesFinish);
+            // 
+            // vehicleWorker
+            // 
+            this.vehicleWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetVehicles);
+            this.vehicleWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetVehiclesFinish);
+            // 
+            // tripWorker
+            // 
+            this.tripWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveTrip);
+            this.tripWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveTripFinish);
             // 
             // Viagens
             // 
@@ -367,18 +392,22 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel BorderPanel1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox BoxVehicle;
         private System.Windows.Forms.Label title;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonCancel;
-        private System.Windows.Forms.ComboBox boxRoute;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox BoxRoute;
+        private System.Windows.Forms.ComboBox BoxDriver;
         private System.Windows.Forms.Label labelRouteSupplpy;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelLitrosSupply;
-        private System.Windows.Forms.TextBox textBoxLitersSupply;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox TxtName;
+        private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.Label labelDataSupply;
+        private System.ComponentModel.BackgroundWorker driverWorker;
+        private System.ComponentModel.BackgroundWorker routeWorker;
+        private System.ComponentModel.BackgroundWorker vehicleWorker;
+        private System.ComponentModel.BackgroundWorker tripWorker;
     }
 }

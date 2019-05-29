@@ -27,7 +27,7 @@ namespace Truckleer.Modules
         [FirestoreProperty("mod_Year")]
         public int Mod_Year { get; set; }
         [FirestoreProperty("color")]
-        public VehicleColor Color { get; set; }
+        public VehicleColor? Color { get; set; }
         [FirestoreProperty("renavam")]
         public string Renavam { get; set; }
         [FirestoreProperty("chassi")]
@@ -35,19 +35,37 @@ namespace Truckleer.Modules
 
         public Message IsValid()
         {
-            if (License_plate == null || License_plate.Length < 7 || License_plate.Length > 8)
+            if (License_plate == null )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
-                    MessageText = "Placa do veiculo Incorreta!a plca deve conter entre 7 e 8 caracteres"
+                    MessageText = "Placa do veiculo Incorreta!a plca deve conter entre 6 e 8 caracteres"
                 };
-            if (Model == null || Model.Length < 3 || Model.Length > 20)
+            if (License_plate.Length < 6 || License_plate.Length > 8)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "Placa do veiculo Incorreta!a plca deve conter entre 6 e 8 caracteres"
+                };
+            if (Model == null )
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "O modelo deve conter entre 3 e 20 caracteres"
                 };
-            if (Brand == null || Model.Length < 3 || Model.Length > 20)
+            if (Model.Length < 3 || Model.Length > 20)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "O modelo deve conter entre 3 e 20 caracteres"
+                };
+            if (Brand == null)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "A marca deve conter entre 3 e 20 caracteres"
+                };
+            if (Model.Length < 3 || Model.Length > 20)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
@@ -59,31 +77,39 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "Erro!Capacidade do tanque incorreta"
                 };
-            if (Fab_Year < 1900 || Fab_Year > new DateTime().Year)
+            if (Fab_Year < 1900 || Fab_Year > DateTime.Now.Year)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Erro!Ano de fabricação é inválido!"
                 };
-            if (Mod_Year < 1900 || Mod_Year > new DateTime().Year)
+            if (Mod_Year < 1900 || Mod_Year > DateTime.Now.Year)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Erro!Ano do Modelo é inválido!"
                 };
-            if (Renavam != null && Renavam.Length != 11)
+            if (Renavam != null)
+                if(Renavam.Length != 11)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                     MessageText = "Erro!Renavam inválido!"
                 };
-            if (Chassi != null && Renavam.Length != 17)
+            if (Chassi != null)
+                if (Chassi.Length != 17)
                 return new Message()
                 {
                     Type = MessageType.ERROR,
                         MessageText = "Erro!Chassi inválido!"
                 };
-
+            
+            if(Color == null)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "Erro!Cor inválida!"
+                };
             return new Message()
             {
                 Type = MessageType.VALID,
