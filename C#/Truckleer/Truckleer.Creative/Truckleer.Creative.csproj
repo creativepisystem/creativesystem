@@ -65,6 +65,19 @@
     <Compile Include="Screens\Abastecimento\CustomSupplyList.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\Despesas\CustomCostList.cs" />
+    <Compile Include="Screens\Despesas\Despesas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Despesas\Despesas.Designer.cs">
+      <DependentUpon>Despesas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Despesas\ListarDespesas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Despesas\ListarDespesas.Designer.cs">
+      <DependentUpon>ListarDespesas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Manutencao\AlertaManutencao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -231,6 +244,12 @@
     <Compile Include="Modules\Vehicle\VehicleFilter.cs" />
     <EmbeddedResource Include="Screens\Abastecimento\Abastecimento.resx">
       <DependentUpon>Abastecimento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Despesas\Despesas.resx">
+      <DependentUpon>Despesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Despesas\ListarDespesas.resx">
+      <DependentUpon>ListarDespesas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manutencao\AlertaManutencao.resx">
       <DependentUpon>AlertaManutencao.cs</DependentUpon>

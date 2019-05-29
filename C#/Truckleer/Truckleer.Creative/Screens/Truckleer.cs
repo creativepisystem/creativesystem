@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Truckleer.Modules;
 using Truckleer.Creative.Screens.Viagem;
 using Truckleer.Creative.Screens.Usuario;
+using Truckleer.Creative;
+using Truckleer.Creative.Screens.Despesas;
 
 namespace Truckleer.Creative
 {
@@ -31,6 +33,8 @@ namespace Truckleer.Creative
         ListarViagens listTrip = new ListarViagens();
         Usuarios user = new Usuarios();
         ListarUsuarios listUser = new ListarUsuarios();
+        Despesas cost = new Despesas();
+        ListarDespesas listCost = new ListarDespesas();
         
 
         Panel currentPanel;
@@ -100,6 +104,8 @@ namespace Truckleer.Creative
             btnMaintence.BackColor = Color.FromArgb(64, 64, 64);
             btnTrip.BackColor = Color.FromArgb(64, 64, 64);
             btnVeiculo.BackColor = Color.FromArgb(64, 64, 64);
+            BtnUser.BackColor = Color.FromArgb(64, 64, 64);
+            BtnCost.BackColor = Color.FromArgb(64, 64, 64);
 
             // Submenus
             btnAbastecer.BackColor = Color.FromArgb(90, 90, 90);
@@ -115,6 +121,10 @@ namespace Truckleer.Creative
             btnAlertMaintence.BackColor = Color.FromArgb(90, 90, 90);
             btnMakeTrip.BackColor = Color.FromArgb(90, 90, 90);
             btnListTrip.BackColor = Color.FromArgb(90, 90, 90);
+            BtnNewUser.BackColor = Color.FromArgb(90, 90, 90);
+            BtnListUser.BackColor = Color.FromArgb(90, 90, 90);
+            BtnNewCost.BackColor = Color.FromArgb(90, 90, 90);
+            BtnListCost.BackColor = Color.FromArgb(90, 90, 90);
         }
         //Call the UserControls
         public void Call(UserControl screen)
@@ -455,6 +465,46 @@ namespace Truckleer.Creative
             Uncolor();
             BtnUser.BackColor = Color.FromArgb(25, 137, 186);
             BtnListUser.BackColor = Color.Gray;
+        }
+
+        //Button Cost Properties
+        private void BtnCost_Click(object sender, EventArgs e)
+        {
+            //Define a value to a global variable that contains the current panel group
+            currentPanel = groupCost;
+            //Test the size of the panel group, if the condition is true, it's close the group instead of, it opens
+            if (groupCost.Size.Height == groupCost.MaximumSize.Height)
+                IsCollapsed = false;
+            else
+                IsCollapsed = true;
+            //Call the timer which close or opens the groups
+            timer.Start();
+            //Opens the sideBar menu when the button is clicked and the menu is collapsed
+            timerSideMenu.Start();
+            //Call CloseGroup Function
+            CloseGroup(user);
+
+            BackImageUp(btnTrip);
+        }
+
+        //Button Nova Despesa
+        private void BtnNewCost_Click(object sender, EventArgs e)
+        {
+            Call(cost);
+            //Unset Colors
+            Uncolor();
+            BtnCost.BackColor = Color.FromArgb(25, 137, 186);
+            BtnNewCost.BackColor = Color.Gray;
+        }
+
+        //Button Listar Despesas Properties
+        private void BtnListCost_Click(object sender, EventArgs e)
+        {
+            Call(listCost);
+            // Unset Colors
+            Uncolor();
+            BtnCost.BackColor = Color.FromArgb(25, 137, 186);
+            BtnListCost.BackColor = Color.Gray;
         }
 
         //Timer Open Side Menu When Other Button Is Clicked

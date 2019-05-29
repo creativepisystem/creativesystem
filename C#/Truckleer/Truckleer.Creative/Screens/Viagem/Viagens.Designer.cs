@@ -32,25 +32,25 @@
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
+            this.PanelCadastro = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.BorderPanel1 = new System.Windows.Forms.Panel();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.title = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.ButtonCancel = new System.Windows.Forms.Button();
             this.boxRoute = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.labelRouteSupplpy = new System.Windows.Forms.Label();
-            this.textBoxLitersSupply = new System.Windows.Forms.TextBox();
+            this.ButtonSave = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.labelLitrosSupply = new System.Windows.Forms.Label();
+            this.textBoxLitersSupply = new System.Windows.Forms.TextBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.labelDataSupply = new System.Windows.Forms.Label();
-            this.PanelCadastro = new System.Windows.Forms.Panel();
-            this.title = new System.Windows.Forms.Label();
-            this.ButtonCancel = new System.Windows.Forms.Button();
-            this.ButtonSave = new System.Windows.Forms.Button();
-            this.BorderPanel1 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -66,7 +66,7 @@
             this.PanelMain.Location = new System.Drawing.Point(0, 0);
             this.PanelMain.Name = "PanelMain";
             this.PanelMain.Size = new System.Drawing.Size(1096, 759);
-            this.PanelMain.TabIndex = 3;
+            this.PanelMain.TabIndex = 4;
             // 
             // layoutFlex
             // 
@@ -106,123 +106,6 @@
             this.PanelContainer.Size = new System.Drawing.Size(1067, 693);
             this.PanelContainer.TabIndex = 1;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.AllowDrop = true;
-            this.comboBox2.BackColor = System.Drawing.Color.Azure;
-            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(30, 413);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(195, 28);
-            this.comboBox2.TabIndex = 39;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.Gray;
-            this.label2.Location = new System.Drawing.Point(26, 384);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(68, 20);
-            this.label2.TabIndex = 38;
-            this.label2.Text = "Veículo";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AllowDrop = true;
-            this.comboBox1.BackColor = System.Drawing.Color.Azure;
-            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(28, 242);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(345, 28);
-            this.comboBox1.TabIndex = 37;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Gray;
-            this.label1.Location = new System.Drawing.Point(27, 210);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(84, 20);
-            this.label1.TabIndex = 36;
-            this.label1.Text = "Motorista";
-            // 
-            // boxRoute
-            // 
-            this.boxRoute.AllowDrop = true;
-            this.boxRoute.BackColor = System.Drawing.Color.Azure;
-            this.boxRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.boxRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.boxRoute.FormattingEnabled = true;
-            this.boxRoute.Location = new System.Drawing.Point(28, 330);
-            this.boxRoute.Name = "boxRoute";
-            this.boxRoute.Size = new System.Drawing.Size(266, 28);
-            this.boxRoute.TabIndex = 35;
-            // 
-            // labelRouteSupplpy
-            // 
-            this.labelRouteSupplpy.AutoSize = true;
-            this.labelRouteSupplpy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRouteSupplpy.ForeColor = System.Drawing.Color.Gray;
-            this.labelRouteSupplpy.Location = new System.Drawing.Point(26, 302);
-            this.labelRouteSupplpy.Name = "labelRouteSupplpy";
-            this.labelRouteSupplpy.Size = new System.Drawing.Size(48, 20);
-            this.labelRouteSupplpy.TabIndex = 34;
-            this.labelRouteSupplpy.Text = "Rota";
-            // 
-            // textBoxLitersSupply
-            // 
-            this.textBoxLitersSupply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxLitersSupply.BackColor = System.Drawing.Color.Azure;
-            this.textBoxLitersSupply.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxLitersSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxLitersSupply.Location = new System.Drawing.Point(28, 92);
-            this.textBoxLitersSupply.MaxLength = 10;
-            this.textBoxLitersSupply.Name = "textBoxLitersSupply";
-            this.textBoxLitersSupply.Size = new System.Drawing.Size(444, 23);
-            this.textBoxLitersSupply.TabIndex = 33;
-            // 
-            // labelLitrosSupply
-            // 
-            this.labelLitrosSupply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.labelLitrosSupply.AutoSize = true;
-            this.labelLitrosSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLitrosSupply.ForeColor = System.Drawing.Color.Gray;
-            this.labelLitrosSupply.Location = new System.Drawing.Point(24, 61);
-            this.labelLitrosSupply.Name = "labelLitrosSupply";
-            this.labelLitrosSupply.Size = new System.Drawing.Size(145, 20);
-            this.labelLitrosSupply.TabIndex = 32;
-            this.labelLitrosSupply.Text = "Nome da Viagem";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(28, 160);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.dateTimePicker1.RightToLeftLayout = true;
-            this.dateTimePicker1.Size = new System.Drawing.Size(141, 26);
-            this.dateTimePicker1.TabIndex = 31;
-            // 
-            // labelDataSupply
-            // 
-            this.labelDataSupply.AutoSize = true;
-            this.labelDataSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDataSupply.ForeColor = System.Drawing.Color.Gray;
-            this.labelDataSupply.Location = new System.Drawing.Point(26, 137);
-            this.labelDataSupply.Name = "labelDataSupply";
-            this.labelDataSupply.Size = new System.Drawing.Size(48, 20);
-            this.labelDataSupply.TabIndex = 30;
-            this.labelDataSupply.Text = "Data";
-            // 
             // PanelCadastro
             // 
             this.PanelCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -251,6 +134,58 @@
             this.PanelCadastro.Size = new System.Drawing.Size(502, 519);
             this.PanelCadastro.TabIndex = 28;
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel4.Location = new System.Drawing.Point(29, 184);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(140, 2);
+            this.panel4.TabIndex = 45;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel3.Location = new System.Drawing.Point(29, 439);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(196, 2);
+            this.panel3.TabIndex = 44;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel2.Location = new System.Drawing.Point(27, 356);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(267, 2);
+            this.panel2.TabIndex = 43;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.panel1.Location = new System.Drawing.Point(27, 268);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(346, 2);
+            this.panel1.TabIndex = 42;
+            // 
+            // BorderPanel1
+            // 
+            this.BorderPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.BorderPanel1.Location = new System.Drawing.Point(29, 115);
+            this.BorderPanel1.Name = "BorderPanel1";
+            this.BorderPanel1.Size = new System.Drawing.Size(444, 2);
+            this.BorderPanel1.TabIndex = 41;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.AllowDrop = true;
+            this.comboBox2.BackColor = System.Drawing.Color.Azure;
+            this.comboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(30, 413);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(195, 28);
+            this.comboBox2.TabIndex = 39;
+            // 
             // title
             // 
             this.title.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
@@ -262,6 +197,17 @@
             this.title.Size = new System.Drawing.Size(211, 26);
             this.title.TabIndex = 40;
             this.title.Text = "Cadastro de Viagem";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Gray;
+            this.label2.Location = new System.Drawing.Point(26, 384);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.TabIndex = 38;
+            this.label2.Text = "Veículo";
             // 
             // ButtonCancel
             // 
@@ -279,6 +225,41 @@
             this.ButtonCancel.Text = "Cancelar";
             this.ButtonCancel.UseVisualStyleBackColor = false;
             // 
+            // boxRoute
+            // 
+            this.boxRoute.AllowDrop = true;
+            this.boxRoute.BackColor = System.Drawing.Color.Azure;
+            this.boxRoute.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boxRoute.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.boxRoute.FormattingEnabled = true;
+            this.boxRoute.Location = new System.Drawing.Point(28, 330);
+            this.boxRoute.Name = "boxRoute";
+            this.boxRoute.Size = new System.Drawing.Size(266, 28);
+            this.boxRoute.TabIndex = 35;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.AllowDrop = true;
+            this.comboBox1.BackColor = System.Drawing.Color.Azure;
+            this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(28, 242);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(345, 28);
+            this.comboBox1.TabIndex = 37;
+            // 
+            // labelRouteSupplpy
+            // 
+            this.labelRouteSupplpy.AutoSize = true;
+            this.labelRouteSupplpy.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelRouteSupplpy.ForeColor = System.Drawing.Color.Gray;
+            this.labelRouteSupplpy.Location = new System.Drawing.Point(26, 302);
+            this.labelRouteSupplpy.Name = "labelRouteSupplpy";
+            this.labelRouteSupplpy.Size = new System.Drawing.Size(48, 20);
+            this.labelRouteSupplpy.TabIndex = 34;
+            this.labelRouteSupplpy.Text = "Rota";
+            // 
             // ButtonSave
             // 
             this.ButtonSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -294,45 +275,64 @@
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
             // 
-            // BorderPanel1
+            // label1
             // 
-            this.BorderPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.BorderPanel1.Location = new System.Drawing.Point(29, 115);
-            this.BorderPanel1.Name = "BorderPanel1";
-            this.BorderPanel1.Size = new System.Drawing.Size(444, 2);
-            this.BorderPanel1.TabIndex = 41;
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Gray;
+            this.label1.Location = new System.Drawing.Point(27, 210);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 20);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Motorista";
             // 
-            // panel1
+            // labelLitrosSupply
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel1.Location = new System.Drawing.Point(27, 268);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(346, 2);
-            this.panel1.TabIndex = 42;
+            this.labelLitrosSupply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelLitrosSupply.AutoSize = true;
+            this.labelLitrosSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLitrosSupply.ForeColor = System.Drawing.Color.Gray;
+            this.labelLitrosSupply.Location = new System.Drawing.Point(24, 61);
+            this.labelLitrosSupply.Name = "labelLitrosSupply";
+            this.labelLitrosSupply.Size = new System.Drawing.Size(145, 20);
+            this.labelLitrosSupply.TabIndex = 32;
+            this.labelLitrosSupply.Text = "Nome da Viagem";
             // 
-            // panel2
+            // textBoxLitersSupply
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel2.Location = new System.Drawing.Point(27, 356);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(267, 2);
-            this.panel2.TabIndex = 43;
+            this.textBoxLitersSupply.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxLitersSupply.BackColor = System.Drawing.Color.Azure;
+            this.textBoxLitersSupply.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxLitersSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxLitersSupply.Location = new System.Drawing.Point(28, 92);
+            this.textBoxLitersSupply.MaxLength = 10;
+            this.textBoxLitersSupply.Name = "textBoxLitersSupply";
+            this.textBoxLitersSupply.Size = new System.Drawing.Size(444, 23);
+            this.textBoxLitersSupply.TabIndex = 33;
             // 
-            // panel3
+            // dateTimePicker1
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel3.Location = new System.Drawing.Point(29, 439);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(196, 2);
-            this.panel3.TabIndex = 44;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateTimePicker1.Location = new System.Drawing.Point(28, 160);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.dateTimePicker1.RightToLeftLayout = true;
+            this.dateTimePicker1.Size = new System.Drawing.Size(141, 26);
+            this.dateTimePicker1.TabIndex = 31;
             // 
-            // panel4
+            // labelDataSupply
             // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.panel4.Location = new System.Drawing.Point(29, 184);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(140, 2);
-            this.panel4.TabIndex = 45;
+            this.labelDataSupply.AutoSize = true;
+            this.labelDataSupply.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDataSupply.ForeColor = System.Drawing.Color.Gray;
+            this.labelDataSupply.Location = new System.Drawing.Point(26, 137);
+            this.labelDataSupply.Name = "labelDataSupply";
+            this.labelDataSupply.Size = new System.Drawing.Size(48, 20);
+            this.labelDataSupply.TabIndex = 30;
+            this.labelDataSupply.Text = "Data";
             // 
             // Viagens
             // 
@@ -361,24 +361,24 @@
         private System.Windows.Forms.TableLayoutPanel layoutFlex;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel PanelContainer;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox boxRoute;
-        private System.Windows.Forms.Label labelRouteSupplpy;
         private System.Windows.Forms.Panel PanelCadastro;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel BorderPanel1;
+        private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label title;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button ButtonCancel;
+        private System.Windows.Forms.ComboBox boxRoute;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label labelRouteSupplpy;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelLitrosSupply;
         private System.Windows.Forms.TextBox textBoxLitersSupply;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label labelDataSupply;
-        private System.Windows.Forms.Panel BorderPanel1;
-        private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel1;
     }
 }
