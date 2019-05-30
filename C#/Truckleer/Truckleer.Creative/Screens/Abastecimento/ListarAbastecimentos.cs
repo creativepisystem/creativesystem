@@ -25,7 +25,6 @@ namespace Truckleer.Creative
         public void ListarAbastecimentos_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
-            supplyListWorker.RunWorkerAsync();
         }
 
         bool isCollapsed = false;

@@ -42,6 +42,7 @@
             this.DatePickerInitial = new System.Windows.Forms.DateTimePicker();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ButtonCadastro = new System.Windows.Forms.Button();
+            this.expenseWorker = new System.ComponentModel.BackgroundWorker();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -218,6 +219,11 @@
             this.ButtonCadastro.Text = "Cadastrar Despesa";
             this.ButtonCadastro.UseVisualStyleBackColor = false;
             // 
+            // expenseWorker
+            // 
+            this.expenseWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetExpense);
+            this.expenseWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetExpenseFinish);
+            // 
             // ListarDespesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -253,5 +259,6 @@
         private System.Windows.Forms.DateTimePicker DatePickerInitial;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ButtonCadastro;
+        private System.ComponentModel.BackgroundWorker expenseWorker;
     }
 }
