@@ -228,10 +228,10 @@ namespace Truckleer.Creative
         private void ClearFields()
         {
             DateSupply.Value = DateTime.Now;
-            BoxVehicle.Items.Clear();
-            BoxTrip.Items.Clear();
-            BoxRoute.Items.Clear();
-            BoxDriver.Items.Clear();
+            BoxVehicle.SelectedIndex = -1;
+            BoxTrip.SelectedIndex = -1;
+            BoxRoute.SelectedIndex = -1;
+            BoxDriver.SelectedIndex = -1;
             TextLiters.Text = "";
             TextKm.Text = "";
             TextPrice.Text = "";

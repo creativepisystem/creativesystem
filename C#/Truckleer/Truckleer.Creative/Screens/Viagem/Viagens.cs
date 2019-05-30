@@ -131,9 +131,9 @@ namespace Truckleer.Creative
         private void ClearFields()
         {
             Date.Value = DateTime.Now;
-            BoxDriver.Items.Clear();
-            BoxRoute.Items.Clear();
-            BoxVehicle.Items.Clear();
+            BoxDriver.SelectedIndex = -1;
+            BoxRoute.SelectedIndex = -1;
+            BoxVehicle.SelectedIndex = -1;
             TxtName.Name = "";
         }
     }
