@@ -33,6 +33,9 @@
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.PanelCadastro = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BoxDriver = new System.Windows.Forms.ComboBox();
+            this.LabelDriver = new System.Windows.Forms.Label();
             this.TextObservation = new System.Windows.Forms.TextBox();
             this.LabelObservation = new System.Windows.Forms.Label();
             this.TextPrice = new System.Windows.Forms.TextBox();
@@ -50,9 +53,9 @@
             this.TextName = new System.Windows.Forms.TextBox();
             this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelData = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.BoxDriver = new System.Windows.Forms.ComboBox();
-            this.LabelDriver = new System.Windows.Forms.Label();
+            this.TripWorker = new System.ComponentModel.BackgroundWorker();
+            this.DriverWorker = new System.ComponentModel.BackgroundWorker();
+            this.ExpenseWorker = new System.ComponentModel.BackgroundWorker();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -137,6 +140,37 @@
             this.PanelCadastro.Name = "PanelCadastro";
             this.PanelCadastro.Size = new System.Drawing.Size(502, 606);
             this.PanelCadastro.TabIndex = 28;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(25, 405);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(267, 2);
+            this.panel3.TabIndex = 90;
+            // 
+            // BoxDriver
+            // 
+            this.BoxDriver.AllowDrop = true;
+            this.BoxDriver.BackColor = System.Drawing.Color.Azure;
+            this.BoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxDriver.FormattingEnabled = true;
+            this.BoxDriver.Location = new System.Drawing.Point(26, 376);
+            this.BoxDriver.Name = "BoxDriver";
+            this.BoxDriver.Size = new System.Drawing.Size(266, 28);
+            this.BoxDriver.TabIndex = 89;
+            // 
+            // LabelDriver
+            // 
+            this.LabelDriver.AutoSize = true;
+            this.LabelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDriver.ForeColor = System.Drawing.Color.Gray;
+            this.LabelDriver.Location = new System.Drawing.Point(24, 351);
+            this.LabelDriver.Name = "LabelDriver";
+            this.LabelDriver.Size = new System.Drawing.Size(84, 20);
+            this.LabelDriver.TabIndex = 88;
+            this.LabelDriver.Text = "Motorista";
             // 
             // TextObservation
             // 
@@ -328,36 +362,20 @@
             this.labelData.TabIndex = 30;
             this.labelData.Text = "Data";
             // 
-            // panel3
+            // TripWorker
             // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
-            this.panel3.Location = new System.Drawing.Point(25, 405);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(267, 2);
-            this.panel3.TabIndex = 90;
+            this.TripWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetTrips);
+            this.TripWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetTripsFinish);
             // 
-            // BoxDriver
+            // DriverWorker
             // 
-            this.BoxDriver.AllowDrop = true;
-            this.BoxDriver.BackColor = System.Drawing.Color.Azure;
-            this.BoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BoxDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BoxDriver.FormattingEnabled = true;
-            this.BoxDriver.Location = new System.Drawing.Point(26, 376);
-            this.BoxDriver.Name = "BoxDriver";
-            this.BoxDriver.Size = new System.Drawing.Size(266, 28);
-            this.BoxDriver.TabIndex = 89;
+            this.DriverWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetDrivers);
+            this.DriverWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetDriversWorker);
             // 
-            // LabelDriver
+            // ExpenseWorker
             // 
-            this.LabelDriver.AutoSize = true;
-            this.LabelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDriver.ForeColor = System.Drawing.Color.Gray;
-            this.LabelDriver.Location = new System.Drawing.Point(24, 351);
-            this.LabelDriver.Name = "LabelDriver";
-            this.LabelDriver.Size = new System.Drawing.Size(84, 20);
-            this.LabelDriver.TabIndex = 88;
-            this.LabelDriver.Text = "Motorista";
+            this.ExpenseWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveExpense);
+            this.ExpenseWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveExpenseFinish);
             // 
             // Despesas
             // 
@@ -405,5 +423,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox BoxDriver;
         private System.Windows.Forms.Label LabelDriver;
+        private System.ComponentModel.BackgroundWorker TripWorker;
+        private System.ComponentModel.BackgroundWorker DriverWorker;
+        private System.ComponentModel.BackgroundWorker ExpenseWorker;
     }
 }

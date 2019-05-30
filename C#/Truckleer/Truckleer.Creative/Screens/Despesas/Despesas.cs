@@ -21,5 +21,35 @@ namespace Truckleer.Creative.Screens.Despesas
         {
             Dock = DockStyle.Fill;
         }
+
+        private void GetTrips(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void GetTripsFinish(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
+
+        private void GetDrivers(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void GetDriversWorker(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
+
+        private void SaveExpense(object sender, DoWorkEventArgs e)
+        {
+
+        }
+
+        private void SaveExpenseFinish(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+        }
     }
 }

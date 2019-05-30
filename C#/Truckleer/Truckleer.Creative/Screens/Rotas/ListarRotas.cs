@@ -31,7 +31,7 @@ namespace Truckleer.Creative
 
         private void ButtonCadastro_Click(object sender, EventArgs e)
         {
-            routeListWorker.RunWorkerAsync();
+            
         }
 
         private void ButtonFilter_Click(object sender, EventArgs e)
