@@ -25,7 +25,42 @@ namespace Truckleer.Modules
 
         public Message IsValid()
         {
-            throw new System.NotImplementedException();
+            if (Type.Length < 2 || Type.Length > 30)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "Erro! O tipo deve Conter de 2 a 30 caracteres!"
+                };
+            if (Value < 0)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "Erro! O valor não pode ser negativo!"
+                };
+            if (Trip == null)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "A viagem é obrigatória!"
+                };
+            if (Driver == null)
+                return new Message()
+                {
+                    Type = MessageType.ERROR,
+                    MessageText = "O motorista é obrigatório!"
+                };
+            if (Obs != null)
+                if(Obs.Length< 2 && Obs.Length > 100)
+                    return new Message()
+                    {
+                        Type = MessageType.ERROR,
+                        MessageText = "A Observação de conter de 2 a 100 caracteres"
+                    };
+            return new Message()
+            {
+                Type = MessageType.VALID,
+                MessageText = "Despesa é valida"
+            };
         }
     }
 }
