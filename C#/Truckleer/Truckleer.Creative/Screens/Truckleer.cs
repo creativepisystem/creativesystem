@@ -7,18 +7,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Truckleer.Modules;
 using Truckleer.Creative.Screens.Viagem;
 using Truckleer.Creative.Screens.Usuario;
-using Truckleer.Creative;
 using Truckleer.Creative.Screens.Despesas;
+using Truckleer.Creative.Screens.CustomEvent;
+using Truckleer.Modules;
 
 namespace Truckleer.Creative
 {
     public partial class Truckleer : Form
     {
         Dashboard dash = new Dashboard();
-        Abastecimento supply = new Abastecimento(null);
+        Abastecimento supply = new Abastecimento();
         ListarAbastecimentos listSupply = new ListarAbastecimentos();
         Veiculos vehicle = new Veiculos();
         ListarVeiculos listVehicle = new ListarVeiculos();
@@ -33,15 +33,34 @@ namespace Truckleer.Creative
         ListarViagens listTrip = new ListarViagens();
         Usuarios user = new Usuarios();
         ListarUsuarios listUser = new ListarUsuarios();
-        Despesas cost = new Despesas();
-        ListarDespesas listCost = new ListarDespesas();
-        
+        Despesas expense = new Despesas();
+        ListarDespesas listExpense = new ListarDespesas();
 
         Panel currentPanel;
         public Truckleer()
         {
             InitializeComponent();
-            Call(dash);           
+            Call(dash);
+            supply.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Supply>>.OnChangeScreen(BtnListAbastecimentos_Click);
+            listSupply.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Supply>.OnChangeScreen(BtnAbastecer_Click);
+
+            //expense.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Expense>.OnChangeScreen(BtnNewCost_Click);
+            //listExpense.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Expense>>.OnChangeScreen(BtnListCost_Click);
+
+            //driver.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Driver>.OnChangeScreen(BtnMakeDriver_Click);
+            //listDriver.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Driver>>.OnChangeScreen(BtnListDrivers_Click);
+
+            //route.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Route>.OnChangeScreen(BtnMakeRoute_Click);
+            //listRoute.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Route>>.OnChangeScreen(BtnRoutes_Click);
+
+            //user.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<User>.OnChangeScreen(BtnNewUser_Click);
+            //listUser.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<User>>.OnChangeScreen(BtnListUser_Click);
+
+            //vehicle.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Vehicle>.OnChangeScreen(BtnMakeVehicle_Click);
+            //listVehicle.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Vehicle>>.OnChangeScreen(BtnListVehicle_Click);
+
+            //trip.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Trip>.OnChangeScreen(BtnMakeTrip_Click);
+            //listTrip.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Trip>>.OnChangeScreen(BtnListTrip_Click);
         }
 
         bool menuIsCollapsed = false;
@@ -92,7 +111,7 @@ namespace Truckleer.Creative
                 }
             }
         }
-        
+
         // Method Remove Buttons Color
         public void Uncolor()
         {
@@ -136,7 +155,7 @@ namespace Truckleer.Creative
         //Close Groups
         public void CloseGroup(UserControl group)
         {
-            if(group != null)
+            if (group != null)
                 group.Size = group.MaximumSize;
 
             groupSupply.Size = groupSupply.MinimumSize;
@@ -153,12 +172,12 @@ namespace Truckleer.Creative
             Image up = Properties.Resources.iconArrowUp;
             botao.BackgroundImage = up;
         }
-        
+
         //Button Dash Properties        
         private void BtnDash_Click(object sender, EventArgs e)
         {
+
             Call(dash);
-            
             // Unset Colors
             Uncolor();
             //Call CloseGroup Function
@@ -490,7 +509,7 @@ namespace Truckleer.Creative
         //Button Nova Despesa
         private void BtnNewCost_Click(object sender, EventArgs e)
         {
-            Call(cost);
+            Call(expense);
             //Unset Colors
             Uncolor();
             BtnCost.BackColor = Color.FromArgb(25, 137, 186);
@@ -500,7 +519,7 @@ namespace Truckleer.Creative
         //Button Listar Despesas Properties
         private void BtnListCost_Click(object sender, EventArgs e)
         {
-            Call(listCost);
+            Call(listExpense);
             // Unset Colors
             Uncolor();
             BtnCost.BackColor = Color.FromArgb(25, 137, 186);
@@ -517,7 +536,7 @@ namespace Truckleer.Creative
                 menuIsCollapsed = false;
             }
         }
-        
+
         //Open and Close SideBar Menu By Click on Hamburguer Button
         private void HamburguerMenu_Click(object sender, EventArgs e)
         {
@@ -531,5 +550,6 @@ namespace Truckleer.Creative
         {
 
         }
+
     }
 }

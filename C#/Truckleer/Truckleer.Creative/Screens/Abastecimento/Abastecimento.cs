@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Truckleer.Creative.Screens.CustomEvent;
 using Truckleer.Modules;
 using Message = Truckleer.Modules.Message;
 
@@ -9,7 +10,8 @@ namespace Truckleer.Creative
 {
     public partial class Abastecimento : UserControl
     {
-        private Supply Supply;
+        
+        public ChangeScreenEvent<List<Supply>> ChangeScreenEvent { get; set; }
         private RouteService routeService;
         private DriverService driverService;
         private TripService tripService;
@@ -19,29 +21,25 @@ namespace Truckleer.Creative
         private List<Driver> drivers;
         private List<Trip> trips;
         private List<Vehicle> vehicles;
-        
+        private Supply Supply;
 
-        public Abastecimento(Supply supply)
+        
+        public Abastecimento()
         {
-            if(supply != null)
-            {
-                Supply = supply;
-            }
-            else
-            {
-                Supply = new Supply();
-            }
             routeService = new RouteService();
             driverService = new DriverService();
             tripService = new TripService();
             vehicleService = new VehicleService();
             supplyService = new SupplyService();
+            Supply = new Supply();
+            ChangeScreenEvent = new ChangeScreenEvent<List<Supply>>();
             InitializeComponent();
            
         }
 
         private void Abastecimento_Load(object sender, EventArgs e)
         {
+           
             if(Supply == null)
                 ClearFields();
             this.Dock = DockStyle.Fill;
@@ -50,7 +48,10 @@ namespace Truckleer.Creative
             vehicleWorker.RunWorkerAsync();
             tripWorker.RunWorkerAsync();
         }
-        
+        private void Abastecimento_ChangeVisible(object sender, EventArgs e)
+        {
+        }
+
         //Call Dashboard
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -103,6 +104,7 @@ namespace Truckleer.Creative
 
         private void BoxVehicle_SelectedIndexChanged(object sender, EventArgs e)
         {
+
         }
 
         private void GetDrivers(object sender, DoWorkEventArgs e)
@@ -189,6 +191,7 @@ namespace Truckleer.Creative
             {
                 MessageBox.Show("Abastecimento Salvo com Sucesso");
                 ClearFields();
+                ChangeScreenEvent.Change(null);
             }
             else
             {
@@ -238,5 +241,12 @@ namespace Truckleer.Creative
             TextStation.Text = "";
             LabelResult.Text = "";
         }
+
+        private void ButtonCancel_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        
     }
 }

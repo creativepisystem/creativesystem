@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Truckleer.Modules;
+using Truckleer.Creative.Screens.CustomEvent;
 
 namespace Truckleer.Creative.Screens.Usuario
 {
     public partial class ListarUsuarios : UserControl
     {
+        public ChangeScreenEvent<List<User>> ChangeScreenEvent { get; set; }
         private UserService userService;
         private List<User> users = new List<User>();
 

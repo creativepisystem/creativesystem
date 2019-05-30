@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Truckleer.Modules;
 using Truckleer.Creative.Screens.Motorista;
+using Truckleer.Creative.Screens.CustomEvent;
 
 namespace Truckleer.Creative
 {
     public partial class ListarMotoristas : UserControl
     {
+        public ChangeScreenEvent<List<Driver>> ChangeScreenEvent { get; set; }
 
         private DriverService driverService;
         private List<Driver> drivers = new List<Driver>();

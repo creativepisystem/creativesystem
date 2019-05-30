@@ -41,6 +41,10 @@ namespace Truckleer.Creative
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.panelMenu = new System.Windows.Forms.Panel();
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.groupCost = new System.Windows.Forms.Panel();
+            this.BtnListCost = new System.Windows.Forms.Button();
+            this.BtnNewCost = new System.Windows.Forms.Button();
+            this.BtnCost = new System.Windows.Forms.Button();
             this.groupUser = new System.Windows.Forms.Panel();
             this.BtnListUser = new System.Windows.Forms.Button();
             this.BtnNewUser = new System.Windows.Forms.Button();
@@ -77,10 +81,6 @@ namespace Truckleer.Creative
             this.subMenuCollapsed = new System.Windows.Forms.Timer(this.components);
             this.timerSideMenu = new System.Windows.Forms.Timer(this.components);
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.groupCost = new System.Windows.Forms.Panel();
-            this.BtnCost = new System.Windows.Forms.Button();
-            this.BtnNewCost = new System.Windows.Forms.Button();
-            this.BtnListCost = new System.Windows.Forms.Button();
             this.truckleerContainer1.SuspendLayout();
             this.mainContainer.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -91,6 +91,7 @@ namespace Truckleer.Creative
             this.tableLayoutPanel3.SuspendLayout();
             this.panelMenu.SuspendLayout();
             this.menuPanel.SuspendLayout();
+            this.groupCost.SuspendLayout();
             this.groupUser.SuspendLayout();
             this.groupTrip.SuspendLayout();
             this.groupMaintence.SuspendLayout();
@@ -100,7 +101,6 @@ namespace Truckleer.Creative
             this.groupSupply.SuspendLayout();
             this.sideBarTop.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.groupCost.SuspendLayout();
             this.SuspendLayout();
             // 
             // truckleerContainer1
@@ -290,6 +290,78 @@ namespace Truckleer.Creative
             this.menuPanel.Name = "menuPanel";
             this.menuPanel.Size = new System.Drawing.Size(190, 564);
             this.menuPanel.TabIndex = 13;
+            // 
+            // groupCost
+            // 
+            this.groupCost.Controls.Add(this.BtnListCost);
+            this.groupCost.Controls.Add(this.BtnNewCost);
+            this.groupCost.Controls.Add(this.BtnCost);
+            this.groupCost.Dock = System.Windows.Forms.DockStyle.Top;
+            this.groupCost.Location = new System.Drawing.Point(0, 325);
+            this.groupCost.Margin = new System.Windows.Forms.Padding(0);
+            this.groupCost.MaximumSize = new System.Drawing.Size(190, 123);
+            this.groupCost.MinimumSize = new System.Drawing.Size(190, 40);
+            this.groupCost.Name = "groupCost";
+            this.groupCost.Size = new System.Drawing.Size(190, 40);
+            this.groupCost.TabIndex = 22;
+            // 
+            // BtnListCost
+            // 
+            this.BtnListCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.BtnListCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnListCost.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnListCost.FlatAppearance.BorderSize = 0;
+            this.BtnListCost.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.BtnListCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnListCost.ForeColor = System.Drawing.Color.Silver;
+            this.BtnListCost.Location = new System.Drawing.Point(0, 81);
+            this.BtnListCost.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnListCost.Name = "BtnListCost";
+            this.BtnListCost.Size = new System.Drawing.Size(190, 40);
+            this.BtnListCost.TabIndex = 25;
+            this.BtnListCost.Text = "Lsitar Despesas";
+            this.BtnListCost.UseVisualStyleBackColor = false;
+            this.BtnListCost.Click += new System.EventHandler(this.BtnListCost_Click);
+            // 
+            // BtnNewCost
+            // 
+            this.BtnNewCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
+            this.BtnNewCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnNewCost.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnNewCost.FlatAppearance.BorderSize = 0;
+            this.BtnNewCost.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
+            this.BtnNewCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNewCost.ForeColor = System.Drawing.Color.Silver;
+            this.BtnNewCost.Location = new System.Drawing.Point(0, 41);
+            this.BtnNewCost.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnNewCost.Name = "BtnNewCost";
+            this.BtnNewCost.Size = new System.Drawing.Size(190, 40);
+            this.BtnNewCost.TabIndex = 24;
+            this.BtnNewCost.Text = "Nova Despesa";
+            this.BtnNewCost.UseVisualStyleBackColor = false;
+            this.BtnNewCost.Click += new System.EventHandler(this.BtnNewCost_Click);
+            // 
+            // BtnCost
+            // 
+            this.BtnCost.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCost.BackgroundImage")));
+            this.BtnCost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BtnCost.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BtnCost.Dock = System.Windows.Forms.DockStyle.Top;
+            this.BtnCost.FlatAppearance.BorderSize = 0;
+            this.BtnCost.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
+            this.BtnCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnCost.ForeColor = System.Drawing.Color.Silver;
+            this.BtnCost.Image = global::Truckleer.Creative.Properties.Resources.tripMin;
+            this.BtnCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.BtnCost.Location = new System.Drawing.Point(0, 0);
+            this.BtnCost.Margin = new System.Windows.Forms.Padding(0);
+            this.BtnCost.Name = "BtnCost";
+            this.BtnCost.Size = new System.Drawing.Size(190, 41);
+            this.BtnCost.TabIndex = 22;
+            this.BtnCost.Text = "Despesas";
+            this.BtnCost.UseVisualStyleBackColor = true;
+            this.BtnCost.Click += new System.EventHandler(this.BtnCost_Click);
             // 
             // groupUser
             // 
@@ -884,78 +956,6 @@ namespace Truckleer.Creative
             this.timer.Interval = 10;
             this.timer.Tick += new System.EventHandler(this.Timer_Tick);
             // 
-            // groupCost
-            // 
-            this.groupCost.Controls.Add(this.BtnListCost);
-            this.groupCost.Controls.Add(this.BtnNewCost);
-            this.groupCost.Controls.Add(this.BtnCost);
-            this.groupCost.Dock = System.Windows.Forms.DockStyle.Top;
-            this.groupCost.Location = new System.Drawing.Point(0, 325);
-            this.groupCost.Margin = new System.Windows.Forms.Padding(0);
-            this.groupCost.MaximumSize = new System.Drawing.Size(190, 123);
-            this.groupCost.MinimumSize = new System.Drawing.Size(190, 40);
-            this.groupCost.Name = "groupCost";
-            this.groupCost.Size = new System.Drawing.Size(190, 40);
-            this.groupCost.TabIndex = 22;
-            // 
-            // BtnCost
-            // 
-            this.BtnCost.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BtnCost.BackgroundImage")));
-            this.BtnCost.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BtnCost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnCost.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnCost.FlatAppearance.BorderSize = 0;
-            this.BtnCost.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(171)))), ((int)(((byte)(186)))));
-            this.BtnCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnCost.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCost.ForeColor = System.Drawing.Color.Silver;
-            this.BtnCost.Image = global::Truckleer.Creative.Properties.Resources.tripMin;
-            this.BtnCost.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BtnCost.Location = new System.Drawing.Point(0, 0);
-            this.BtnCost.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnCost.Name = "BtnCost";
-            this.BtnCost.Size = new System.Drawing.Size(190, 41);
-            this.BtnCost.TabIndex = 22;
-            this.BtnCost.Text = "Despesas";
-            this.BtnCost.UseVisualStyleBackColor = true;
-            this.BtnCost.Click += new System.EventHandler(this.BtnCost_Click);
-            // 
-            // BtnNewCost
-            // 
-            this.BtnNewCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.BtnNewCost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnNewCost.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnNewCost.FlatAppearance.BorderSize = 0;
-            this.BtnNewCost.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
-            this.BtnNewCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnNewCost.ForeColor = System.Drawing.Color.Silver;
-            this.BtnNewCost.Location = new System.Drawing.Point(0, 41);
-            this.BtnNewCost.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnNewCost.Name = "BtnNewCost";
-            this.BtnNewCost.Size = new System.Drawing.Size(190, 40);
-            this.BtnNewCost.TabIndex = 24;
-            this.BtnNewCost.Text = "Nova Despesa";
-            this.BtnNewCost.UseVisualStyleBackColor = false;
-            this.BtnNewCost.Click += new System.EventHandler(this.BtnNewCost_Click);
-            // 
-            // BtnListCost
-            // 
-            this.BtnListCost.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(90)))), ((int)(((byte)(90)))));
-            this.BtnListCost.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.BtnListCost.Dock = System.Windows.Forms.DockStyle.Top;
-            this.BtnListCost.FlatAppearance.BorderSize = 0;
-            this.BtnListCost.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(96)))), ((int)(((byte)(96)))), ((int)(((byte)(96)))));
-            this.BtnListCost.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BtnListCost.ForeColor = System.Drawing.Color.Silver;
-            this.BtnListCost.Location = new System.Drawing.Point(0, 81);
-            this.BtnListCost.Margin = new System.Windows.Forms.Padding(0);
-            this.BtnListCost.Name = "BtnListCost";
-            this.BtnListCost.Size = new System.Drawing.Size(190, 40);
-            this.BtnListCost.TabIndex = 25;
-            this.BtnListCost.Text = "Lsitar Despesas";
-            this.BtnListCost.UseVisualStyleBackColor = false;
-            this.BtnListCost.Click += new System.EventHandler(this.BtnListCost_Click);
-            // 
             // Truckleer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -980,6 +980,7 @@ namespace Truckleer.Creative
             this.tableLayoutPanel3.ResumeLayout(false);
             this.panelMenu.ResumeLayout(false);
             this.menuPanel.ResumeLayout(false);
+            this.groupCost.ResumeLayout(false);
             this.groupUser.ResumeLayout(false);
             this.groupTrip.ResumeLayout(false);
             this.groupMaintence.ResumeLayout(false);
@@ -989,7 +990,6 @@ namespace Truckleer.Creative
             this.groupSupply.ResumeLayout(false);
             this.sideBarTop.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.groupCost.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

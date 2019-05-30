@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 using Truckleer.Modules;
 
-namespace Truckleer.Creative.Screens.Expense
+namespace Truckleer.Creative.Screens.Despesas
 {
     class CustomExpenseList : Panel
     {
@@ -14,9 +9,9 @@ namespace Truckleer.Creative.Screens.Expense
         readonly int index = 0;
 
         //Exemplo para classe Usuario
-        readonly Expense cost;
+        readonly Expense expense;
 
-        public CustomExpenseList(int index, Expense cost)
+        public CustomExpenseList(int index, Expense expense)
         {
             this.index = index;
             this.ItemListDriver = new Panel();
@@ -51,7 +46,7 @@ namespace Truckleer.Creative.Screens.Expense
             this.SuspendLayout();
 
             //Seta o Usuario
-            this.cost = cost;
+            this.expense = expense;
             InitializeCustomList();
         }
 
