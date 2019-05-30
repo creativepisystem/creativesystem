@@ -11,7 +11,7 @@ namespace Truckleer.Creative.Screens.Despesas
     class CustomExpenseList : Panel
     {
         //index - necessario
-        readonly int index = 0;
+        //readonly int index = 0;
 
         //Exemplo para classe Usuario
         readonly Expense expense;

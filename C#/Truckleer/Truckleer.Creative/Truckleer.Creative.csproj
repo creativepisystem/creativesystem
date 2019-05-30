@@ -83,6 +83,15 @@
     <Compile Include="Screens\Despesas\ListarDespesas.Designer.cs">
       <DependentUpon>ListarDespesas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Screens\Home\CustomDriverExpense.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Screens\Home\Home.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Screens\Home\Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
     <Compile Include="Screens\Manutencao\AlertaManutencao.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -255,6 +264,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Despesas\ListarDespesas.resx">
       <DependentUpon>ListarDespesas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Screens\Home\Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Screens\Manutencao\AlertaManutencao.resx">
       <DependentUpon>AlertaManutencao.cs</DependentUpon>

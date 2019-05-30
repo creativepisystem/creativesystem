@@ -11,13 +11,14 @@ using Truckleer.Modules;
 using Truckleer.Creative.Screens.Viagem;
 using Truckleer.Creative.Screens.Usuario;
 using Truckleer.Creative;
+using Truckleer.Creative.Screens.Home;
 using Truckleer.Creative.Screens.Despesas;
 
 namespace Truckleer.Creative
 {
     public partial class Truckleer : Form
     {
-        Dashboard dash = new Dashboard();
+        Home home = new Home();
         Abastecimento supply = new Abastecimento(null);
         ListarAbastecimentos listSupply = new ListarAbastecimentos();
         Veiculos vehicle = new Veiculos();
@@ -41,7 +42,7 @@ namespace Truckleer.Creative
         public Truckleer()
         {
             InitializeComponent();
-            Call(dash);           
+            Call(home);           
         }
 
         bool menuIsCollapsed = false;
@@ -157,7 +158,7 @@ namespace Truckleer.Creative
         //Button Dash Properties        
         private void BtnDash_Click(object sender, EventArgs e)
         {
-            Call(dash);
+            Call(home);
             
             // Unset Colors
             Uncolor();
