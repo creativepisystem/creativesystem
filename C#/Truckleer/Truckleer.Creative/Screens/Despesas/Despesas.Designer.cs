@@ -312,7 +312,7 @@
             this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateTimePicker.Location = new System.Drawing.Point(26, 155);
             this.DateTimePicker.Name = "DateTimePicker";
-            this.DateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DateTimePicker.RightToLeftLayout = true;
             this.DateTimePicker.Size = new System.Drawing.Size(141, 26);
             this.DateTimePicker.TabIndex = 31;

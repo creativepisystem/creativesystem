@@ -288,7 +288,7 @@ namespace Truckleer.Creative
             this.DateCnhDue.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateCnhDue.Location = new System.Drawing.Point(707, 144);
             this.DateCnhDue.Name = "DateCnhDue";
-            this.DateCnhDue.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateCnhDue.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DateCnhDue.RightToLeftLayout = true;
             this.DateCnhDue.Size = new System.Drawing.Size(138, 26);
             this.DateCnhDue.TabIndex = 86;
@@ -341,7 +341,7 @@ namespace Truckleer.Creative
             this.DateBirthDay.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.DateBirthDay.Location = new System.Drawing.Point(271, 144);
             this.DateBirthDay.Name = "DateBirthDay";
-            this.DateBirthDay.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.DateBirthDay.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.DateBirthDay.RightToLeftLayout = true;
             this.DateBirthDay.Size = new System.Drawing.Size(135, 26);
             this.DateBirthDay.TabIndex = 80;

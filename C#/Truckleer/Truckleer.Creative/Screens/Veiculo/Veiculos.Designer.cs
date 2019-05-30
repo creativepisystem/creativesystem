@@ -1,4 +1,6 @@
-﻿namespace Truckleer.Creative
+﻿using System.ComponentModel;
+
+namespace Truckleer.Creative
 {
     partial class Veiculos
     {
@@ -6,7 +8,7 @@
         /// Variável de designer necessária.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
-
+        private BackgroundWorker vehicleWorker;
         /// <summary> 
         /// Limpar os recursos que estão sendo usados.
         /// </summary>
@@ -34,7 +36,7 @@
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelContainer = new System.Windows.Forms.Panel();
             this.PanelVehicle = new System.Windows.Forms.Panel();
-            this.BorderPanel10 = new System.Windows.Forms.Panel();
+            this.BoxColor = new System.Windows.Forms.ComboBox();
             this.BorderPanel9 = new System.Windows.Forms.Panel();
             this.BorderPanel8 = new System.Windows.Forms.Panel();
             this.BorderPanel7 = new System.Windows.Forms.Panel();
@@ -45,15 +47,12 @@
             this.BorderPanel2 = new System.Windows.Forms.Panel();
             this.BorderPanel1 = new System.Windows.Forms.Panel();
             this.DivPanel = new System.Windows.Forms.Panel();
-            this.TextType = new System.Windows.Forms.TextBox();
-            this.LabelType = new System.Windows.Forms.Label();
             this.TextYearMod = new System.Windows.Forms.TextBox();
             this.LabelYearMod = new System.Windows.Forms.Label();
             this.TextChassi = new System.Windows.Forms.TextBox();
             this.LabelChassi = new System.Windows.Forms.Label();
             this.TextRenavam = new System.Windows.Forms.TextBox();
             this.LabelRenavam = new System.Windows.Forms.Label();
-            this.TextColor = new System.Windows.Forms.TextBox();
             this.LabelColor = new System.Windows.Forms.Label();
             this.TextYearFab = new System.Windows.Forms.TextBox();
             this.LabelYearFab = new System.Windows.Forms.Label();
@@ -70,6 +69,7 @@
             this.PanelTitle = new System.Windows.Forms.Panel();
             this.title = new System.Windows.Forms.Label();
             this.PageDescription = new System.Windows.Forms.Label();
+            this.vehicleWorker = new System.ComponentModel.BackgroundWorker();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -147,7 +147,7 @@
             // 
             this.PanelVehicle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelVehicle.BackColor = System.Drawing.Color.LightGray;
-            this.PanelVehicle.Controls.Add(this.BorderPanel10);
+            this.PanelVehicle.Controls.Add(this.BoxColor);
             this.PanelVehicle.Controls.Add(this.BorderPanel9);
             this.PanelVehicle.Controls.Add(this.BorderPanel8);
             this.PanelVehicle.Controls.Add(this.BorderPanel7);
@@ -158,15 +158,12 @@
             this.PanelVehicle.Controls.Add(this.BorderPanel2);
             this.PanelVehicle.Controls.Add(this.BorderPanel1);
             this.PanelVehicle.Controls.Add(this.DivPanel);
-            this.PanelVehicle.Controls.Add(this.TextType);
-            this.PanelVehicle.Controls.Add(this.LabelType);
             this.PanelVehicle.Controls.Add(this.TextYearMod);
             this.PanelVehicle.Controls.Add(this.LabelYearMod);
             this.PanelVehicle.Controls.Add(this.TextChassi);
             this.PanelVehicle.Controls.Add(this.LabelChassi);
             this.PanelVehicle.Controls.Add(this.TextRenavam);
             this.PanelVehicle.Controls.Add(this.LabelRenavam);
-            this.PanelVehicle.Controls.Add(this.TextColor);
             this.PanelVehicle.Controls.Add(this.LabelColor);
             this.PanelVehicle.Controls.Add(this.TextYearFab);
             this.PanelVehicle.Controls.Add(this.LabelYearFab);
@@ -188,13 +185,23 @@
             this.PanelVehicle.Size = new System.Drawing.Size(970, 589);
             this.PanelVehicle.TabIndex = 0;
             // 
-            // BorderPanel10
+            // BoxColor
             // 
-            this.BorderPanel10.BackColor = System.Drawing.Color.Firebrick;
-            this.BorderPanel10.Location = new System.Drawing.Point(619, 439);
-            this.BorderPanel10.Name = "BorderPanel10";
-            this.BorderPanel10.Size = new System.Drawing.Size(153, 2);
-            this.BorderPanel10.TabIndex = 101;
+            this.BoxColor.BackColor = System.Drawing.Color.LightGray;
+            this.BoxColor.FormattingEnabled = true;
+            this.BoxColor.Items.AddRange(new object[] {
+            "Preto",
+            "Branco",
+            "Vermelho",
+            "Amarelo",
+            "Verde",
+            "Cinza",
+            "Azul",
+            "Marrom"});
+            this.BoxColor.Location = new System.Drawing.Point(162, 348);
+            this.BoxColor.Name = "BoxColor";
+            this.BoxColor.Size = new System.Drawing.Size(169, 28);
+            this.BoxColor.TabIndex = 101;
             // 
             // BorderPanel9
             // 
@@ -276,26 +283,6 @@
             this.DivPanel.Size = new System.Drawing.Size(2, 366);
             this.DivPanel.TabIndex = 91;
             // 
-            // TextType
-            // 
-            this.TextType.BackColor = System.Drawing.Color.LightGray;
-            this.TextType.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextType.Location = new System.Drawing.Point(619, 420);
-            this.TextType.Name = "TextType";
-            this.TextType.Size = new System.Drawing.Size(153, 19);
-            this.TextType.TabIndex = 90;
-            // 
-            // LabelType
-            // 
-            this.LabelType.AutoSize = true;
-            this.LabelType.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelType.ForeColor = System.Drawing.Color.Gray;
-            this.LabelType.Location = new System.Drawing.Point(443, 420);
-            this.LabelType.Name = "LabelType";
-            this.LabelType.Size = new System.Drawing.Size(170, 20);
-            this.LabelType.TabIndex = 89;
-            this.LabelType.Text = "Tipo de Combustível";
-            // 
             // TextYearMod
             // 
             this.TextYearMod.BackColor = System.Drawing.Color.LightGray;
@@ -355,15 +342,6 @@
             this.LabelRenavam.Size = new System.Drawing.Size(84, 20);
             this.LabelRenavam.TabIndex = 83;
             this.LabelRenavam.Text = "Renavam";
-            // 
-            // TextColor
-            // 
-            this.TextColor.BackColor = System.Drawing.Color.LightGray;
-            this.TextColor.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextColor.Location = new System.Drawing.Point(162, 359);
-            this.TextColor.Name = "TextColor";
-            this.TextColor.Size = new System.Drawing.Size(168, 19);
-            this.TextColor.TabIndex = 82;
             // 
             // LabelColor
             // 
@@ -427,7 +405,6 @@
             this.LabelTank.TabIndex = 77;
             this.LabelTank.Text = "Capacidade Tanque";
             this.LabelTank.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.LabelTank.Click += new System.EventHandler(this.labelTankVehicle_Click);
             // 
             // TextBrand
             // 
@@ -508,6 +485,7 @@
             this.ButtonSave.TabIndex = 69;
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // PanelTitle
             // 
@@ -542,6 +520,11 @@
             this.PageDescription.Size = new System.Drawing.Size(259, 31);
             this.PageDescription.TabIndex = 42;
             this.PageDescription.Text = "Cadastrar Veículos /";
+            // 
+            // vehicleWorker
+            // 
+            this.vehicleWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveVehicle);
+            this.vehicleWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveVehicleFinish);
             // 
             // Veiculos
             // 
@@ -589,16 +572,12 @@
         private System.Windows.Forms.Label LabelChassi;
         private System.Windows.Forms.TextBox TextRenavam;
         private System.Windows.Forms.Label LabelRenavam;
-        private System.Windows.Forms.TextBox TextColor;
         private System.Windows.Forms.Label LabelColor;
         private System.Windows.Forms.TextBox TextYearFab;
         private System.Windows.Forms.Label LabelYearFab;
-        private System.Windows.Forms.TextBox TextType;
-        private System.Windows.Forms.Label LabelType;
         private System.Windows.Forms.TextBox TextYearMod;
         private System.Windows.Forms.Label LabelYearMod;
         private System.Windows.Forms.Panel DivPanel;
-        private System.Windows.Forms.Panel BorderPanel10;
         private System.Windows.Forms.Panel BorderPanel9;
         private System.Windows.Forms.Panel BorderPanel8;
         private System.Windows.Forms.Panel BorderPanel7;
@@ -610,5 +589,6 @@
         private System.Windows.Forms.Panel BorderPanel1;
         private System.Windows.Forms.Button ButtonHome;
         private System.Windows.Forms.Label PageDescription;
+        private System.Windows.Forms.ComboBox BoxColor;
     }
 }

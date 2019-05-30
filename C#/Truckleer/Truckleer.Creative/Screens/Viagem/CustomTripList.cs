@@ -97,7 +97,7 @@ namespace Truckleer.Creative.Screens.Viagem
             LabelReceiveRoute.Name = "LabelReceiveRoute";
             LabelReceiveRoute.Size = new System.Drawing.Size(73, 17);
             LabelReceiveRoute.TabIndex = 19;
-            LabelReceiveRoute.Text = "ROUTE ?";
+            LabelReceiveRoute.Text = trip.Route ==null ? "-" : trip.Route.Origin + "-" + trip.Route.Destination;
             LabelReceiveRoute.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // BorderPanel3
