@@ -50,8 +50,8 @@
             this.LabelTrip = new System.Windows.Forms.Label();
             this.ButtonSave = new System.Windows.Forms.Button();
             this.LabelName = new System.Windows.Forms.Label();
-            this.TextName = new System.Windows.Forms.TextBox();
-            this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.TextType = new System.Windows.Forms.TextBox();
+            this.Date = new System.Windows.Forms.DateTimePicker();
             this.labelData = new System.Windows.Forms.Label();
             this.TripWorker = new System.ComponentModel.BackgroundWorker();
             this.DriverWorker = new System.ComponentModel.BackgroundWorker();
@@ -133,8 +133,8 @@
             this.PanelCadastro.Controls.Add(this.LabelTrip);
             this.PanelCadastro.Controls.Add(this.ButtonSave);
             this.PanelCadastro.Controls.Add(this.LabelName);
-            this.PanelCadastro.Controls.Add(this.TextName);
-            this.PanelCadastro.Controls.Add(this.DateTimePicker);
+            this.PanelCadastro.Controls.Add(this.TextType);
+            this.PanelCadastro.Controls.Add(this.Date);
             this.PanelCadastro.Controls.Add(this.labelData);
             this.PanelCadastro.Location = new System.Drawing.Point(163, 22);
             this.PanelCadastro.Name = "PanelCadastro";
@@ -204,6 +204,7 @@
             this.TextPrice.Name = "TextPrice";
             this.TextPrice.Size = new System.Drawing.Size(145, 23);
             this.TextPrice.TabIndex = 47;
+            this.TextPrice.TextChanged += new System.EventHandler(this.TextPrice_TextChanged);
             // 
             // panel1
             // 
@@ -254,7 +255,7 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.Black;
-            this.title.Location = new System.Drawing.Point(273, 62);
+            this.title.Location = new System.Drawing.Point(277, 13);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(222, 26);
             this.title.TabIndex = 40;
@@ -313,6 +314,7 @@
             this.ButtonSave.TabIndex = 38;
             this.ButtonSave.Text = "Salvar";
             this.ButtonSave.UseVisualStyleBackColor = false;
+            this.ButtonSave.Click += new System.EventHandler(this.ButtonSave_Click);
             // 
             // LabelName
             // 
@@ -327,29 +329,29 @@
             this.LabelName.TabIndex = 32;
             this.LabelName.Text = "Tipo da Despesa";
             // 
-            // TextName
+            // TextType
             // 
-            this.TextName.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.TextType.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TextName.BackColor = System.Drawing.Color.Azure;
-            this.TextName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.TextName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TextName.Location = new System.Drawing.Point(28, 92);
-            this.TextName.MaxLength = 10;
-            this.TextName.Name = "TextName";
-            this.TextName.Size = new System.Drawing.Size(444, 23);
-            this.TextName.TabIndex = 33;
+            this.TextType.BackColor = System.Drawing.Color.Azure;
+            this.TextType.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TextType.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextType.Location = new System.Drawing.Point(28, 92);
+            this.TextType.MaxLength = 10;
+            this.TextType.Name = "TextType";
+            this.TextType.Size = new System.Drawing.Size(444, 23);
+            this.TextType.TabIndex = 33;
             // 
-            // DateTimePicker
+            // Date
             // 
-            this.DateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.DateTimePicker.Location = new System.Drawing.Point(26, 155);
-            this.DateTimePicker.Name = "DateTimePicker";
-            this.DateTimePicker.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.DateTimePicker.RightToLeftLayout = true;
-            this.DateTimePicker.Size = new System.Drawing.Size(141, 26);
-            this.DateTimePicker.TabIndex = 31;
+            this.Date.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Date.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Date.Location = new System.Drawing.Point(26, 155);
+            this.Date.Name = "Date";
+            this.Date.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.Date.RightToLeftLayout = true;
+            this.Date.Size = new System.Drawing.Size(141, 26);
+            this.Date.TabIndex = 31;
             // 
             // labelData
             // 
@@ -417,8 +419,8 @@
         private System.Windows.Forms.Label LabelTrip;
         private System.Windows.Forms.Button ButtonSave;
         private System.Windows.Forms.Label LabelName;
-        private System.Windows.Forms.TextBox TextName;
-        private System.Windows.Forms.DateTimePicker DateTimePicker;
+        private System.Windows.Forms.TextBox TextType;
+        private System.Windows.Forms.DateTimePicker Date;
         private System.Windows.Forms.Label labelData;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox BoxDriver;

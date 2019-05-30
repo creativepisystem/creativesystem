@@ -56,6 +56,9 @@
     <PackageReference Include="Google.Cloud.Firestore" Version="1.0.0-beta19" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\Expense\Expense.cs" />
+    <Compile Include="Modules\Expense\ExpenseRepository.cs" />
+    <Compile Include="Modules\Expense\ExpenseService.cs" />
     <Compile Include="Screens\Abastecimento\Abastecimento.cs">
       <SubType>UserControl</SubType>
     </Compile>
