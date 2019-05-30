@@ -50,6 +50,9 @@
             this.TextName = new System.Windows.Forms.TextBox();
             this.DateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.labelData = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.BoxDriver = new System.Windows.Forms.ComboBox();
+            this.LabelDriver = new System.Windows.Forms.Label();
             this.PanelMain.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -110,6 +113,9 @@
             this.PanelCadastro.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.PanelCadastro.AutoSize = true;
             this.PanelCadastro.BackColor = System.Drawing.Color.Azure;
+            this.PanelCadastro.Controls.Add(this.panel3);
+            this.PanelCadastro.Controls.Add(this.BoxDriver);
+            this.PanelCadastro.Controls.Add(this.LabelDriver);
             this.PanelCadastro.Controls.Add(this.TextObservation);
             this.PanelCadastro.Controls.Add(this.LabelObservation);
             this.PanelCadastro.Controls.Add(this.TextPrice);
@@ -127,18 +133,18 @@
             this.PanelCadastro.Controls.Add(this.TextName);
             this.PanelCadastro.Controls.Add(this.DateTimePicker);
             this.PanelCadastro.Controls.Add(this.labelData);
-            this.PanelCadastro.Location = new System.Drawing.Point(163, 40);
+            this.PanelCadastro.Location = new System.Drawing.Point(163, 22);
             this.PanelCadastro.Name = "PanelCadastro";
-            this.PanelCadastro.Size = new System.Drawing.Size(502, 562);
+            this.PanelCadastro.Size = new System.Drawing.Size(502, 606);
             this.PanelCadastro.TabIndex = 28;
             // 
             // TextObservation
             // 
-            this.TextObservation.Location = new System.Drawing.Point(28, 374);
+            this.TextObservation.Location = new System.Drawing.Point(27, 443);
             this.TextObservation.Multiline = true;
             this.TextObservation.Name = "TextObservation";
             this.TextObservation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.TextObservation.Size = new System.Drawing.Size(442, 98);
+            this.TextObservation.Size = new System.Drawing.Size(442, 88);
             this.TextObservation.TabIndex = 87;
             // 
             // LabelObservation
@@ -146,7 +152,7 @@
             this.LabelObservation.AutoSize = true;
             this.LabelObservation.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelObservation.ForeColor = System.Drawing.Color.Gray;
-            this.LabelObservation.Location = new System.Drawing.Point(24, 351);
+            this.LabelObservation.Location = new System.Drawing.Point(23, 420);
             this.LabelObservation.Name = "LabelObservation";
             this.LabelObservation.Size = new System.Drawing.Size(104, 20);
             this.LabelObservation.TabIndex = 86;
@@ -214,7 +220,7 @@
             this.title.AutoSize = true;
             this.title.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.title.ForeColor = System.Drawing.Color.Black;
-            this.title.Location = new System.Drawing.Point(273, 40);
+            this.title.Location = new System.Drawing.Point(273, 62);
             this.title.Name = "title";
             this.title.Size = new System.Drawing.Size(222, 26);
             this.title.TabIndex = 40;
@@ -229,7 +235,7 @@
             this.ButtonCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonCancel.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonCancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ButtonCancel.Location = new System.Drawing.Point(389, 508);
+            this.ButtonCancel.Location = new System.Drawing.Point(389, 552);
             this.ButtonCancel.Name = "ButtonCancel";
             this.ButtonCancel.Size = new System.Drawing.Size(97, 32);
             this.ButtonCancel.TabIndex = 39;
@@ -267,7 +273,7 @@
             this.ButtonSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ButtonSave.Font = new System.Drawing.Font("Cooper Black", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ButtonSave.ForeColor = System.Drawing.Color.Azure;
-            this.ButtonSave.Location = new System.Drawing.Point(278, 508);
+            this.ButtonSave.Location = new System.Drawing.Point(278, 552);
             this.ButtonSave.Name = "ButtonSave";
             this.ButtonSave.Size = new System.Drawing.Size(97, 32);
             this.ButtonSave.TabIndex = 38;
@@ -322,6 +328,37 @@
             this.labelData.TabIndex = 30;
             this.labelData.Text = "Data";
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.panel3.Location = new System.Drawing.Point(25, 405);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(267, 2);
+            this.panel3.TabIndex = 90;
+            // 
+            // BoxDriver
+            // 
+            this.BoxDriver.AllowDrop = true;
+            this.BoxDriver.BackColor = System.Drawing.Color.Azure;
+            this.BoxDriver.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BoxDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoxDriver.FormattingEnabled = true;
+            this.BoxDriver.Location = new System.Drawing.Point(26, 376);
+            this.BoxDriver.Name = "BoxDriver";
+            this.BoxDriver.Size = new System.Drawing.Size(266, 28);
+            this.BoxDriver.TabIndex = 89;
+            // 
+            // LabelDriver
+            // 
+            this.LabelDriver.AutoSize = true;
+            this.LabelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDriver.ForeColor = System.Drawing.Color.Gray;
+            this.LabelDriver.Location = new System.Drawing.Point(24, 351);
+            this.LabelDriver.Name = "LabelDriver";
+            this.LabelDriver.Size = new System.Drawing.Size(84, 20);
+            this.LabelDriver.TabIndex = 88;
+            this.LabelDriver.Text = "Motorista";
+            // 
             // Despesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -365,5 +402,8 @@
         private System.Windows.Forms.TextBox TextName;
         private System.Windows.Forms.DateTimePicker DateTimePicker;
         private System.Windows.Forms.Label labelData;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.ComboBox BoxDriver;
+        private System.Windows.Forms.Label LabelDriver;
     }
 }
