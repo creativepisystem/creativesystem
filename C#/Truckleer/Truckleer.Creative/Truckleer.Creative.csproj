@@ -65,7 +65,9 @@
     <Compile Include="Screens\Abastecimento\CustomSupplyList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Screens\Despesas\CustomCostList.cs" />
+    <Compile Include="Screens\Despesas\CustomExpenseList.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Screens\Despesas\Despesas.cs">
       <SubType>UserControl</SubType>
     </Compile>
