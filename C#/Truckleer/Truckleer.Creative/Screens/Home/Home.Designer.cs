@@ -28,22 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
-            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint1 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint2 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint3 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint4 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint5 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint6 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint7 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint8 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint9 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint10 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.container = new System.Windows.Forms.Panel();
             this.PageDescription = new System.Windows.Forms.Label();
@@ -105,6 +105,11 @@
             this.pictureTrip = new System.Windows.Forms.PictureBox();
             this.LabelReceiveTrip = new System.Windows.Forms.Label();
             this.yellow = new System.Windows.Forms.Panel();
+            this.TripWorker = new System.ComponentModel.BackgroundWorker();
+            this.TripListWorker = new System.ComponentModel.BackgroundWorker();
+            this.SupplyListWorker = new System.ComponentModel.BackgroundWorker();
+            this.ExpenseListWorker = new System.ComponentModel.BackgroundWorker();
+            this.DriverListWorker = new System.ComponentModel.BackgroundWorker();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
@@ -241,25 +246,25 @@
             // 
             // chart2
             // 
-            chartArea3.Name = "ChartArea1";
-            this.chart2.ChartAreas.Add(chartArea3);
+            chartArea1.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea1);
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend3.Name = "Legend1";
-            this.chart2.Legends.Add(legend3);
+            legend1.Name = "Legend1";
+            this.chart2.Legends.Add(legend1);
             this.chart2.Location = new System.Drawing.Point(0, 0);
             this.chart2.Name = "chart2";
-            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
-            series3.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
-            series3.ChartArea = "ChartArea1";
-            series3.Legend = "Legend1";
-            series3.Name = "Series1";
-            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series3.Points.Add(dataPoint11);
-            series3.Points.Add(dataPoint12);
-            series3.Points.Add(dataPoint13);
-            series3.Points.Add(dataPoint14);
-            series3.Points.Add(dataPoint15);
-            this.chart2.Series.Add(series3);
+            series1.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
+            series1.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            series1.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series1.Points.Add(dataPoint1);
+            series1.Points.Add(dataPoint2);
+            series1.Points.Add(dataPoint3);
+            series1.Points.Add(dataPoint4);
+            series1.Points.Add(dataPoint5);
+            this.chart2.Series.Add(series1);
             this.chart2.Size = new System.Drawing.Size(510, 242);
             this.chart2.TabIndex = 2;
             this.chart2.Text = "chart2";
@@ -298,25 +303,25 @@
             // 
             // chart1
             // 
-            chartArea4.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea4);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend4.Name = "Legend1";
-            this.chart1.Legends.Add(legend4);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(0, 0);
             this.chart1.Name = "chart1";
-            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
-            series4.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
-            series4.ChartArea = "ChartArea1";
-            series4.Legend = "Legend1";
-            series4.Name = "Series1";
-            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
-            series4.Points.Add(dataPoint16);
-            series4.Points.Add(dataPoint17);
-            series4.Points.Add(dataPoint18);
-            series4.Points.Add(dataPoint19);
-            series4.Points.Add(dataPoint20);
-            this.chart1.Series.Add(series4);
+            series2.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
+            series2.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            series2.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series2.Points.Add(dataPoint6);
+            series2.Points.Add(dataPoint7);
+            series2.Points.Add(dataPoint8);
+            series2.Points.Add(dataPoint9);
+            series2.Points.Add(dataPoint10);
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(588, 242);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
@@ -602,9 +607,8 @@
             this.LabelReceiveTotal.AutoSize = true;
             this.LabelReceiveTotal.Location = new System.Drawing.Point(77, 53);
             this.LabelReceiveTotal.Name = "LabelReceiveTotal";
-            this.LabelReceiveTotal.Size = new System.Drawing.Size(101, 25);
+            this.LabelReceiveTotal.Size = new System.Drawing.Size(0, 25);
             this.LabelReceiveTotal.TabIndex = 5;
-            this.LabelReceiveTotal.Text = "R$ 900,00";
             // 
             // pictureBox4
             // 
@@ -665,9 +669,8 @@
             this.LabelReceiveExpense.AutoSize = true;
             this.LabelReceiveExpense.Location = new System.Drawing.Point(76, 53);
             this.LabelReceiveExpense.Name = "LabelReceiveExpense";
-            this.LabelReceiveExpense.Size = new System.Drawing.Size(101, 25);
+            this.LabelReceiveExpense.Size = new System.Drawing.Size(0, 25);
             this.LabelReceiveExpense.TabIndex = 2;
-            this.LabelReceiveExpense.Text = "R$ 900,00";
             // 
             // pictureBox2
             // 
@@ -718,9 +721,8 @@
             this.LabelReceiveCLitros.AutoSize = true;
             this.LabelReceiveCLitros.Location = new System.Drawing.Point(76, 53);
             this.LabelReceiveCLitros.Name = "LabelReceiveCLitros";
-            this.LabelReceiveCLitros.Size = new System.Drawing.Size(85, 25);
+            this.LabelReceiveCLitros.Size = new System.Drawing.Size(0, 25);
             this.LabelReceiveCLitros.TabIndex = 2;
-            this.LabelReceiveCLitros.Text = "R$ 3000";
             // 
             // pictureBox3
             // 
@@ -771,9 +773,8 @@
             this.LabelReceiveLitros.AutoSize = true;
             this.LabelReceiveLitros.Location = new System.Drawing.Point(78, 53);
             this.LabelReceiveLitros.Name = "LabelReceiveLitros";
-            this.LabelReceiveLitros.Size = new System.Drawing.Size(61, 25);
+            this.LabelReceiveLitros.Size = new System.Drawing.Size(0, 25);
             this.LabelReceiveLitros.TabIndex = 2;
-            this.LabelReceiveLitros.Text = "600 L";
             // 
             // pictureBox1
             // 
@@ -835,9 +836,8 @@
             this.LabelReceiveTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelReceiveTrip.Location = new System.Drawing.Point(118, 53);
             this.LabelReceiveTrip.Name = "LabelReceiveTrip";
-            this.LabelReceiveTrip.Size = new System.Drawing.Size(24, 26);
+            this.LabelReceiveTrip.Size = new System.Drawing.Size(0, 26);
             this.LabelReceiveTrip.TabIndex = 1;
-            this.LabelReceiveTrip.Text = "5";
             // 
             // yellow
             // 
@@ -848,6 +848,31 @@
             this.yellow.Name = "yellow";
             this.yellow.Size = new System.Drawing.Size(10, 103);
             this.yellow.TabIndex = 0;
+            // 
+            // TripWorker
+            // 
+            this.TripWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.SaveTrip);
+            this.TripWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.SaveTripFinish);
+            // 
+            // TripListWorker
+            // 
+            this.TripListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetTrips);
+            this.TripListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetTripsFinish);
+            // 
+            // SupplyListWorker
+            // 
+            this.SupplyListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetSupplys);
+            this.SupplyListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetSupplysFinish);
+            // 
+            // ExpenseListWorker
+            // 
+            this.ExpenseListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetExpenses);
+            this.ExpenseListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetExpensesFinish);
+            // 
+            // DriverListWorker
+            // 
+            this.DriverListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetDrivers);
+            this.DriverListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetDriversFinish);
             // 
             // Home
             // 
@@ -964,5 +989,10 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.Label LabelTrip;
+        private System.ComponentModel.BackgroundWorker TripWorker;
+        private System.ComponentModel.BackgroundWorker TripListWorker;
+        private System.ComponentModel.BackgroundWorker SupplyListWorker;
+        private System.ComponentModel.BackgroundWorker ExpenseListWorker;
+        private System.ComponentModel.BackgroundWorker DriverListWorker;
     }
 }

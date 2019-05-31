@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel;
-using Truckleer.Creative.Screens.ProgressBar;
 
 namespace Truckleer.Creative
 {

@@ -14,9 +14,9 @@ namespace Truckleer.Creative.Screens.Home
         readonly int index = 0;
 
         //Exemplo para classe Usuario
-        readonly Trip trip;
-
-        public CustomTripExpenseList(int index, Trip trip)
+        readonly TripDTO tripDTO;
+        private Action<Trip> Action;
+        public CustomTripExpenseList(int index, TripDTO tripDTO, Action<Trip> Action)
         {
             this.index = index;
             PanelRowTrip = new Panel();
@@ -31,7 +31,8 @@ namespace Truckleer.Creative.Screens.Home
             SuspendLayout();
 
             //Seta o Usuario
-            this.trip = trip;
+            this.tripDTO = tripDTO;
+            this.Action = Action;
             InitializeCustomList();
         }
 
@@ -87,7 +88,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveTrip.Name = "LabelReceiveTrip";
             LabelReceiveTrip.Size = new System.Drawing.Size(135, 81);
             LabelReceiveTrip.TabIndex = 0;
-            LabelReceiveTrip.Text = "Viagem 1";
+            LabelReceiveTrip.Text = tripDTO.Trip.Name;
             LabelReceiveTrip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveDriverTrip
@@ -100,7 +101,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveDriverTrip.Name = "LabelReceiveDriverTrip";
             LabelReceiveDriverTrip.Size = new System.Drawing.Size(191, 81);
             LabelReceiveDriverTrip.TabIndex = 1;
-            LabelReceiveDriverTrip.Text = "Felipe Barbosa Goulart";
+            LabelReceiveDriverTrip.Text = tripDTO.Trip.Driver.Name;
             LabelReceiveDriverTrip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveTripExpense
@@ -113,7 +114,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveTripExpense.Name = "LabelReceiveTripExpense";
             LabelReceiveTripExpense.Size = new System.Drawing.Size(96, 81);
             LabelReceiveTripExpense.TabIndex = 2;
-            LabelReceiveTripExpense.Text = "R$ 300,00";
+            LabelReceiveTripExpense.Text = $"R$ {string.Format("{0:0.00}", tripDTO.TotalExpense)}"; ;
             LabelReceiveTripExpense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ButtonCloseTrip
@@ -126,8 +127,14 @@ namespace Truckleer.Creative.Screens.Home
             ButtonCloseTrip.Size = new System.Drawing.Size(64, 53);
             ButtonCloseTrip.TabIndex = 3;
             ButtonCloseTrip.UseVisualStyleBackColor = true;
+            ButtonCloseTrip.Click += new EventHandler(BtnCloseTrip_CLick);
         }
 
+        private void BtnCloseTrip_CLick(object Sender, EventArgs args)
+        {
+            tripDTO.Trip.Status = TripStatus.FECHADA;
+            Action.Invoke(tripDTO.Trip);
+        }
         private readonly Panel PanelRowTrip;
         private Panel panel2;
         private TableLayoutPanel LayoutHeaderTrip;

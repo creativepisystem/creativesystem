@@ -13,10 +13,9 @@ namespace Truckleer.Creative.Screens.Home
         //index - necessario
         readonly int index = 0;
 
-        //Exemplo para classe Usuario
-        readonly Driver driver;
+        readonly DriverDTO driverDTO;
 
-        public CustomDriverExpenseList(int index, Driver driver)
+        public CustomDriverExpenseList(int index, DriverDTO driverDTO)
         {
             this.index = index;
             PanelBorderRow = new Panel();
@@ -33,7 +32,7 @@ namespace Truckleer.Creative.Screens.Home
             SuspendLayout();
 
             //Seta o Usuario
-            this.driver = driver;
+            this.driverDTO = driverDTO;
             InitializeCustomList();
         }
 
@@ -103,7 +102,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveDriver.Name = "LabelReceiveDriver";
             LabelReceiveDriver.Size = new System.Drawing.Size(176, 62);
             LabelReceiveDriver.TabIndex = 1;
-            LabelReceiveDriver.Text = "Felipe Goulart";
+            LabelReceiveDriver.Text = driverDTO.Name;
             LabelReceiveDriver.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveSupply
@@ -117,7 +116,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveSupply.Name = "LabelReceiveSupply";
             LabelReceiveSupply.Size = new System.Drawing.Size(117, 62);
             LabelReceiveSupply.TabIndex = 2;
-            LabelReceiveSupply.Text = "R$ 300,00";
+            LabelReceiveSupply.Text = $"R$ {string.Format("{0:0.00}",driverDTO.FuelTotal)}";
             LabelReceiveSupply.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveExpense
@@ -131,7 +130,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveExpense.Name = "LabelReceiveExpense";
             LabelReceiveExpense.Size = new System.Drawing.Size(117, 62);
             LabelReceiveExpense.TabIndex = 3;
-            LabelReceiveExpense.Text = "R$ 300,00";
+            LabelReceiveExpense.Text = $"R$ {string.Format("{0:0.00}", driverDTO.ExpenseTotal)}";
             LabelReceiveExpense.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LabelReceiveTotal
@@ -145,7 +144,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveTotal.Name = "LabelReceiveTotal";
             LabelReceiveTotal.Size = new System.Drawing.Size(120, 62);
             LabelReceiveTotal.TabIndex = 4;
-            LabelReceiveTotal.Text = "R$ 600,00";
+            LabelReceiveTotal.Text = $"R$ {string.Format("{0:0.00}", driverDTO.FuelTotal + driverDTO.ExpenseTotal)}";
             LabelReceiveTotal.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         }
 

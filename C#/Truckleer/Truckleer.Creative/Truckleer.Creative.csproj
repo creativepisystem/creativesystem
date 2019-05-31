@@ -56,9 +56,11 @@
     <PackageReference Include="Google.Cloud.Firestore" Version="1.0.0-beta19" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Modules\Driver\DriverDTO.cs" />
     <Compile Include="Modules\Expense\Expense.cs" />
     <Compile Include="Modules\Expense\ExpenseRepository.cs" />
     <Compile Include="Modules\Expense\ExpenseService.cs" />
+    <Compile Include="Modules\Trip\TripDTO.cs" />
     <Compile Include="Screens\Abastecimento\Abastecimento.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -129,9 +131,6 @@
     </Compile>
     <Compile Include="Screens\Motorista\ListarMotoristas.Designer.cs">
       <DependentUpon>ListarMotoristas.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Screens\ProgressBar\CustomProgressBar.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Screens\Rotas\CustomRouteList.cs">
       <SubType>Component</SubType>
