@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Truckleer.Creative.Screens.CustomEvent;
 using Truckleer.Modules;
 using Message = Truckleer.Modules.Message;
 
@@ -8,6 +9,8 @@ namespace Truckleer.Creative
 {
     public partial class Motorista : UserControl
     {
+        public ChangeScreenEvent<Driver> ChangeScreenEvent { get; set; }
+
         private DriverService driverService;
         private Driver Driver;
         public Motorista()

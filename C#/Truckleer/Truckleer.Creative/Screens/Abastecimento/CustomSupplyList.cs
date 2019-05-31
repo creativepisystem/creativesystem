@@ -15,11 +15,14 @@ namespace Truckleer.Creative.Screens.Abastecimento
 
         
         readonly private Supply supply;
+        private Action<Supply> EditFunc;
+        private Action<Supply> DeleteFunc;
 
-        public CustomSupplyList(int index, Supply supply)
+        public CustomSupplyList(int index, Supply supply,Action<Supply> EditFunc, Action<Supply> DeleteFunc)
         {
+            this.EditFunc = EditFunc;
+            this.DeleteFunc = DeleteFunc;
             this.index = index;
-
             BorderPanel = new Panel();
             PanelHour = new Panel();
             PanelPlate = new Panel();
@@ -318,6 +321,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             ButtonEdit.Name = "ButtonEdit";
             ButtonEdit.Size = new System.Drawing.Size(42, 23);
             ButtonEdit.TabIndex = 11;
+            ButtonEdit.Click += new System.EventHandler(BtnEdit_Click);
             ButtonEdit.UseVisualStyleBackColor = false;
             // 
             // ButtonDelete
@@ -329,6 +333,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             ButtonDelete.Location = new System.Drawing.Point(0, 37);
             ButtonDelete.Name = "ButtonDelete";
             ButtonDelete.Size = new System.Drawing.Size(42, 23);
+            ButtonDelete.Click +=  new System.EventHandler(BtnDelete_Click);
             ButtonDelete.TabIndex = 12;
             ButtonDelete.UseVisualStyleBackColor = false;
             // 
@@ -342,7 +347,14 @@ namespace Truckleer.Creative.Screens.Abastecimento
             LabelListDate.Text = supply.Date.ToString();
             LabelListDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
         }
-
+        private void BtnEdit_Click(object sender,EventArgs args)
+        {
+            EditFunc.Invoke(supply);
+        }
+        private void BtnDelete_Click(object sender, EventArgs args)
+        {
+            DeleteFunc.Invoke(supply);
+        }
         private Panel BorderPanel;
         private Panel PanelHour;
         private Panel PanelPlate;

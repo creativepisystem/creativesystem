@@ -293,6 +293,7 @@ namespace Truckleer.Creative
             this.ButtonCancel.TabIndex = 70;
             this.ButtonCancel.Text = "Cancelar";
             this.ButtonCancel.UseVisualStyleBackColor = false;
+            this.ButtonCancel.Click += new System.EventHandler(this.ButtonCancel_Click);
             // 
             // ButtonSave
             // 
@@ -596,6 +597,7 @@ namespace Truckleer.Creative
             this.Name = "Abastecimento";
             this.Size = new System.Drawing.Size(1220, 990);
             this.Load += new System.EventHandler(this.Abastecimento_Load);
+            this.VisibleChanged+= new System.EventHandler(this.Abastecimento_ChangeVisible);
             this.PanelMain.ResumeLayout(false);
             this.PanelMain.PerformLayout();
             this.layoutFlex.ResumeLayout(false);

@@ -82,5 +82,9 @@ namespace Truckleer.Modules
                 MessageText = "A viagem é válida!"
             };
         }
+        public bool FindById(Trip trip)
+        {
+            return Id == trip.Id;
+        }
     }
 }

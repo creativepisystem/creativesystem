@@ -116,6 +116,10 @@ namespace Truckleer.Modules
                 MessageText = "O veículo é valido!"
             };
         }
+        public bool FindById(Vehicle vehicle)
+        {
+            return Id == vehicle.Id;
+        }
     }
 
 }

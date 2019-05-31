@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Truckleer.Modules;
 using Message = Truckleer.Modules.Message;
+using Truckleer.Creative.Screens.CustomEvent;
 
 namespace Truckleer.Creative
 {
     public partial class Viagens : UserControl
     {
+        public ChangeScreenEvent<Trip> ChangeScreenEvent { get; set; }
         private DriverService driverService;
         private TripService tripService;
         private VehicleService vehicleService;

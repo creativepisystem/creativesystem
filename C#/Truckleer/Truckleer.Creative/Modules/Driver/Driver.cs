@@ -123,5 +123,9 @@ namespace Truckleer.Modules
 
             };
         }
+        public bool FindById(Driver driver)
+        {
+            return Id == driver.Id;
+        }
     }
 }

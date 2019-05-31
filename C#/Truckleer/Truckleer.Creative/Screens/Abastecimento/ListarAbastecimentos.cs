@@ -9,11 +9,13 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Truckleer.Modules;
 using Truckleer.Creative.Screens.Abastecimento;
+using Truckleer.Creative.Screens.CustomEvent;
 
 namespace Truckleer.Creative
 {    
     public partial class ListarAbastecimentos : UserControl
     {
+        public ChangeScreenEvent<Supply> ChangeScreenEvent { get; set; }
         private SupplyService supplyService;
         private List<Supply> supplys = new List<Supply>();
         
@@ -21,13 +23,18 @@ namespace Truckleer.Creative
         {
             InitializeComponent();
             supplyService = new SupplyService();
+            ChangeScreenEvent = new ChangeScreenEvent<Supply>();
         }
         public void ListarAbastecimentos_Load(object sender, EventArgs e)
         {
+            
             this.Dock = DockStyle.Fill;
             supplyListWorker.RunWorkerAsync();
         }
-
+        public void UpdateList()
+        {
+            supplyListWorker.RunWorkerAsync();
+        }
         bool isCollapsed = false;
         private void TimerFilter_Tick(object sender, EventArgs e)
         {
@@ -58,7 +65,7 @@ namespace Truckleer.Creative
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-            supplyListWorker.RunWorkerAsync();
+            ChangeScreenEvent.Change(null);
         }       
 
         private void FilterSupply(object sender, DoWorkEventArgs e)
@@ -82,7 +89,15 @@ namespace Truckleer.Creative
             supplys.Sort((a, b) =>( a.Date.CompareTo(b.Date)));
             ListPanel.Controls.Clear();
             for (int i = 0; i < supplys.Count; i++)
-                ListPanel.Controls.Add(new CustomSupplyList(i, supplys[i]));
+                ListPanel.Controls.Add(new CustomSupplyList(i, supplys[i],Edit,Delete));
+        }
+        private void Edit(Supply supply)
+        {
+            ChangeScreenEvent.Change(supply);
+        }
+        private void Delete(Supply supply)
+        {
+            //supplyService.Delete(supply);
         }
     }    
 }

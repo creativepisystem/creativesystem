@@ -8,11 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Truckleer.Modules;
+using Truckleer.Creative.Screens.CustomEvent;
 
 namespace Truckleer.Creative.Screens.Viagem
 {
     public partial class ListarViagens : UserControl
     {
+        public ChangeScreenEvent<List<Trip>> ChangeScreenEvent { get; set; }
         private TripService tripService;
         private List<Trip> trips = new List<Trip>();
         

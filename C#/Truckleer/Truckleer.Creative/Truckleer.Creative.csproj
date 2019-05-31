@@ -68,6 +68,8 @@
     <Compile Include="Screens\Abastecimento\CustomSupplyList.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\CustomEvent\ChangeScreenEvent.cs" />
+    <Compile Include="Screens\CustomEvent\ScreensEnum.cs" />
     <Compile Include="Screens\Despesas\CustomExpenseList.cs">
       <SubType>Component</SubType>
     </Compile>
