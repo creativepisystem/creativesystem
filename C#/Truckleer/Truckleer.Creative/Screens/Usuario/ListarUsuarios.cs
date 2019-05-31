@@ -30,6 +30,15 @@ namespace Truckleer.Creative.Screens.Usuario
             userListWorker.RunWorkerAsync();
         }
 
+        public void UpdateList()
+        {
+            ProgressBar.Visible = true;
+
+            RemoveUserList();
+
+            userListWorker.RunWorkerAsync();
+        }
+
         private void ButtonFilter_Click(object sender, EventArgs e)
         {
 
@@ -42,11 +51,22 @@ namespace Truckleer.Creative.Screens.Usuario
 
         private void FilterUserFinish(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            ProgressBar.Visible = false;
             users = (List<User>)e.Result;
             FlowUserPanel.Controls.Clear();
             for (int i = 0; i < users.Count; i++)
                 FlowUserPanel.Controls.Add(new CustomUserList(i, users[i]));
+        }
+
+        private void RemoveUserList()
+        {
+            for (int i = FlowUserPanel.Controls.Count - 1; i > -1; i--)
+            {
+                if (FlowUserPanel.Controls[i].GetType() == typeof(CustomUserList))
+                {
+                    FlowUserPanel.Controls.RemoveAt(i);
+                }
+            }
         }
     }
 }

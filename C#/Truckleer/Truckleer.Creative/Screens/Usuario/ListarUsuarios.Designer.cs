@@ -45,10 +45,12 @@ namespace Truckleer.Creative.Screens.Usuario
             this.ButtonCadastro = new System.Windows.Forms.Button();
             this.LabelYearMod = new System.Windows.Forms.Label();
             this.BoxYearMod = new System.Windows.Forms.ComboBox();
+            this.ProgressBar = new CircularProgressBar.CircularProgressBar();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.FlowUserPanel.SuspendLayout();
             this.filter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -153,6 +155,7 @@ namespace Truckleer.Creative.Screens.Usuario
             // 
             this.FlowUserPanel.AutoScroll = true;
             this.FlowUserPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.FlowUserPanel.Controls.Add(this.ProgressBar);
             this.FlowUserPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlowUserPanel.Location = new System.Drawing.Point(0, 0);
             this.FlowUserPanel.Margin = new System.Windows.Forms.Padding(5, 15, 5, 5);
@@ -219,6 +222,44 @@ namespace Truckleer.Creative.Screens.Usuario
             this.BoxYearMod.Size = new System.Drawing.Size(234, 33);
             this.BoxYearMod.TabIndex = 19;
             // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.ProgressBar.AnimationSpeed = 500;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.ProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBar.InnerColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.InnerMargin = 2;
+            this.ProgressBar.InnerWidth = -1;
+            this.ProgressBar.Location = new System.Drawing.Point(450, 150);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(450, 150, 3, 3);
+            this.ProgressBar.MarqueeAnimationSpeed = 2000;
+            this.ProgressBar.MaximumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.MinimumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.OuterColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProgressBar.OuterMargin = -21;
+            this.ProgressBar.OuterWidth = 15;
+            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(90)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
+            this.ProgressBar.ProgressWidth = 30;
+            this.ProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.ProgressBar.Size = new System.Drawing.Size(243, 224);
+            this.ProgressBar.StartAngle = 0;
+            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.ProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.ProgressBar.SubscriptText = "";
+            this.ProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.ProgressBar.SuperscriptText = "";
+            this.ProgressBar.TabIndex = 3;
+            this.ProgressBar.Text = "Loading...";
+            this.ProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.ProgressBar.Value = 20;
+            // 
             // ListarUsuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,6 +273,7 @@ namespace Truckleer.Creative.Screens.Usuario
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
+            this.FlowUserPanel.ResumeLayout(false);
             this.filter.ResumeLayout(false);
             this.filter.PerformLayout();
             this.ResumeLayout(false);
@@ -253,5 +295,6 @@ namespace Truckleer.Creative.Screens.Usuario
         private System.Windows.Forms.Button ButtonCadastro;
         private System.Windows.Forms.Label LabelYearMod;
         private System.Windows.Forms.ComboBox BoxYearMod;
+        private CircularProgressBar.CircularProgressBar ProgressBar;
     }
 }

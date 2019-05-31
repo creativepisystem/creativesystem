@@ -43,7 +43,7 @@ namespace Truckleer.Creative.Screens.Home
             // PanelBorderRow
             // 
             BackColor = System.Drawing.SystemColors.WindowText;
-            Dock = DockStyle.Bottom;
+            Dock = DockStyle.Top;
             Location = new System.Drawing.Point(0, 62);
             Name = "PanelBorderRow";
             Size = new System.Drawing.Size(588, 5);
