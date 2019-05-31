@@ -108,42 +108,15 @@ namespace Truckleer.Modules
                     Type = MessageType.ERROR,
                     MessageText = "Quantidade litros inválido!"
                 };
-            //if (Route != null)
-            //{
-            //    if (RouteService.FindOne(Route.Id) == null)
-            //    {
-            //        return new Message()
-            //        {
-            //            Type = MessageType.ERROR,
-            //            MessageText = "A rota é inválida!"
-            //        };
-            //    }
-            //}
-            //if (DriverService.FindOne(Driver.Id) == null)
-            //    return new Message()
-            //    {
-            //        Type = MessageType.ERROR,
-            //        MessageText = "O Motorista é inválido!"
-            //    };
-            //if (VehicleService.FindOne(Vehicle.Id) == null)
-            //    return new Message()
-            //    {
-            //        Type = MessageType.ERROR,
-            //        MessageText = "O veículo é inválido!"
-            //    };
-            //if (TripService.FindOne(Trip.Id) == null)
-            //    return new Message()
-            //    {
-            //        Type = MessageType.ERROR,
-            //        MessageText = "A viagem é inválida!"
-            //    };
-
             return new Message()
             {
                 Type = MessageType.VALID,
                 MessageText = "O abstecimento é válido!"
             };
         }
-
+        public bool FindById(Supply supply)
+        {
+            return Id == supply.Id;
+        }
     }
 }

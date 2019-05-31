@@ -333,6 +333,7 @@ namespace Truckleer.Creative.Screens.Abastecimento
             ButtonDelete.Location = new System.Drawing.Point(0, 37);
             ButtonDelete.Name = "ButtonDelete";
             ButtonDelete.Size = new System.Drawing.Size(42, 23);
+            ButtonDelete.Click +=  new System.EventHandler(BtnDelete_Click);
             ButtonDelete.TabIndex = 12;
             ButtonDelete.UseVisualStyleBackColor = false;
             // 
@@ -349,6 +350,10 @@ namespace Truckleer.Creative.Screens.Abastecimento
         private void BtnEdit_Click(object sender,EventArgs args)
         {
             EditFunc.Invoke(supply);
+        }
+        private void BtnDelete_Click(object sender, EventArgs args)
+        {
+            DeleteFunc.Invoke(supply);
         }
         private Panel BorderPanel;
         private Panel PanelHour;

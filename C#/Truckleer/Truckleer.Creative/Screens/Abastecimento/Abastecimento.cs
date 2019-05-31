@@ -10,7 +10,7 @@ namespace Truckleer.Creative
 {
     public partial class Abastecimento : UserControl
     {
-        
+        private int completeWorks = 0;
         public ChangeScreenEvent<List<Supply>> ChangeScreenEvent { get; set; }
         private RouteService routeService;
         private DriverService driverService;
@@ -36,10 +36,12 @@ namespace Truckleer.Creative
             InitializeComponent();
            
         }
-
+        private bool IsAllWorksComplete()
+        {
+            return completeWorks > 3;
+        }
         private void Abastecimento_Load(object sender, EventArgs e)
         {
-           
             if(Supply == null)
                 ClearFields();
             this.Dock = DockStyle.Fill;
@@ -51,7 +53,16 @@ namespace Truckleer.Creative
         private void Abastecimento_ChangeVisible(object sender, EventArgs e)
         {
         }
-
+        public void SetSupply(Supply supply)
+        {
+            if (supply != null)
+            {
+                Supply = supply;
+                if(IsAllWorksComplete())
+                    FillFields();
+            }
+           
+        }
         //Call Dashboard
         private void Button2_Click(object sender, EventArgs e)
         {
@@ -141,6 +152,9 @@ namespace Truckleer.Creative
             {
                 BoxDriver.Items.Add($"{driver.Name}");
             });
+            completeWorks++;
+            if (IsAllWorksComplete() && Supply.Id != null)
+                FillFields();
         }
 
         private void GetVehicles(object sender, DoWorkEventArgs e)
@@ -154,6 +168,9 @@ namespace Truckleer.Creative
             {
                 BoxVehicle.Items.Add($"{vehicle.License_plate}");
             });
+            completeWorks++;
+            if (IsAllWorksComplete() && Supply.Id != null)
+                FillFields();
         }
         private void GetRoutes(object sender, DoWorkEventArgs e)
         {
@@ -166,6 +183,9 @@ namespace Truckleer.Creative
             {
                 BoxRoute.Items.Add($"{route.Origin}-{route.Destination}");
             });
+            completeWorks++;
+            if (IsAllWorksComplete() && Supply.Id != null)
+                FillFields();
         }
         private void GetTrips(object sender, DoWorkEventArgs e)
         {
@@ -178,6 +198,9 @@ namespace Truckleer.Creative
             {
                 BoxTrip.Items.Add($"{trip.Name}");
             });
+            completeWorks++;
+            if (IsAllWorksComplete() && Supply.Id != null)
+                FillFields();
         }
 
         private void SaveSupply(object sender, DoWorkEventArgs e)
@@ -247,6 +270,18 @@ namespace Truckleer.Creative
             
         }
 
-        
+        private void FillFields()
+        {
+            DateSupply.Value = Supply.Date;
+            BoxVehicle.SelectedIndex = vehicles.FindIndex(Supply.Vehicle.FindById);
+            BoxTrip.SelectedIndex = trips.FindIndex(Supply.Trip.FindById);
+            BoxRoute.SelectedIndex = routes.FindIndex(Supply.Route.FindById);
+            BoxDriver.SelectedIndex = drivers.FindIndex(Supply.Driver.FindById);
+            TextLiters.Text = Supply.Liters.ToString();
+            TextKm.Text = Supply.Current_Km.ToString();
+            TextPrice.Text = Supply.Price.ToString();
+            TextStation.Text = Supply.Station;
+            LabelResult.Text = (Supply.Liters* Supply.Price).ToString();
+        }
     }
 }

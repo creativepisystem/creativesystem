@@ -85,5 +85,9 @@ namespace Truckleer.Modules
                 MessageText = "Despesa é valida"
             };
         }
+        public bool FindById(Expense expense)
+        {
+            return Id == expense.Id;
+        }
     }
 }

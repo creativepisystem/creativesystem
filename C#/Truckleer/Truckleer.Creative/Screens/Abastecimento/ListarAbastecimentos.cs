@@ -31,7 +31,10 @@ namespace Truckleer.Creative
             this.Dock = DockStyle.Fill;
             supplyListWorker.RunWorkerAsync();
         }
-
+        public void UpdateList()
+        {
+            supplyListWorker.RunWorkerAsync();
+        }
         bool isCollapsed = false;
         private void TimerFilter_Tick(object sender, EventArgs e)
         {
@@ -75,11 +78,15 @@ namespace Truckleer.Creative
             supplys.Sort((a, b) =>( a.Date.CompareTo(b.Date)));
             ListPanel.Controls.Clear();
             for (int i = 0; i < supplys.Count; i++)
-                ListPanel.Controls.Add(new CustomSupplyList(i, supplys[i],Edit,Edit));
+                ListPanel.Controls.Add(new CustomSupplyList(i, supplys[i],Edit,Delete));
         }
         private void Edit(Supply supply)
         {
             ChangeScreenEvent.Change(supply);
+        }
+        private void Delete(Supply supply)
+        {
+            //supplyService.Delete(supply);
         }
     }    
 }

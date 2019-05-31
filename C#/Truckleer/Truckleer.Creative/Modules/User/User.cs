@@ -88,7 +88,10 @@ namespace Truckleer.Modules
             };
 
         }
-
+        public bool FindById(User user)
+        {
+            return Id == user.Id;
+        }
     }
 
 }
