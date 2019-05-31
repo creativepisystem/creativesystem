@@ -86,6 +86,9 @@
     <Compile Include="Screens\Home\CustomDriverExpense.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Screens\Home\CustomTripExpense.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Screens\Home\Home.cs">
       <SubType>UserControl</SubType>
     </Compile>

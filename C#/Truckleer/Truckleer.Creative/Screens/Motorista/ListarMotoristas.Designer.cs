@@ -36,23 +36,25 @@ namespace Truckleer.Creative
             this.driverListWorker = new System.ComponentModel.BackgroundWorker();
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.TitleFilter = new System.Windows.Forms.Panel();
-            this.BoxDriver = new System.Windows.Forms.ComboBox();
-            this.LabelDriver = new System.Windows.Forms.Label();
-            this.BoxCnh = new System.Windows.Forms.ComboBox();
-            this.LabelChn = new System.Windows.Forms.Label();
-            this.ButtonCadastro = new System.Windows.Forms.Button();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.PanelListDriver = new System.Windows.Forms.Panel();
             this.FlowDriver = new System.Windows.Forms.FlowLayoutPanel();
+            this.TitleFilter = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.ButtonCadastro = new System.Windows.Forms.Button();
+            this.LabelChn = new System.Windows.Forms.Label();
+            this.BoxCnh = new System.Windows.Forms.ComboBox();
+            this.LabelDriver = new System.Windows.Forms.Label();
+            this.BoxDriver = new System.Windows.Forms.ComboBox();
             this.ButtonFilter = new System.Windows.Forms.Button();
             this.PageDescription = new System.Windows.Forms.Label();
             this.ButtonHome = new System.Windows.Forms.Button();
             this.container = new System.Windows.Forms.Panel();
+            this.ProgressBar = new CircularProgressBar.CircularProgressBar();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
-            this.TitleFilter.SuspendLayout();
             this.PanelListDriver.SuspendLayout();
+            this.FlowDriver.SuspendLayout();
+            this.TitleFilter.SuspendLayout();
             this.container.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,7 +64,10 @@ namespace Truckleer.Creative
             // 
             // driverListWorker
             // 
+            this.driverListWorker.WorkerReportsProgress = true;
+            this.driverListWorker.WorkerSupportsCancellation = true;
             this.driverListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterDriver);
+            this.driverListWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.FilterDriverProgress);
             this.driverListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterDriverFinish);
             // 
             // layoutFlex
@@ -94,6 +99,26 @@ namespace Truckleer.Creative
             this.MainPanel.Size = new System.Drawing.Size(1141, 693);
             this.MainPanel.TabIndex = 0;
             // 
+            // PanelListDriver
+            // 
+            this.PanelListDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
+            this.PanelListDriver.Controls.Add(this.FlowDriver);
+            this.PanelListDriver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanelListDriver.Location = new System.Drawing.Point(0, 100);
+            this.PanelListDriver.Name = "PanelListDriver";
+            this.PanelListDriver.Size = new System.Drawing.Size(1141, 593);
+            this.PanelListDriver.TabIndex = 1;
+            // 
+            // FlowDriver
+            // 
+            this.FlowDriver.AutoScroll = true;
+            this.FlowDriver.Controls.Add(this.ProgressBar);
+            this.FlowDriver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowDriver.Location = new System.Drawing.Point(0, 0);
+            this.FlowDriver.Name = "FlowDriver";
+            this.FlowDriver.Size = new System.Drawing.Size(1141, 593);
+            this.FlowDriver.TabIndex = 0;
+            // 
             // TitleFilter
             // 
             this.TitleFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
@@ -111,43 +136,14 @@ namespace Truckleer.Creative
             this.TitleFilter.Size = new System.Drawing.Size(1141, 100);
             this.TitleFilter.TabIndex = 0;
             // 
-            // BoxDriver
+            // panel1
             // 
-            this.BoxDriver.FormattingEnabled = true;
-            this.BoxDriver.Location = new System.Drawing.Point(99, 54);
-            this.BoxDriver.Name = "BoxDriver";
-            this.BoxDriver.Size = new System.Drawing.Size(109, 21);
-            this.BoxDriver.TabIndex = 19;
-            // 
-            // LabelDriver
-            // 
-            this.LabelDriver.AutoSize = true;
-            this.LabelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelDriver.ForeColor = System.Drawing.Color.Azure;
-            this.LabelDriver.Location = new System.Drawing.Point(94, 31);
-            this.LabelDriver.Name = "LabelDriver";
-            this.LabelDriver.Size = new System.Drawing.Size(75, 20);
-            this.LabelDriver.TabIndex = 20;
-            this.LabelDriver.Text = "Motorista";
-            // 
-            // BoxCnh
-            // 
-            this.BoxCnh.FormattingEnabled = true;
-            this.BoxCnh.Location = new System.Drawing.Point(272, 54);
-            this.BoxCnh.Name = "BoxCnh";
-            this.BoxCnh.Size = new System.Drawing.Size(109, 21);
-            this.BoxCnh.TabIndex = 21;
-            // 
-            // LabelChn
-            // 
-            this.LabelChn.AutoSize = true;
-            this.LabelChn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LabelChn.ForeColor = System.Drawing.Color.Azure;
-            this.LabelChn.Location = new System.Drawing.Point(267, 31);
-            this.LabelChn.Name = "LabelChn";
-            this.LabelChn.Size = new System.Drawing.Size(43, 20);
-            this.LabelChn.TabIndex = 22;
-            this.LabelChn.Text = "CNH";
+            this.panel1.BackColor = System.Drawing.Color.Black;
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(1141, 1);
+            this.panel1.TabIndex = 71;
             // 
             // ButtonCadastro
             // 
@@ -165,33 +161,43 @@ namespace Truckleer.Creative
             this.ButtonCadastro.UseVisualStyleBackColor = false;
             this.ButtonCadastro.Click += new System.EventHandler(this.ButtonCadastro_Click);
             // 
-            // panel1
+            // LabelChn
             // 
-            this.panel1.BackColor = System.Drawing.Color.Black;
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 99);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1141, 1);
-            this.panel1.TabIndex = 71;
+            this.LabelChn.AutoSize = true;
+            this.LabelChn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelChn.ForeColor = System.Drawing.Color.Azure;
+            this.LabelChn.Location = new System.Drawing.Point(267, 31);
+            this.LabelChn.Name = "LabelChn";
+            this.LabelChn.Size = new System.Drawing.Size(43, 20);
+            this.LabelChn.TabIndex = 22;
+            this.LabelChn.Text = "CNH";
             // 
-            // PanelListDriver
+            // BoxCnh
             // 
-            this.PanelListDriver.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(140)))), ((int)(((byte)(140)))));
-            this.PanelListDriver.Controls.Add(this.FlowDriver);
-            this.PanelListDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanelListDriver.Location = new System.Drawing.Point(0, 100);
-            this.PanelListDriver.Name = "PanelListDriver";
-            this.PanelListDriver.Size = new System.Drawing.Size(1141, 593);
-            this.PanelListDriver.TabIndex = 1;
+            this.BoxCnh.FormattingEnabled = true;
+            this.BoxCnh.Location = new System.Drawing.Point(272, 54);
+            this.BoxCnh.Name = "BoxCnh";
+            this.BoxCnh.Size = new System.Drawing.Size(109, 21);
+            this.BoxCnh.TabIndex = 21;
             // 
-            // FlowDriver
+            // LabelDriver
             // 
-            this.FlowDriver.AutoScroll = true;
-            this.FlowDriver.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.FlowDriver.Location = new System.Drawing.Point(0, 0);
-            this.FlowDriver.Name = "FlowDriver";
-            this.FlowDriver.Size = new System.Drawing.Size(1141, 593);
-            this.FlowDriver.TabIndex = 0;
+            this.LabelDriver.AutoSize = true;
+            this.LabelDriver.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LabelDriver.ForeColor = System.Drawing.Color.Azure;
+            this.LabelDriver.Location = new System.Drawing.Point(94, 31);
+            this.LabelDriver.Name = "LabelDriver";
+            this.LabelDriver.Size = new System.Drawing.Size(75, 20);
+            this.LabelDriver.TabIndex = 20;
+            this.LabelDriver.Text = "Motorista";
+            // 
+            // BoxDriver
+            // 
+            this.BoxDriver.FormattingEnabled = true;
+            this.BoxDriver.Location = new System.Drawing.Point(99, 54);
+            this.BoxDriver.Name = "BoxDriver";
+            this.BoxDriver.Size = new System.Drawing.Size(109, 21);
+            this.BoxDriver.TabIndex = 19;
             // 
             // ButtonFilter
             // 
@@ -247,6 +253,44 @@ namespace Truckleer.Creative
             this.container.Size = new System.Drawing.Size(1170, 759);
             this.container.TabIndex = 1;
             // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.ProgressBar.AnimationSpeed = 500;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.ProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBar.InnerColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.InnerMargin = 2;
+            this.ProgressBar.InnerWidth = -1;
+            this.ProgressBar.Location = new System.Drawing.Point(450, 150);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(450, 150, 3, 3);
+            this.ProgressBar.MarqueeAnimationSpeed = 2000;
+            this.ProgressBar.MaximumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.MinimumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.OuterColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProgressBar.OuterMargin = -21;
+            this.ProgressBar.OuterWidth = 15;
+            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.ProgressBar.ProgressWidth = 30;
+            this.ProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.ProgressBar.Size = new System.Drawing.Size(243, 224);
+            this.ProgressBar.StartAngle = 0;
+            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.ProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.ProgressBar.SubscriptText = "";
+            this.ProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.ProgressBar.SuperscriptText = "";
+            this.ProgressBar.TabIndex = 2;
+            this.ProgressBar.Text = "Loading...";
+            this.ProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.ProgressBar.Value = 20;
+            // 
             // ListarMotoristas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -258,9 +302,10 @@ namespace Truckleer.Creative
             this.Load += new System.EventHandler(this.ListarMotoristas_Load);
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
+            this.PanelListDriver.ResumeLayout(false);
+            this.FlowDriver.ResumeLayout(false);
             this.TitleFilter.ResumeLayout(false);
             this.TitleFilter.PerformLayout();
-            this.PanelListDriver.ResumeLayout(false);
             this.container.ResumeLayout(false);
             this.container.PerformLayout();
             this.ResumeLayout(false);
@@ -284,5 +329,6 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Label PageDescription;
         private System.Windows.Forms.Button ButtonHome;
         private System.Windows.Forms.Panel container;
+        private CircularProgressBar.CircularProgressBar ProgressBar;
     }
 }

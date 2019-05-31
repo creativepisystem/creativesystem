@@ -36,11 +36,18 @@ namespace Truckleer.Creative.Screens.Viagem
         private void FilterTrip(object sender, DoWorkEventArgs e)
         {
             e.Result = tripService.FindAll();
+            for (int i = 0; i <= 100; i++)
+                tripListWorker.ReportProgress(i);
+        }
+
+        private void FilterTripProgress(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
         }
 
         private void FilterTripFinish(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            ProgressBar.Visible = false;
             trips = (List<Trip>)e.Result;
             FlowTrip.Controls.Clear();
             for (int i = 0; i < trips.Count; i++)

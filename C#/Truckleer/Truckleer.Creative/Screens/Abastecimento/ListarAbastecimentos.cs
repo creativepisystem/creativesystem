@@ -25,6 +25,7 @@ namespace Truckleer.Creative
         public void ListarAbastecimentos_Load(object sender, EventArgs e)
         {
             this.Dock = DockStyle.Fill;
+            supplyListWorker.RunWorkerAsync();
         }
 
         bool isCollapsed = false;
@@ -59,13 +60,24 @@ namespace Truckleer.Creative
         {
             supplyListWorker.RunWorkerAsync();
         }       
+
         private void FilterSupply(object sender, DoWorkEventArgs e)
         {
+
             e.Result = supplyService.FindAll();
+            for (int i = 0; i <= 100; i++)
+                supplyListWorker.ReportProgress(i);
+            
         }
+
+        private void FilterSupplyProgress(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
+        }
+
         private void FilterSupplyFinish(object sender, RunWorkerCompletedEventArgs e)
         {
-            
+            ProgressBar.Visible = false;
             supplys = (List<Supply>)e.Result;
             supplys.Sort((a, b) =>( a.Date.CompareTo(b.Date)));
             ListPanel.Controls.Clear();

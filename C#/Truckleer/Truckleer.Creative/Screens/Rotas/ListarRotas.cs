@@ -65,11 +65,18 @@ namespace Truckleer.Creative
         private void FilterRoute(object sender, DoWorkEventArgs e)
         {
             e.Result = routeService.FindAll();
+            for (int i = 0;  i <= 100; i++)
+                routeListWorker.ReportProgress(i);
+        }
+
+        private void FilterRouteProgress(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
         }
 
         private void FilterRouteFinish(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            ProgressBar.Visible = false;
             routes = (List<Route>)e.Result;
             FlowRoute.Controls.Clear();
             for (int i = 0; i < routes.Count; i++)

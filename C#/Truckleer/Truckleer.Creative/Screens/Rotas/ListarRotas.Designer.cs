@@ -39,7 +39,6 @@ namespace Truckleer.Creative
             this.layoutFlex = new System.Windows.Forms.TableLayoutPanel();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.PanelR = new System.Windows.Forms.Panel();
-            this.routeListWorker = new System.ComponentModel.BackgroundWorker();
             this.FlowRoute = new System.Windows.Forms.FlowLayoutPanel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.TitleFilter = new System.Windows.Forms.Panel();
@@ -47,11 +46,14 @@ namespace Truckleer.Creative
             this.ButtonCadastro = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.routeListWorker = new System.ComponentModel.BackgroundWorker();
             this.filtro = new System.Windows.Forms.Timer(this.components);
+            this.ProgressBar = new CircularProgressBar.CircularProgressBar();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.PanelR.SuspendLayout();
+            this.FlowRoute.SuspendLayout();
             this.TitleFilter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -152,6 +154,7 @@ namespace Truckleer.Creative
             // FlowRoute
             // 
             this.FlowRoute.AutoScroll = true;
+            this.FlowRoute.Controls.Add(this.ProgressBar);
             this.FlowRoute.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlowRoute.Location = new System.Drawing.Point(0, 0);
             this.FlowRoute.Name = "FlowRoute";
@@ -225,12 +228,52 @@ namespace Truckleer.Creative
             this.label1.Size = new System.Drawing.Size(118, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Buscar Rota";
-            //
-            //Route Worker
-            //
+            // 
+            // routeListWorker
+            // 
+            this.routeListWorker.WorkerReportsProgress = true;
+            this.routeListWorker.WorkerSupportsCancellation = true;
             this.routeListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterRoute);
+            this.routeListWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.FilterRouteProgress);
             this.routeListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterRouteFinish);
-
+            // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.ProgressBar.AnimationSpeed = 500;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.ProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBar.InnerColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.InnerMargin = 2;
+            this.ProgressBar.InnerWidth = -1;
+            this.ProgressBar.Location = new System.Drawing.Point(450, 150);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(450, 150, 3, 3);
+            this.ProgressBar.MarqueeAnimationSpeed = 2000;
+            this.ProgressBar.MaximumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.MinimumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.OuterColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProgressBar.OuterMargin = -21;
+            this.ProgressBar.OuterWidth = 15;
+            this.ProgressBar.ProgressColor = System.Drawing.Color.Orange;
+            this.ProgressBar.ProgressWidth = 30;
+            this.ProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.ProgressBar.Size = new System.Drawing.Size(243, 224);
+            this.ProgressBar.StartAngle = 0;
+            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.ProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.ProgressBar.SubscriptText = "";
+            this.ProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.ProgressBar.SuperscriptText = "";
+            this.ProgressBar.TabIndex = 2;
+            this.ProgressBar.Text = "Loading...";
+            this.ProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.ProgressBar.Value = 20;
             // 
             // ListarRotas
             // 
@@ -246,6 +289,7 @@ namespace Truckleer.Creative
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.PanelR.ResumeLayout(false);
+            this.FlowRoute.ResumeLayout(false);
             this.TitleFilter.ResumeLayout(false);
             this.TitleFilter.PerformLayout();
             this.ResumeLayout(false);
@@ -269,5 +313,6 @@ namespace Truckleer.Creative
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button ButtonFilter;
         private System.Windows.Forms.Timer filtro;
+        private CircularProgressBar.CircularProgressBar ProgressBar;
     }
 }

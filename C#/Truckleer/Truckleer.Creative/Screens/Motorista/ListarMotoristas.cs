@@ -67,11 +67,18 @@ namespace Truckleer.Creative
         private void FilterDriver(object sender, DoWorkEventArgs e)
         {
             e.Result = driverService.FindAll();
+            for (int i = 0; i <= 100; i++)
+                driverListWorker.ReportProgress(i);
+        }
+
+        private void FilterDriverProgress(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
         }
 
         private void FilterDriverFinish(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            ProgressBar.Visible = false;
             drivers = (List<Driver>)e.Result;
             FlowDriver.Controls.Clear();
             for (int i = 0; i < drivers.Count; i++)

@@ -28,6 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint11 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint12 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint13 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint14 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint15 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint16 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint17 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint18 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint19 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
+            System.Windows.Forms.DataVisualization.Charting.DataPoint dataPoint20 = new System.Windows.Forms.DataVisualization.Charting.DataPoint(0D, 0D);
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.container = new System.Windows.Forms.Panel();
             this.PageDescription = new System.Windows.Forms.Label();
@@ -37,21 +53,26 @@
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label9 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.label3 = new System.Windows.Forms.Label();
             this.PanelTripCost = new System.Windows.Forms.Panel();
             this.LabelCost = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.FlowTrip = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
             this.LayoutHeaderTrip = new System.Windows.Forms.TableLayoutPanel();
             this.LabelTrip = new System.Windows.Forms.Label();
             this.LabelDriverTrip = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.PanelDriverCost = new System.Windows.Forms.Panel();
             this.LabelDriverCost = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.FlowDriver = new System.Windows.Forms.Panel();
             this.PanelHeaderDriver = new System.Windows.Forms.Panel();
             this.LayoutHeaderDriver = new System.Windows.Forms.TableLayoutPanel();
             this.LabelDriver = new System.Windows.Forms.Label();
@@ -89,7 +110,11 @@
             this.MainPanel.SuspendLayout();
             this.PanelDash.SuspendLayout();
             this.panel8.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             this.panel7.SuspendLayout();
+            this.panel9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.PanelTripCost.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -177,6 +202,7 @@
             this.PanelDash.Controls.Add(this.panelMaintence);
             this.PanelDash.Controls.Add(this.panelCusto);
             this.PanelDash.Controls.Add(this.panelTrip);
+            this.PanelDash.Dock = System.Windows.Forms.DockStyle.Fill;
             this.PanelDash.Location = new System.Drawing.Point(0, 0);
             this.PanelDash.Margin = new System.Windows.Forms.Padding(0);
             this.PanelDash.Name = "PanelDash";
@@ -204,12 +230,39 @@
             // 
             // panel10
             // 
+            this.panel10.AutoScroll = true;
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
+            this.panel10.Controls.Add(this.chart2);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel10.Location = new System.Drawing.Point(0, 36);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(510, 242);
             this.panel10.TabIndex = 2;
+            // 
+            // chart2
+            // 
+            chartArea3.Name = "ChartArea1";
+            this.chart2.ChartAreas.Add(chartArea3);
+            this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend3.Name = "Legend1";
+            this.chart2.Legends.Add(legend3);
+            this.chart2.Location = new System.Drawing.Point(0, 0);
+            this.chart2.Name = "chart2";
+            series3.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
+            series3.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            series3.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series3.Points.Add(dataPoint11);
+            series3.Points.Add(dataPoint12);
+            series3.Points.Add(dataPoint13);
+            series3.Points.Add(dataPoint14);
+            series3.Points.Add(dataPoint15);
+            this.chart2.Series.Add(series3);
+            this.chart2.Size = new System.Drawing.Size(510, 242);
+            this.chart2.TabIndex = 2;
+            this.chart2.Text = "chart2";
             // 
             // label9
             // 
@@ -234,12 +287,39 @@
             // 
             // panel9
             // 
+            this.panel9.AutoScroll = true;
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
+            this.panel9.Controls.Add(this.chart1);
             this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel9.Location = new System.Drawing.Point(0, 36);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(588, 242);
             this.panel9.TabIndex = 2;
+            // 
+            // chart1
+            // 
+            chartArea4.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea4);
+            this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
+            legend4.Name = "Legend1";
+            this.chart1.Legends.Add(legend4);
+            this.chart1.Location = new System.Drawing.Point(0, 0);
+            this.chart1.Name = "chart1";
+            series4.BackGradientStyle = System.Windows.Forms.DataVisualization.Charting.GradientStyle.VerticalCenter;
+            series4.BackHatchStyle = System.Windows.Forms.DataVisualization.Charting.ChartHatchStyle.BackwardDiagonal;
+            series4.ChartArea = "ChartArea1";
+            series4.Legend = "Legend1";
+            series4.Name = "Series1";
+            series4.Palette = System.Windows.Forms.DataVisualization.Charting.ChartColorPalette.Grayscale;
+            series4.Points.Add(dataPoint16);
+            series4.Points.Add(dataPoint17);
+            series4.Points.Add(dataPoint18);
+            series4.Points.Add(dataPoint19);
+            series4.Points.Add(dataPoint20);
+            this.chart1.Series.Add(series4);
+            this.chart1.Size = new System.Drawing.Size(588, 242);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
             // 
             // label3
             // 
@@ -278,6 +358,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
+            this.panel4.Controls.Add(this.FlowTrip);
             this.panel4.Controls.Add(this.panel6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel4.Location = new System.Drawing.Point(0, 41);
@@ -285,10 +366,19 @@
             this.panel4.Size = new System.Drawing.Size(510, 446);
             this.panel4.TabIndex = 1;
             // 
+            // FlowTrip
+            // 
+            this.FlowTrip.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowTrip.Location = new System.Drawing.Point(0, 49);
+            this.FlowTrip.Name = "FlowTrip";
+            this.FlowTrip.Size = new System.Drawing.Size(510, 397);
+            this.FlowTrip.TabIndex = 2;
+            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(65)))), ((int)(((byte)(66)))), ((int)(((byte)(67)))));
             this.panel6.Controls.Add(this.LayoutHeaderTrip);
+            this.panel6.Controls.Add(this.panel2);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
@@ -297,10 +387,11 @@
             // 
             // LayoutHeaderTrip
             // 
-            this.LayoutHeaderTrip.ColumnCount = 3;
-            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 32.52398F));
-            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.20349F));
-            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 24.27253F));
+            this.LayoutHeaderTrip.ColumnCount = 4;
+            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 27.68902F));
+            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 38.8007F));
+            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.17929F));
+            this.LayoutHeaderTrip.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 13.331F));
             this.LayoutHeaderTrip.Controls.Add(this.LabelTrip, 0, 0);
             this.LayoutHeaderTrip.Controls.Add(this.LabelDriverTrip, 1, 0);
             this.LayoutHeaderTrip.Controls.Add(this.label10, 2, 0);
@@ -309,8 +400,8 @@
             this.LayoutHeaderTrip.Name = "LayoutHeaderTrip";
             this.LayoutHeaderTrip.RowCount = 1;
             this.LayoutHeaderTrip.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.LayoutHeaderTrip.Size = new System.Drawing.Size(510, 49);
-            this.LayoutHeaderTrip.TabIndex = 2;
+            this.LayoutHeaderTrip.Size = new System.Drawing.Size(510, 48);
+            this.LayoutHeaderTrip.TabIndex = 3;
             // 
             // LabelTrip
             // 
@@ -320,7 +411,7 @@
             this.LabelTrip.ForeColor = System.Drawing.Color.Azure;
             this.LabelTrip.Location = new System.Drawing.Point(3, 0);
             this.LabelTrip.Name = "LabelTrip";
-            this.LabelTrip.Size = new System.Drawing.Size(159, 49);
+            this.LabelTrip.Size = new System.Drawing.Size(135, 48);
             this.LabelTrip.TabIndex = 0;
             this.LabelTrip.Text = "Viagem";
             this.LabelTrip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -331,9 +422,9 @@
             this.LabelDriverTrip.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LabelDriverTrip.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LabelDriverTrip.ForeColor = System.Drawing.Color.Azure;
-            this.LabelDriverTrip.Location = new System.Drawing.Point(168, 0);
+            this.LabelDriverTrip.Location = new System.Drawing.Point(144, 0);
             this.LabelDriverTrip.Name = "LabelDriverTrip";
-            this.LabelDriverTrip.Size = new System.Drawing.Size(214, 49);
+            this.LabelDriverTrip.Size = new System.Drawing.Size(191, 48);
             this.LabelDriverTrip.TabIndex = 1;
             this.LabelDriverTrip.Text = "Motorista";
             this.LabelDriverTrip.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -344,12 +435,21 @@
             this.label10.Dock = System.Windows.Forms.DockStyle.Fill;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Azure;
-            this.label10.Location = new System.Drawing.Point(388, 0);
+            this.label10.Location = new System.Drawing.Point(341, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(119, 49);
+            this.label10.Size = new System.Drawing.Size(96, 48);
             this.label10.TabIndex = 2;
             this.label10.Text = "Custo Despesas";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.Black;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 48);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(510, 1);
+            this.panel2.TabIndex = 0;
             // 
             // PanelDriverCost
             // 
@@ -375,12 +475,21 @@
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(52)))));
+            this.panel3.Controls.Add(this.FlowDriver);
             this.panel3.Controls.Add(this.PanelHeaderDriver);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel3.Location = new System.Drawing.Point(0, 41);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(588, 446);
             this.panel3.TabIndex = 0;
+            // 
+            // FlowDriver
+            // 
+            this.FlowDriver.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FlowDriver.Location = new System.Drawing.Point(0, 50);
+            this.FlowDriver.Name = "FlowDriver";
+            this.FlowDriver.Size = new System.Drawing.Size(588, 396);
+            this.FlowDriver.TabIndex = 1;
             // 
             // PanelHeaderDriver
             // 
@@ -755,8 +864,12 @@
             this.PanelDash.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.PanelTripCost.ResumeLayout(false);
             this.PanelTripCost.PerformLayout();
             this.panel4.ResumeLayout(false);
@@ -841,9 +954,14 @@
         private System.Windows.Forms.Label LabelExpense;
         private System.Windows.Forms.Label LabelTotal;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel FlowDriver;
+        private System.Windows.Forms.Panel FlowTrip;
         private System.Windows.Forms.TableLayoutPanel LayoutHeaderTrip;
-        private System.Windows.Forms.Label LabelTrip;
         private System.Windows.Forms.Label LabelDriverTrip;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Label LabelTrip;
     }
 }

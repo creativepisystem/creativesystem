@@ -65,11 +65,18 @@ namespace Truckleer.Creative
         private void FilterVehicle(object sender, DoWorkEventArgs e)
         {
             e.Result = vehicleService.FindAll();
+            for (int i = 0; i <= 100; i++)
+                vehicleListWorker.ReportProgress(i);
+        }
+
+        private void FilterVehicleProgress(object sender, ProgressChangedEventArgs e)
+        {
+            ProgressBar.Value = e.ProgressPercentage;
         }
 
         private void FilterVehicleFinish(object sender, RunWorkerCompletedEventArgs e)
         {
-
+            ProgressBar.Visible = false;
             vehicles = (List<Vehicle>)e.Result;
             FlowVehiclePanel.Controls.Clear();
             for (int i = 0; i < vehicles.Count; i++)
