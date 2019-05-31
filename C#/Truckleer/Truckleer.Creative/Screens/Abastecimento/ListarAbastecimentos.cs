@@ -29,7 +29,6 @@ namespace Truckleer.Creative
         {
             
             this.Dock = DockStyle.Fill;
-            supplyListWorker.RunWorkerAsync();
         }
         public void UpdateList()
         {

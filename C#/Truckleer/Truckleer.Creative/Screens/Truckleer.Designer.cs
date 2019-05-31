@@ -915,7 +915,7 @@ namespace Truckleer.Creative
             this.btnDash.Name = "btnDash";
             this.btnDash.Size = new System.Drawing.Size(195, 40);
             this.btnDash.TabIndex = 13;
-            this.btnDash.Text = "DashBoard";
+            this.btnDash.Text = "Home";
             this.btnDash.UseVisualStyleBackColor = false;
             this.btnDash.Click += new System.EventHandler(this.BtnDash_Click);
             // 

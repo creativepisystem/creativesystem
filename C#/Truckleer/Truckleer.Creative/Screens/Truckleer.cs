@@ -12,6 +12,7 @@ using Truckleer.Creative.Screens.Usuario;
 using Truckleer.Creative.Screens.Despesas;
 using Truckleer.Creative.Screens.CustomEvent;
 using Truckleer.Modules;
+using Truckleer.Creative.Screens.Home;
 
 namespace Truckleer.Creative
 {
@@ -19,6 +20,7 @@ namespace Truckleer.Creative
     {
         Dashboard dash = new Dashboard();
         Abastecimento supply = new Abastecimento();
+        Home home = new Home();
         ListarAbastecimentos listSupply = new ListarAbastecimentos();
         Veiculos vehicle = new Veiculos();
         ListarVeiculos listVehicle = new ListarVeiculos();
@@ -40,7 +42,7 @@ namespace Truckleer.Creative
         public Truckleer()
         {
             InitializeComponent();
-            Call(dash);
+            Call(home);
             supply.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Supply>>.OnChangeScreen(BtnListAbastecimentos_Click);
             listSupply.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Supply>.OnChangeScreen(BtnAbastecer_Click);
 
@@ -61,6 +63,8 @@ namespace Truckleer.Creative
 
             //trip.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<Trip>.OnChangeScreen(BtnMakeTrip_Click);
             //listTrip.ChangeScreenEvent.ChangeScreen += new ChangeScreenEvent<List<Trip>>.OnChangeScreen(BtnListTrip_Click);
+                     
+
         }
 
         bool menuIsCollapsed = false;
@@ -177,7 +181,8 @@ namespace Truckleer.Creative
         private void BtnDash_Click(object sender, EventArgs e)
         {
 
-            Call(dash);
+            Call(home);
+           
             // Unset Colors
             Uncolor();
             //Call CloseGroup Function
