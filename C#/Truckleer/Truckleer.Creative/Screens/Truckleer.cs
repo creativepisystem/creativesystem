@@ -239,16 +239,17 @@ namespace Truckleer.Creative
         //Button Listar Abastecimentos Properties
         private void BtnListAbastecimentos_Click(object sender, EventArgs e)
         {
-            if (sender.GetType().Name.Contains("ChangeScreenEvent"))
-            {
-                listSupply.UpdateList();
-            }
+            
             //Call the supply Panel
             Call(listSupply);
             // Unset Colors
             Uncolor();
             btnAbastecimento.BackColor = Color.FromArgb(25, 137, 186);
             btnListAbastecimentos.BackColor = Color.Gray;
+            if (sender.GetType().Name.Contains("ChangeScreenEvent"))
+            {
+                listSupply.UpdateList();
+            }
         }
 
         //Button Veículo Properties

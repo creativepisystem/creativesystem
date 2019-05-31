@@ -24,6 +24,8 @@ namespace Truckleer.Creative
             InitializeComponent();
             supplyService = new SupplyService();
             ChangeScreenEvent = new ChangeScreenEvent<Supply>();
+            DatePickerInitial.Value = new DateTime(DateTime.Now.Year, DateTime.Now.Month, 1);
+            DatePickerFinal.Value = DateTime.Now;
         }
         public void ListarAbastecimentos_Load(object sender, EventArgs e)
         {
@@ -33,6 +35,10 @@ namespace Truckleer.Creative
         }
         public void UpdateList()
         {
+            ProgressBar.Visible = true;
+
+            RemoveSupplyList();
+            
             supplyListWorker.RunWorkerAsync();
         }
         bool isCollapsed = false;
@@ -72,14 +78,6 @@ namespace Truckleer.Creative
         {
 
             e.Result = supplyService.FindAll();
-            for (int i = 0; i <= 100; i++)
-                supplyListWorker.ReportProgress(i);
-            
-        }
-
-        private void FilterSupplyProgress(object sender, ProgressChangedEventArgs e)
-        {
-            ProgressBar.Value = e.ProgressPercentage;
         }
 
         private void FilterSupplyFinish(object sender, RunWorkerCompletedEventArgs e)
@@ -87,7 +85,7 @@ namespace Truckleer.Creative
             ProgressBar.Visible = false;
             supplys = (List<Supply>)e.Result;
             supplys.Sort((a, b) =>( a.Date.CompareTo(b.Date)));
-            ListPanel.Controls.Clear();
+            RemoveSupplyList();
             for (int i = 0; i < supplys.Count; i++)
                 ListPanel.Controls.Add(new CustomSupplyList(i, supplys[i],Edit,Delete));
         }
@@ -98,6 +96,16 @@ namespace Truckleer.Creative
         private void Delete(Supply supply)
         {
             //supplyService.Delete(supply);
+        }
+        private void RemoveSupplyList()
+        {
+            for(int i = ListPanel.Controls.Count -1; i > -1; i--)
+            {
+                if(ListPanel.Controls[i].GetType()  == typeof(CustomSupplyList))
+                {
+                    ListPanel.Controls.RemoveAt(i);
+                }
+            }
         }
     }    
 }

@@ -690,7 +690,6 @@ namespace Truckleer.Creative
             this.supplyListWorker.WorkerReportsProgress = true;
             this.supplyListWorker.WorkerSupportsCancellation = true;
             this.supplyListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterSupply);
-            this.supplyListWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.FilterSupplyProgress);
             this.supplyListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterSupplyFinish);
             // 
             // ListarAbastecimentos
