@@ -254,7 +254,6 @@ namespace Truckleer.Creative.Screens.Viagem
             this.tripListWorker.WorkerReportsProgress = true;
             this.tripListWorker.WorkerSupportsCancellation = true;
             this.tripListWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.FilterTrip);
-            this.tripListWorker.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.FilterTripProgress);
             this.tripListWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.FilterTripFinish);
             // 
             // ProgressBar

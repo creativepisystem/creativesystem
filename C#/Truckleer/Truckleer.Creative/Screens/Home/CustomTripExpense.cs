@@ -56,7 +56,7 @@ namespace Truckleer.Creative.Screens.Home
             panel2.Dock = DockStyle.Bottom;
             panel2.Location = new System.Drawing.Point(0, 81);
             panel2.Name = "panel2";
-            panel2.Size = new System.Drawing.Size(510, 2);
+            panel2.Size = new System.Drawing.Size(910, 2);
             panel2.TabIndex = 0;
             // 
             // LayoutHeaderTrip

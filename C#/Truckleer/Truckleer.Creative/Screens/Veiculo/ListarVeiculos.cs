@@ -31,6 +31,15 @@ namespace Truckleer.Creative
             vehicleListWorker.RunWorkerAsync();
         }
 
+        public void UpdateList()
+        {
+            ProgressBar.Visible = true;
+
+            RemoveVehicleList();
+
+            vehicleListWorker.RunWorkerAsync();
+        }
+
         bool isCollapsed = false;
         private void Filtro_Tick(object sender, EventArgs e)
         {
@@ -83,6 +92,17 @@ namespace Truckleer.Creative
             FlowVehiclePanel.Controls.Clear();
             for (int i = 0; i < vehicles.Count; i++)
                 FlowVehiclePanel.Controls.Add(new CustomVehicleList(i, vehicles[i]));
+        }
+
+        private void RemoveVehicleList()
+        {
+            for (int i = FlowVehiclePanel.Controls.Count - 1; i > -1; i--)
+            {
+                if (FlowVehiclePanel.Controls[i].GetType() == typeof(CustomVehicleList))
+                {
+                    FlowVehiclePanel.Controls.RemoveAt(i);
+                }
+            }
         }
     }
 }

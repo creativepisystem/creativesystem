@@ -24,6 +24,15 @@ namespace Truckleer.Creative.Screens.Viagem
             tripService = new TripService();
         }
 
+        public void UpdateList()
+        {
+            ProgressBar.Visible = true;
+
+            RemoveTripList();
+
+            tripListWorker.RunWorkerAsync();
+        }
+
         private void ButtonCadastro_Click(object sender, EventArgs e)
         {
             tripListWorker.RunWorkerAsync();
@@ -38,13 +47,6 @@ namespace Truckleer.Creative.Screens.Viagem
         private void FilterTrip(object sender, DoWorkEventArgs e)
         {
             e.Result = tripService.FindAll();
-            for (int i = 0; i <= 100; i++)
-                tripListWorker.ReportProgress(i);
-        }
-
-        private void FilterTripProgress(object sender, ProgressChangedEventArgs e)
-        {
-            ProgressBar.Value = e.ProgressPercentage;
         }
 
         private void FilterTripFinish(object sender, RunWorkerCompletedEventArgs e)
@@ -54,6 +56,17 @@ namespace Truckleer.Creative.Screens.Viagem
             FlowTrip.Controls.Clear();
             for (int i = 0; i < trips.Count; i++)
                 FlowTrip.Controls.Add(new CustomTripList(i, trips[i]));
+        }
+
+        private void RemoveTripList()
+        {
+            for (int i = FlowTrip.Controls.Count - 1; i > -1; i--)
+            {
+                if (FlowTrip.Controls[i].GetType() == typeof(CustomTripList))
+                {
+                    FlowTrip.Controls.RemoveAt(i);
+                }
+            }
         }
     }
 }

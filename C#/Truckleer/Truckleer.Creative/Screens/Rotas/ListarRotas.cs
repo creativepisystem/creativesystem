@@ -32,6 +32,15 @@ namespace Truckleer.Creative
             routeListWorker.RunWorkerAsync();
         }
 
+        public void UpdateList()
+        {
+            ProgressBar.Visible = true;
+
+            RemoveRouteList();
+
+            routeListWorker.RunWorkerAsync();
+        }
+
         private void ButtonCadastro_Click(object sender, EventArgs e)
         {
             
@@ -84,6 +93,17 @@ namespace Truckleer.Creative
             FlowRoute.Controls.Clear();
             for (int i = 0; i < routes.Count; i++)
                 FlowRoute.Controls.Add(new CustomRouteList(i, routes[i]));
+        }
+
+        private void RemoveRouteList()
+        {
+            for (int i = FlowRoute.Controls.Count - 1; i > -1; i--)
+            {
+                if (FlowRoute.Controls[i].GetType() == typeof(CustomRouteList))
+                {
+                    FlowRoute.Controls.RemoveAt(i);
+                }
+            }
         }
     }
 }

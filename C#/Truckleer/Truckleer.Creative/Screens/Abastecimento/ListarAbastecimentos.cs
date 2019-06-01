@@ -33,6 +33,7 @@ namespace Truckleer.Creative
             this.Dock = DockStyle.Fill;
             supplyListWorker.RunWorkerAsync();
         }
+
         public void UpdateList()
         {
             ProgressBar.Visible = true;
@@ -41,6 +42,7 @@ namespace Truckleer.Creative
             
             supplyListWorker.RunWorkerAsync();
         }
+
         bool isCollapsed = false;
         private void TimerFilter_Tick(object sender, EventArgs e)
         {
@@ -97,6 +99,7 @@ namespace Truckleer.Creative
         {
             //supplyService.Delete(supply);
         }
+
         private void RemoveSupplyList()
         {
             for(int i = ListPanel.Controls.Count -1; i > -1; i--)
