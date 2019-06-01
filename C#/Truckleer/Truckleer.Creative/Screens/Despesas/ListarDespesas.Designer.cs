@@ -43,10 +43,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.ButtonCadastro = new System.Windows.Forms.Button();
             this.expenseWorker = new System.ComponentModel.BackgroundWorker();
+            this.ProgressBar = new CircularProgressBar.CircularProgressBar();
             this.container.SuspendLayout();
             this.layoutFlex.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.PanelRoute.SuspendLayout();
+            this.FlowDespesa.SuspendLayout();
             this.PanelFilter.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +133,7 @@
             // FlowDespesa
             // 
             this.FlowDespesa.AutoScroll = true;
+            this.FlowDespesa.Controls.Add(this.ProgressBar);
             this.FlowDespesa.Dock = System.Windows.Forms.DockStyle.Fill;
             this.FlowDespesa.Location = new System.Drawing.Point(0, 0);
             this.FlowDespesa.Margin = new System.Windows.Forms.Padding(0);
@@ -224,6 +227,44 @@
             this.expenseWorker.DoWork += new System.ComponentModel.DoWorkEventHandler(this.GetExpense);
             this.expenseWorker.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.GetExpenseFinish);
             // 
+            // ProgressBar
+            // 
+            this.ProgressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProgressBar.AnimationFunction = WinFormAnimation.KnownAnimationFunctions.Liner;
+            this.ProgressBar.AnimationSpeed = 500;
+            this.ProgressBar.BackColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold);
+            this.ProgressBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ProgressBar.InnerColor = System.Drawing.Color.Transparent;
+            this.ProgressBar.InnerMargin = 2;
+            this.ProgressBar.InnerWidth = -1;
+            this.ProgressBar.Location = new System.Drawing.Point(470, 150);
+            this.ProgressBar.Margin = new System.Windows.Forms.Padding(470, 150, 3, 3);
+            this.ProgressBar.MarqueeAnimationSpeed = 2000;
+            this.ProgressBar.MaximumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.MinimumSize = new System.Drawing.Size(243, 224);
+            this.ProgressBar.Name = "ProgressBar";
+            this.ProgressBar.OuterColor = System.Drawing.SystemColors.ActiveBorder;
+            this.ProgressBar.OuterMargin = -21;
+            this.ProgressBar.OuterWidth = 15;
+            this.ProgressBar.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.ProgressBar.ProgressWidth = 30;
+            this.ProgressBar.SecondaryFont = new System.Drawing.Font("Microsoft Sans Serif", 36F);
+            this.ProgressBar.Size = new System.Drawing.Size(243, 224);
+            this.ProgressBar.StartAngle = 0;
+            this.ProgressBar.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.ProgressBar.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
+            this.ProgressBar.SubscriptText = "";
+            this.ProgressBar.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.ProgressBar.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
+            this.ProgressBar.SuperscriptText = "";
+            this.ProgressBar.TabIndex = 3;
+            this.ProgressBar.Text = "Loading...";
+            this.ProgressBar.TextMargin = new System.Windows.Forms.Padding(8, 8, 0, 0);
+            this.ProgressBar.Value = 20;
+            // 
             // ListarDespesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -237,6 +278,7 @@
             this.layoutFlex.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.PanelRoute.ResumeLayout(false);
+            this.FlowDespesa.ResumeLayout(false);
             this.PanelFilter.ResumeLayout(false);
             this.PanelFilter.PerformLayout();
             this.ResumeLayout(false);
@@ -260,5 +302,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button ButtonCadastro;
         private System.ComponentModel.BackgroundWorker expenseWorker;
+        private CircularProgressBar.CircularProgressBar ProgressBar;
     }
 }

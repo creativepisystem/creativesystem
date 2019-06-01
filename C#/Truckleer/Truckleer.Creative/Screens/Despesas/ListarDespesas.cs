@@ -30,6 +30,15 @@ namespace Truckleer.Creative.Screens.Despesas
             expenseWorker.RunWorkerAsync();
         }
 
+        public void UpdateList()
+        {
+            ProgressBar.Visible = true;
+
+            RemoveExpenseList();
+
+            expenseWorker.RunWorkerAsync();
+        }
+
         private void GetExpense(object sender, DoWorkEventArgs e)
         {
             e.Result = expenseService.FindAll();
@@ -41,6 +50,17 @@ namespace Truckleer.Creative.Screens.Despesas
             FlowDespesa.Controls.Clear();
             for (int i = 0; i < expenses.Count; i++)
                 FlowDespesa.Controls.Add(new CustomExpenseList(i, expenses[i]));
+        }
+
+        private void RemoveExpenseList()
+        {
+            for (int i = FlowDespesa.Controls.Count - 1; i > -1; i--)
+            {
+                if (FlowDespesa.Controls[i].GetType() == typeof(CustomExpenseList))
+                {
+                    FlowDespesa.Controls.RemoveAt(i);
+                }
+            }
         }
     }
 }

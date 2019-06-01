@@ -32,6 +32,15 @@ namespace Truckleer.Creative
             driverListWorker.RunWorkerAsync();
         }
 
+        public void UpdateList()
+        {
+            ProgressBar.Visible = true;
+
+            RemoveDriverList();
+
+            driverListWorker.RunWorkerAsync();
+        }
+
         private void Button1_Click(object sender, EventArgs e)
         {
             filtro.Start();
@@ -85,6 +94,17 @@ namespace Truckleer.Creative
             FlowDriver.Controls.Clear();
             for (int i = 0; i < drivers.Count; i++)
                 FlowDriver.Controls.Add(new CustomDriverList(i, drivers[i]));
+        }
+
+        private void RemoveDriverList()
+        {
+            for (int i = FlowDriver.Controls.Count - 1; i > -1; i--)
+            {
+                if (FlowDriver.Controls[i].GetType() == typeof(CustomDriverList))
+                {
+                    FlowDriver.Controls.RemoveAt(i);
+                }
+            }
         }
     }
 }
