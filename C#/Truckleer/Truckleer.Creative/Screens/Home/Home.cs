@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Windows.Forms;
 using Truckleer.Modules;
 using System.Linq;
+using System.Dynamic;
 
 namespace Truckleer.Creative.Screens.Home
 {
@@ -106,7 +107,7 @@ namespace Truckleer.Creative.Screens.Home
             LabelReceiveCLitros.Text = string.Format("R$ {0:0.00}", supplys.Sum(s => s.Price));
             LabelReceiveExpense.Text = string.Format("R$ {0:0.00}", expenses.Sum(s => s.Value));
             LabelReceiveTrip.Text = trips.Count.ToString();
-            LabelReceiveTotal.Text = string.Format("R$ {0:0.00}", supplys.Sum(s => s.Price)+ expenses.Sum(s => s.Value));
+            LabelReceiveTotal.Text = string.Format("R$ {0:0.00}", supplys.Sum(s => s.Price) + expenses.Sum(s => s.Value));
 
             FlowTrip.Controls.Clear();
             FlowDriver.Controls.Clear();
@@ -131,11 +132,34 @@ namespace Truckleer.Creative.Screens.Home
                                         .Sum(expense => expense.Value)
                     }
                     ));
+            var litersSerie = LitersCharts.Series.Add("Litros");
+            var expenseSerie = LitersCharts.Series.Add("Custo");
+            var teste = supplys.
+                GroupBy(s => new DateTime(year: s.Date.Year, month: s.Date.Month, day: s.Date.Day)).ToList();
+                
+                getListUniqueDates().ForEach(d =>
+            {
+                
+                litersSerie.Points.AddXY($"{d.Day}",
+                    supplys.Where(s=> s.Date.Day == d.Day && s.Date.Month == d.Month && s.Date.Year == d.Year).
+                    Sum(s => s.Liters)
+                    );
+                expenseSerie.Points.AddXY($"{d.Day}",
+                    supplys.Where(s => s.Date.Day == d.Day && s.Date.Month == d.Month && s.Date.Year == d.Year).
+                    Sum(s => s.Price)
+                    );
+            });
+           
         }
 
         private void CloseTrip(Trip trip)
         {
 
+        }
+        private List<DateTime> getListUniqueDates()
+        {
+            List<DateTime> uDates = new List<DateTime>();
+            return uDates;
         }
     }
 }
